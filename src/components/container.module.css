@@ -1,0 +1,72 @@
+/* You’ll notice that the file name ends 
+with .module.css. 
+
+This is how you tell Gatsby that this CSS file 
+should be processed as a CSS module 
+rather than plain CSS. */
+
+.container {
+  margin: 1em 1em;
+}
+
+h1{
+  font-family: 'raleway';
+  color: rgb(255,128,0); /* rgb(0, 102, 153); */
+  font-size: 24em;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: 'raleway';
+  color: rgb(255,128,0);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+h3 {
+  font-family: 'raleway';
+  color: rgb(255,128,0);
+  font-size: 20px;
+  font-weight: 800;
+}
+h4{
+  font-family: 'raleway';
+}
+p {
+  font-family: "open sans";
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.innerLayout {
+  margin: 0 1.0em;
+}
+
+p a:link {
+  text-decoration: underline wavy;
+  color: rgb(255,128,0);
+}
+
+p a:visited{
+  color: rgb(255,128,0);
+}
+
+/* blog portfolio list pages */
+
+.postList a:link{
+  text-decoration: none;
+}
+.postList a:visited{
+  text-decoration: none;
+}
+.postList h4 {
+  margin: 0;
+}
+.postList {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.postWrapper{
+  max-width: 768px;
+  margin: 0 auto;
+}

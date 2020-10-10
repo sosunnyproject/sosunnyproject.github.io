@@ -1,0 +1,23 @@
+html {
+    background-color: white;
+}
+
+#index p{
+    font-size: 2.4em;
+    line-height: normal;
+    color: gray;
+    font-family: "raleway";
+    margin-bottom: 0.5em;
+}
+#index h1 {
+    font-size: 2.6em;
+    margin-bottom: 0;
+    font-family: 'bungee shade';
+    line-height: 1.5;
+}
+
+.highlightSpan {
+   display: inline-block;
+   font-family:  'bungee shade';
+   line-height: 1.2;
+}

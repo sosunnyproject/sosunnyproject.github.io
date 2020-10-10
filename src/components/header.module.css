@@ -1,0 +1,67 @@
+.headerContainer {
+  padding: 2.0em 0;
+  display: flex;
+  font-family:'raleway';
+}
+
+.logoText{
+  display: inline-block;
+  flex: 1;
+  font-size: 1.2em;
+  color:rgb(255,128,0);
+}
+.logoText a:link{
+  text-decoration: none;
+  color:rgb(255,128,0);
+}
+.logoText a:visited{
+  color:rgb(255,128,0);
+  text-decoration: none;
+}
+
+.navContainer {
+  display: inline-block;
+  justify-content: flex-end;
+}
+
+.navText{
+  font-size: 1.2em;
+  color: gray;
+  margin-right: 0.5em;
+  text-decoration: none;
+}
+
+.navContainer [aria-current] {
+    text-decoration: underline wavy;
+    text-decoration-color: rgb(255,128,0);
+
+    /* box-shadow: 0 -6px rgba(0, 102, 153, 0.5) inset;  #7A6629 */
+}
+
+.socialContainer{
+  display: inline-flex;
+  align-items: center;
+}
+.socialContainer img{
+  padding: 0 0.7em;
+  vertical-align: middle;
+}
+/*
+RGB 242, 102, 113 #F26671
+RGB 137, 209, 217 #89D1D9 
+RGB 242, 205, 92 #F2CD5C
+RGB 242, 237, 228 #F2EDE4
+RGB 242, 126, 99 #F27E63
+*/
+
+/*
+#F26D6D RGB 242, 109, 109
+
+#F28972 RGB 242, 137, 114
+
+#2A2859 RGB 42, 40, 89
+
+#58498C RGB 88, 73, 140
+
+#A65D8C RGB 166, 93, 140
+*/
