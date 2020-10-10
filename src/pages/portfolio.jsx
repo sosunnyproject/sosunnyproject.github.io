@@ -33,7 +33,7 @@ query {
       edges {
         node {
           id
-          excerpt(pruneLength: 50)
+          excerpt(truncate: true)
           timeToRead
           frontmatter {
             title

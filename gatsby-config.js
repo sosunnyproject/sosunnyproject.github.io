@@ -27,10 +27,9 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/images`,
+        path: `${__dirname}/src/images`,
       },
     },
-    `eslint-plugin-jsx-a11y`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -42,6 +41,7 @@ module.exports = {
               maxWidth: 800,
             },
           },
+          'gatsby-remark-a11y-emoji',
         ],
       },
     },

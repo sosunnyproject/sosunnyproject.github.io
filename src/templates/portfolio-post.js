@@ -16,7 +16,7 @@ export default function PortfolioPost({ data }) {
     <Container>
       <Header />
       <div className={containerStyles.postWrapper}>
-        <h2>{post.frontmatter.title}</h2>
+        <h1>{post.frontmatter.title}</h1>
         <div className={containerStyles.innerLayout} dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Container>
