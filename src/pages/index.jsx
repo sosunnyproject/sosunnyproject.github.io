@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../components/header"
 import Container from "../components/container"
+import containerStyles from "../components/container.module.css"
 import { Link, graphql } from "gatsby"
 import '../styles/global.css';
 import logo from "../images/sosunny_logo.png"
@@ -17,7 +18,7 @@ export default function Home({ data }) {
   <Container >
     <Header />
 
-    <div id='index'>
+    <div className={containerStyles.index}>
     <h1>Write Code, Make Art</h1>
 
     <p>
@@ -29,10 +30,10 @@ export default function Home({ data }) {
      Currently in Seoul, she is a full-time web dev during the day and creative coder at night.
     </p>
 
-    <p id="indexBottom">
-      Recently watched <span class="highlightSpan">Enola Holmes </span>, 
-    read <span class="highlightSpan">뉴턴의 아뜰리에 </span>
-    , bought <span class="highlightSpan">Massage gun</span></p>
+    <p className={containerStyles.indexBottom}>
+      Recently watched <span className={containerStyles.highlightSpan}>Enola Holmes </span>, 
+    read <span className={containerStyles.highlightSpan}>뉴턴의 아틀리에 </span>
+    , bought <span className={containerStyles.highlightSpan}>Massage gun</span></p>
 
     </div>
   </Container>
