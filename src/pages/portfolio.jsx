@@ -18,7 +18,7 @@ export default function Portfolio({ data }) {
                 </h3>
               </Link>
                 <h4>{node.frontmatter.date}</h4>
-              <p>{node.excerpt}</p>
+              
             </div>
          ))}
       </div>
@@ -28,7 +28,12 @@ export default function Portfolio({ data }) {
 
 export const query = graphql`
 query {
-  allMarkdownRemark{
+  allMarkdownRemark(
+    sort: {
+      fields: [frontmatter___date,  frontmatter___title]
+      order: DESC
+    }
+  ){
     totalCount
       edges {
         node {

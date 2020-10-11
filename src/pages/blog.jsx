@@ -28,7 +28,12 @@ export default function Blog({ data }) {
 
 export const query = graphql`
 query {
-  allMarkdownRemark {
+  allMarkdownRemark(
+    sort: {
+      fields: [frontmatter___date,  frontmatter___title]
+      order: DESC
+    }
+  ) {
     totalCount
       edges {
         node {

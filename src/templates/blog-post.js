@@ -3,6 +3,7 @@ import Container from "../components/container"
 import { graphql } from "gatsby"
 import Header from "../components/header"
 import containerStyles from "../components/container.module.css"
+import '../styles/global.css';
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
