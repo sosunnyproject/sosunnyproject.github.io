@@ -1,6 +1,6 @@
 ---
-title: "2020 인터렉티브 아트랩 전시 후기"
-date: "2020-08-10"
+title: "2020 인터렉티브 아트랩 전시 후기(1)"
+date: "2020-07-14"
 category: "blog"
 ---
 
@@ -13,7 +13,7 @@ category: "blog"
 그러다보니 전시에 방문한 관객들, 특히 혼자 전시장에 들어와서 작품들을 열심히 만져보는 사람들이 참 반갑고 고마웠다. 이 분야에 관심이 있었든 없었든, 자의로 왔건 타의로 왔건, 직접 작품을 보고 가지고 놀아 본 타인들의 피드백은 작가에게 좋은 거름이 되기에 기록해본다. 더불어 작품 자체에 대한 피드백 뿐만 아니라 전시를 기획하고 홍보하고 운영하는 것에 대한 회고도 함께 한다.
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="frames-5.jpg" width="80%">
+<img style="objectPosition: center" src="frames-5.jpg" height="100%" width="auto">
 <figcaption> 💓💓 </figcaption>
 </figure>
 
@@ -24,22 +24,18 @@ category: "blog"
 - **카페** : 전시장 자체가 카페이다보니, 작가들이 방문객들과 앉아서 이야기도 하고, 질문과 피드백을 더 자세하게 들을 수 있었다. 이전에 대관했던 전시관은 의자가 거의 없는 곳들이다보니, 앉아서 이야기하고 오래 머물기가 애매한 곳이었다. 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="frames-1.JPG" width="80%">
+<img src="frames-1.JPG" height="100%" width="auto">
 <figcaption>내부에서 창문에 쏘았던 프로젝터 화면</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="frames-3.jpg" width="80%">
+<img src="frames-3.jpg" height="100%" width="auto">
 <figcaption>punto blu seoul 카페</figcaption>
 </figure>
 
-### P.S.
-카페에서 전시를 해보고 나니, 더 많은 카페들이 갤러리 전시를 적극적으로 하면 좋겠다는 생각이 든다. 사실 전시할 수 있는 작가들이 찾아보면 굉장히 많을 텐데, 너무 크거나 부담스러운 가격이 아니어도 전시할 수 있는 공간은 생각보다 많지 않을 듯 하다. 그래도 요즘은 이런 카페/갤러리 공간들이 늘어나는 추세로 보인다. 
-
-특히 코로나 때문에 매출이 적어지고, 주변에 카페들은 천지이다. 카페를 특별하게 브랜딩하거나 소셜미디어로 더 많은 팔로워를 유입하려면, 카페 운영자 입장에서도 전시가 좋은 아이템이라 생각된다.
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="frames-6.jpg" width="80%">
+<img src="frames-6.jpg" height="100%" width="auto">
 <figcaption>전시 중인 카페</figcaption>
 </figure>
 
@@ -60,10 +56,10 @@ category: "blog"
 
 이런 의견이 오갔었다. 
 
-나는 1번 생각이 더 컸지만, 그래도 전시를 하고 있다는 표시를 더 낼 필요가 있다고 생각했고, 아직 전시 초반이니까 뭐라도 할 수 있는 것은 하고 싶었다. 
+나는 1번 생각이 더 컸지만, 그래도 전시를 하고 있다는 표시를 더 낼 필요가 있다고는 생각했다. 그리고 아직 전시 초반이니까 뭐라도 더 할 수 있는 것은 하고 싶었다. 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="frames-7.JPG" width="80%">
+<img src="frames-7.JPG" height="100%" width="auto">
 <figcaption>홍보용 배너 현수막</figcaption>
 </figure>
 
@@ -88,17 +84,13 @@ category: "blog"
 - 예전에 내가 우먼후코드나 모두의 연구소에서 발표한 것을 보시고, 관심이 생겨서 내 계정 혹은 랩 계정은 팔로우하던 인스타 친구분들. 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="frames-2.JPG" width="80%">
+<img src="frames-2.JPG" height="100%" width="auto">
 <figcaption>작업 설치 중...</figcaption>
 </figure>
 
 작년에는 거의 모든 친구들한테 전시 꼭 오라는 홍보를 엄청 했다. 그 사람들이 이 분야에 관심이 있든 없든 중요하지 않았었다. 하지만 그렇게 전시를 해보고나니, 그들이 나 때문에 (70%는) 억지로 오고, 나는 이게 왜 흥미로운지 설득해야 할 것만 같은, 이 이상한 경험이 쌍방 모두에게 매우 비효율적이라는 생각이 들었다. 
 
 그래서 이번에는 그 시간과 에너지를, 개인 / 랩 계정으로 인스타 홍보를 하는 데에 더 주력했다. 관심있는 사람들이 알아서 스스로 찾아오는 게 훨씬 더 서로에게 유익한 시간이겠다 싶었다. 그렇게 마음을 내려놓으니, 정말 예상치 못했던 친구들과 인친들이 방문해주었다. 나 또한 그들이 흥미로워하는 매체를 직접 접할 수 있도록 좋은 계기를 주었다는 생각에 한층 더 뿌듯했다. 그리고 (좋든 나쁘든) 건설적인 피드백을 듣고 싶은 나로써는, 본인의 의지로 방문한 사람들과의 인터렉션이 훨씬 즐거웠다.
-
-### P.S. 
-
-한국에 인맥이 많이 없는 나지만, (한국에서 대학교나 대학원을 다니지 않았고 이쪽 분야 활동은 모두연 랩에서 한 것들, 인스타 계정에 업로드 하는 것들이 거의 전부였다) 이런 식으로 점점 사람들을 만나게 되어 영광이었다. 내가 했던 대외 활동들이 의미가 있었구나 - 다행이었다.
 
 ---
 
@@ -107,7 +99,7 @@ category: "blog"
 내 작품에 대해 회고하고 개선점을 생각해 보았다.
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="here-now.JPG" width="80%">
+<img src="here-now.JPG" height="100%" width="auto">
 <figcaption>내 작품</figcaption>
 </figure>
 
@@ -131,7 +123,7 @@ category: "blog"
     - 이건 기존에도 생각하고 있었지만, 그 자리에서 바로 바로 프린트 하려면 하드웨어를 많이 건드려야할 것 같아서 하지 않았다. 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="here-now-stickers.jpg" width="80%">
+<img src="here-now-stickers.jpg" height="100%" width="auto">
 <figcaption>스티커!</figcaption>
 </figure>
 
@@ -165,7 +157,7 @@ category: "blog"
 하지만 그걸 굉장히 명확하고 단순하게 표현할 수 있다면 대다수의 관객들에게 더 깊이를 줄 수 있을까? 그리고 그들이 원하는 건 그런 것일까?
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="frames-4.jpg" width="80%">
+<img src="frames-4.jpg" height="100%" width="auto">
 <figcaption>내 작품을 구경하는 동행을 찍는 관객을 찍는 나</figcaption>
 </figure>
 
@@ -174,23 +166,6 @@ category: "blog"
   - 서버를 잘 분리하고, 통신을 원활하게 하고, 꾸준히 데이터의 캡을 지키도록 (데이터가 무한정 쌓이지 않도록) 최적화 관리를 고려해보면 좋겠다는 생각이 들었다. 
   - 나는 여태까지는 전시마다 하드웨어를 썼었고, 이번이 가장 하드웨어 비중을 줄여본 작품이었다. 하드웨어는 아직 내 분야가 아닌 만큼, 계속해서 소프트웨어 비중을 더 넓히고 내가 잘하는 것에 더 집중하려고 한다.
 
-# 인터렉티브 미디어라는 분야에 대한 회고 
+#### P.S. 
 
-이 부분은 다른 장문의 포스팅으로 남기고 싶어서 여기에는 짧게 남긴다.
-
-### 접근성
-
-- 배우고 싶어도 배울만한 곳들이 많지 않거나 마땅치 않다.
-- 관심있는 대학생들의 경우, 학교에서 가르쳐주지 않거나 주변에서 같이 좋아하는 친구가 없으면 이 분야를 스터디하기가 힘들다.
-- 많은 리소스가 영어로 되어있기에 영어를 잘 못한다면 더더욱 힘들다.
-
-### 커뮤니티
-- 초보자, 입문자, 혹은 어느 정도의 유경험자(개발자/디자이너/메이커)들 각각의 집단을 위하거나, 그들이 모두 함께 교류도 할 수 있는 커뮤니티의 중요성
-- 프레임워크 / 툴 마다 커뮤니티가 잘 만들어져 있는 외국의 사례들
-- 대학원이나 대학교 (아트앤테크놀로지, 디지털미디어디자인, 인터렉티브 미디어 등 관련 전공이 있는 학교들) 로 주축이 되어 있는 인맥
-
-### 마이너 ? 대중 ?
-- 작가마다 작업마다 타겟이 매우 다를 것이다. 나는 어떤 취향인지 고려해본다..
-- 점점 대중으로 다가가는 길은 어떤 모양일까? 해외는 이미 많이 전파되어 있지만, 그래도 여전히 elitist 의 축에 속하는 것 같기도.
-- 예술과 기술이라는 분야 자체가 이미 elitism 에 많이 물들여져 있다. 교육받지 못하면, 기회가 없으면 쉽게 접하거나 배울 수 없는 분야들이다. 나는 이걸 넘어서고 싶은가? 어떻게 그 선을 넘어가야 하는가?
-
+한국에 인맥이 많이 없는 나지만, (한국에서 대학교나 대학원을 다니지 않았고 이쪽 분야 활동은 모두연 랩에서 한 것들, 인스타 계정에 업로드 하는 것들이 거의 전부였다) 이런 식으로 점점 사람들을 만나게 되어 영광이었다. 내가 했던 대외 활동들이 의미가 있었구나 - 다행이었다.
