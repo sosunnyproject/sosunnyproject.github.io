@@ -17,7 +17,8 @@
 - 마크다운의 코드 블럭 꾸미기
   - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
   - css 충돌은 styles/global.css 로 직접 수정
-
+  - 참고 이슈: https://github.com/PrismJS/prism/issues/1237
+  
 ```css
   pre{
   width: 100%;

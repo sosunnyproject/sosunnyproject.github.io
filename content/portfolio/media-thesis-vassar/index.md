@@ -1,6 +1,6 @@
 ---
 title: "Interplaying - Interactive Media Installation for Live Music Events (Thesis, Vassar '16)"
-date: "2016-06-11"
+date: "2016-05-09"
 category: "portfolio"
 ---
 
@@ -22,11 +22,32 @@ Date: 2016. 05. 09
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/hgD8w5DXE-k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<img src="thesis20.png" width="30%">s
-<img src="thesis1.png" width="30%">
-<img src="thesis3.png" width="30%">
-<img src="thesis4.png" width="30%">
-<img src="thesis6.png" width="30%">
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="thesis20.png" >
+<figcaption>Main Image</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="thesis1.png">
+<figcaption> Facebook Event for On-Campus Showcase</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="thesis3.png">
+<figcaption> Facebook Event for On-Campus Showcase</figcaption>
+</figure>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="thesis4.png">
+<figcaption> Facebook Event for On-Campus Showcase </figcaption>
+</figure>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="thesis6.png">
+<figcaption> On-Campus Showcase at Vassar College </figcaption>
+</figure>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="DemoDay_hearstTower.jpg">
+<figcaption> Demo Day (May 13) at Hearst Tower, New York City </figcaption>
+</figure>
 
 ### 배경
 인터플레잉은 라이브 음악 공연(콘서트, 페스티벌)에서 21세기의 관객이 핸드폰이나 카메라와 같은 개인의 디지털 기기에만 집착하는 현상을 타파하고 서로 다른 관객과 라이브 현장을 즐길 수 있는 경험을 선사하기 위한 프로젝트입니다. 
@@ -37,9 +58,9 @@ Date: 2016. 05. 09
 
 ### 작품 설명 및 구동 방법
 
-<img src="thesis9.png" width="30%">
-<img src="thesis8.png" width="30%">
-<img src="thesis7.png" width="30%">
+<img src="thesis9.png" /><br />
+<img src="thesis8.png" /><br />
+<img src="thesis7.png" /><br />
 
 본 설치 미디어 작품은 DJ들이 쓰는 Launchpad의 형태에서 영감을 받아 버튼과 같은 비쥬얼로 만들었습니다. 손동작 감지 하드웨어인 Leap Motion (립 모션) 위에 손을 올리면, 본인의 손을 화면에서 볼 수 있습니다. 손을 움직여 화면 상의 큐브를 버튼처럼 생각하고 터치하며 사운드가 재생됩니다. 
 
@@ -51,17 +72,20 @@ Date: 2016. 05. 09
 
 ### Thesis Presentation Preview
 
-<img src="thesis11.png" width="30%">
-<img src="thesis12.png" width="30%">
-<img src="thesis13.png" width="30%">
-<img src="thesis14.png" width="30%">
-<img src="thesis15.png" width="30%">
-<img src="thesis16.png" width="30%">
-<img src="thesis17.png" width="30%">
-<img src="thesis18.png" width="30%">
-<img src="thesis19.png" width="30%">
-<img src="thesis10.png" width="30%">
+<img src="thesis11.png" /><br />
+<img src="thesis12.png" /><br />
+<img src="thesis13.png" /><br />
+<img src="thesis14.png" /><br />
+<img src="thesis15.png" /><br />
+<img src="thesis16.png" /><br />
+<img src="thesis17.png" /><br />
+<img src="thesis18.png" /><br />
+<img src="thesis19.png" /><br />
+<img src="thesis10.png" /><br />
 
+### Short Description
+
+“Interplaying” is an interactive digital installation to encourage audience member’s live social interaction with one another in live music events – concerts/festivals. By allowing the audience to virtually mash up the music with the musician and other audience members, “interplaying” demo aims to show the potential of technology building people’s ‘social’ capital.
 
 ### Project Summary
 
