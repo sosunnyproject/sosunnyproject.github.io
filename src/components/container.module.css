@@ -57,12 +57,18 @@ a {
 }
 
 /* index container */
+
 .index p{
   font-size: calc(24px + 1vw);
   line-height: 1.5;
   color: gray;
   font-family: 'raleway';
   margin-bottom: calc(5px + 1vw);
+}
+@media screen and (max-width: 500px) {
+  .index p{
+    font-size: calc(20px + 1vw);
+  }
 }
 .index h1 {
   font-size: calc(26px + 1vw);
