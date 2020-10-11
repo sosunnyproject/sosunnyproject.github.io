@@ -4,13 +4,14 @@ date: "2016-05-09"
 category: "portfolio"
 ---
 
-
+<div class="intro">
 Creator: So Sun Park <br />
 Venue: Vassar College<br />
 Type: Media Studies Major Thesis Project, Class of 2016<br />
 Showcase: Vassar College Main Building<br />
 Tools: Unity Engine, Leap Motion <br />
 Date: 2016. 05. 09
+</div>
 
 <hr />
 

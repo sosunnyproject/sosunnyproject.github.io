@@ -10,12 +10,16 @@
   - [x] AR hololens mit media lab hackathon
   - [x] nyu itp camp showcase
   - [x] 펜타포트 페스티벌 라이팅 설치물
-  - [ ] jeju hackathon meerkat app - 1st place
-  - [ ] modulabs dlc
-  - [ ] zero1ne 
-  - [ ] ial exhibition 1
-  - [ ] ial exhibition 2
+  - [x] jeju hackathon meerkat app - 1st place
+  - [ ] modulabs dlc 발표 
+  - [ ] zero1ne day 
+  - [ ] ial exhibition 1 (영상 편집 필요)
+  - [ ] ial exhibition 2 (사진 더 필요)
   - [ ] modulabs 풀잎스쿨 p5js natureofcode
+  - [ ] 딥백수 발표 자료 https://www.slideshare.net/SoSunPark/ss-102987732
+  - [x] jsconf 발표 자료
+  - [ ] 삼성 soscon 발표 자료
+  - [ ] 아트 / 테크 코딩 기초 모집
 ---------------------------------------
 - [x] 블로그 컨텐츠 가져오기 (구 블로그에서) - 일주일에 최소 7개
 - [ ] p5js로 홈페이지 모션그래픽 추가하기

@@ -7,9 +7,7 @@ export default function Vitae() {
   <Container>
     <Header />
 
-    <h2>resume</h2>
-    <h2>career</h2>
-    <h2>education</h2>
+    <h2>coming soon </h2>
 
   </Container>
   )

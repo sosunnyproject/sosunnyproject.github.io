@@ -3,16 +3,26 @@ title: "5 Pointz Graffiti Mecca (360 VR Interactive Film)"
 category: 'portfolio'
 date: '2017-02-10'
 ---
-
+<div class="intro">
 Creator: So Sun Park, Maxwell Foxman<br />
 Tools: Unity, Gear VR, Cardboard, Maya, Audacity<br />
-Type: [TimeWave Lab VR/AR Festival 2017](http://timewavefestival.com/virtualrealitylab-2017-projects/) in NYC <br />
+Type: <a target="_blank" rel="noreferrer" href="http://timewavefestival.com/virtualrealitylab-2017-projects/">TimeWave Lab VR/AR Festival 2017</a> in NYC <br />
 Venue: NYU Gaming Center (MakerSpace), Time Inc. (Showcase), Oculus (Sponsor) <br />
 Date: 2017. Spring
-
+</div>
 <hr />
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/kRfG-g5NoZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="timewave2017.jpg">
+<figcaption>뉴욕 VR 랩 전시 팜플렛</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="timewave2017-1.jpg">
+<figcaption>뉴욕 VR 랩 전시 팜플렛</figcaption>
+</figure>
 
 가상현실 랩 프로그램에서 VR로 만든 뉴욕 그래피티 프로젝트입니다. 단순히 360도 영상을 넘어서 가상현실에 최적화된 스토리텔링은 어떤 것인지 고민하다가 현존하지 않는 역사 속의 모습들을 재현하고 그것에 대한 설명을 목소리나 그래픽으로 보여주는 것이 VR을 효과적으로 이용하는 방법이라고 생각되어 시작했습니다. 5pointz 는 뉴욕 롱아일랜드시티에서 오랫동안 존재했던 거대한 그래피티 구역입니다. 수많은 아티스트들이 합법적으로 벽화를 그리고 사회에 대한 메세지들을 예술적으로 자유롭게 표현했던 곳입니다. 하지만 몇 년 전, 개발자들의 요구로 이 곳이 허물어지고 현재는 고층빌딩을 짓고 있어 많은 사람들이 안타까워 하는 뉴욕 역사 속의 명소입니다.
 

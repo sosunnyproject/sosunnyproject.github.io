@@ -3,13 +3,13 @@ title: "MIT media lab: VR/AR Hackathon with Hololens"
 date: "2016-12-01"
 category: "portfolio"
 ---
-
-Creator: So Sun Park with Team Augmented Beatz ([Randall Spence](https://www.linkedin.com/in/randspence/), [Tom Strissel](https://www.linkedin.com/in/tomstrissel/)) <br />
+<div class="intro">
+Creator: So Sun Park with Team Augmented Beatz (<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/randspence/">Randall Spence</a>, <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tomstrissel/">Tom Strissel</a>)<br />
 Venue: MIT Media Lab<br />
 Type: Reality, Virtually Hackathon 2016 - VR/AR <br />
 Tools: Unity Engine, Hololens <br />
 Date: 2016. 10.
-
+</div>
 <hr />
 
 #### English Below

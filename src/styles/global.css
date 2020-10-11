@@ -19,15 +19,19 @@ figcaption {
 }
 
 .intro {
-
-  font-weight: 300;
-  color: gray;
+  color: #525252;
+  font-size: calc(10px + 0.5vw) !important;
 }
 
 hr {
   margin: calc(22px + 0.5vw);
 }
 
+
+.verticalImg{
+  height: 100% !important;
+  width: auto !important;
+}
 /* .gatsby-resp-image-image {
   width: auto !important;
   height: 100% !important;

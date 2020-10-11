@@ -4,14 +4,15 @@ date: "2016-05-13"
 category: "portfolio"
 ---
 
+<div class="intro">
 Title: Not You<br />
 Creators: So Sun Park, Maxwell Foxman, Erika Scott, Bunmi Sijuwade, Rebecca Poulson<br />
 Actors: So Sun Park, Mark Ryan Anderson, Maxwell Foxman, Ulysses Popple<br />
 Tools: Unity, 360 Heroes, Adobe Premiere, Freesound.org, AutoPano, Audacity, Theta 360, and a binaural audio recorder<br />
-Type: [TimeWave Lab VR/AR Festival 2016](http://timewavefestival.com/virtualrealitylab-2016-projects/) in NYC <br />
-Venue: [Hearst Tower(Showcase)](http://timewavefestival.com/2016-demo-day-gallery/), Kickstarter (Production), NYU Gaming Center (Making)<br /> 
+Type: <a target="_blank" rel="noreferrer" href="http://timewavefestival.com/virtualrealitylab-2016-projects/">TimeWave Lab VR/AR Festival 2016</a> in NYC <br />
+Venue: <a target="_blank" rel="noreferrer" href="http://timewavefestival.com/2016-demo-day-gallery/">Hearst Tower(Showcase)</a>, Kickstarter (Production), NYU Gaming Center (Making)<br /> 
 Platform: Cardboard, Gear VR<br />
-
+</div>
 <hr />
 
 #### English Below

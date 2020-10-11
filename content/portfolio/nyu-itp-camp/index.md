@@ -3,12 +3,13 @@ title: Stars in Your Hands
 date: '2017-06-01'
 category: 'portfolio'
 ---
-
+<div class="intro">
 Creator: So Sun Park <br />
 Venue: New York University Interactive Communications Program Building <br />
 Type: NYU ITP Camp Final Show <br />
 Tools: p5.js, processing, dmx lighting, arduino, potentiometers <br />
 Date: 2017. 06. 01
+</div>
 
 <hr />
 
