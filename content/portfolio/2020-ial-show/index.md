@@ -8,6 +8,7 @@ category: "portfolio"
 Artist: 박소선 <br />
 Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/puntobluseoul/">푼토블루 성수</a> <br />
 Type: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/interactive_art_lab/">인터렉티브 아트 랩</a> 그룹 전시 쇼케이스 <br />
+Tools: 립모션 leap motion, p5js 자바스크립트 라이브러리 <br />
 Date: 2020.07.10 ~ 2020.07.11
 </div>
 

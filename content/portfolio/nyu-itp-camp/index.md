@@ -7,7 +7,7 @@ category: 'portfolio'
 Creator: So Sun Park <br />
 Venue: New York University Interactive Communications Program Building <br />
 Type: NYU ITP Camp Final Show <br />
-Tools: p5.js, processing, dmx lighting, arduino, potentiometers <br />
+Tools: p5.js, processing 프로세싱, dmx lighting 무빙 라이트 및 라이팅 제어 소프트웨어, arduino 아두이노, potentiometers <br />
 Date: 2017. 06. 01
 </div>
 

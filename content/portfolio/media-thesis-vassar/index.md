@@ -9,7 +9,7 @@ Creator: So Sun Park <br />
 Venue: Vassar College<br />
 Type: Media Studies Major Thesis Project, Class of 2016<br />
 Showcase: Vassar College Main Building<br />
-Tools: Unity Engine, Leap Motion <br />
+Tools: Unity Engine 유니티, Leap Motion 립모션 <br />
 Date: 2016. 05. 09
 </div>
 
