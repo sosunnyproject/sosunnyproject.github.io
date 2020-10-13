@@ -36,8 +36,8 @@ h4{
 
 p {
   font-family: 'open sans';
-  font-size: calc(12px + 0.5vw);
-  line-height: calc(22px + 0.5vw);
+  font-size: calc(14px + 0.5vw);
+  line-height: calc(24px + 0.5vw);
   /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 li{
