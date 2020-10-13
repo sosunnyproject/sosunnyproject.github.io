@@ -12,21 +12,21 @@ rather than plain CSS. */
 h1{
   font-family: 'raleway';
   color: rgb(255,128,0); /* rgb(0, 102, 153); */
-  font-size: calc(22px + 1vw);
+  font-size: calc(22px + 0.5vw);
   font-weight: 800;
 }
 
 h2 {
   font-family: 'raleway';
   color: rgb(0, 102, 153);
-  font-size: calc(18px + 1vw);
+  font-size: calc(18px + 0.5vw);
   font-weight: 800;
 }
 
 h3 {
   font-family: 'raleway';
   color: rgb(255,128,0);
-  font-size: calc(16px + 1vw);
+  font-size: calc(16px +  0.5vw);
   font-weight: 800;
 }
 h4{
@@ -36,8 +36,8 @@ h4{
 
 p {
   font-family: 'open sans';
-  font-size: calc(14px + 0.5vw);
-  line-height: calc(24px + 0.5vw);
+  font-size: calc(14px + 0.25vw);
+  line-height: calc(24px + 0.25vw);
   /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 li{
