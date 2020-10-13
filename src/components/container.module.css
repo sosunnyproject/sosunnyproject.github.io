@@ -12,21 +12,21 @@ rather than plain CSS. */
 h1{
   font-family: 'raleway';
   color: rgb(255,128,0); /* rgb(0, 102, 153); */
-  font-size: calc(22px + 0.5vw);
+  font-size: calc(22px + 0.25vw);
   font-weight: 800;
 }
 
 h2 {
   font-family: 'raleway';
   color: rgb(0, 102, 153);
-  font-size: calc(20px + 0.5vw);
+  font-size: calc(20px + 0.25vw);
   font-weight: 800;
 }
 
 h3 {
   font-family: 'raleway';
   color: rgb(255,128,0);
-  font-size: calc(18px +  0.5vw);
+  font-size: calc(18px +  0.25vw);
   font-weight: 800;
 }
 h4{
@@ -36,14 +36,14 @@ h4{
 
 p {
   font-family: 'open sans';
-  font-size: calc(16px + 0.25vw);
-  line-height: calc(26px + 0.25vw);
+  font-size: calc(16px + 0.1vw);
+  line-height: calc(26px + 0.1vw);
   /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 li{
   font-family: 'open sans';
-  font-size: calc(16px + 0.25vw);
-  line-height: calc(26px + 0.25vw);
+  font-size: calc(16px + 0.1vw);
+  line-height: calc(26px + 0.1vw);
 }
 
 .innerLayout {
@@ -91,8 +91,8 @@ a {
   margin: 0 auto;
 }
 .postList p {
-  font-size: calc(8px + 0.5vw);
-  line-height: calc(18px + 0.5vw);
+  font-size: calc(8px + 0.25vw);
+  line-height: calc(18px + 0.25vw);
 }
 .postList a:link{
   text-decoration: none;
@@ -103,11 +103,11 @@ a {
 .postList h3 {
   margin-bottom: 0.5em;
   font-weight: 600;
-  font-size: calc(16px + 0.5vw);
+  font-size: calc(16px + 0.25vw);
 }
 .postList h4 {
   margin: 0;
-  font-size: calc(12px + 0.5vw);
+  font-size: calc(12px + 0.25vw);
   font-weight: 300;
   color: gray;
 }
@@ -119,16 +119,16 @@ a {
 
 .portfolioWrapper p {
   font-family: 'raleway';
-  line-height: calc(26px + 0.25vw);
-  font-size: calc(16px + 0.25vw);
+  line-height: calc(26px + 0.1vw);
+  font-size: calc(16px + 0.1vw);
 }
 .portfolioWrapper li {
   font-family: 'raleway';
-  line-height: calc(26px + 0.25vw);
-  font-size: calc(16px + 0.25vw);
+  line-height: calc(26px + 0.1vw);
+  font-size: calc(16px + 0.1vw);
 }
 .portfolioWrapper div {
   font-family: 'raleway';
-  line-height: calc(26px + 0.25vw);
-  font-size: calc(16px + 0.25vw);
+  line-height: calc(26px + 0.1vw);
+  font-size: calc(16px + 0.1vw);
 }
