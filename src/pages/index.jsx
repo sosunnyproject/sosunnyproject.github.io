@@ -32,7 +32,9 @@ export default function Home({ data }) {
     <p className={containerStyles.indexBottom}>
       Recently watched <span className={containerStyles.highlightSpan}>Enola Holmes </span>, 
     read <span className={containerStyles.highlightSpan}>뉴턴의 아틀리에 </span>
-    , bought <span className={containerStyles.highlightSpan}>Massage gun</span></p>
+    , bought <span className={containerStyles.highlightSpan}>Massage gun</span> <br />
+    - 2020/10/12
+    </p>
 
     </div>
   </Container>
