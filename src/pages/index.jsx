@@ -33,7 +33,7 @@ export default function Home({ data }) {
       Recently watched <span className={containerStyles.highlightSpan}>Enola Holmes </span>, 
     read <span className={containerStyles.highlightSpan}>뉴턴의 아틀리에 </span>
     , bought <span className={containerStyles.highlightSpan}>Massage gun</span> <br />
-    - 2020/10/12
+    - 2020/10/12 sosunnyproject
     </p>
 
     </div>

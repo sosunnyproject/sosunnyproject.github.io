@@ -22,7 +22,7 @@ export default function Vitae() {
     <h1>coming soon </h1>
 
     <p>
-    프론트엔드 개발자, 크리에이티브 코더
+    프론트엔드 개발자 | 크리에이티브 코더 | sosunnyproject
     </p>
 
     <p>
@@ -40,7 +40,7 @@ export default function Vitae() {
     </p>
 
     <p className={containerStyles.indexBottom}>
-     - 2020/10/12에 남기는 글
+     - 2020/10/12 박소선
     </p>
 
     </div>
