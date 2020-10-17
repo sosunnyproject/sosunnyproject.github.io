@@ -53,3 +53,9 @@ Date: 2019-09-03
 <img src="timetable2.PNG" height="100%" width="auto">
 <figcaption></figcaption>
 </figure>
+
+## 인터렉티브 아트랩 부스
+
+![부스사진1](IMG_2662.JPG)
+![부스사진3](IMG_2657.JPG)
+![부스사진2](IMG_2649.JPG)
