@@ -30,10 +30,10 @@ export default function Home({ data }) {
     </p>
 
     <p className={containerStyles.indexBottom}>
-      Recently watched <span className={containerStyles.highlightSpan}>Enola Holmes </span>, 
+      Recently watched <span className={containerStyles.highlightSpan}>Queen's Gambit</span>, 
     read <span className={containerStyles.highlightSpan}>뉴턴의 아틀리에 </span>
     , bought <span className={containerStyles.highlightSpan}>Massage gun</span> <br />
-    - 2020/10/12 sosunnyproject
+    - 2020/11/15 sosunnyproject
     </p>
 
     </div>

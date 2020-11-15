@@ -1,4 +1,3 @@
-
 # to do list
 
 ## 기능
@@ -10,7 +9,7 @@
 - [ ] 다크 theme 추가하기
 - [ ] p5js로 홈페이지 모션그래픽 추가하기
 
-## 컨텐츠
+## 포트폴리오 페이지 컨텐츠
 - [ ] modulabs 풀잎스쿨 p5js natureofcode
 - [ ] 딥백수 발표 자료 https://www.slideshare.net/SoSunPark/ss-102987732
 - [ ] modulabs dlc 발표 
@@ -37,3 +36,20 @@
   - [x] jsconf 발표 자료
   - [x] 아트 / 테크 코딩 기초 관심 연락처 모집 구글 폼
   - [x] 삼성 soscon 발표 자료
+
+# basic commands for myself
+
+```bash
+# 업데이트
+$ git fetch
+$ git pull origin source
+
+# build in localhost 
+$ gatsby build
+$ gatsby serve
+
+# deploy to my github pages
+# https://www.gatsbyjs.com/docs/how-gatsby-works-with-github-pages/
+$ gatsby deploy
+
+```

@@ -51,8 +51,9 @@ li{
 }
 
 a {
-  text-decoration: underline wavy;
-  color: rgb(255,128,0);
+  text-decoration: none;
+  color:rgb(255,128,0);
+  box-shadow: 0 -0.5em rgba(255,128,0, 0.2) inset; 
 }
 
 /* index container */
