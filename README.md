@@ -50,6 +50,7 @@ $ gatsby serve
 
 # deploy to my github pages
 # https://www.gatsbyjs.com/docs/how-gatsby-works-with-github-pages/
-$ gatsby deploy
+# on  branch
+$  npm run deploy
 
 ```
