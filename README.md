@@ -15,7 +15,8 @@
 - [ ] modulabs dlc 발표 
 - [ ] zero1ne day + moducon
 - [ ] 레쥬메, vitae 디자인 구상
-
+- [ ] spark ar 테스트 링크 내보내기
+- [ ] spark ar eye color + bg segmentation layer order
 ---------------------------------------
 
 # Done: to do list
