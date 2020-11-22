@@ -2,12 +2,25 @@
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ * 
  */
 
 module.exports = {
   /* Your site config here */
   siteMetadata:{
-    title: `Title from siteMetadata`
+    title: `sosunnyproject | Personal Website · Portfolio · Dev Blog · Contact`,
+    // titleTemplate: "%s · The Real Hero",
+    description:
+      "creative coder, frontend developer, artist who code, interactive media art | 크리에이티브 코딩, 프론트엔드 개발자, 코딩하는 아티스트, 예술과 기술, 인터렉티브 미디어 아트",
+    url: "https://sosunnyproject.github.io", // No trailing slash allowed!
+    image: "/src/images/sosunny_logo.png", // Path to your image you placed in the 'static' folder
+    // twitterUsername: "",
+    contactEmail: "parksosun1103@gmail.com",
+    social: {
+      instagram: 'sosunnyproject',
+      linkedin: 'So Sun Park',
+      github: 'sosunnyproject'
+    }
   },
   plugins: [
     {
@@ -19,6 +32,12 @@ module.exports = {
           // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
           // "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-2903194989953506`
       },
     },
     {
@@ -55,6 +74,24 @@ module.exports = {
           'gatsby-remark-a11y-emoji',
           `gatsby-remark-prismjs`,
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "sosunnyrproject website",
+        short_name: "sosunnyproject",
+        start_url: "/",
+        // background_color: "#6b37bf",
+        // theme_color: "#6b37bf",
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // display: "standalone",
+        icon: "src/images/sosunny_logo.png", // This path is relative to the root of the site.
+        // An optional attribute which provides support for CORS check.
+        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
+        // Any invalid keyword or empty string defaults to `anonymous`
+        crossOrigin: `use-credentials`,
       },
     },
   ],
