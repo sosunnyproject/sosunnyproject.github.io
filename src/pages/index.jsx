@@ -31,9 +31,8 @@ export default function Home({ data }) {
 
     <p className={containerStyles.indexBottom}>
       Recently watched <span className={containerStyles.highlightSpan}>Queen's Gambit</span>, 
-    read <span className={containerStyles.highlightSpan}>뉴턴의 아틀리에 </span>
-    , bought <span className={containerStyles.highlightSpan}>Massage gun</span> <br />
-    - 2020/11/15 sosunnyproject
+    read <span className={containerStyles.highlightSpan}>북저널리즘</span>
+    , bought <span className={containerStyles.highlightSpan}>Chicken Breasts</span> <br />
     </p>
 
     </div>
