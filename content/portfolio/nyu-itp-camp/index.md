@@ -1,5 +1,5 @@
 ---
-title: Stars in Your Hands
+title: '[Exhibition] Stars in Your Hands'
 date: '2017-06-01'
 category: 'portfolio'
 ---

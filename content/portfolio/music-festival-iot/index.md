@@ -1,5 +1,5 @@
 ---
-title: '펜타포트 페스티벌 인터렉티브 라이팅 설치물'
+title: '[Lighting x Arduino] PentaPort Rock Festival Interactive Installation 펜타포트 락 페스티벌'
 date: '2017-08-17'
 category: 'portfolio'
 ---

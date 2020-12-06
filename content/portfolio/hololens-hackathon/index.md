@@ -1,5 +1,5 @@
 ---
-title: "MIT media lab: VR/AR Hackathon with Hololens"
+title: "[AR] MIT media lab: VR/AR Hackathon with Hololens"
 date: "2016-12-01"
 category: "portfolio"
 ---
