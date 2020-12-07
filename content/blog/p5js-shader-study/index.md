@@ -1,5 +1,13 @@
 
 
+ref
+- https://itp-xstory.github.io/p5js-shaders/#/
+- https://github.com/aferriss/p5jsShaderExamples
+- https://editor.p5js.org/hlp/sketches/ncJGM9DNj
+ - https://editor.p5js.org/hlp/sketches/FZPksI2Ii 
+- https://github.com/processing/p5.js/wiki/Global-and-instance-mode
+- shadertoy.com 
+
 # Let's Skim Through P5JS SHADERS documentation by ITPers :)
 
 ## Why Start Studying Shader?
@@ -64,3 +72,4 @@ function draw() {
 ## What I felt after following basic examples
 - the grammar feels just like java
 - excited to learn `setUniform` method which allows **User's input interactivity**
+

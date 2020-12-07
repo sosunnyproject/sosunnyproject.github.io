@@ -1,5 +1,5 @@
 ---
-title: 2020 SOSCON 삼성 오픈소스 컨퍼런스 발표 
+title: '[Talk] 2020 SOSCON Samsung OpenSource Conference 삼성 오픈소스 컨퍼런스 발표'
 date: '2020-10-14'
 category: 'portfolio'
 ---
