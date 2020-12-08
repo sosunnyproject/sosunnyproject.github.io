@@ -18,7 +18,7 @@ h1{
 
 h2 {
   font-family: 'raleway';
-  color: rgb(0, 102, 153);
+  color: rgba(52, 123, 0, 1);
   font-size: calc(20px + 0.25vw);
   font-weight: 800;
 }
@@ -31,7 +31,7 @@ h3 {
 }
 h4{
   font-family: 'raleway';
-  color: rgb(0, 102, 153);
+  color: rgba(52, 123, 0, 1);
 }
 
 p {
@@ -54,6 +54,10 @@ a {
   text-decoration: none;
   color:rgb(255,128,0);
   box-shadow: 0 -0.5em rgba(255,128,0, 0.2) inset; 
+}
+a:hover{
+  color: rgba(52, 123, 0, 1);
+  box-shadow: 0 -0.5em rgba(52, 123, 0, 0.2) inset; 
 }
 
 /* index container */
