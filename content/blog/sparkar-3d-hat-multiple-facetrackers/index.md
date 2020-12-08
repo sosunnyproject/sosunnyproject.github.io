@@ -1,4 +1,5 @@
 
+0. start from hat sample project 
 
 1. santa hat 3d object 
 - bought from sketch fab
@@ -19,17 +20,8 @@
 - duplicate facetracker
   - delete emitter face of second tracker
 - https://sparkar.facebook.com/ar-studio/learn/articles/people-tracking/tracking-more-than-one-face/#adding-more-face-trackers
-
-5. color lut
-- used josh beckwith's fastColorLutPatch 
-- canvas > rectangle 
-  - above faceTrackers (order)
-  - render pass: second box uncheck
-
-6. color lut native picker ui
-- https://sparkar.facebook.com/ar-studio/learn/tutorials/native-ui-picker/#the-unfinished-project
+- in patch editor, make sure you connect hat position, head occluder to each faceTracker
+- in patch editor, connect each facetracker to each 3d object hat
 
 ## ref
 - dan moller: https://www.youtube.com/watch?v=7i_V2K5XkUk 
-- maru studio: https://www.youtube.com/watch?v=033uM62blLw
-- josh beckwith: https://github.com/positlabs/spark-lut-patch 
