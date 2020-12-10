@@ -8,21 +8,21 @@
 module.exports = {
   /* Your site config here */
   siteMetadata:{
-    title: `sosunnyproject | Personal Website · Portfolio · Dev Blog · Contact`,
-    // titleTemplate: "%s · The Real Hero",
-    description:
-      "creative coder, frontend developer, artist who code, interactive media art | 크리에이티브 코딩, 프론트엔드 개발자, 코딩하는 아티스트, 예술과 기술, 인터렉티브 미디어 아트",
-    url: "https://sosunnyproject.github.io", // No trailing slash allowed!
-    image: "/src/images/sosunny_logo.png", // Path to your image you placed in the 'static' folder
-    // twitterUsername: "",
-    contactEmail: "parksosun1103@gmail.com",
-    social: {
-      instagram: 'sosunnyproject',
-      linkedin: 'So Sun Park',
-      github: 'sosunnyproject'
-    }
+    title: 'sosunnyproject | Personal Website · Portfolio · Dev Blog · Contact',
+    author: 'So Sun Park | sosunnyproject', // titleTemplate: "%s · The Real Hero",
+    description: 'creative coder, frontend developer, artist who code, interactive media art | 크리에이티브 코딩, 프론트엔드 개발자, 코딩하는 아티스트, 예술과 기술, 인터렉티브 미디어 아트',
+    siteUrl: 'https://sosunnyproject.github.io', // No trailing slash allowed!
   },
   plugins: [
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://sosunnyproject.github.io',
+        sitemap: 'https://sosunnyproject.github.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

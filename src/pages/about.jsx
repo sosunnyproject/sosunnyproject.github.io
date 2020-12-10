@@ -14,13 +14,3 @@ export default function About({ data }) {
   </Container>
   )
 }
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
