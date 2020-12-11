@@ -15,14 +15,14 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://sosunnyproject.github.io',
-        sitemap: 'https://sosunnyproject.github.io/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-robots-txt',
+    //   options: {
+    //     host: 'https://sosunnyproject.github.io',
+    //     sitemap: 'https://sosunnyproject.github.io/sitemap.xml',
+    //     policy: [{ userAgent: '*', allow: '/' }]
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

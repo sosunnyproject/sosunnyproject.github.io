@@ -22,6 +22,7 @@
 - https://sparkar.facebook.com/ar-studio/learn/articles/people-tracking/tracking-more-than-one-face/#adding-more-face-trackers
 - in patch editor, make sure you connect hat position, head occluder to each faceTracker
 - in patch editor, connect each facetracker to each 3d object hat
+- mkae sure you write the right index for each face tracker texture/material/position/rotation
 
 ## ref
 - dan moller: https://www.youtube.com/watch?v=7i_V2K5XkUk 
