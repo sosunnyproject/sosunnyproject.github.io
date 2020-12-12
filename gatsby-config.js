@@ -14,7 +14,58 @@ module.exports = {
     siteUrl: 'https://sosunnyproject.github.io', // No trailing slash allowed!
   },
   plugins: [
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options:{
+        query: `{
+          site {
+            siteMetadata {
+              description
+              title
+              siteUrl
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+          allMarkdownRemark {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                excerpt
+                headings {
+                  value
+                }
+              }
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+          let pages = []
+          allSitePage.edges.map(edge => {
+            pages.push({
+              url: site.siteMetadata.siteUrl + node.path,
+              changefreq: 'daily',
+              priority: 0.7
+            })
+          })
+          allMarkdownRemark.edges.map(edge => {
+            pages.push({
+              url: site.siteMetadata.siteUrl + node.path,
+              changefreq: 'daily',
+              priority: 0.7
+            })
+          })
+          return pages
+        },
+      },
+    },
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
     //   options: {
