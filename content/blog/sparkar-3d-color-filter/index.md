@@ -22,6 +22,13 @@
 - disadvantage: there is a gap between facemesh (for color lut) and the real facetexture
   - particles like snow may go throught this gap, and it looks like its cutting through your face
 
+9. particles going through, passing through or overlapping with face mesh
+- in my case, i created separate canvas, rect, and face mesh for color lut
+- then, my particles were going through the spaces between facemesh(color lut) and my real face object
+- i unchecked render options: depth of particles. 
+- Then, it created the effect of moving all the particles to the closest layer of camera. now it doesn't overlap between
+my face mesh layers. not going through eyes or mouth. 
+
 ## ref
 - dan moller: https://www.youtube.com/watch?v=7i_V2K5XkUk 
 - maru studio: https://www.youtube.com/watch?v=033uM62blLw
