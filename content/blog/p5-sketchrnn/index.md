@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "P5 x SketchRNN"
+title: "[p5js] SketchRNN with Javascript (feat. ml5js)"
 date: '2020-03-31'
 ---
 

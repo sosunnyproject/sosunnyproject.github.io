@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "Flexbox : flexbox froggy - CSS 플렉스"
+title: "[CSS] Studying CSS Flex with flexbox froggy | CSS 플렉스"
 date: "2020-03-11"
 ---
 

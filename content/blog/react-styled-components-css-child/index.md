@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "React CSS Styled Components: fixing first-child last-child problem"
+title: "[React] CSS Styled Components: fixing first-child last-child problem"
 date: '2020-12-13'
 ---
 

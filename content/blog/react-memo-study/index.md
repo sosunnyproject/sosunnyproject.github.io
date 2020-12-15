@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "React.useMemo 가볍게 살펴보기"
+title: "[React] React.useMemo 가볍게 살펴보기"
 date: '2020-07-05'
 ---
 

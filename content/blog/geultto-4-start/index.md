@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "2020 글또로 시작하는 블로그"
+title: "[Review] 2020 글또로 시작하는 블로그"
 date: '2020-02-29'
 ---
 

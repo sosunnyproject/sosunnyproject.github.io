@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "Review: 3 Months of Translating Storybook OpenSource"
+title: "[Review] 3 Months of Translating Storybook OpenSource"
 date: '2020-11-29'
 ---
 

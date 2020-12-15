@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "파인 다이닝 메뉴 디자인 코딩해보기"
+title: "[p5js] Make Logos with Creative Coding | 코딩으로 로고 만들기"
 date: '2020-04-05'
 ---
 

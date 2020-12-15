@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "2020 글또 5기 다짐글"
+title: "[Review] 2020 글또 5기 다짐글"
 date: '2020-11-15'
 ---
 
