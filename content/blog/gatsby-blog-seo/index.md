@@ -19,3 +19,8 @@ https://soobing.github.io/react/gatsby-seo/
 
 gatsby favicon
 https://medium.com/@itguymax/add-a-custom-icon-to-your-gatsby-site-in-just-a-few-a-minute-4e5b5f12ca40
+
+google search console
+
+gatsby js sitemap.xml google search console doesn't work
+http://jinyongjeong.github.io/2017/01/13/blog_make_searched/
