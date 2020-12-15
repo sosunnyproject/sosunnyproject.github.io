@@ -85,12 +85,12 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        publisherId: `ca-pub-2903194989953506`
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-adsense`,
+    //   options: {
+    //     publisherId: `ca-pub-2903194989953506`
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
