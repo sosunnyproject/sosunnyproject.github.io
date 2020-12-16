@@ -1,3 +1,6 @@
+the very first step
+https://www.gatsbyjs.com/tutorial/seo-and-social-sharing-cards-tutorial/
+
 https://www.gatsbyjs.com/docs/creating-a-sitemap/
 https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/?=sitemap
 

@@ -13,10 +13,6 @@ export default function Portfolio({ data }) {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         (node.frontmatter.category === 'portfolio') && 
             <div key={node.id}>
-              <SEO 
-                  title={node.frontmatter.title} 
-                  description={node.excerpt}
-                  pathname={node.fields.slug} />
               <Link to={node.fields.slug} >
                 <h3>
                   {node.frontmatter.title}

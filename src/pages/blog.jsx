@@ -3,7 +3,6 @@ import Header from "../components/header"
 import Container from "../components/container"
 import { Link, graphql } from "gatsby"
 import containerStyles from "../components/container.module.css"
-import SEO from "../components/seo"
 
 export default function Blog({ data }) {
   return (
@@ -13,10 +12,6 @@ export default function Blog({ data }) {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         (node.frontmatter.category === 'blog') && 
             <div key={node.id}>
-              <SEO 
-                title={node.frontmatter.title} 
-                description={node.excerpt}
-                pathname={node.fields.slug} />
               <Link to={node.fields.slug} >
                 <h3>
                   {node.frontmatter.title}
