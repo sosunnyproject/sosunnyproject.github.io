@@ -12,6 +12,7 @@ module.exports = {
     author: 'So Sun Park | sosunnyproject', // titleTemplate: "%s · The Real Hero",
     description: 'creative coder, frontend developer, artist who code, interactive media art | 크리에이티브 코딩, 프론트엔드 개발자, 코딩하는 아티스트, 예술과 기술, 인터렉티브 미디어 아트',
     siteUrl: 'https://sosunnyproject.github.io', // No trailing slash allowed!
+    keywords: [`blog`, `portfolio`, `reviews`, `frontend`]
   },
   plugins: [
     {
@@ -66,14 +67,14 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-robots-txt',
-    //   options: {
-    //     host: 'https://sosunnyproject.github.io',
-    //     sitemap: 'https://sosunnyproject.github.io/sitemap.xml',
-    //     policy: [{ userAgent: '*', allow: '/' }]
-    //   }
-    // },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://sosunnyproject.github.io',
+        sitemap: 'https://sosunnyproject.github.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -146,5 +147,6 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 }

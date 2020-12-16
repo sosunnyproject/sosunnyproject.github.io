@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Header from "../components/header"
 import containerStyles from "../components/container.module.css"
 import '../styles/global.css';
+import SEO from "../components/seo"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -14,6 +15,11 @@ export default function BlogPost({ data }) {
 
   return (
     <Container>
+      <SEO 
+        title={post.frontmatter.title} 
+        description={post.excerpt}
+        pathname={post.fields.slug} 
+      />
       <Header />
       <div className={containerStyles.postWrapper}>
         <h1>{post.frontmatter.title}</h1>
@@ -25,8 +31,18 @@ export default function BlogPost({ data }) {
 
 export const query = graphql`
   query($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
+      fields{
+        slug
+      }
       frontmatter {
         title
         category

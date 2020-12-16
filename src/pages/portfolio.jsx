@@ -3,6 +3,7 @@ import Header from "../components/header"
 import Container from "../components/container"
 import { Link, graphql } from "gatsby"
 import containerStyles from "../components/container.module.css"
+import SEO from "../components/seo"
 
 export default function Portfolio({ data }) {
   return (
@@ -12,6 +13,10 @@ export default function Portfolio({ data }) {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         (node.frontmatter.category === 'portfolio') && 
             <div key={node.id}>
+              <SEO 
+                  title={node.frontmatter.title} 
+                  description={node.excerpt}
+                  pathname={node.fields.slug} />
               <Link to={node.fields.slug} >
                 <h3>
                   {node.frontmatter.title}
@@ -28,6 +33,12 @@ export default function Portfolio({ data }) {
 
 export const query = graphql`
 query {
+  site {
+    siteMetadata {
+      title
+      author
+    }
+  }
   allMarkdownRemark(
     sort: {
       fields: [frontmatter___date,  frontmatter___title]
