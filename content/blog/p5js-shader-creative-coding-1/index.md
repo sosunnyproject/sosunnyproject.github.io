@@ -1,7 +1,7 @@
 ---
 category: 'blog'
 title: "[p5js] Studying Shader with Creative Coding (1)"
-date: "2020-12-19"
+date: "2020-12-18"
 ---
 
 ## Shader Study with ITPers Shader x P5 JS (1)

@@ -131,7 +131,41 @@ Depending on the location and spacing of these pins your shader can be stretched
 TexCoord is calculated in the vertex and passed from the vertex to the fragment shader, and then the texture coordinates of our shader are set to be equal to TexCoord.
 ```
 
+**TexCoord in .vert file**
+```glsl
+attribute vec2 aTexCoord;  // cpu/p5 to vert file
 
+varying vec2 vTexCoord; // to move texcoords from vert to frag shader
+
+void main() {
+  //copy the texture coordinates
+  vTexCoord = aTexCoord;
+}
+```
+
+**TexCoord in .frag file**
+```glsl
+// receive vTexCoord from vertex shader
+// ranges from 0.0 to 1.0
+varying vec2 vTexCoord;
+
+// use a value to access every pixel on the screen
+vec2 st = vTexCoord;
+
+```
+
+### FragCoord is used in fragement shader
+
+- Calculate the texture coordinates relative to the resolution uniform we passed it
+- You may see coordinates referred as uv, st, coord, etc. These are just different naming conventions.
+
+**FragCoord in .frag file**
+
+```glsl
+void main (void) {
+    vec2 st = gl_FragCoord.xy/u_resolution.xy;
+ }
+```
 
 ### Reference links
 - https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts
