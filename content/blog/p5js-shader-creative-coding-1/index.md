@@ -1,20 +1,12 @@
 ---
 category: 'blog'
-title: "[p5js] Studying Shader with Creative Coding"
-date: "2020-03-11"
+title: "[p5js] Studying Shader with Creative Coding (1)"
+date: "2020-12-19"
 ---
 
-ref
-- https://itp-xstory.github.io/p5js-shaders/#/
-- https://github.com/aferriss/p5jsShaderExamples
-- https://editor.p5js.org/hlp/sketches/ncJGM9DNj
- - https://editor.p5js.org/hlp/sketches/FZPksI2Ii 
-- https://github.com/processing/p5.js/wiki/Global-and-instance-mode
-- shadertoy.com 
+## Shader Study with ITPers Shader x P5 JS (1)
 
-# Let's Skim Through P5JS SHADERS documentation by ITPers :)
-
-## Why Start Studying Shader?
+### Why Start Studying Shader?
 
 I've been wanting to study shader since I saw a computer science course named 'computer graphics' when I was at college. I was learning Unity around that time,  so 'graphics' sounded so cool. Yet, my course schedule was already loaded and it seemed quite hard for me, who was neither majoring nor minoring CS at the time (I wish I knew this is a stupid reason though).
 
@@ -22,7 +14,7 @@ Later, I learned more about Unity, openframeworks, and other creative coding too
 
 It was always on my to do list. Finally, a week ago, I encountered some serious GPU / speed limitation while working on p5js WEBGL and 3D modes. Now I actually have an urge & full interest to start digging into SHADERS.
 
-## Shader is ...
+### Shader is ...
 
 - **faster**
 - [`a small program that runs entirely on your graphics card`](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders)
@@ -33,7 +25,7 @@ It was always on my to do list. Finally, a week ago, I encountered some serious 
 - [composed of .vert file and .frag file](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=the-anatomy-of-a-shader)
 
 
-## Understanding Few Terms and Concepts
+### Understanding Few Terms and Concepts
 
 - vertex
 - mesh: the complex shape that connected multiple vertexes, eg. Sphere 
@@ -43,7 +35,7 @@ It was always on my to do list. Finally, a week ago, I encountered some serious 
 - vec3 aPosition: the attribute that has 3 vectors and tells a pixel its location on the canvas
 - void main() : the name of function where the program starts
 
-## How to Use Shader with P5JS ?
+### How to Use Shader with P5JS ?
 
 1. no need to add .vert and .frag filenames on index.html. `<script>` tag can load javascript file only, so it doesn't understand shader files anyway
 
@@ -51,7 +43,7 @@ It was always on my to do list. Finally, a week ago, I encountered some serious 
 
 This is the code I got from [p5js shaders glitch example](https://glitch.com/edit/#!/normal-coord-vs-normalized?path=sketch.js%3A1%3A0)
 
-```
+```js
 let theShader;
 
 function preload(){
@@ -70,10 +62,16 @@ function draw() {
   rect(0,0,width,height);
 }
 ```
-3. checkout [this built in shader method](https://p5js.org/reference/#/p5/shader) in p5js API
+3. checkout [this built-in shader method](https://p5js.org/reference/#/p5/shader) in p5js API
 
-
-## What I felt after following basic examples
+### What I felt after following basic examples
 - the grammar feels just like java
 - excited to learn `setUniform` method which allows **User's input interactivity**
 
+### Reference
+- https://itp-xstory.github.io/p5js-shaders/#/
+- https://github.com/aferriss/p5jsShaderExamples
+- https://editor.p5js.org/hlp/sketches/ncJGM9DNj
+- https://editor.p5js.org/hlp/sketches/FZPksI2Ii
+- https://github.com/processing/p5.js/wiki/Global-and-instance-mode
+- shadertoy.com 
