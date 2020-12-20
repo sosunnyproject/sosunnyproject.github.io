@@ -23,3 +23,8 @@
   font-family: "Cafe24Simple";
   src: url("../fonts/Cafe24Simplehae.ttf");
 }
+
+@font-face {
+  font-family: 'SanFrancisco';
+  src: url("../fonts/SFUIText-Light.otf")
+}
