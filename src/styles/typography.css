@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "NuriR";
+  src: url("../fonts/HangeulNuriR.ttf");
+}
+
+@font-face {
+  font-family: "NuriB";
+  src: url("../fonts/HangeulNuriB.ttf");
+}
+
+@font-face {
+  font-family: "MapleBold";
+  src: url("../fonts/Maplestory\ Bold.ttf");
+}
+
+
+@font-face {
+  font-family: "MapleLight";
+  src: url("../fonts/Maplestory\ Light.ttf");
+}
+
+@font-face {
+  font-family: "Cafe24Simple";
+  src: url("../fonts/Cafe24Simplehae.ttf");
+}

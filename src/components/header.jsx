@@ -5,14 +5,6 @@ import instagramSVG from "../images/instagram.svg"
 import linkedinSVG from "../images/linkedin (1).svg"
 import githubSVG from "../images/github-pixel-perfect.svg"
 import youtubeSVG from "../images/youtube-pixel-perfect.svg"
-import "typeface-merienda"
-import "typeface-montserrat"
-import "typeface-rock-salt"
-import "typeface-roboto"
-import "typeface-open-sans"
-import "typeface-raleway"
-import "typeface-bungee-shade"
-import "typeface-bangers"
 
 export default function Header() {
   return <div className={headerStyles.headerContainer}>

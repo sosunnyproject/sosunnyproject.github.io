@@ -4,13 +4,6 @@ import Container from "../components/container"
 import containerStyles from "../components/container.module.css"
 import { Link } from "gatsby"
 import '../styles/global.css';
-import "typeface-open-sans"
-import "typeface-raleway"
-import "typeface-merienda"
-import "typeface-montserrat"
-import "typeface-roboto"
-import "typeface-bungee-shade"
-import "typeface-bangers"
 
 export default function Vitae() {
   return (
