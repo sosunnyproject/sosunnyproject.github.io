@@ -93,6 +93,14 @@ module.exports = {
     //   },
     // },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Merienda', 'Montserrat', 'Open Sans', 'Roboto', 'Quicksand', 'Rock Salt', 'Raleway', 'Bungee Shade', 'Black Han Sans', 'Noto Serif KR', 'Droid Sans', 'Droid Serif']
+        }
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,

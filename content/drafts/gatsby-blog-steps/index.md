@@ -36,3 +36,12 @@ pre code {
     white-space: break-spaces !important;
 }
 ````
+
+fonts
+- https://www.gatsbyjs.com/plugins/gatsby-plugin-web-font-loader/?=google-fonts
+
+- https://github.com/KyleAMathews/typefaces
+
+- different font-family for different languages
+
+- https://www.gatsbyjs.com/docs/how-to/styling/using-local-fonts/

@@ -1,19 +1,19 @@
+@import 'typography.css';
+@import 'precode.css';
+
 html {
     background-color: white;
 }
-pre{
-  width: 100%;
-  background: beige;
-  border-radius: 1px;
+pre {
+  width: auto;
 }
-
 pre code {
     white-space: break-spaces !important;
 }
 
 figcaption {
   font-size: calc(10px + 0.5vw);
-  color:rgb(0, 102, 153);
+  color:#19FF7B;
   letter-spacing: calc(0.005px + 0.05vw);
   margin-bottom:calc(20px + 0.5vw);
 }

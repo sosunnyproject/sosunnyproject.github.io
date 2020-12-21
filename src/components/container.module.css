@@ -5,43 +5,45 @@ This is how you tell Gatsby that this CSS file
 should be processed as a CSS module 
 rather than plain CSS. */
 
+@import '../styles/global.css';
+
 .container {
   margin: calc(10px + 1vw) calc(10px + 1vw);
 }
 
 h1{
-  font-family: 'raleway';
-  color: rgb(255,128,0); /* rgb(0, 102, 153); */
+  font-family: 'raleway', 'MapleBold';
+  color:  #A119FF; /* rgb(0, 102, 153); */
   font-size: calc(22px + 0.25vw);
   font-weight: 800;
 }
 
 h2 {
-  font-family: 'raleway';
-  color: rgba(52, 123, 0, 1);
+  font-family: 'raleway', 'MapleBold';
+  color: rgb(72,3,140); /*rgba(52, 123, 0, 1); */
   font-size: calc(20px + 0.25vw);
   font-weight: 800;
 }
 
 h3 {
-  font-family: 'raleway';
-  color: rgb(255,128,0);
+  font-family: 'raleway', 'MapleBold';
+  color: #A303A6;
   font-size: calc(18px +  0.25vw);
   font-weight: 800;
 }
 h4{
-  font-family: 'raleway';
-  color: rgba(52, 123, 0, 1);
+  font-family: 'raleway', 'MapleBold';
+  color: #F2059F;
 }
 
 p {
-  font-family: 'open sans';
+  font-family: 'SanFrancisco', 'MapleLight';
   font-size: calc(16px + 0.1vw);
   line-height: calc(26px + 0.1vw);
   /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 li{
-  font-family: 'open sans';
+  font-family: 'SanFrancisco', 'MapleLight';
   font-size: calc(16px + 0.1vw);
   line-height: calc(26px + 0.1vw);
 }
@@ -52,22 +54,23 @@ li{
 
 a {
   text-decoration: none;
-  color:rgb(255,128,0);
-  box-shadow: 0 -0.5em rgba(255,128,0, 0.2) inset; 
+  color: #A119FF;
+  box-shadow: 0 -0.5em rgba(161,25,255,0.2) inset; 
 }
 a:hover{
-  color: rgba(52, 123, 0, 1);
-  box-shadow: 0 -0.5em rgba(52, 123, 0, 0.2) inset; 
+  color: #19FF7B;
+  box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset; 
 }
 
 /* index container */
-
+.index {
+  padding: 10px;
+}
 .index p{
   font-size: calc(24px + 1vw);
   line-height: 1.5;
   color: gray;
   font-family: 'raleway';
-  margin-bottom: calc(5px + 1vw);
 }
 @media screen and (max-width: 500px) {
   .index p{
@@ -80,7 +83,11 @@ a:hover{
   font-family: 'bungee shade';
   line-height: 1.5;
 }
-
+.index a {
+  box-shadow: none;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
 .highlightSpan {
   display: inline-block;
   font-family: 'bungee shade';
@@ -88,7 +95,7 @@ a:hover{
 }
 
 .index .indexBottom {
-   font-size: calc(16px + 1vw);
+   font-size: calc(16px + 0.5vw);
 }
 /* blog portfolio list pages */
 .postList {
@@ -109,6 +116,8 @@ a:hover{
   margin-bottom: 0.5em;
   font-weight: 600;
   font-size: calc(16px + 0.25vw);
+  color: #A119FF;
+  font-family: 'raleway', 'MapleBold';
 }
 .postList h4 {
   margin: 0;
@@ -137,3 +146,23 @@ a:hover{
   line-height: calc(26px + 0.1vw);
   font-size: calc(16px + 0.1vw);
 }
+
+/* pre {
+  width: auto;
+  margin: 0 !important;
+  background-color: #000000;
+}
+
+code[class*="language-"]{
+  color: #ffb84e;
+}
+
+code[class="language-text"] {
+  background-color: #ffb84e;
+  color: green;
+}
+
+pre[class="language-text"] code[class="language-text"]{
+  background-color: #ffb84e;
+  font-weight: 700;
+} */
