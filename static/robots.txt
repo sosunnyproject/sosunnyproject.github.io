@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://sosunnyproject.github.io/sitemap.xml
+Host: https://sosunnyproject.github.io
