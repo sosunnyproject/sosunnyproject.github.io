@@ -56,13 +56,6 @@ module.exports = {
               priority: 0.7
             })
           })
-          allMarkdownRemark.edges.map(edge => {
-            pages.push({
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: 'daily',
-              priority: 0.7
-            })
-          })
           return pages
         },
       },
