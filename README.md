@@ -2,6 +2,8 @@
 
 ## 기능
 - [ ] *SEO 최적화*
+- [x] seo - share : title, image cards
+- [ ] thumbnail images for post list
 - [x] *구글 애널리틱스 추가*
 - [x] google search console
 - [x] sitemap.xml
