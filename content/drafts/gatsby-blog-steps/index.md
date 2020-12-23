@@ -43,3 +43,5 @@ fonts
 - https://github.com/KyleAMathews/typefaces
 
 - different font-family for different languages
+
+- https://www.gatsbyjs.com/docs/how-to/styling/using-local-fonts/
