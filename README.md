@@ -8,7 +8,7 @@
 - [x] google search console
 - [x] sitemap.xml
 - [ ] *댓글 기능 추가*
-- [ ] 구글 애드 센스 추가
+- [ ] 구글 애드 센스 추가 (보류)
 - [ ] 한글/영어 전환 버튼 추가하기
 - [ ] 다크 theme 추가하기
 - [ ] p5js로 홈페이지 모션그래픽 추가하기
@@ -21,7 +21,7 @@
 - [ ] 레쥬메, vitae 디자인 구상
 
 ## blog tutorials
-- [ ] youtube tutorials
+- [ ] youtube tutorials - apple watch activity app logo
 - [ ] spark ar 테스트 링크 내보내기
 - [ ] spark ar eye color + bg segmentation layer order
 ---------------------------------------
