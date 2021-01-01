@@ -1,5 +1,8 @@
 # to do list
 
+## vitae
+- [ ] stibee 구독 한글 (https://page.stibee.com/subscriptions/97941) 
+- [ ] 구글 폼 영문 등록 (https://forms.gle/Aw5RUKAr6Nr3S3W27)
 ## 기능
 - [ ] *SEO 최적화*
 - [x] seo - share : title, image cards
