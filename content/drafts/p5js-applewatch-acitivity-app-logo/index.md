@@ -103,4 +103,97 @@ To my circle. I don’t want that. so im using this function called noStroke().
 
 ## Draw 3 circles with for loop in p5js
 
+- Colors array
+- For loop
+- Ellipse parameter x: why size*I, size + size* I 
 
+Before we start, if you are completely new to programming, 
+I highly recommend you to go search these terms, variable, for loop, and array of javascript.
+Google would throw you thousands of websites and blogs, and im sure they are amazing, 
+But I would personally recommend khan academy or codecademy. 
+
+1. Very first step to understand this code is making an array called colors. 
+Array is one of data types in computer science and it is a list-like object. In most programming languages, we call the order of array as index, which means we access each element in the array by calling the index of that element. And the index of array starts with number 0.
+So we can use this first element by calling colors[0], colors[1], colors[2].
+
+2. Next step is for loop, which is very important programming logic you’d get used to, especially when you want to repeat certain actions. In this case, our repetitive action is drawing multiple circles. 
+
+Just like its name, we may understand this for loop as in,  execute this code inside the bracket over and over again, ‘for’ a certain number of times. 
+And we define this ‘certain number of times’ and conditions of for loop inside this parenthesis, written right next to the word for.
+
+Inside parenthesis, there are 3 crucial information divided by semicolon.
+Here the first part is initialization. We initialize the starting index of this for loop. 
+You can start from 0, or 1, or 10. Whatever you want.
+Next part is condition. 
+Repeat this code over and over , but we also wanna make it stop at some point. Otherwise your computer would get overwhelmed of infinite work. 
+This code Block will get executed as long as this condition stays true. 
+
+Last part is incrementing or decreasing the index of for loop.
+- ++ means +1
+- — means -1
+If you wanna increment by adding 2 you would write like this I+=2 which means I = I+2
+Decrement by subtracting 3, you’d write I -= 3 , I = I-3
+
+Here, I started the index of for loop with 0, because I wanna use this index value 
+To access each color in my colors array, which start from 0 index. 
+
+And since I only want 3 circles, which is as same as the numbers of elements in my colors array, 
+I set my condition to 3. I declared this variable called Len as 3, and using it here. 
+But more common practice would be writing colors.length which is 3. 
+Just a quick tip is, don’t get confused with your index of array and the length of array. 
+Length of array means how many elements are there in your array.
+But index starts from 0, so your array’s last index would always be different from the length of array.
+
+If you’re little confused with how for loop, I highly recommend you to look up khan academy or codecademy. 
+
+Let’s lay out how this for loop works here to clarify for all of you. 
+- This index starts from 0. 
+- We set the color as colors[0], and draw ellipse.
+- At the end of code execution, I gets incremented by 1.
+
+And now our index is updated is to 1.
+Checking condition, this I is still smaller than 3., so we are not stopping. 
+After this code execution, I gets incremented. 
+
+And now our I is updated is to 2.
+Checking condition, I is smaller than 3
+After this code execution, it is incremented, and now 3. 
+
+This I variable is 3, so this condition is false, so we are stopping the loop. 
+
+Before we end this section, 
+One more thing we need to pay attention to. 
+Do you see the first parameter of my ellipse function?
+
+It’s not 0, but size*I .
+Because of this, our circles are not overlapped to each other, and rather
+Beautifully aligned like this. 
+
+This is because the value of size*I generates 
+different x coordinate for each circle.
+
+The size variable is defined at the top of this code. And im using it 
+As width and height diameter of ellipse. 
+
+Quick reminder, ellipse function’s parameters are x, y, width, height values.
+If you don’t remember it, 
+Please refer to my previous tutorial or p5js official reference page.
+
+In this for loop, 
+I gets updated from 0 to 1 and then 2.
+
+So this first circle’s x coordinate is size* 0 , which is 0.
+Second circle: size * I = 50 * 1 . 
+Last circle is size 50 * I 2.= 100.
+If we make x coordinate something bigger than a diameter of circle, 
+Let’s say give width height values as 50
+But change the multiplier of x coordinate as 55, 60
+The circles would have some gap between one another.
+If we make 45 30, something less than diameter, they would be overlapped.
+ 
+You can move these circles by changing the x and y coordinate values
+Of this ellipse function, 
+
+But that’s not the only way,
+I used translate() function in my Activity App Logo creative coding challenge,
+ And I will explain it further in the next tutorial video.
