@@ -101,6 +101,19 @@ And stroke() function allows you to change the outline color of a shape.
 I don’t think I need this. But if I don’t write anything, it automatically give a default stroke color
 To my circle. I don’t want that. so im using this function called noStroke().
 
+In addition, let’s try changing the parameters of ellipse function
+And see what we get. 
+When changing x or y coordinates, just be aware that you might wanna
+Write the number that is less than width or height value of canvas size, 
+Which is 400 pixel in this case.
+If you change the width or height values of ellipse function, you can get
+Oval shape, bigger circle, or smaller circle. 
+This is a little more advanced example, if you don’t know what’s happening 
+Don’t worry we will cover this later. 
+If you feel like you wanna play around like this right now, go search mouseX and mouseY in reference page.
+I will show you a quick example of playing around with 
+Fill, noFill, stroke, noStroke functions. Please go ahead and change yours too!
+
 ## Draw 3 circles with for loop in p5js
 
 - Colors array
@@ -196,4 +209,184 @@ Of this ellipse function,
 
 But that’s not the only way,
 I used translate() function in my Activity App Logo creative coding challenge,
- And I will explain it further in the next tutorial video.
+And I will explain it further in the next tutorial video.
+
+```js
+// Size + size * I 
+ellipse(size * I, 0, size, size)
+ellipse(size + size * I, 0, size, size)
+```
+Last but not least, In my final code, 
+There is one little difference in ellipse function’s first parameter, which is x coordinate of circle.
+Final version’s x coordinate is size + size * I variable.
+Now if I don’t add this size variable, as you can see ,
+The first circle is at the center of canvas, and we cannot see
+It rotating around like other ones.
+In order to give some empty space in the very center of these spirals,  
+just like activity app’s logo, we are adding size variable.
+Also, as I explained few minutes, the first circle of which I value is 0.
+If we don’t add size variable, then the first blue circle’s coordinate will be 0.
+But as soon as we add this size variable, now it is little apart from the center of this canvas.
+You may better understand this after you learn the translate function in my next video.
+
+## Move circles, Rotate Circles: Spiral Animation
+1. translate() method
+
+Now we know how to draw 3 circles with for loop.
+Final step is giving some life to these circles, which means make a motion
+Or animation of shapes. After that, it would almost look like motion graphics.
+
+As I mentioned in the previous section, you can move these circles
+By using the function called translate. 
+
+Let’s see what happens first when we write translate vs when we don’t write translate
+
+If you’re already familiar with html canvas, you might have heard of this method. If you haven’t yet, that’s totally fine, im just giving out extra information cuz at some point I do wanna deep dive into html canvas and vanilla javascript, because ultimately that is what p5js library is controlling behind the screen. 
+
+Let’s go back to Reference page, and read the description of translate function.
+
+To make sure we’re on the same page, the coordinate of p5js canvas looks like this. Fyi, This coordinate system is same with html canvas.
+Left corner is 0, 0. X gets bigger as you go right.
+Y gets bigger as you go down. When we draw a shape or do sth with coordinates, the default position is 0, 0.
+
+This section, y has minus value, and this section, x has minus value.
+When you start doing webgl, or 3d environment in p5js, this coordinate system will get changed, so just be aware of that. 
+
+1. First example code
+Let’s comment this out and see what we get. our rectangle function’s x y coordinate values are 0, and our default coordinate starts from 0, 0. So this is where rectangle belongs.
+But when we use translate function. Tada. Even though 0, 0 parameter values are still same in rectangle function, the shape is no longer at 0, 0.
+It’s because (move to online painter)
+The coordinate of this canvas is now moved to here. because of translate function, this point 30, 20 is now 0, 0 of this canvas system.
+
+Let’s look at 2nd example. This shows what description explained about transformations being cumulative.
+So there is two translate functions. 
+Let me draw this. 
+First translate function moved the coordinate system to here. 
+And now, in this world, 0, 0 is here. 
+So this second translate function moves the canvas based on current 0, 0 which is here. 
+After the second translate, our coordinate system is located like this.
+
+if you wanna draw rectangle up here Or here, you’d have to use minus values. 
+
+Now the last example, this is gonna be difficult and interesting, also THIS would be a good example to understand dynamic motions. In my final  code, I used rotate function to make the rotate the circles, but this is another possibility you can play around with.
+
+Width, height variables are  system variables or reserved variables in p5js world. 
+Just like frameCount, you don’t need to declare or define system variables like width and height. These are just given, and p5js already knows what to return when you use these.
+
+Here, we created the canvas size of 400 px by 400 px. 
+Now p5js instantly understands this, and assign each 400 to properties called width and height.
+
+As the description says, if we don’t use createCanvas to set our canvas size, it will make the canvas default as 100px, 100px. So console.log prints out width and height as 100.
+
+To get the center of canvas, write width/2, height/2
+
+And next part,
+I am going to skip details for now, because it contains too many new things we have to learn. 
+But if you wanna take a deep dive, please remember that this 
+p5.Vector is a class, 
+You can use this fromAngle function along with p5.Vector, 
+And this returns a vector which is a object that holds x and y coordinate values. 
+Just like you see in this console.log
+
+Here, the rectangle is moving, because millis() function returns a current milliseconds value, which obviously changes every miliseconds. 
+
+
+Since this canvas’s coordinate is once moved to the center of canvas, It makes sense that this changing x coordinate value allows the rectangle to move around the center.
+
+If you change this denominator to 500, it renders fast, 
+If we change the y coordinate, 40 to sth else, it gets closer to or farther from our 0, 0 coordinate, which is again translated to the center of canvas
+
+2. Push() pop() 
+Next, we’re gonna learn push and pop
+If you paid close attention to the description of translate function, you’d notice it mentioning them in the bottom.
+
+Let’s see what happens first when we write push pop vs when we don’t write them.
+
+Push functions saves the current settings and transformations, while pop restores, basically resets these settings. They are always used together. 
+Right after push, You can change the style and transformation settings of the canvas, and after pop, you return to previous version of your canvas.
+
+When I first saw these, I didn’t entirely know how to play with this. But certain computer science knowledge that I had back in my college years was pretty useful. let me share just in case it helps you too.
+
+When you learn data structure or browser rendering, you will probably hear this concept called stack. 
+
+What I’m gonna explain now would be similar to browser’s call stack. 
+If you are not aware of any of those, don’t worry, Im not gonna go too deep. 
+If you want to research more by yourself, I recommend you to search in these keywords: javascript call stack, javascript event loop, and push pop stack javascript
+But this image will help you to visualize what’s happening behind the screen.
+
+To apply this image to our case, I will make some specific analogy. 
+
+Let’s say this empty stack is our browser’s to do list, which renders and draws a canvas.
+This blue square is certain action that p5js asks the browser to execute, for example fill the color or draw a circle.
+
+When the function push runs, this part of code, goes into the stacks of browser’s to do list. 
+When the function pop runs, this action gets finished and no longer valid.
+
+Let’s look at the first example. 
+The circle in the middle is colored but not the others.
+We could write noFill, fill, then noFill again.
+
+But instead, we can simply use push and pop. 
+Inside push and pop, it described how to draw the circle in the middle. 
+Giving thick stroke lines, fill the color, move the coordinate, draw an ellipse
+And then pop makes all those drawing requests to disappear.
+
+After pop, it draws third ellipse, but all the settings of second ellipse, 
+which was inside push and pop function, disappeared.
+
+Because code between push/pop is basically popped out of to do list, so the browser doesn’t execute that anymore.
+
+3. rotate() 
+
+ROTATE
+
+Next is rotate, because in this tutorial, we ultimately want these circles to actually move and generate spiral animation.
+
+Let’s see what happens first when we write rotate vs when we don’t write rotate.
+Also, I will show you how canvas changes when rotate function is inside or outside of push/pop.
+
+There is a subtle different when we write rotate outside and inside of push/pop.
+Rotate function is giving the angle value to the canvas to rotate the circles.
+If we write rotate function outside of push pop, the rotation angle value gets accumulated and applied to all shapes.
+Just like it says on the official documentation.
+So it seems little bit faster.
+
+But if we write it inside push/pop, rotation angle gets reset after each for loop of drawing a circle.
+
+Also, when you move around rotate function based on my code, be aware that I variable is no longer defined outside of for loop, so you have to change the parameter value of rotate function.
+
+In addition, we need to pay close attention to translate function as well when we use rotate function.
+Because the shapes are always rotated around their relative position to the origin. 
+And translate function sets the new origin you want. S
+o if you don’t explicitly call translate function, the canvas would rotate the shape around the 0, 0 coordinate which is the default origin  of canvas.
+
+Rotate function rotates a shape by amount specified by the angle parameter,
+Based on the setting angleMode, this amount unit gets calculated differently.
+
+Default mode of p5js is RADIANS. 
+By using function called angleMode, you can set the angle type of your
+Canvas to eatery RADIANS or DEGREES in p5js environment.
+There are lots of system variables and functions related to this, 
+So please look up these in the reference page.
+
+Just a quick note, you’d commonly put values like 60, 90, 180, 360 for degrees setting. And PI, PI/3, TWO PI for RADIANS mode.
+
+4. Background opacity control
+
+Last but not least, changing the opacity of background.
+
+Here, I initially gave only one parameter to the background which generates
+Gray value, between black and white. 
+If I give second parameter, the background function’s syntax understands that
+I wanna pass in opacity value.
+Opacity or alpha value ranged from 0 to 255.
+And the more I make the background of canvas transparent, 
+you see more traces of rotating circles.
+
+This is because  whenever a draw function runs,
+ the background  function, which we wrote as a very first line of draw function, 
+gets executed.
+This means that Background function paints the entire canvas. it basically erases all the circles
+Every certain milliseconds.
+Therefore, if we make that background color quite transparent, we can still see the previous circles 
+That previous draw functions drew on the canvas.
