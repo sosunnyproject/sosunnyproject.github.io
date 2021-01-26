@@ -24,10 +24,10 @@ export default function Home({ data }) {
 
       <p className={containerStyles.indexBottom}>
       Recently watched <span className={containerStyles.highlightSpan}>
-        Queen's Gambit, BLACKPINK on Netflix
+        Bridgerton
       </span>, 
       read <span className={containerStyles.highlightSpan}>
-        부의 대이동
+        Big Debt Crisis
       </span>
       , donated to <span className={containerStyles.highlightSpan}>
         <a href="https://www.goodneighbors.kr/business/korea_welfare/childcare.gn" rel="noreferrer" target="_blank">
