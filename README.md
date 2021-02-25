@@ -4,6 +4,7 @@
 - [ ] stibee 구독 한글 (https://page.stibee.com/subscriptions/97941) 
 - [ ] 구글 폼 영문 등록 (https://forms.gle/Aw5RUKAr6Nr3S3W27)
 - [ ] shop 기능 
+- [ ] reference 아카이브 기능: three.js 작업들, ex. https://billie.withyoutube.com/
 ## 기능
 - [ ] *SEO 최적화*
 - [x] seo - share : title, image cards
