@@ -9,8 +9,6 @@ export default function Vitae() {
   return (
   <Container>
     <Header />
-
-
     <div className={containerStyles.index}>
     <h1>coming soon </h1>
 
@@ -24,8 +22,8 @@ export default function Vitae() {
     </p>
 
     <p>
-      유튜브에 작업 영상과 튜토리얼을 올리고, 트위치를 통해 크리에이티브 코딩 101 스터디를 진행할 계획이 있습니다. 
-      관심있으신 분들은 <a target="_blank" rel="noreferrer" href="https://forms.gle/F7MP8cPW8J7aUWfq6">구글폼</a>을 작성해주시면 모집 시 연락드리겠습니다 :)
+			<a target="_blank" rel="noreferrer" href="https://www.youtube.com/artistwhocode">유튜브에 작업 영상과 튜토리얼을 업로드</a>하고, 2-3주마다 라이브로 크리에이티브 코딩 101 스터디를 진행하고 있어요. 
+			관심있으신 분들은 <a target="_blank" rel="noreferrer" href="https://maily.so/artistwhocode/">뉴스레터를</a> 구독해주세요 :)
       기타 문의사항은 인스타그램 메세지로 연락주세요.
     </p>
 
@@ -34,7 +32,7 @@ export default function Vitae() {
     </p>
 
     <p className={containerStyles.indexBottom}>
-     - 2020/12/30 박소선
+     - 2021.March.2 박소선
     </p>
 
     </div>
