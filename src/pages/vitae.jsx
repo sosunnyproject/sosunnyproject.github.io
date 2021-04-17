@@ -23,7 +23,7 @@ export default function Vitae() {
 
     <p>
 			<a target="_blank" rel="noreferrer" href="https://www.youtube.com/artistwhocode">유튜브에 작업 영상과 튜토리얼을 업로드</a>하고, 2-3주마다 라이브로 크리에이티브 코딩 101 스터디를 진행하고 있어요. 
-			관심있으신 분들은 <a target="_blank" rel="noreferrer" href="https://maily.so/artistwhocode/">뉴스레터를</a> 구독해주세요 :)
+			관심있으신 분들은 <a target="_blank" rel="noreferrer" href="https://maily.so/sosunnyproject/">뉴스레터를</a> 구독해주세요 :)
       기타 문의사항은 인스타그램 메세지로 연락주세요.
     </p>
 
