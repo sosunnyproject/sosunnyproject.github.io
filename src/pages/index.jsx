@@ -24,10 +24,14 @@ export default function Home({ data }) {
 
       <p className={containerStyles.indexBottom}>
       Recently watched <span className={containerStyles.highlightSpan}>
-        Bridgerton
+        <a href="https://www.youtube.com/watch?v=3s0LTDhqe5A" rel="noreferrer" target="_blank">
+          My Octopus Teacher
+        </a>
       </span>, 
       read <span className={containerStyles.highlightSpan}>
-        Big Debt Crisis
+        <a href="https://www.youtube.com/watch?v=vlfda_doSd4" rel="noreferrer" target="_blank">
+        The Upward Spiral 우울할땐 뇌과학
+        </a>
       </span>
       , donated to <span className={containerStyles.highlightSpan}>
         <a href="https://www.goodneighbors.kr/business/korea_welfare/childcare.gn" rel="noreferrer" target="_blank">
