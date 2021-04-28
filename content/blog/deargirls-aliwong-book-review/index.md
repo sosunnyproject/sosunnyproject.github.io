@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "Dear Girls by Ali Wong"
+title: "[Review] Dear Girls by Ali Wong"
 date: '2020-05-24'
 ---
 

@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "How to Make Best Out of Your Stress"
+title: "[Review] How to Make Best Out of Your Stress"
 date: '2020-06-07'
 ---
 

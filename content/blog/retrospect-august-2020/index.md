@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title: "글또 및 상반기 회고"
+title: "[Review] 글또 및 상반기 회고"
 date: '2020-08-16'
 ---
 
