@@ -12,38 +12,35 @@ rather than plain CSS. */
 }
 
 h1{
-  font-family: 'raleway', 'MapleBold';
+  font-family: 'raleway', 'gmarketMedium';
   color:  #A119FF; /* rgb(0, 102, 153); */
   font-size: calc(22px + 0.25vw);
-  font-weight: 800;
 }
 
 h2 {
-  font-family: 'raleway', 'MapleBold';
+  font-family: 'raleway', 'gmarketMedium';
   color: rgb(72,3,140); /*rgba(52, 123, 0, 1); */
   font-size: calc(20px + 0.25vw);
-  font-weight: 800;
 }
 
 h3 {
-  font-family: 'raleway', 'MapleBold';
+  font-family: 'raleway', 'gmarketMedium';
   color: #A303A6;
   font-size: calc(18px +  0.25vw);
-  font-weight: 800;
 }
 h4{
-  font-family: 'raleway', 'MapleBold';
+  font-family: 'raleway', 'gmarketMedium';
   color: #F2059F;
 }
 
 p {
-  font-family: 'SanFrancisco', 'MapleLight';
+  font-family: 'SanFrancisco', 'ridiBatang';
   font-size: calc(16px + 0.1vw);
   line-height: calc(26px + 0.1vw);
   /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 li{
-  font-family: 'SanFrancisco', 'MapleLight';
+  font-family: 'SanFrancisco', 'ridiBatang';
   font-size: calc(16px + 0.1vw);
   line-height: calc(26px + 0.1vw);
 }
@@ -117,7 +114,7 @@ a:hover{
   font-weight: 600;
   font-size: calc(16px + 0.25vw);
   color: #A119FF;
-  font-family: 'raleway', 'MapleBold';
+  font-family: 'raleway', 'gmarketMedium';
 }
 .postList h4 {
   margin: 0;

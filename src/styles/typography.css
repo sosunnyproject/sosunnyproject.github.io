@@ -1,4 +1,22 @@
 @font-face {
+  font-family: "ridiBatang";
+  src: url("../fonts/RIDIBatang.otf");
+}
+
+@font-face {
+  font-family: "gmarketBold";
+  src: url("../fonts/GmarketSansBold.otf");
+}
+@font-face {
+  font-family: "gmarketLight";
+  src: url("../fonts/GmarketSansLight.otf");
+}
+@font-face {
+  font-family: "gmarketMedium";
+  src: url("../fonts/GmarketSansMedium.otf");
+}
+
+@font-face {
   font-family: "NuriR";
   src: url("../fonts/HangeulNuriR.ttf");
 }

@@ -2,13 +2,19 @@
 @import 'precode.css';
 
 html {
-    background-color: white;
+  background-color: white;
 }
 pre {
   width: auto;
 }
 pre code {
-    white-space: break-spaces !important;
+  white-space: break-spaces !important;
+}
+blockquote {
+  background-color: #F6EFFF;
+}
+blockquote blockquote p {
+  font-family: 'raleway', 'gmarketMedium';
 }
 
 figcaption {
