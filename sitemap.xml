@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://sosunnyproject.github.io/blog/newstart-2021/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/blog/react-styled-components-css-child/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/blog/retrospect-august-2020/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/blog/react-memo-study/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -14,7 +15,6 @@
 <url> <loc>https://sosunnyproject.github.io/blog/p5js-leapmotion-tutorial/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/blog/p5-sketchrnn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/blog/p5js-bauhaus-coding/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sosunnyproject.github.io/blog/newstart-2021/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/blog/overachiever-retrospect-essay/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/blog/mentalhealth-month-2020/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/blog/p5-logo-coding/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
