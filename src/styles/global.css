@@ -13,6 +13,9 @@ pre code {
 blockquote {
   background-color: #F6EFFF;
 }
+blockquote p {
+  font-family: 'raleway', 'gmarketMedium';
+}
 blockquote blockquote p {
   font-family: 'raleway', 'gmarketMedium';
 }
