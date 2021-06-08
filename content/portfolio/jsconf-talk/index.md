@@ -2,6 +2,7 @@
 title: "[Talk] 2019 JSCONF (Javascript Conference, Seoul)"
 date: "2019-09-03"
 category: "portfolio"
+featuredImage: "talk1.png"
 ---
 
 <div class="intro">

@@ -122,6 +122,48 @@ a:hover{
   font-weight: 300;
   color: gray;
 }
+
+/* portfolio list */
+.portfolioList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+.portfolioList div {
+  width: 40%;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+.portfolioList .portfolioCard {
+  display: flex;
+  flex-direction: column;
+}
+.portfolioList a {
+  box-shadow: none;
+  text-decoration: none;
+}
+.portfolioList a:visited{
+  text-decoration: none;
+}
+.portfolioList h3 {
+  display: inline-block;
+  width: 70%;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  font-size: calc(14px + 0.25vw);
+  color: #A119FF;
+  font-family: 'raleway', 'gmarketMedium';
+}
+.portfolioList h4 {
+  display: inline-block;
+  width: 70%;
+  margin: 0;
+  font-size: calc(12px + 0.25vw);
+  font-weight: 300;
+  color: gray;
+}
+
 /* post */
 .postWrapper{
   max-width: 768px;

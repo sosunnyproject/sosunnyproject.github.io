@@ -2,6 +2,7 @@
 title: '[Talk] 2020 SOSCON Samsung OpenSource Conference 삼성 오픈소스 컨퍼런스 발표'
 date: '2020-10-14'
 category: 'portfolio'
+featuredImage: 'sosun_soscon_ppt.001.jpeg'
 ---
 <div class="intro">
 Speaker: 박소선 <br />

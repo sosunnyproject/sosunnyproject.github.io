@@ -2,6 +2,7 @@
 title: "[AR] MIT media lab: VR/AR Hackathon with Hololens"
 date: "2016-12-01"
 category: "portfolio"
+featuredImage: "mit4.png"
 ---
 <div class="intro">
 Creator: So Sun Park with Team Augmented Beatz (<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/randspence/">Randall Spence</a>, <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tomstrissel/">Tom Strissel</a>)<br />

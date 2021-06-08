@@ -2,6 +2,7 @@
 title: "[Exhibition] 2020 Interactive Art Lab Annual Show 인터렉티브 아트랩 전시"
 date: "2020-07-13"
 category: "portfolio"
+featuredImage: "../../blog/post-2020-exhibition/here-now.JPG"
 ---
 
 <div class="intro">

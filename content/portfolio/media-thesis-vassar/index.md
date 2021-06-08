@@ -2,6 +2,7 @@
 title: "[Leap Motion x Music] Interactive Media for Live Music Events (Thesis, Vassar '16)"
 date: "2016-05-09"
 category: "portfolio"
+featuredImage: "thesis20.png"
 ---
 
 <div class="intro">
