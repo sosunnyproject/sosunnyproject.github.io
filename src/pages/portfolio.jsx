@@ -3,9 +3,9 @@ import Header from "../components/header"
 import Container from "../components/container"
 import { Link, graphql } from "gatsby"
 import containerStyles from "../components/container.module.css"
-import SEO from "../components/seo"
 
 export default function Portfolio({ data }) {
+  console.log(data)
   return (
   <Container>
     <Header />

@@ -9,7 +9,7 @@ import youtubeSVG from "../images/youtube-pixel-perfect.svg"
 export default function Header() {
   return <div className={headerStyles.headerContainer}>
     <div className={headerStyles.logoText} >
-      <Link to="/">have so sunny day 🎗️</Link>
+      <Link to="/">have so sunny day <span role="img" aria-label="pink-ribbon">🎗️</span></Link>
     </div>
     <div className={headerStyles.navContainer}>
       <Link to="/portfolio/" className={headerStyles.navText}>portfolio</Link>

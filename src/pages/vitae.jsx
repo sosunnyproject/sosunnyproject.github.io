@@ -2,7 +2,6 @@ import React from "react"
 import Header from "../components/header"
 import Container from "../components/container"
 import containerStyles from "../components/container.module.css"
-import { Link } from "gatsby"
 import '../styles/global.css';
 
 export default function Vitae() {

@@ -1,6 +1,6 @@
 import React from "react"
 import Container from "../components/container"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Header from "../components/header"
 import containerStyles from "../components/container.module.css"
 import '../styles/global.css';

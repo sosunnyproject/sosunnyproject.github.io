@@ -14,10 +14,10 @@ export default function Home({ data }) {
       <h1>Write Code, Make Art</h1>
 
       <p>
-      a sassy girl loved musical theaters so much she ✈️ to New York Broadway & Vassar 🗽
-      When life was giving her 🍋🍋🍋, she found some 💎 
+      a sassy girl loved musical theaters so much she <span role="img" aria-label="airplane">✈️</span> to New York Broadway & Vassar <span role="img" aria-label="the statue of liberty">🗽</span>
+      When life was giving her <span role="img" aria-label="lemon">🍋🍋🍋</span>, she found some 💎 
       in the land of <Link to="/blog">software engineering </Link> 💻 
-      Yet, as she still loves 🎨 🎭 she has started <Link to="/portfolio"> combining media and technology </Link> 
+      Yet, as she still loves <span role="img" aria-label="arts">🎨</span> <span role="img" aria-label="theater">🎭</span> she has started <Link to="/portfolio"> combining media and technology </Link> 
       through VR, AR, mixed media, and <a target="_blank" rel="noreferrer" href="https://www.instagram.com/sosunnyproject">creative coding. </a>
       Currently in Seoul, she is a full-time frontend dev during the day and creative coder at night.
       </p>
