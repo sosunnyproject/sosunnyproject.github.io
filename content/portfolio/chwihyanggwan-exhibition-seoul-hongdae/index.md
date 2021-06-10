@@ -14,7 +14,6 @@ Date: 2021.5.21 ~ 22
 </div>
 <hr />
 
-
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4010.png">
 <figcaption></figcaption>
@@ -24,7 +23,6 @@ Date: 2021.5.21 ~ 22
 <img src="edit-GX2A4041.PNG">
 <figcaption></figcaption>
 </figure>
-
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4095_1.PNG">
