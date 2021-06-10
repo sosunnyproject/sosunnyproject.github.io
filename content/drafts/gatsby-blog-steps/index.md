@@ -45,3 +45,6 @@ fonts
 - different font-family for different languages
 
 - https://www.gatsbyjs.com/docs/how-to/styling/using-local-fonts/
+
+## 리스트에 썸네일 이미지 넣는 방법
+- https://www.gatsbyjs.com/docs/working-with-images-in-markdown/
