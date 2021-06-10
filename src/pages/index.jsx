@@ -19,7 +19,7 @@ export default function Home({ data }) {
       in the land of <Link to="/blog">software engineering </Link> 💻 
       Yet, as she still loves <span role="img" aria-label="arts">🎨</span> <span role="img" aria-label="theater">🎭</span> she has started <Link to="/portfolio"> combining media and technology </Link> 
       through VR, AR, mixed media, and <a target="_blank" rel="noreferrer" href="https://www.instagram.com/sosunnyproject">creative coding. </a>
-      Currently in Seoul, she is a full-time frontend dev during the day and creative coder at night.
+      Currently in Seoul, she's a freelance front-end web developer, creative coder, and artist. Mostly having fun with p5 js, three js, matter js, Unity, Blender, shader.
       </p>
 
       <p className={containerStyles.indexBottom}>
