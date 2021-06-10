@@ -130,34 +130,56 @@ a:hover{
   justify-content: space-around;
   margin-top: 2em;
 }
-.portfolioList div {
-  width: 40%;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
+@media (max-width: 480px) {
+  .portfolioList {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 1em;
+  }
 }
 .portfolioList .portfolioCard {
+  width: 30%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 4em;
+}
+@media screen and (max-width: 1024px) {
+  .portfolioList .portfolioCard {
+    width: 45%;
+    margin-right: 1em;
+    margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolioList .portfolioCard {
+    width: 100%;
+    margin-bottom: 2em;
+  }
 }
 .portfolioList a {
   box-shadow: none;
   text-decoration: none;
 }
+
 .portfolioList a:visited{
   text-decoration: none;
 }
 .portfolioList h3 {
   display: inline-block;
-  width: 70%;
+  width: 80%;
   margin-bottom: 0.5em;
-  font-weight: 500;
-  font-size: calc(14px + 0.25vw);
+  font-weight: 700;
+  font-size: calc(16px + 0.15vw);
   color: #A119FF;
   font-family: 'raleway', 'gmarketMedium';
 }
+.portfolioList h3:hover {
+  color: #19FF7B;
+  box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset; 
+}
 .portfolioList h4 {
   display: inline-block;
-  width: 70%;
   margin: 0;
   font-size: calc(12px + 0.25vw);
   font-weight: 300;

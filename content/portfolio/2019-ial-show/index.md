@@ -2,7 +2,7 @@
 title: '[Exhibition] 2019 Interactive Art Lab Annual Show 인터렉티브 아트랩 전시'
 date: '2019-03-21'
 category: 'portfolio'
-featuredImage: 'bloom3.jpg'
+featuredImage: 'bloom4.jpg'
 ---
 
 <div class="intro">

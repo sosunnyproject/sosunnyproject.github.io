@@ -2,7 +2,7 @@
 title: '[Exhibition] Stars in Your Hands'
 date: '2017-06-01'
 category: 'portfolio'
-featuredImage: 'nyu1.JPG'
+featuredImage: 'nyu6.JPG'
 ---
 <div class="intro">
 Creator: So Sun Park <br />

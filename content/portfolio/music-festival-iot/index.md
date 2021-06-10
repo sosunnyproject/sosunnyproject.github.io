@@ -2,7 +2,7 @@
 title: '[Lighting x Arduino] PentaPort Rock Festival Interactive Installation 펜타포트 락 페스티벌'
 date: '2017-08-17'
 category: 'portfolio'
-featuredImage: "ball1.jpg"
+featuredImage: "penta1.jpg"
 ---
 
 <div class="intro">
