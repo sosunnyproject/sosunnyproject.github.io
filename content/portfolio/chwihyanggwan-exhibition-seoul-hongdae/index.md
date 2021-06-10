@@ -17,34 +17,41 @@ Date: 2021.5.21 ~ 22
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4010.png">
+<figcaption></figcaption>
 </figure>
-
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4041.PNG">
+<figcaption></figcaption>
 </figure>
 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4095_1.PNG">
+<figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4098.PNG">
+<figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4117.PNG">
+<figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4123.PNG">
+<figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A4166.PNG">
+<figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="edit-GX2A3987.PNG">
+<figcaption></figcaption>
 </figure>
