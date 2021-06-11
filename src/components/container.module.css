@@ -12,35 +12,37 @@ rather than plain CSS. */
 }
 
 h1{
-  font-family: 'raleway', 'gmarketMedium';
+  font-family: 'raleway', 'jejuGothic';
   color:  #A119FF; /* rgb(0, 102, 153); */
   font-size: calc(22px + 0.25vw);
 }
 
 h2 {
-  font-family: 'raleway', 'gmarketMedium';
+  font-family: 'raleway', 'jejuGothic';
+  font-weight: 500;
   color: rgb(72,3,140); /*rgba(52, 123, 0, 1); */
   font-size: calc(20px + 0.25vw);
 }
 
 h3 {
-  font-family: 'raleway', 'gmarketMedium';
+  font-family: 'raleway', 'jejuGothic';
   color: #A303A6;
+  font-weight: 500;
   font-size: calc(18px +  0.25vw);
 }
 h4{
-  font-family: 'raleway', 'gmarketMedium';
+  font-family: 'raleway', 'jejuGothic';
   color: #F2059F;
 }
 
 p {
-  font-family: 'SanFrancisco', 'ridiBatang';
+  font-family: 'Brawler', 'ridiBatang';
   font-size: calc(16px + 0.1vw);
   line-height: calc(26px + 0.1vw);
   /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 li{
-  font-family: 'SanFrancisco', 'ridiBatang';
+  font-family: 'Brawler', 'ridiBatang';
   font-size: calc(16px + 0.1vw);
   line-height: calc(26px + 0.1vw);
 }
@@ -111,10 +113,10 @@ a:hover{
 }
 .postList h3 {
   margin-bottom: 0.5em;
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(16px + 0.25vw);
   color: #A119FF;
-  font-family: 'raleway', 'gmarketMedium';
+  font-family: 'raleway', 'jejuGothic';
 }
 .postList h4 {
   margin: 0;
@@ -127,7 +129,7 @@ a:hover{
 .portfolioList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 2em;
 }
 @media (max-width: 480px) {
@@ -169,10 +171,11 @@ a:hover{
   display: inline-block;
   width: 80%;
   margin-bottom: 0.5em;
-  font-weight: 700;
+  font-weight: 500;
   font-size: calc(16px + 0.15vw);
   color: #A119FF;
-  font-family: 'raleway', 'gmarketMedium';
+  font-family: 'Raleway', 'sans serif', 'jejuGothic';
+  line-height: 1.3;
 }
 .portfolioList h3:hover {
   color: #19FF7B;
@@ -193,17 +196,15 @@ a:hover{
 }
 
 .portfolioWrapper p {
-  font-family: 'raleway';
   line-height: calc(26px + 0.1vw);
   font-size: calc(16px + 0.1vw);
 }
 .portfolioWrapper li {
-  font-family: 'raleway';
   line-height: calc(26px + 0.1vw);
   font-size: calc(16px + 0.1vw);
 }
 .portfolioWrapper div {
-  font-family: 'raleway';
+  font-family: 'raleway', 'jejuGothic';
   line-height: calc(26px + 0.1vw);
   font-size: calc(16px + 0.1vw);
 }

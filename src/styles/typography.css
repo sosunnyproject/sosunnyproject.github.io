@@ -2,7 +2,14 @@
   font-family: "ridiBatang";
   src: url("../fonts/RIDIBatang.otf");
 }
-
+@font-face {
+  font-family: "jejuGothic";
+  src: url("../fonts/jejuGothic.ttf");
+}
+@font-face {
+  font-family: "jejuMyeongjo";
+  src: url("../fonts/jejuMyeongjo.ttf");
+}
 @font-face {
   font-family: "gmarketBold";
   src: url("../fonts/GmarketSansBold.otf");

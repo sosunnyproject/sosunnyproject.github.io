@@ -21,8 +21,8 @@ blockquote blockquote p {
 }
 
 figcaption {
-  font-size: calc(10px + 0.5vw);
-  color:#19FF7B;
+  font-size: calc(10px + 0.3vw);
+  color: #A0A0A0;
   letter-spacing: calc(0.005px + 0.05vw);
   margin-bottom:calc(20px + 0.5vw);
 }
