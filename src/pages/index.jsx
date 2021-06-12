@@ -24,8 +24,8 @@ export default function Home({ data }) {
 
       <p className={containerStyles.indexBottom}>
       Recently watched <span className={containerStyles.highlightSpan}>
-        <a href="https://www.youtube.com/watch?v=3s0LTDhqe5A" rel="noreferrer" target="_blank">
-          My Octopus Teacher
+        <a href="https://www.netflix.com/kr-en/title/80095698" rel="noreferrer" target="_blank">
+          Dear White People
         </a>
       </span>, 
       read <span className={containerStyles.highlightSpan}>
