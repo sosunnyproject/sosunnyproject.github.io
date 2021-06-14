@@ -1,7 +1,6 @@
 # to do list
 
 ## vitae
-- [ ] stibee 구독 한글 (https://page.stibee.com/subscriptions/97941) 
 - [ ] 구글 폼 영문 등록 (https://forms.gle/Aw5RUKAr6Nr3S3W27)
 - [ ] shop 기능 
 - [ ] typo user interactive controlling webpage
@@ -9,7 +8,7 @@
 ## 기능
 - [ ] *SEO 최적화*
 - [x] seo - share : title, image cards
-- [ ] thumbnail images for post list
+- [x] thumbnail images for post list
 - [x] *구글 애널리틱스 추가*
 - [x] google search console
 - [x] sitemap.xml
@@ -17,7 +16,7 @@
 - [ ] 구글 애드 센스 추가 (보류)
 - [ ] 한글/영어 전환 버튼 추가하기
 - [ ] 다크 theme 추가하기
-- [ ] p5js로 홈페이지 모션그래픽 추가하기
+- [ ] p5js/threejs로 홈페이지 모션그래픽 추가하기
 
 ## 포트폴리오 페이지 컨텐츠
 - [ ] modulabs 풀잎스쿨 p5js natureofcode
@@ -55,6 +54,7 @@
 
 ```bash
 # 업데이트
+# do not pull  master branch
 $ git fetch
 $ git pull origin source
 
