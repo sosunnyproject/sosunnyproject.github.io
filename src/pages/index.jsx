@@ -29,9 +29,7 @@ export default function Home({ data }) {
         </a>
       </span>, 
       read <span className={containerStyles.highlightSpan}>
-        <a href="https://www.youtube.com/watch?v=vlfda_doSd4" rel="noreferrer" target="_blank">
-        The Upward Spiral 우울할땐 뇌과학
-        </a>
+         Bodies 몸에 갇힌 사람들 by Susie Obarch
       </span>
       , donated to <span className={containerStyles.highlightSpan}>
         <a href="https://www.goodneighbors.kr/business/korea_welfare/childcare.gn" rel="noreferrer" target="_blank">
