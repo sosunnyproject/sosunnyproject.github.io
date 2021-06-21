@@ -26,6 +26,8 @@
 - [ ] 레쥬메, vitae 디자인 구상
 
 ## blog tutorials
+- [ ] unity AR
+- [ ] unity URP shader 쉐이더 강의
 - [ ] youtube tutorials
 - [ ] spark ar 테스트 링크 내보내기
 - [ ] spark ar eye color + bg segmentation layer order
