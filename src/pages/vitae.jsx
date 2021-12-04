@@ -23,11 +23,12 @@ export default function Vitae() {
 
     <h2>Languages/Framework/Engines</h2>
     <p>
-      Javascript (es6), HTML/CSS, Threejs, P5js, Processing, WebGL, Pixi JS, React JS, Webpack, Parcel, Netlify, Unity Engine, Leap motion, Kinect, Tensorflow, Python, Java
+      Javascript (es6), HTML/CSS, Threejs, P5js, Processing, WebGL, Pixi JS, React JS, Webpack, Parcel, Netlify, Unity Engine, Hololens, Leap motion, Kinect, Tensorflow, Python, Java
     </p>
 
     <h2>Exhibitions</h2>
-      <p className={vitaeStyles.title}>‘을지로에는 공원이 없다' v.1, 서울문화재단 도시문화 랩 x 을지예술센터 “접는도시" 전시</p>
+      <p className={vitaeStyles.title}>‘을지로에는 공원이 없다' v.1, 서울문화재단 도시문화 랩 x 을지예술센터 
+      <a href="https://archivist.kr/show/scroll.php?pagecode=1638070197" rel="noreferrer" target="_blank"> “접는도시" 전시 </a> </p>
       <span className={vitaeStyles.addition}>작가</span>
       <span className={vitaeStyles.addition}>August 2021 - January 2022</span>
       <ul>
@@ -35,15 +36,16 @@ export default function Vitae() {
         <li> Threejs 및 WebGL 사용, Xbox 컨트롤러 연동,  3D GLTF 모델 및 애니메이션 (monstermash) 사용</li>
       </ul>
 
-      <p className={vitaeStyles.title}>분산된 돌봄의 웹 - 가든.로컬 v.2, 파주 아트센터 화이트블럭 x 최태윤스튜디오</p>
+      <p className={vitaeStyles.title}>분산된 돌봄의 웹 - 
+      <a href="https://whiteblock.org/%EC%A0%84%EC%8B%9C/view/2792034" rel="noreferrer" target="_blank">가든.로컬 v.2</a>, 파주 아트센터 화이트블럭 x 최태윤스튜디오</p>
       <span className={vitaeStyles.addition}>소프트웨어 엔지니어 협업자</span>
       <span className={vitaeStyles.addition}>August 2021 - January 2022</span>
       <ul>
-        <li> 을지로의 미래를 상상한 인터렉티브 리얼타임 3D 웹사이트 작품 기획 및 개발 </li> 
-        <li> Threejs 및 WebGL 사용, Xbox 컨트롤러 연동,  3D GLTF 모델 및 애니메이션 (monstermash) 사용</li>
+        <li> Pixi.js 이용해서 프론트엔드 및 제너레이티브 아트 개발, 모바일 웹 터치 및 사운드 인터렉션 기능 개발 </li> 
+        <li> 라즈베리 파이 네트워크 환경에서 접속 가능한 모바일/PC 로컬 웹사이트 개발, 현장 전시 원격 지원</li>
       </ul>
-
-      <p className={vitaeStyles.title}>2021 프랑켄슈타인, 서울문화재단 UNFOLD x SAPY 청년예술청 전시</p>
+      <p className={vitaeStyles.title}>
+      <a href="https://2021frankenstein.bubbleapps.io/version-test" rel="noreferrer" target="_blank">2021 프랑켄슈타인</a>, 서울문화재단 UNFOLD x SAPY 청년예술청 전시</p>
       <span className={vitaeStyles.addition}>작가, 팀 리드, 개발 담당</span>
       <span className={vitaeStyles.addition}>June 2021 - August 2021</span>
       <ul>

@@ -31,12 +31,12 @@ export default function Home({ data }) {
       , 
       read 
         <a href="https://www.goodreads.com/book/show/26118426-ninefox-gambit" rel="noreferrer" target="_blank">
-        <span className={containerStyles.highlightSpan}>Ninefox Gambit by Yoonha Lee </span>
-        </a>
+        <span className={containerStyles.highlightSpan}>Ninefox Gambit</span>
+        </a> by Yoonha Lee
       
       , donated to
         <a href="https://www.goodneighbors.kr/business/korea_welfare/childcare.gn" rel="noreferrer" target="_blank">
-        <span className={containerStyles.highlightSpan}>GoodNeighbors</span>
+        <span className={containerStyles.highlightSpan}>New Philly Church</span>
       </a> 
       </p>
     </div>
