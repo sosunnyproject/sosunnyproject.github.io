@@ -89,7 +89,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Merienda', 'Montserrat', 'Brawler','Crimson Text', 'Open Sans', 'Poppins', 'Source Sans Pro', 'Heebo', 'Roboto', 'Quicksand', 'Rock Salt', 'Raleway', 'Bungee Shade', 'Black Han Sans', 'Noto Serif KR', 'Droid Sans', 'Droid Serif']
+          families: ['Rubik', 'Montserrat', 'Brawler', 'Open Sans', 'Poppins', 'Source Sans Pro', 'Heebo', 'Roboto', 'Quicksand', 'Rock Salt', 'Raleway', 'Bungee Shade', 'Black Han Sans', 'Noto Serif KR',]
         }
       }
     },

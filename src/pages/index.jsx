@@ -23,20 +23,21 @@ export default function Home({ data }) {
       </p>
 
       <p className={containerStyles.indexBottom}>
-      Recently watched <span className={containerStyles.highlightSpan}>
-        <a href="https://www.netflix.com/kr-en/title/80095698" rel="noreferrer" target="_blank">
-          Dear White People
+      Recently watched 
+        <a href="https://www.netflix.com/kr/title/81031737" rel="noreferrer" target="_blank">
+         <span className={containerStyles.highlightSpan}>
+           Connected: The Hidden Science of Everything </span>
         </a>
-      </span>, 
-      read <span className={containerStyles.highlightSpan}>
-        <a href="https://www.youtube.com/watch?v=vlfda_doSd4" rel="noreferrer" target="_blank">
-        The Upward Spiral 우울할땐 뇌과학
+      , 
+      read 
+        <a href="https://www.goodreads.com/book/show/26118426-ninefox-gambit" rel="noreferrer" target="_blank">
+        <span className={containerStyles.highlightSpan}>Ninefox Gambit by Yoonha Lee </span>
         </a>
-      </span>
-      , donated to <span className={containerStyles.highlightSpan}>
+      
+      , donated to
         <a href="https://www.goodneighbors.kr/business/korea_welfare/childcare.gn" rel="noreferrer" target="_blank">
-      GoodNeighbors</a>
-      </span> 
+        <span className={containerStyles.highlightSpan}>GoodNeighbors</span>
+      </a> 
       </p>
     </div>
   </Container>

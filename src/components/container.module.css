@@ -7,20 +7,21 @@ rather than plain CSS. */
 
 @import '../styles/global.css';
 
+/* 
 .container {
   margin: calc(10px + 1vw) calc(10px + 1vw);
 }
 
 h1{
   font-family: 'raleway', 'jejuGothic';
-  color:  #A119FF; /* rgb(0, 102, 153); */
+  color:  #A119FF;
   font-size: calc(22px + 0.25vw);
 }
 
 h2 {
   font-family: 'raleway', 'jejuGothic';
   font-weight: 500;
-  color: rgb(72,3,140); /*rgba(52, 123, 0, 1); */
+  color: rgb(72,3,140); 
   font-size: calc(20px + 0.25vw);
 }
 
@@ -36,17 +37,16 @@ h4{
 }
 
 p {
-  font-family: 'Brawler', 'ridiBatang';
+  font-family: 'Rubik', 'ridiBatang';
   font-size: calc(16px + 0.1vw);
   line-height: calc(26px + 0.1vw);
-  /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 li{
-  font-family: 'Brawler', 'ridiBatang';
+  font-family: 'Rubik', 'ridiBatang';
   font-size: calc(16px + 0.1vw);
   line-height: calc(26px + 0.1vw);
 }
-
+*/
 .innerLayout {
   margin: 0 1.0em;
 }
@@ -69,7 +69,7 @@ a:hover{
   font-size: calc(24px + 1vw);
   line-height: 1.5;
   color: gray;
-  font-family: 'raleway';
+  font-family: 'Montserrat';
 }
 @media screen and (max-width: 500px) {
   .index p{
@@ -91,6 +91,7 @@ a:hover{
   display: inline-block;
   font-family: 'bungee shade';
   line-height: 1.2;
+  text-decoration-style: none;
 }
 
 .index .indexBottom {
@@ -115,8 +116,8 @@ a:hover{
   margin-bottom: 0.5em;
   font-weight: 500;
   font-size: calc(16px + 0.25vw);
-  color: #A119FF;
-  font-family: 'raleway', 'jejuGothic';
+  color: #F79D84;
+  font-family: 'Montserrat', 'jejuGothic';
 }
 .postList h4 {
   margin: 0;
@@ -173,13 +174,13 @@ a:hover{
   margin-bottom: 0.5em;
   font-weight: 500;
   font-size: calc(16px + 0.15vw);
-  color: #A119FF;
-  font-family: 'Raleway', 'sans serif', 'jejuGothic';
+  color: #F79D84;
+  font-family: 'Montserrat', 'sans serif', 'jejuGothic';
   line-height: 1.3;
 }
 .portfolioList h3:hover {
   color: #19FF7B;
-  box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset; 
+  /* box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset;  */
 }
 .portfolioList h4 {
   display: inline-block;
@@ -196,15 +197,17 @@ a:hover{
 }
 
 .portfolioWrapper p {
+  font-family: 'Rubik', 'ridiBatang';
   line-height: calc(26px + 0.1vw);
   font-size: calc(16px + 0.1vw);
 }
 .portfolioWrapper li {
+  font-family: 'Rubik', 'ridiBatang';
   line-height: calc(26px + 0.1vw);
   font-size: calc(16px + 0.1vw);
 }
 .portfolioWrapper div {
-  font-family: 'raleway', 'jejuGothic';
+  font-family: 'Montserrat', 'jejuGothic';
   line-height: calc(26px + 0.1vw);
   font-size: calc(16px + 0.1vw);
 }

@@ -51,11 +51,12 @@
 .navContainer a{
   box-shadow: none;
 }
+ /*
 .navContainer [aria-current] {
-    /* border-bottom: 5px solid rgba(255,128,0, 0.5); */
     text-decoration-color: rgb(161,25,255);
     box-shadow: 0 -0.5em rgba(161,25,255,0.3) inset; 
 }
+*/
 
 .socialContainer{
   display: inline-flex;

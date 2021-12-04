@@ -18,7 +18,7 @@ Position
 
 ### GLSL Shader Language is Strongly Typed
 - Always write numbers in float type. 
-  - Graphics cards can be picky about this.
+- Graphics cards can be picky about this.
 - Define the type of all of variables: int, float, vec2, etc.
 
 ### Get Familiar with Vectors
