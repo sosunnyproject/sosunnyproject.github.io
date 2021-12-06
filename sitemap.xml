@@ -41,4 +41,6 @@
 <url> <loc>https://sosunnyproject.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/portfolio/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sosunnyproject.github.io/vitae/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sosunnyproject.github.io/vitae_en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sosunnyproject.github.io/vitae_ko/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
