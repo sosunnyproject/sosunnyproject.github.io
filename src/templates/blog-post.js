@@ -5,6 +5,7 @@ import Header from "../components/header"
 import containerStyles from "../components/container.module.css"
 import '../styles/global.css';
 import SEO from "../components/seo"
+import { Disqus } from 'gatsby-plugin-disqus';
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -12,6 +13,10 @@ export default function BlogPost({ data }) {
   // const { title, comment, siteUrl, author, sponsor } = metaData
   // const { disqusShortName, utterances } = comment
   // const { title: postTitle, date } = post.frontmatter
+
+  const disqusConfig = {
+    url: `https://sosunnyproject.github.io${post.fields.slug}`, identifier: post.fields.slug, title: post.frontmatter.title
+  }
 
   return (
     <Container>
@@ -25,6 +30,8 @@ export default function BlogPost({ data }) {
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
+
+      <Disqus config={disqusConfig} />
     </Container>
   )
 }

@@ -86,6 +86,12 @@ module.exports = {
     //   },
     // },
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `sosunnyproject-gitblog`
+      }
+    },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
