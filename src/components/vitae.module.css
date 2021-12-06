@@ -11,6 +11,24 @@ rather than plain CSS. */
  margin: calc(10px + 1vw) calc(10px + 1vw);
 }
 
+.vitaeButton {
+ width: 6.0rem;
+ height: 2.5rem;
+ margin-right: 40px;
+ text-align: center;
+ border: 1px solid #19FF7B;
+ background-color: white;
+ font-weight: 600;
+ margin-top: 1.0rem;
+ margin-bottom: 1.0rem;
+}
+.vitaeButton:hover {
+ background-color: #6cffac;
+}
+.vitaeButton:focus {
+ background-color: #6cffac;
+}
+
 h1{
  font-family: 'Montserrat', 'jejuGothic';
  color:  #EE6352; /* rgb(0, 102, 153); */
