@@ -29,8 +29,6 @@
 - [ ] unity AR
 - [ ] unity URP shader 쉐이더 강의
 - [ ] youtube tutorials
-- [ ] spark ar 테스트 링크 내보내기
-- [ ] spark ar eye color + bg segmentation layer order
 ---------------------------------------
 
 # Done
