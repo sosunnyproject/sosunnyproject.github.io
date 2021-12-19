@@ -9,7 +9,7 @@ featuredImage: "euljiro-park.jpg"
 Creator: So Sun Park <br />
 Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/c.enter_official">Eulji Art Center 을지예술센터</a> or website <a target="_blank" rel="noreferrer" href="https://www.euljiro.lol">euljiro.lol</a> <br />
 Type: Interactive 3D website<br />
-Tools: threejs, xbox gamepad, netlify<br />
+Tools: threejs, xbox gamepad, monstermash.zone, Procreate (iPad), netlify<br />
 Date: 2021.11.27 ~ <br />
 Thanks to: <a target="_blank" rel="noreferrer" href="https://readymag.com/u16519807/1261048/">Producer Yoo Jun Lee</a>, <a target="_blank" rel="noreferrer" href="https://klovesmart.wixsite.com/mypage">Sound Designer Ja Hyun Kim</a>
 </div>
