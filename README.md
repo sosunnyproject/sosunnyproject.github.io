@@ -2,8 +2,8 @@
 
 ## vitae
 - [ ] 구글 폼 영문 등록 (https://forms.gle/Aw5RUKAr6Nr3S3W27)
-- [ ] shop 기능 
 - [ ] typo user interactive controlling webpage
+- [ ] subconscious interactive work
 - [ ] reference 아카이브 pages
 ## 기능
 - [ ] *SEO 최적화*
@@ -29,8 +29,6 @@
 - [ ] unity AR
 - [ ] unity URP shader 쉐이더 강의
 - [ ] youtube tutorials
-- [ ] spark ar 테스트 링크 내보내기
-- [ ] spark ar eye color + bg segmentation layer order
 ---------------------------------------
 
 # Done
