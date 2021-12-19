@@ -24,7 +24,7 @@ export default function Vitae() {
     <p>
       <a target="_blank" rel="noreferrer" href="https://maily.so/sosunnyproject/">뉴스레터 (Korean Newsletter)</a><br />
       <a target="_blank" rel="noreferrer" href="https://instagram.com/sosunnyproject/">Instagram</a><br />
-			<a target="_blank" rel="noreferrer" href="https://www.youtube.com/artistwhocode">Youtube</a> <br />
+			<a target="_blank" rel="noreferrer" href="https://www.youtube.com/sosunnyproject">Youtube</a> <br />
     </p>
 
     <h2>Languages/Framework/Engines</h2>
