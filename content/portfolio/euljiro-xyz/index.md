@@ -1,5 +1,5 @@
 ---
-title: "[Exhibition] 《 euljiro.lol 》, Seoul"
+title: "[Exhibition] 《 euljiro.xyz 》, Seoul"
 date: "2021-11-27"
 category: "portfolio"
 featuredImage: "euljiro-park.jpg"
@@ -7,7 +7,7 @@ featuredImage: "euljiro-park.jpg"
 
 <div class="intro">
 Creator: So Sun Park <br />
-Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/c.enter_official">Eulji Art Center 을지예술센터</a> or website <a target="_blank" rel="noreferrer" href="https://www.euljiro.lol">euljiro.lol</a> <br />
+Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/c.enter_official">Eulji Art Center 을지예술센터</a> or website <a target="_blank" rel="noreferrer" href="https://www.euljiro.xyz">euljiro.xyz</a> <br />
 Type: Interactive 3D website<br />
 Tools: threejs, xbox gamepad, monstermash.zone, Procreate (iPad), netlify<br />
 Date: 2021.11.27 ~ 2022.1.23<br />
@@ -15,7 +15,7 @@ Thanks to: <a target="_blank" rel="noreferrer" href="https://readymag.com/u16519
 </div>
 <hr />
 
-As of Januray 2022, I recommend you to enjoy this artwork on online, <a target="_blank" rel="noreferrer" href="https://www.euljiro.lol">euljiro.lol</a>. (It would work better if your graphic card is Nvidia GTX 1060 or higher.)
+As of Januray 2022, I recommend you to enjoy this artwork on online, <a target="_blank" rel="noreferrer" href="https://www.euljiro.xyz">euljiro.xyz</a>. (It would work better if your graphic card is Nvidia GTX 1060 or higher.)
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/HJYgOmYNM3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -26,9 +26,10 @@ and political tension of gentrification. Yet, I observed it lacks the place with
 
 This was a part of ongoing exhibition 'Folding of the City' at Eulji Art Center, inspired by Jingfang Hao's SF novel "Folding Beijing".
 
-Thanks to 서울문화재단 (Seoul Foundation of Arts and Culture) sponsorship, 을지예술센터 (Eulji Art Center), 이유준 PD, 김자현 Composer/Sound Artist.
+<h3>Updated 2022.02</h3>
+Removed animations from a number of models, considering the optimization for more devices. 
 
-Full explainer video and optimized website is coming soon!
+Thanks to 서울문화재단 (Seoul Foundation of Arts and Culture) sponsorship, 을지예술센터 (Eulji Art Center), 이유준 PD, 김자현 Composer/Sound Artist.
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="eulji1.png">
