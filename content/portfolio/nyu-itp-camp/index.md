@@ -2,7 +2,7 @@
 title: '[Exhibition] Stars in Your Hands'
 date: '2017-06-01'
 category: 'portfolio'
-featuredImage: 'nyu6.JPG'
+featuredImage: 'nyu6.jpg'
 ---
 <div class="intro">
 Creator: So Sun Park <br />
@@ -20,51 +20,51 @@ Date: 2017. 06. 01
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/ASxuVJJzKDY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu7.JPG">
+<img src="nyu7.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu8.JPG">
+<img src="nyu8.jpg">
 <figcaption></figcaption>
 </figure>
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu12.JPG">
-<figcaption></figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu10.JPG">
+<img src="nyu12.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu2.JPG">
+<img src="nyu10.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu4.JPG">
+<img src="nyu2.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu5.JPG">
+<img src="nyu4.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu11.JPG">
+<img src="nyu5.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu9.JPG">
+<img src="nyu11.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu6.JPG">
+<img src="nyu9.jpg">
+<figcaption></figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="nyu6.jpg">
 <figcaption></figcaption>
 </figure>
 

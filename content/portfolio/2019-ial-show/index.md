@@ -37,13 +37,13 @@ Date: 2019.03.21 ~ 2019.03.24
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="IMG_1092.JPG" >
+<img src="IMG_1092.jpg" >
 <figcaption></figcaption>
 </figure>
 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="IMG_1115.JPG" >
+<img src="IMG_1115.jpg" >
 <figcaption></figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ Date: 2019.03.21 ~ 2019.03.24
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="fbevent.PNG" >
+<img src="fbevent.png" >
 <figcaption>페이스북 이벤트 홍보 페이지</figcaption>
 </figure>
 

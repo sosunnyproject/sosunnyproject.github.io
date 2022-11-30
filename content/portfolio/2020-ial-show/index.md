@@ -57,7 +57,7 @@ The audience can change simple shapes on the screen with her hand movement. It a
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="../../blog/post-2020-exhibition/here-now.JPG" >
+<img src="../../blog/post-2020-exhibition/here-now.jpg" >
 <figcaption></figcaption>
 </figure>
 
@@ -67,7 +67,7 @@ The audience can change simple shapes on the screen with her hand movement. It a
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="../../blog/post-2020-exhibition/here-now-stickers-2.JPG" >
+<img src="../../blog/post-2020-exhibition/here-now-stickers-2.jph" >
 <figcaption></figcaption>
 </figure>
 
