@@ -30,13 +30,13 @@ export default function Home({ data }) {
         </a>
       , 
       read 
-        <a href="https://www.goodreads.com/book/show/26118426-ninefox-gambit" rel="noreferrer" target="_blank">
-        <span className={containerStyles.highlightSpan}>Ninefox Gambit</span>
-        </a> by Yoonha Lee
+        <a href="https://www.goodreads.com/book/show/20518872-the-three-body-problem" rel="noreferrer" target="_blank">
+        <span className={containerStyles.highlightSpan}>The Three-Body Problem</span>
+        </a> by Cixin Liu
       
       , donated to
-        <a href="https://www.goodneighbors.kr/business/korea_welfare/childcare.gn" rel="noreferrer" target="_blank">
-        <span className={containerStyles.highlightSpan}>New Philly Church</span>
+        <a href="https://www.oaktreeproject.com/" rel="noreferrer" target="_blank">
+        <span className={containerStyles.highlightSpan}>Secret Angel for Zion Girl's Home</span>
       </a> 
       </p>
     </div>
