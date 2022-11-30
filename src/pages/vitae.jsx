@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Header from "../components/header"
 // import Container from "../components/container"
-import vitaeStyles from "../components/vitae.module.css"
+import * as vitaeStyles from "../components/vitae.module.css"
 import VitaeKO from "./vitae_ko";
 import VitaeEN from "./vitae_en";
 import '../styles/global.css';

@@ -1,6 +1,6 @@
 import React from "react"
 import  { Link } from "gatsby"
-import headerStyles from "./header.module.css"
+import * as headerStyles from "./header.module.css"
 import instagramSVG from "../images/instagram.svg"
 import linkedinSVG from "../images/linkedin (1).svg"
 import githubSVG from "../images/github-pixel-perfect.svg"

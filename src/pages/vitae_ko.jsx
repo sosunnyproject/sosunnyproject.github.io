@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "../components/header"
 // import Container from "../components/container"
-import vitaeStyles from "../components/vitae.module.css"
+import * as vitaeStyles from "../components/vitae.module.css"
 import '../styles/global.css';
 
 export default function VitaeKO() {

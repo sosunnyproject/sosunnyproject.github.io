@@ -2,7 +2,7 @@ import React from "react"
 import Container from "../components/container"
 import { graphql } from "gatsby"
 import Header from "../components/header"
-import containerStyles from "../components/container.module.css"
+import * as containerStyles from "../components/container.module.css"
 import '../styles/global.css';
 import SEO from "../components/seo"
 import { Disqus } from 'gatsby-plugin-disqus';

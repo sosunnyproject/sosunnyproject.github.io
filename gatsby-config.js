@@ -6,6 +6,9 @@
  */
 
 module.exports = {
+  flags: {
+    DEV_SSR: true
+  },
   /* Your site config here */
   siteMetadata:{
     title: 'sosunnyproject | Personal Website · Portfolio · Dev Blog · Contact',
@@ -27,10 +30,8 @@ module.exports = {
             }
           }
           allSitePage {
-            edges {
-              node {
-                path
-              }
+            nodes {
+              path
             }
           }
           allMarkdownRemark {
@@ -47,16 +48,19 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
-          let pages = []
-          allSitePage.edges.map(edge => {
-            pages.push({
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: 'daily',
-              priority: 0.7
-            })
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+        }) => {
+          return allPages.map(page => {
+            return { ...page }
           })
-          return pages
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: `daily`,
+            priority: 0.7
+          }
         },
       },
     },
@@ -119,6 +123,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -133,7 +138,6 @@ module.exports = {
               maxWidth: 768,
             },
           },
-          'gatsby-remark-a11y-emoji',
           `gatsby-remark-prismjs`,
         ],
       },

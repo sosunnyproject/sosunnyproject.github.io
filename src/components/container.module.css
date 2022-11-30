@@ -5,8 +5,6 @@ This is how you tell Gatsby that this CSS file
 should be processed as a CSS module 
 rather than plain CSS. */
 
-@import '../styles/global.css';
-
 /* 
 .container {
   margin: calc(10px + 1vw) calc(10px + 1vw);
