@@ -1,24 +1,30 @@
 import React from "react"
-import Header from "../components/header"
-import Container from "../components/container"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import * as containerStyles from "../components/container.module.css"
-import PortfolioPost from "../components/portfolioPost"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default function Portfolio({ data }) {
-  return (
-  <Container>
-    <Header />
-    <div className={containerStyles.portfolioList}>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        (node.frontmatter.category === 'portfolio') &&
-            <PortfolioPost node={node} key={node.id} />
-        )
-      )}
-    </div>
-  </Container>
-  )
+export default function PortfolioPost({ node }) {
+    const image = getImage(node.frontmatter?.featuredImage)
+    console.log(node.frontmatter);
+    return (
+        <div key={node.id} className={containerStyles.portfolioCard}>
+            <Link to={node.fields.slug} >
+            <GatsbyImage 
+                image={image}
+                alt=""
+                layout="fullWidth"
+                width={480}
+                aspectRatio={16/9}
+            />
+            <h3>
+                {node?.frontmatter?.title}
+            </h3>
+            </Link>
+            <h4>{node?.frontmatter?.date}</h4>
+        </div>
+    )
 }
+
 
 export const query = graphql`
 query {
@@ -28,9 +34,7 @@ query {
       author
     }
   }
-  allMarkdownRemark(
-    sort: [{frontmatter: {date: DESC}}, {frontmatter: {title: ASC}}]
-  ){
+  allMarkdownRemark{
     totalCount
       edges {
         node {

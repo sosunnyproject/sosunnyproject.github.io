@@ -209,7 +209,10 @@ a:hover{
   line-height: calc(26px + 0.1vw);
   font-size: calc(16px + 0.1vw);
 }
-
+.innerLayout .EmbedVideo div {
+  padding-bottom: 100%;
+  position: unset;
+}
 /* pre {
   width: auto;
   margin: 0 !important;
