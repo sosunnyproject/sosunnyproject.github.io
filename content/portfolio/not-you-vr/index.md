@@ -28,7 +28,7 @@ Platform: Cardboard, Gear VR<br />
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="vrlab-website.PNG" height="100%" width="auto">
+<img src="vrlab-website.png" height="100%" width="auto">
 <figcaption>TimeWave VR Lab Website</figcaption>
 </figure>
 

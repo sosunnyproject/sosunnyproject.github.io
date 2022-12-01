@@ -16,7 +16,7 @@ Thanks to: @bektodam @minhee51 curator | @amazing_mina for photos and videos
 <hr />
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="poster-kote.JPG">
+<img src="poster-kote.jpg">
 <figcaption></figcaption>
 </figure>
 

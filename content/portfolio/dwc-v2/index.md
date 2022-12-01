@@ -2,7 +2,7 @@
 title: "[Exhibition] 《 Garden.Local : Distributed Web of Care 》"
 date: "2021-11-20"
 category: "portfolio"
-featuredImage: "16.JPG"
+featuredImage: "16.jpg"
 ---
 
 <div class="intro">
@@ -52,66 +52,66 @@ Photographs below are taken by Chulki Hong.
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="4.JPG">
+<img src="4.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="10.JPG">
+<img src="10.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="11.JPG">
+<img src="11.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="12.JPG">
+<img src="12.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="6.JPG">
+<img src="6.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="8.JPG">
+<img src="8.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="9.JPG">
+<img src="9.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="15.JPG">
+<img src="15.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="16.JPG">
+<img src="16.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="13.JPG">
+<img src="13.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="14.JPG">
+<img src="14.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="1.JPG">
+<img src="1.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="3.JPG">
+<img src="3.jpg">
 <figcaption></figcaption>
 </figure>

@@ -18,7 +18,7 @@ Date: 2016. 05. 09
 
 *한국어는 하단에*
 
-#### [Click Here for Thesis Paper (English)](https://digitalwindow.vassar.edu/senior_capstone/543/)
+#### [Click Here for Thesis Paper (English)](https://digitallibrary.vassar.edu/collections/institutional-repository/designing-interactive-digital-installation-human-human)
 
 ### Pop-up Showcase of Media Thesis Project @ Vassar College Campus (뉴욕 바싸대학교 미디어 전공 졸업 논문 프로젝트 팝업 쇼케이스 영상)
 
