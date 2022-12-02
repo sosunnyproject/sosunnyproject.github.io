@@ -154,3 +154,4 @@ Let's not forget to wrap same components inside a single `div` tag to distinguis
 - https://developer.mozilla.org/ko/docs/Web/CSS/Descendant_combinator
 - https://www.geeksforgeeks.org/css-child-vs-descendant-selectors/
 - https://reactjs.org/docs/fragments.html
+- https://www.scaler.com/topics/css-nth-child/
