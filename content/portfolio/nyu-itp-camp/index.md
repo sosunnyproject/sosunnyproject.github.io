@@ -5,7 +5,7 @@ category: 'portfolio'
 featuredImage: 'nyu6.jpg'
 ---
 <div class="intro">
-Creator: So Sun Park <br />
+Position: Producer, Creative Technologist<br />
 Venue: New York University Interactive Communications Program Building <br />
 Type: NYU ITP Camp Final Show <br />
 Tools: p5.js, processing 프로세싱, dmx lighting 무빙 라이트 및 라이팅 제어 소프트웨어, arduino 아두이노, potentiometers <br />

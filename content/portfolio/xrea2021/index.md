@@ -6,7 +6,8 @@ featuredImage: "xrea.jpg"
 ---
 
 <div class="intro">
-Creator: So Sun Park, Hanna Ok, Sun Ho Lee, Joo Yeon Lee <br />
+Position: Team Lead, Developer, Co-Producer <br />
+Team: X-REA (Hanna Ok, Sun Ho Lee, Joo Yeon Lee, So Sun Park) <br />
 Venue: <a target="_blank" rel="noreferrer" href="http://www.sapy.kr/XR-SAPY">Seoul Artists' Platform New&Young (SAPY) 청년예술청</a>, Android/iOS Apps <br />
 Type: XR (AR, MR) on Android Samsung Tablets, iPads, Hololens 2.0<br />
 Tools: Unity, Unity AR foundation packages, Unity MR Toolkit <br />
@@ -35,7 +36,7 @@ Creating a new 'Monster' reflecting the modern society and technologies, X-REA a
 
 <hr />
 
-Currently, you can only download the korean version of Android/iOS app. We are preparing to add english and launch a global version in 2022. 
+Currently, you can only download the korean version of Android/iOS app. We are preparing to add english and launch a global version in 2023. 
 
 소개 웹사이트 Temporary introduction website (korean!) <a target="_blank" rel="noreferrer" href="https://2021frankenstein.bubbleapps.io/version-test">here</a>.
 

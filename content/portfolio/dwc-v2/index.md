@@ -6,12 +6,12 @@ featuredImage: "dwc16.jpg"
 ---
 
 <div class="intro">
-Creator: Taeyoon Choi and Collaborators <br />
+Position: Web Developer, Product Manager <br />
+Team: Taeyoon Choi and Collaborators <br />
 Venue: <a target="_blank" rel="noreferrer" href="https://whiteblock.org/%EC%A0%84%EC%8B%9C/view/2792034">파주 화이트블럭 아트센터 Paju WhiteBlock</a>, South Korea <br />
 Type: Interactive & Accessible Mobile Website with Distributed Mesh Network 분산 네트워크 환경에서 인터렉티브하며 접근성 기능을 포함한 모바일 웹사이트 <br />
 Tools: pixijs, nodejs, pm2, nginx, raspberry pi<br />
 Date: 2021.11.20 ~ 2021.11.28 <br />
-Role: Frontend Web Developer 프론트엔드 웹 개발 참여
 </div>
 <hr />
 

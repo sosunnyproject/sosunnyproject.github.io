@@ -6,7 +6,7 @@ featuredImage: "euljiro-park.jpg"
 ---
 
 <div class="intro">
-Creator: So Sun Park <br />
+Position: Co-Producer, Developer, Artist <br />
 Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/c.enter_official">Eulji Art Center 을지예술센터</a> or website <a target="_blank" rel="noreferrer" href="https://www.euljiro.xyz">euljiro.xyz</a> <br />
 Type: Interactive 3D website<br />
 Tools: threejs, xbox gamepad, monstermash.zone, Procreate (iPad), netlify<br />

@@ -6,7 +6,8 @@ featuredImage: "penta1.jpg"
 ---
 
 <div class="intro">
-Creator: 박소선, 홍렌<br />
+Position: Co-Producer, Creative Technologist <br />
+Team: 박소선, 홍렌<br />
 Venue: 펜타포트 인천 락 페스티벌 PentaPort Rock Music Festival, Incheon, South Korea<br />
 Type: 에스꼴라 알레그리아 삼바 퍼레이드 공연을 위한 인터렉티브 라이팅 설치 작품 Interactive Lighting Installation for Escola Alegria Samba Parade <br />
 Tools: lightings 조명(을지로), arduino 아두이노 <br />

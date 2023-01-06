@@ -6,7 +6,7 @@ featuredImage: "edit-GX2A4095.png"
 ---
 
 <div class="intro">
-Creator: So Sun Park <br />
+Position: Producer, Creative Technologist<br />
 Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/chwihyang.gwan/">Chwi Hyang Gwan 취향관</a>, 합정 문화살롱 공간, cultural salon venue in Seoul <br />
 Type: Interactive Media Installation with Pop-up event of music, bar, board games<br />
 Tools: P5 JS, Leap Motion 립모션<br />

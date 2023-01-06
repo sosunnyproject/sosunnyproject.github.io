@@ -6,7 +6,8 @@ featuredImage: "app1.png"
 ---
 
 <div class="intro">
-Creator: Team Saving Okja (박소선: 서비스 기획 및 PM, Product/Business Lead) <br />
+Position: Team Lead, Product Manager, Business Lead <br />
+Team: Saving Okja<br />
 Venue: 제주창조경제혁신센터 <a target="_blank" rel="noreferrer" href="http://jccei.kr/">jeju innovation hub </a> <br />
 Type: 글로벌 제주 해커톤 Global Jeju Hackathon <br />
 Tools: iOS APP <br />

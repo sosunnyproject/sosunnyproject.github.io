@@ -5,7 +5,8 @@ date: '2017-02-10'
 featuredImage: 'timewave2017.jpg'
 ---
 <div class="intro">
-Creator: So Sun Park, Maxwell Foxman<br />
+Position: Co-Producer, Developer <br />
+Team: So Sun Park, Maxwell Foxman<br />
 Tools: Unity, Gear VR, Cardboard, Maya, Audacity<br />
 Type: <a target="_blank" rel="noreferrer" href="http://timewavefestival.com/virtualrealitylab-2017-projects/">TimeWave Lab VR/AR Festival 2017</a> in NYC <br />
 Venue: NYU Gaming Center (MakerSpace), Time Inc. (Showcase), Oculus (Sponsor) <br />

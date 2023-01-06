@@ -6,7 +6,7 @@ featuredImage: "talk1.png"
 ---
 
 <div class="intro">
-Creator: 박소선 (스피커) (발표자료 디자인: 조예지, 영상: 정효) <br />
+Position: Speaker (발표자료 디자인: 조예지, 영상: 정효) <br />
 Venue: 2019 JSCONF  <a target="_blank" rel="noreferrer" href="https://2019.jsconfkorea.com/">자바스크립트 컨퍼런스</a> 코엑스 Coex, Seoul, South Korea<br />
 Type: Community Lightning Talk커뮤니티 라이트닝 토크 <br />
 Date: 2019-09-03

@@ -6,7 +6,7 @@ featuredImage: "jiwoo1.jpeg"
 ---
 
 <div class="intro">
-Teacher: So Sun Park <br />
+Position: Teacher, Creative Technologist<br />
 Venue: <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@SSSTUDIO22">Seoul Music High School</a> <br />
 Type: Creative coding, audiovisual<br />
 Tools: p5js, DALL-E<br />

@@ -5,7 +5,7 @@ category: 'portfolio'
 featuredImage: 'sosun_soscon_ppt.001.jpeg'
 ---
 <div class="intro">
-Speaker: 박소선 <br />
+Position: Speaker<br />
 Venue: 삼성 R&D 센터 (사전 촬영), SOSCON.NET <br />
 Date: 2020.10.14
 </div>

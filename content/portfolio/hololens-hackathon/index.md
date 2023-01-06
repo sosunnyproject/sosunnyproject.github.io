@@ -5,7 +5,8 @@ category: "portfolio"
 featuredImage: "mit6.png"
 ---
 <div class="intro">
-Creator: So Sun Park with Team Augmented Beatz (<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/randspence/">Randall Spence</a>, <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tomstrissel/">Tom Strissel</a>)<br />
+Position: Team Lead, Producer, Developer <br />
+Team: Augmented Beatz (<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/randspence/">Randall Spence</a>, <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tomstrissel/">Tom Strissel</a>)<br />
 Venue: MIT Media Lab<br />
 Type: Reality, Virtually Hackathon 2016 - VR/AR <br />
 Tools: Unity Engine 유니티, Hololens 마이크로소프트 홀로렌즈<br />

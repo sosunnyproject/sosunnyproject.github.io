@@ -6,7 +6,7 @@ featuredImage: "thesis20.png"
 ---
 
 <div class="intro">
-Creator: So Sun Park <br />
+Position: Producer, Researcher, Developer<br />
 Venue: Vassar College<br />
 Type: Media Studies Major Thesis Project, Class of 2016<br />
 Showcase: Vassar College Main Building<br />

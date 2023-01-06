@@ -6,7 +6,7 @@ featuredImage: "kote-IMG_1783.png"
 ---
 
 <div class="intro">
-Creator: So Sun Park <br />
+Position: Creative Technologist<br />
 Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/kote.kr/">인사동 KOTE Gallery</a>, Seoul <br />
 Type: Video Installation @ Continuous Flow Group Exhibition<br />
 Tools: P5 JS, Kinetic Typography, Matter JS, P5 LIVE, EPSON Projector, DIVIX<br />
