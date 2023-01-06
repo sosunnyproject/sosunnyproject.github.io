@@ -6,7 +6,7 @@ featuredImage: "dwc16.jpg"
 ---
 
 <div class="intro">
-Position: Web Developer, Product Manager <br />
+Position: [Collaborator] Frontend web developer (2021), Web developer & Product manager (2022) <br />
 Team: Taeyoon Choi and Collaborators <br />
 Venue: <a target="_blank" rel="noreferrer" href="https://whiteblock.org/%EC%A0%84%EC%8B%9C/view/2792034">파주 화이트블럭 아트센터 Paju WhiteBlock</a>, South Korea <br />
 Type: Interactive & Accessible Mobile Website with Distributed Mesh Network 분산 네트워크 환경에서 인터렉티브하며 접근성 기능을 포함한 모바일 웹사이트 <br />
@@ -20,6 +20,14 @@ What if the Internet is like a garden, full of moss, lichens, and mushrooms? Wha
 
 -- quoted from taeyoonchoi medium.com
 ```
+
+A multimedia exhibition that poses a question ‘What if the Internet is like a garden?’. Made with pixi js (web 2D rendering engine), WebGL, socket, node js, Raspberry PI, etc.
+
+Logging into the mobile website via local wifi network, the audience can experience their own virtual gardens and creatures. A multimedia exhibition with drawing installations, mesh wifi networks, and interactive mobile website.
+
+Participated again as web developer and product manager in version 2, Fall 2022.
+
+---
 
 I've been a huge fan of Taeyoon Choi since I learned about SFPC back in 2016 nyc. It was a big pleasure working with Taeyoon Choi and his collaborators. I participated as Frontend Web Developer for interactive mobile website along with Cezar Mocan from NYU ITP. I mainly developed features related to webgl generative design (pixijs), accessibility features, audio, touch interaction and more. The website was only live in local environment because it was tied to wifi (named lichen, moss, mushroom) from a distributed mesh network (Donghoon Yi built hardware and network).
 

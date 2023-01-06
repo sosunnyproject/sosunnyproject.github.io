@@ -5,46 +5,6 @@ This is how you tell Gatsby that this CSS file
 should be processed as a CSS module 
 rather than plain CSS. */
 
-/* 
-.container {
-  margin: calc(10px + 1vw) calc(10px + 1vw);
-}
-
-h1{
-  font-family: 'raleway', 'jejuGothic';
-  color:  #A119FF;
-  font-size: calc(22px + 0.25vw);
-}
-
-h2 {
-  font-family: 'raleway', 'jejuGothic';
-  font-weight: 500;
-  color: rgb(72,3,140); 
-  font-size: calc(20px + 0.25vw);
-}
-
-h3 {
-  font-family: 'raleway', 'jejuGothic';
-  color: #A303A6;
-  font-weight: 500;
-  font-size: calc(18px +  0.25vw);
-}
-h4{
-  font-family: 'raleway', 'jejuGothic';
-  color: #F2059F;
-}
-
-p {
-  font-family: 'Rubik', 'ridiBatang';
-  font-size: calc(16px + 0.1vw);
-  line-height: calc(26px + 0.1vw);
-}
-li{
-  font-family: 'Rubik', 'ridiBatang';
-  font-size: calc(16px + 0.1vw);
-  line-height: calc(26px + 0.1vw);
-}
-*/
 .innerLayout {
   margin: 0 1.0em;
 }
@@ -115,7 +75,7 @@ a:hover{
   font-weight: 500;
   font-size: calc(16px + 0.25vw);
   color: #F79D84;
-  font-family: 'Montserrat', 'jejuGothic';
+  font-family: 'Montserrat', 'pretendard';
 }
 .postList h4 {
   margin: 0;
@@ -166,14 +126,14 @@ a:hover{
 .portfolioList a:visited{
   text-decoration: none;
 }
-.portfolioList h3 {
+.portfolioList h3 { 
   display: inline-block;
   width: 80%;
   margin-bottom: 0.5em;
   font-weight: 500;
   font-size: calc(16px + 0.15vw);
   color: #F79D84;
-  font-family: 'Montserrat', 'sans serif', 'jejuGothic';
+  font-family: 'Montserrat', 'pretendard', 'sans serif';
   line-height: 1.3;
 }
 .portfolioList h3:hover {
@@ -190,24 +150,29 @@ a:hover{
 
 /* post */
 .postWrapper{
-  max-width: 768px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
 .portfolioWrapper p {
-  font-family: 'Rubik', 'ridiBatang';
-  line-height: calc(26px + 0.1vw);
-  font-size: calc(16px + 0.1vw);
+  font-family: 'pretendard';
+  font-size: 1.0em;
+  line-height: 1.4em;
+  margin-top: 0.5em;
+  /* line-height: calc(26px + 0.1vw); */
+  /* font-size: calc(16px + 0.1vw); */
 }
 .portfolioWrapper li {
-  font-family: 'Rubik', 'ridiBatang';
-  line-height: calc(26px + 0.1vw);
-  font-size: calc(16px + 0.1vw);
+  font-family: 'pretendard';
+  font-size: 1.0em;
+  line-height: 1.4em;
+  /* font-size: calc(16px + 0.1vw); */
 }
 .portfolioWrapper div {
-  font-family: 'Montserrat', 'jejuGothic';
-  line-height: calc(26px + 0.1vw);
-  font-size: calc(16px + 0.1vw);
+  font-family: 'Montserrat', 'pretendard';
+  font-size: 1.0em;
+  line-height: 1.4em;
+
 }
 .innerLayout .EmbedVideo div {
   padding-bottom: 100%;

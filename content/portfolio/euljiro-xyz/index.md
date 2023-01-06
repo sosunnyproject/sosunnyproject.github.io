@@ -6,7 +6,7 @@ featuredImage: "euljiro-park.jpg"
 ---
 
 <div class="intro">
-Position: Co-Producer, Developer, Artist <br />
+Position: [Director] Co-Producer, Developer, Designer, Artist <br />
 Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/c.enter_official">Eulji Art Center 을지예술센터</a> or website <a target="_blank" rel="noreferrer" href="https://www.euljiro.xyz">euljiro.xyz</a> <br />
 Type: Interactive 3D website<br />
 Tools: threejs, xbox gamepad, monstermash.zone, Procreate (iPad), netlify<br />
@@ -15,16 +15,25 @@ Thanks to: <a target="_blank" rel="noreferrer" href="https://readymag.com/u16519
 </div>
 <hr />
 
-As of Januray 2022, I recommend you to enjoy this artwork on online, <a target="_blank" rel="noreferrer" href="https://www.euljiro.xyz">euljiro.xyz</a>. (It would work better if your graphic card is Nvidia GTX 1060 or higher.)
+<i>As of Januray 2022, I recommend you to enjoy this artwork online, <a target="_blank" rel="noreferrer" href="https://www.euljiro.xyz">euljiro.xyz</a>. (It would work better if your graphic card is Nvidia GTX 1060 or higher.) </i>
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/HJYgOmYNM3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I made an interactive website/artwork with powerful threejs library. The general concept, 3D models, and gamification elements are inspired by my experience at Euljiro district in Seoul, South Korea. This is an artwork from my imagination of how this district will be shaped in the future.
+The artwork’s general synopsis, characters, and interactive mechanism are inspired by coexisting dualities of Euljiro - young vs. old generations, historical manufacturing stores vs. hip and trendy cafes, gentrification, and lack of nature. This is an artwork from my imagination of how this district will be shaped in the future.
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="slide-1-3-1.png">
+<figcaption>Development Process</figcaption>
+</figure>
+
+Inspired by real-world Euljiro, I drew the characters with Procreate. Made 3D models with MonsterMash Siggraph-featured demo, edited in Blender. Programmed 3D website with Threejs.
+
+----
 
 Euljiro district is known for its diverse generations, historical manufacturing shops and merchants, hipster places,
 and political tension of gentrification. Yet, I observed it lacks the place with nature and public space where diverse population can (indirectly) interact or connect with one another. So I imagined a park in its virtual world. Also, I made a system of world - you can only charge 'energy' in the park and use the energy as you roam around other places.
 
-This was a part of ongoing exhibition 'Folding of the City' at Eulji Art Center, inspired by Jingfang Hao's SF novel "Folding Beijing".
+This was a part of a group exhibition 'Folding of the City' at Eulji Art Center, inspired by Jingfang Hao's SF novel "Folding Beijing".
 
 <h3>Updated 2022.02</h3>
 Removed animations from a number of models, considering the optimization for more devices. 

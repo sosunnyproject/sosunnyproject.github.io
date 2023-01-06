@@ -28,46 +28,60 @@ rather than plain CSS. */
 }
 
 h1{
- font-family: 'Montserrat', 'jejuGothic';
- color:  #EE6352; /* rgb(0, 102, 153); */
- font-size: calc(18px + 0.25vw);
+ font-family: 'Montserrat', 'pretendard';
+ font-weight: 800;
+ color:  #a42cd6; /* rgb(0, 102, 153); */
+ font-size: 1.6em;
 }
 
+a {
+    text-decoration: none;
+    color: #f79d84;
+    box-shadow: 0 -0.5em #fdddd4 inset; 
+}
+   
+a:hover{
+    color: #19FF7B;
+    box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset; 
+}
+li a {
+    color: #838383;
+  }
 h2 {
- font-family: 'Montserrat', 'jejuGothic';
- font-weight: 500;
- color: #3FA7D6; /*rgba(52, 123, 0, 1); */
- font-size: calc(16px + 0.25vw);
+ font-family: 'pretendard black';
+ color: #c130ff; /*rgba(52, 123, 0, 1); */
+ font-size: 1.4em;
+ padding-top: 1.2em;
+ margin: 0;
 }
-
+h2 a {
+    color: #c130ff;
+}
 h3 {
- font-family: 'Montserrat', 'jejuGothic';
- color: #FAC05E;
- font-weight: 500;
- font-size: calc(14px +  0.25vw);
+ font-family: 'pretendard bold';
+ color: #cc65ff;
+ padding-top: 1.2em;
+ margin: 0;
+ font-size: 1.2em;
+}
+h3 a {
+    color: #cc65ff;
 }
 h4{
- font-family: 'Montserrat', 'jejuGothic';
- color: #F79D84;
-}
-a {
- text-decoration: none;
- color: #F79D84;
- box-shadow: 0 -0.5em #fdddd4 inset; 
-}
-a:hover{
- color: #19FF7B;
- box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset; 
+ font-family: 'pretendard';
+ color: #A0A0A0;
+ font-size: 1.0em;
 }
 
 p {
- font-family: 'Rubik', 'ridiBatang';
- font-size: calc(12px + 0.1vw);
- line-height: calc(20px + 0.1vw);
+ font-family: 'pretendard', 'ridiBatang';
+ font-size: 1.0em;
+ line-height: 1.2em;
+ /* line-height: calc(20px + 0.1vw); */
  /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 .subHeader {
- font-family: 'Montserrat', 'jejuGothic';
+ font-family: 'Montserrat', 'pretendard';
  font-weight: 500;
  color: white; /* #3FA7D6 rgba(52, 123, 0, 1); */
  font-size: calc(16px + 0.25vw);
@@ -75,21 +89,21 @@ p {
  background-color: rgb(187, 187, 187);
 }
 .title {
- font-family: 'Rubik', 'ridiBatang';
+ font-family: 'pretendard', 'ridiBatang';
  font-size: calc(12px + 0.1vw);
  line-height: calc(14px + 0.1vw);
  font-weight: 600;
  /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 .addition {
- font-family: 'Rubik', 'ridiBatang';
+ font-family: 'pretendard', 'ridiBatang';
  font-size: calc(10px + 0.1vw);
  color: gray;
  font-weight: 200;
  display: block;
 }
 li {
- font-family: 'Rubik', 'ridiBatang';
+ font-family: 'pretendard', 'ridiBatang';
  line-height: calc(18px + 0.1vw);
  font-size: calc(12px + 0.1vw);
  font-weight: 400;

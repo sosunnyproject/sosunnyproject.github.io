@@ -21,10 +21,12 @@ blockquote blockquote p {
 }
 
 figcaption {
-  font-size: calc(10px + 0.3vw);
+  font-family: 'pretendard';
+  font-size: calc(12px + 0.3vw);
+  line-height: 1.5em;
   color: #A0A0A0;
-  letter-spacing: calc(0.005px + 0.05vw);
-  margin-bottom:calc(20px + 0.5vw);
+  /* padding-bottom: 0.75em; */
+  /* letter-spacing: calc(0.005px + 0.05vw); */
 }
 
 .intro {

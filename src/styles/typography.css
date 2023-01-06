@@ -3,52 +3,29 @@
   src: url("../fonts/RIDIBatang.otf");
 }
 @font-face {
-  font-family: "jejuGothic";
-  src: url("../fonts/jejuGothic.ttf");
+  font-family: "pretendard";
+  src: url("../fonts/PretendardVariable.woff2");
 }
 @font-face {
-  font-family: "jejuMyeongjo";
-  src: url("../fonts/jejuMyeongjo.ttf");
+  font-family: "pretendard black";
+  src: url("../fonts/Pretendard-Black.woff");
 }
 @font-face {
-  font-family: "gmarketBold";
-  src: url("../fonts/GmarketSansBold.otf");
+  font-family: "pretendard extrabold";
+  src: url("../fonts/Pretendard-ExtraBold.woff");
 }
 @font-face {
-  font-family: "gmarketLight";
-  src: url("../fonts/GmarketSansLight.otf");
+  font-family: "pretendard bold";
+  src: url("../fonts/Pretendard-Bold.woff");
+}
+@font-face {
+  font-family: "pretendard semibold";
+  src: url("../fonts/Pretendard-SemiBold.woff");
 }
 @font-face {
   font-family: "gmarketMedium";
   src: url("../fonts/GmarketSansMedium.otf");
 }
-
-@font-face {
-  font-family: "NuriR";
-  src: url("../fonts/HangeulNuriR.ttf");
-}
-
-@font-face {
-  font-family: "NuriB";
-  src: url("../fonts/HangeulNuriB.ttf");
-}
-
-@font-face {
-  font-family: "MapleBold";
-  src: url("../fonts/Maplestory\ Bold.ttf");
-}
-
-
-@font-face {
-  font-family: "MapleLight";
-  src: url("../fonts/Maplestory\ Light.ttf");
-}
-
-@font-face {
-  font-family: "Cafe24Simple";
-  src: url("../fonts/Cafe24Simplehae.ttf");
-}
-
 @font-face {
   font-family: 'SanFrancisco';
   src: url("../fonts/SFUIText-Light.otf")
