@@ -2,7 +2,7 @@
 title: "[Exhibition] 《 Garden.Local : Distributed Web of Care 》"
 date: "2021-11-20"
 category: "portfolio"
-featuredImage: "16.jpg"
+featuredImage: "dwc16.jpg"
 ---
 
 <div class="intro">
@@ -52,37 +52,37 @@ Photographs below are taken by Chulki Hong.
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="4.jpg">
+<img src="dwc4.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="10.jpg">
+<img src="dwc10.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="11.jpg">
+<img src="dwc11.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="12.jpg">
+<img src="dwc12.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="6.jpg">
+<img src="dwc6.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="8.jpg">
+<img src="dwc8.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="9.jpg">
+<img src="dwc9.jpg">
 <figcaption></figcaption>
 </figure>
 
@@ -92,26 +92,26 @@ Photographs below are taken by Chulki Hong.
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="16.jpg">
+<img src="dwc16.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="13.jpg">
+<img src="dwc13.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="14.jpg">
+<img src="dwc14.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="1.jpg">
+<img src="dwc1.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="3.jpg">
+<img src="dwc3.jpg">
 <figcaption></figcaption>
 </figure>

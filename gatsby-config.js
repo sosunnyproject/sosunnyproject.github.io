@@ -149,7 +149,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-instagram`,
+    `gatsby-plugin-instagram-embed`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

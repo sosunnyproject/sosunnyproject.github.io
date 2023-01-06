@@ -20,51 +20,51 @@ Date: 2017. 06. 01
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/ASxuVJJzKDY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu7.jpg">
+<img src="./nyu7.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu8.jpg">
+<img src="./nyu8.jpg">
 <figcaption></figcaption>
 </figure>
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu12.jpg">
-<figcaption></figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu10.jpg">
+<img src="./nyu12.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu2.jpg">
+<img src="./nyu10.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu4.jpg">
+<img src="./nyu2.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu5.jpg">
+<img src="./nyu4.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu11.jpg">
+<img src="./nyu5.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu9.jpg">
+<img src="./nyu11.jpg">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="nyu6.jpg">
+<img src="./nyu9.jpg">
+<figcaption></figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="./nyu6.jpg">
 <figcaption></figcaption>
 </figure>
 

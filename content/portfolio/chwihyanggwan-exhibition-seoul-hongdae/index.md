@@ -44,12 +44,12 @@ At each scene, it throws a question like a game, and creates special interaction
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="edit-GX2A4095_1.png">
+<img src="./edit-GX2A4095_1.png">
 <figcaption></figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="edit-GX2A4098.png">
+<img src="./edit-GX2A4098.png">
 <figcaption></figcaption>
 </figure>
 
