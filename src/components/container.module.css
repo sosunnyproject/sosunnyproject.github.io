@@ -8,7 +8,21 @@ rather than plain CSS. */
 .innerLayout {
   margin: 0 1.0em;
 }
-
+.canvas {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+.jsText {
+  position: absolute;
+  left: 0;
+  top: 10;
+  width: 100%;
+}
 a {
   text-decoration: none;
   color: #A119FF;

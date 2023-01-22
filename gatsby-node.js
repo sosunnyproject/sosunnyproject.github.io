@@ -16,6 +16,26 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+// https://forum.babylonjs.com/t/gltf-loading-in-gatsby/35721/5
+exports.onCreateWebpackConfig = ({
+  actions
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.(glb|gltf|bin|png|jpg|jpeg)$/i,
+          use: {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+            },
+          }
+        },
+      ]
+    }
+  })
+}
 
 exports.createPages = async ({ graphql, actions }) => {
   // **Note:** The graphql function call returns a Promise

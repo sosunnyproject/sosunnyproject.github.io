@@ -12,6 +12,7 @@ export default function Header() {
       <Link to="/">have so sunny day</Link>
     </div>
     <div className={headerStyles.navContainer}>
+      <Link to="/intro/" className={headerStyles.navText}>intro</Link>
       <Link to="/portfolio/" className={headerStyles.navText}>portfolio</Link>
       <Link to="/blog/" className={headerStyles.navText}>blog</Link>
       <Link to="/vitae/" className={headerStyles.navText}>vitae</Link>
