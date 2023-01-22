@@ -7,7 +7,6 @@ import '../styles/global.css';
 export default function VitaeEN() {
   return (
     <>
-
     <h2>Exhibitions</h2>
       <p className={vitaeStyles.title}>'Euljiro Has No Park' v.1, Seoul Foundation of Arts and Culture (SFAC) sponsored x Eulji Art Center 
       <a href="https://archivist.kr/show/scroll.php?pagecode=1638070197" rel="noreferrer" target="_blank"> “A Folding of the City" exhibition </a> </p>
@@ -58,9 +57,6 @@ export default function VitaeEN() {
         <li>Assisted and researched monthly business franchise lists including Fortune 500, Global 500, and more</li>
       </ul>
 
-    <h2>Workshops/Conference</h2>
-    <p> Samsung Open Source Conference 2020, JS CONF 2020, ModuCon 2018 & 2020 (ModuLabs), ModuLabs Flipped Learning Workshop Series - Nature of Code x p5js </p>
-
     <h2>Education</h2>
     <p className={vitaeStyles.title}>Vassar College, Poughkeepsie, NY</p>
     <span className={vitaeStyles.addition}>Bachelor’s Degree, Cum Laude, Phi Beta Kappa</span>
@@ -87,6 +83,60 @@ export default function VitaeEN() {
       <li>Led internal team projects such as Summarizing News with NLP, K-drama Data collection/analysis/visualiztion with Python Pandas</li>
     </ul>
 
+    <h2>Talks</h2>
+    <ul>
+<li>2022.11   		Artist Talk, IML300: Reading and Writing the Web course by Qianqian Ye, 		USC Media Arts and Practice Division</li>
+
+<li>2022.11 		<i>Coding Typography in 2D & 3D world</i>, Korean Society of Typography</li>
+
+<li>2022.09 		Organizer, MC, Creative coding performer JSCONF KOREA 2022</li>
+
+<li>2022.08 		Panel, Discussion About Translation and p5js, Women Open Tech Lab, Seoul Arts Week</li>
+
+<li>2022.02 		Judge, Google Developer Student Clubs Korea Winter Hackathon: Play Your Stay</li>
+
+<li>2021.08		Instagram Takeover, p5js official Instagram account</li>
+
+<li>2021.08		Organizer, MC, and Speaker, Processing Day Seoul, Gather.Town & KOTE gallery, Seoul</li>
+
+<li>2020.10		<i>Introducing Creative Coding Open-Source to Generate Art</i>, Samsung Open Source Conference, Seoul</li>
+
+<li>2019.12		<i>Learn Code to Make Art</i>, Modu Conference, Modulabs, Seoul</li>
+
+<li>2019.11		<i>Creative Coding: Code + Art</i>, Women Who Code Seoul, Microsoft Office, Seoul</li>
+
+<li>2019.10		<i>How We Do Code x Art Lab</i>, JSCONF Korea, COEX expo center, Seoul</li>
+
+<li>2018.12		Presentation and demo, <i>Playing with Deep Learning: Interact with PoseNet</i>, Modulabs</li>
+
+<li>2018.10 		Poster presentation, <i>Transforming Hand-Sketched Objects into Photographic Qualities</i>,		Artificial Intelligence Symposium Conference by IEIE, Seoul National University</li>
+
+<li>2018.06 		<i>Introduction to Blockchain</i>, Modulabs</li>
+</ul>
+
+<h2>Workshops</h2>
+<ul>
+
+<li>2022.09-11  	<i>Interactive Visual Coding</i>, 5-weeks curriculum, Notefolio Design Academy, Seoul </li>
+
+<li>2022.02 	     	<i>Dancing Vertex – Behind the Scene</i>, Nest Gangnam, Seoul</li>
+
+<li>2022.08		Assistant Teacher, Taeyoon Choi’s Body Coding workshop, 		Smilegate Game Company Future lab, Seoul</li>
+
+<li>2022.07 	       	<i>Trigonometry in p5js</i>, Virtual CC Fest</li>
+
+<li>2022.04-05   	<i>Animating Pixel Human with p5js</i>, Nest Gangnam, Seoul</li>
+
+<li>2022.05 		Artist Talk & Workshop, Taeyoon Choi’s Creative coding workshop for 		Samsung Special Education School students, Leeum Museum, Seoul</li>
+
+<li>2022.02 		<i>Generative Symmetric Patterns with p5js</i>, Nest Gangnam, Seoul</li>
+
+<li>2019.07-09	<i>Draw Nature with Code, p5js</i>, a series based on Nature of Code lectures,		Modulabs</li>
+
+<li>2016.10 		Participant and team lead, <i>Augmented Beatz</i>, Reality Virtually Hackathon, 		MIT Media Lab, Boston</li>
+
+<li>2016.07 		Participant, Hack Cooper 2016, Cooper Union, NY</li>
+</ul>
     </>
 
   )

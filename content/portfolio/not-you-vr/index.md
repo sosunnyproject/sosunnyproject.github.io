@@ -7,17 +7,20 @@ featuredImage: "NotYou_Screenshot.jpg"
 
 <div class="intro">
 Title: Not You<br />
-Position: Co-Producer, Developer, Voice Actor <br />
-Team: Maxwell Foxman, Erika Scott, Bunmi Sijuwade, Rebecca Poulson<br />
-Tools: Unity, 360 Heroes, Adobe Premiere, Freesound.org, AutoPano, Audacity, Theta 360, and a binaural audio recorder<br />
+Position: [Collaborator] Co-Producer, Developer, Voice Actor <br />
+Topic: AR / VR / XR, Gender Discrimination <br />
+Team: Maxwell Foxman, Erika Scott, Bunmi Sijuwade, Rebecca Poulson, So Sun Park, Mark Ryan Anderson, Maxwell Foxman, Ulysses Popple<br />
+Tools: Unity, 360 Heroes, Adobe Premiere, Freesound.org, AutoPano, Audacity, Theta 360, and a binaural audio recorder, Cardboard, Gear VR<br />
 Type: <a target="_blank" rel="noreferrer" href="http://timewavefestival.com/virtualrealitylab-2016-projects/">TimeWave Lab VR/AR Festival 2016</a> in NYC <br />
 Venue: <a target="_blank" rel="noreferrer" href="http://timewavefestival.com/2016-demo-day-gallery/">Hearst Tower(Showcase)</a>, Kickstarter (Production), NYU Gaming Center (Making)<br /> 
-Platform: Cardboard, Gear VR<br />
-Actors: So Sun Park, Mark Ryan Anderson, Maxwell Foxman, Ulysses Popple<br />
+Date: May 2016
 </div>
 <hr />
 
-#### English Below
+<h3>
+A short interactive VR film about gender discrimination that females go through in professional workplaces. Made with Unity, GoPro 360, Gear VR.
+</h3> <br />
+
 
 <img src="NotYou_Screenshot.jpg" width="30%"><br />
 

@@ -8,7 +8,7 @@ import '../styles/global.css';
 
 export default function Vitae() {
 
-  const [language, setLang] = useState('ko')
+  const [language, setLang] = useState('en')
 
   return (
     <div className={vitaeStyles.vitaeContainer}>

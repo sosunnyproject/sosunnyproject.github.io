@@ -7,6 +7,7 @@ featuredImage: "IMG_5116-min.jpg"
 
 <div class="intro">
 Position: Organizer, MC, Performer <br />
+Topic: Opensource Community, Generative Arts, Audiovisual Performance  <br />
 Venue: <a target="_blank" rel="noreferrer" href="https://2022.jsconf.kr/">2022 JSCONF Korea 자바스크립트 컨퍼런스</a> Nodeul Island, Seoul, South Korea<br />
 Type: Volunteer, Community <br />
 Date: 2022-09-16 ~ 2022-09-17
@@ -17,6 +18,8 @@ Date: 2022-09-16 ~ 2022-09-17
 I participated in JSCONF Korea 2022 as an organizer, MC (Korean & English), and live-coding performer.
 
 Since April 2022, I closley worked with other organizers and volunteers. To list some of the works I did, I organized logistics for speakers, sponsorship proposals, fun facts quiz time, customer service, ticket sales, and social media communication. I was also MC for 2-days event for both Korean and English with another partner.
+
+On Day 2 of the event, I also performed a live-coding audiovisual generative arts piece, [Dancing Vertex] made with p5 javascript creative coding library and p5live website. 
 
 More than 200 people gathered in a beautiful Nodeul Island in Seoul, South Korea. The speakers who flew from different countries hung out together very well and enjoyed their time here. I believe the spirit of open mind and kind hearts that JSCONF pursues united all participants regardless of their backgrounds or skills. 
 
@@ -40,7 +43,7 @@ More than 200 people gathered in a beautiful Nodeul Island in Seoul, South Korea
 <figcaption></figcaption>
 </figure>
 
-## Live-coding Audiovisual Performance 
+### A live-coding audiovisual performance made with p5js creative coding library and p5live website. 
 
 On the opening time of Day 2, I gave 15-20 minutes of audiovisual performance with p5js and p5live. As it was 'JAVASCRIPT' conference, I wanted to only use javascript and web browser. I call this piece 'Dancing Vertex' as this is a compilation of my experiments on 2d, 3d coordinates on digital graphics system. 
 

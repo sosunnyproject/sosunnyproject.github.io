@@ -6,24 +6,23 @@ featuredImage: "thesis20.png"
 ---
 
 <div class="intro">
-Position: Producer, Researcher, Developer<br />
+Position: Director] Producer, Researcher, Developer<br />
+Topic: Interactive Installation, Social power dynamic, Playful technology <br />
 Venue: Vassar College<br />
 Type: Media Studies Major Thesis Project, Class of 2016<br />
 Showcase: Vassar College Main Building<br />
-Tools: Unity Engine 유니티, Leap Motion 립모션 <br />
+Tools: Unity Engine, Leap Motion, 유니티, 립모션 <br />
 Date: 2016. 05. 09
 </div>
-
 <hr />
 
-*한국어는 하단에*
+<h3>An interactive media installation demo for live music events. It experiments multiple audience and artists interacting with each other and create collaborative soundscape. </h3>
 
 #### [Click Here for Thesis Paper (English)](https://digitallibrary.vassar.edu/collections/institutional-repository/designing-interactive-digital-installation-human-human)
 
-### Pop-up Showcase of Media Thesis Project @ Vassar College Campus (뉴욕 바싸대학교 미디어 전공 졸업 논문 프로젝트 팝업 쇼케이스 영상)
-
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/hgD8w5DXE-k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+#### Pop-up Showcase of Media Thesis Project @ Vassar College Campus (뉴욕 바싸대학교 미디어 전공 졸업 논문 프로젝트 팝업 쇼케이스 영상)
 
 ### Short Description
 
@@ -38,7 +37,7 @@ This project investigates the way to **encourage the audience’s human-to-human
 It found a lesson from organic and physical human-to-human interaction in cultural/community festivals. Also, it does not criticize the presence of technology itself in the music events. **Interplaying experiments if technology can help and encourage live social interaction amongst audience members, bringing people together in real world.**
 
 
-### How Does It Work
+### How It Works
 
 1. Put your hands on top of Leap Motion device
 2. Try to touch each red cube, which is similar to DJ LaunchPad button
@@ -50,6 +49,18 @@ It found a lesson from organic and physical human-to-human interaction in cultur
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="thesis20.png" >
 <figcaption>Main Image</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="thesis6.png">
+<figcaption> May 2016, Interplaying, Media Studies senior thesis project showcase, Vassar College Main Building, New York. </figcaption>
+</figure>
+<img src="thesis8.png" /><br />
+<img src="thesis7.png" /><br />
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="DemoDay_hearstTower.jpg">
+<figcaption> Demo Day (May 13) at Hearst Tower, New York City </figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
@@ -65,18 +76,9 @@ It found a lesson from organic and physical human-to-human interaction in cultur
 <img src="thesis4.png">
 <figcaption> Facebook Event for On-Campus Showcase </figcaption>
 </figure>
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="thesis6.png">
-<figcaption> On-Campus Showcase at Vassar College </figcaption>
-</figure>
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="DemoDay_hearstTower.jpg">
-<figcaption> Demo Day (May 13) at Hearst Tower, New York City </figcaption>
-</figure>
 
 <img src="thesis9.png" /><br />
-<img src="thesis8.png" /><br />
-<img src="thesis7.png" /><br />
+
 
 ### Thesis Presentation Preview
 

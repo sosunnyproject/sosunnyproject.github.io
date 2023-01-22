@@ -5,16 +5,19 @@ category: 'portfolio'
 featuredImage: 'nyu6.jpg'
 ---
 <div class="intro">
-Position: Producer, Creative Technologist<br />
+Position: [Director] Artist, Developer <br />
+Topic: Interactive Installation, Social power dynamic <br />
 Venue: New York University Interactive Communications Program Building <br />
 Type: NYU ITP Camp Final Show <br />
-Tools: p5.js, processing 프로세싱, dmx lighting 무빙 라이트 및 라이팅 제어 소프트웨어, arduino 아두이노, potentiometers <br />
-Date: 2017. 06. 01
+Tools: p5.js, processing, DMX lighting, Arduino, potentiometers, 프로세싱, 무빙 라이트 및 라이팅 제어 소프트웨어, 아두이노<br />
+Date: June 2017
 </div>
 
 <hr />
 
-#### English Below
+<h3>An interactive installation about reversing the power dynamic between celebrities on stage vs. audience. It allows people to directly control the lighting and projection design of the space.</h3>
+<br />
+
 #### Please set to 1080p for better video quality
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/ASxuVJJzKDY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

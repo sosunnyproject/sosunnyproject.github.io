@@ -5,14 +5,19 @@ date: '2017-02-10'
 featuredImage: 'timewave2017.jpg'
 ---
 <div class="intro">
-Position: Co-Producer, Developer <br />
+Position: [Collaborator] Co-Producer, Developer <br />
+Topic: AR/VR/XR, Urban Environment <br />
 Team: So Sun Park, Maxwell Foxman<br />
 Tools: Unity, Gear VR, Cardboard, Maya, Audacity<br />
 Type: <a target="_blank" rel="noreferrer" href="http://timewavefestival.com/virtualrealitylab-2017-projects/">TimeWave Lab VR/AR Festival 2017</a> in NYC <br />
 Venue: NYU Gaming Center (MakerSpace), Time Inc. (Showcase), Oculus (Sponsor) <br />
-Date: 2017. Spring
+Date: January 2017
 </div>
 <hr />
+
+<h3>A short interactive VR documentary about gentrified and now-disappeared historic American mural space 5 Pointz in New York.</h3>
+
+<br />
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/kRfG-g5NoZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

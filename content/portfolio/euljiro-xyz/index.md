@@ -7,6 +7,7 @@ featuredImage: "euljiro-park.jpg"
 
 <div class="intro">
 Position: [Director] Co-Producer, Developer, Designer, Artist <br />
+Topic: Web Project, Urban Environment <br />
 Venue: <a target="_blank" rel="noreferrer" href="https://www.instagram.com/c.enter_official">Eulji Art Center 을지예술센터</a> or website <a target="_blank" rel="noreferrer" href="https://www.euljiro.xyz">euljiro.xyz</a> <br />
 Type: Interactive 3D website<br />
 Tools: threejs, xbox gamepad, monstermash.zone, Procreate (iPad), netlify<br />

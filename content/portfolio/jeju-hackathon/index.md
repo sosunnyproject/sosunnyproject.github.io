@@ -6,7 +6,8 @@ featuredImage: "app1.png"
 ---
 
 <div class="intro">
-Position: Team Lead, Product Manager, Business Lead <br />
+Position: [Collaborator] Product Lead, Project Manager <br />
+Topic: Web/App Project, Environment <br />
 Team: Saving Okja<br />
 Venue: 제주창조경제혁신센터 <a target="_blank" rel="noreferrer" href="http://jccei.kr/">jeju innovation hub </a> <br />
 Type: 글로벌 제주 해커톤 Global Jeju Hackathon <br />
@@ -17,6 +18,11 @@ Date: 2017.10-27 ~ 2017.10.29
 <hr />
 
 ## 제작 앱
+
+<h3>iOS mobile application that instantly checks the environment-friendly scores of the products with image-detection or OCR</h3> <br />
+
+The team won the 1st place winner in Global Jeju Hackathon, South Korea.
+
 <figure class="verticalImg" style="display: block; margin: 0 auto; text-align: center">
 <img src="app1.png" >
 <figcaption></figcaption>

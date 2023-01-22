@@ -17,6 +17,31 @@ Passionate about making technology more accessible, approachable, enjoyable thro
 - [Tripbtoz, 2020 - 2021](#web-4)
 - [Saving Okja, Global Jeju Hackathon, 2017](#web-5)
 
+## 2. GENERATIVE ARTS
+- [Audiovisual live-coding performance, 2022](#ga-1)
+- [Creative coding classes and performances, 2022](#ga-2)
+- [Dreaming in Starry Night, 2021](#ga-3)
+- [Creative coding works on social media](#ga-4)
+
+## 3. XR (AR, VR, MR)
+- [2021 Frankenstein, 2021](#xr-1)
+- [Reviving 5 Pointz, 2017](#xr-2)
+- [Not You, 2016](#xr-3)
+- [Augmented Beatz, VR/AR Hackathon, MIT Media Lab, 2016](#xr-4)
+
+## 4. INTERACTIVE INSTALLATION
+- [Dance x Tech Lab,  2021](#ii-1)
+- [Subconscious,  2021](#ii-2)
+- [Here, Now,  2020](#ii-3)
+- [Bloom Together,  2019](#ii-4)
+- [Stars in Your Hands,  2017](#ii-5)
+- [Interplaying, 2016](#ii-6)
+- [Theater, Vassar College, 2012-2015](#ii-7)
+
+## 5. PRESENTATION
+- [List of Talks](#pp-1)
+- [List of Workshops](#pp-2)
+
 <h3 id="web-1"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/euljiro-xyz/"> Euljiro Has No Park, 2021</a></h3>
 
 Topic: Urban Environment
@@ -75,10 +100,6 @@ iOS mobile application that instantly checks the environment-friendly scores of 
 
 
 ## 2. GENERATIVE ARTS
-- [Audiovisual live-coding performance, 2022](#ga-1)
-- [Creative coding classes and performances, 2022](#ga-2)
-- [Dreaming in Starry Night, 2021](#ga-3)
-- [Creative coding works on social media](#ga-4)
 
 <h3 id="ga-1"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/jsconf-korea-2022">Audiovisual live-coding performance, 2022 </a></h3>
 
@@ -113,7 +134,7 @@ Topic: Creative coding
 
 A video installation of generative kinetic typography works made with Javascript (p5js, matterjs) and WebGL, inspired by typography designs and #36DaysOfType.
 
-### Creative coding works on social media
+<h3 id="ga-4"><a target="_blank" rel="noreferrer"  href="http://instagram.com/sosunnyproject">Creative coding works on social media</a></h3>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="slide-11.png">
@@ -132,11 +153,6 @@ Upload daily coding sketches, experiment with creative codes, make series of ske
 Make basic p5js tutorials in both Korean and English. Produce time-lapse videos of creative coding works.
 
 ## 3. XR (AR, VR, MR)
-
-- [2021 Frankenstein, 2021](#xr-1)
-- [Reviving 5 Pointz, 2017](#xr-2)
-- [Not You, 2016](#xr-3)
-- [Augmented Beatz, VR/AR Hackathon, MIT Media Lab, 2016](#xr-4)
 
 <h3 id="xr-1"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/xrea2021/">2021 Frankenstein, 2021</a></h3>
 
@@ -188,14 +204,6 @@ Hololens App demo of XR DJ-ing application that imagines a AR/MR DJ equipment on
 Made with Unity and Hololens.
 
 ## 4. INTERACTIVE INSTALLATION
-
-- [Dance x Tech Lab,  2021](#ii-1)
-- [Subconscious,  2021](#ii-2)
-- [Here, Now,  2020](#ii-3)
-- [Bloom Together,  2019](#ii-4)
-- [Stars in Your Hands,  2017](#ii-5)
-- [Interplaying, 2016](#ii-6)
-- [Theater, Vassar College, 2012-2015](#ii-7)
 
 <h3 id="ii-1">Dance x Tech Lab, 2021</h3>
 
@@ -288,7 +296,7 @@ Participated in various Vassar College Drama Department shows and student theate
 
 ## 5. PRESENTATION
 
-### Talks
+<h3 id="pp-1">Talks</h3>
 
 2022.11   		Artist Talk, IML300: Reading and Writing the Web course by Qianqian Ye, 		USC Media Arts and Practice Division
 
@@ -318,7 +326,8 @@ Participated in various Vassar College Drama Department shows and student theate
 
 2018.06 		<i>Introduction to Blockchain</i>, Modulabs
 
-###  Workshops
+<h3 id="pp-2">Workshops</h3>
+
 
 2022.09-11  	<i>Interactive Visual Coding</i>, 5-weeks curriculum, Notefolio Design Academy, Seoul 
 
