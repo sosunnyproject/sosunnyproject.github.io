@@ -71,8 +71,6 @@ Topic: Nature and tech
 
 A multimedia exhibition that poses a question ‘What if the Internet is like a garden?’. Logging into the mobile website via local wifi network, the audience can experience their own virtual gardens and creatures. Made with pixi js (web 2D rendering engine), WebGL, socket, node js, Raspberry PI, etc.
 
-- 
-
 <h3 id="web-3"><a target="_blank" rel="noreferrer"  href="https://digital-trypanosomiasis-2022.netlify.app/">디지털 수면병 Digital Trypanosomiasis, 2022</a></h3>
 
 Topic: Healing of Trauma
