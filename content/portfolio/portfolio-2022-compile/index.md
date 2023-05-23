@@ -6,30 +6,26 @@ featuredImage: 'thumbnail.png'
 ---
 
 ## INTRODUCTION
-A storyteller who uses interactive digital mediums. In pursuit to create immersive experiences with stories about urban problems, dualities of technology, social power dynamics, and trauma recovery. 
+A developer and storyteller who uses interactive digital mediums. Passionate about making technology more accessible, approachable, enjoyable through creative applications.
 
-Passionate about making technology more accessible, approachable, enjoyable through creative applications.
-
-## 1. WEB PROJECTS
+## 1. WEB PROJECTS 웹 개발
 - [Euljiro Has No Park, 2021](#web-1)
 - [garden.local, distributed web of care, 2021 - 2022](#web-2)
 - [Digital Trypanosomiasis, 2022](#web-3)
 - [Tripbtoz, 2020 - 2021](#web-4)
 - [Saving Okja, Global Jeju Hackathon, 2017](#web-5)
 
-## 2. GENERATIVE ARTS
+## 2. GENERATIVE ARTS 알고리즘 생성 아트
 - [Audiovisual live-coding performance, 2022](#ga-1)
 - [Creative coding classes and performances, 2022](#ga-2)
 - [Dreaming in Starry Night, 2021](#ga-3)
 - [Creative coding works on social media](#ga-4)
 
-## 3. XR (AR, VR, MR)
+## 3. XR (AR, VR, MR) 증강현실, 가상현실
 - [2021 Frankenstein, 2021](#xr-1)
 - [Reviving 5 Pointz, 2017](#xr-2)
-- [Not You, 2016](#xr-3)
-- [Augmented Beatz, VR/AR Hackathon, MIT Media Lab, 2016](#xr-4)
 
-## 4. INTERACTIVE INSTALLATION
+## 4. INTERACTIVE INSTALLATION 인터렉티브 설치물
 - [Dance x Tech Lab,  2021](#ii-1)
 - [Subconscious,  2021](#ii-2)
 - [Here, Now,  2020](#ii-3)
@@ -38,11 +34,11 @@ Passionate about making technology more accessible, approachable, enjoyable thro
 - [Interplaying, 2016](#ii-6)
 - [Theater, Vassar College, 2012-2015](#ii-7)
 
-## 5. PRESENTATION
+## 5. PRESENTATION 발표
 - [List of Talks](#pp-1)
 - [List of Workshops](#pp-2)
 
-<h3 id="web-1"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/euljiro-xyz/"> Euljiro Has No Park, 2021</a></h3>
+<h3 id="web-1"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/euljiro-xyz/"> 을지로에는 공원이 없다. Euljiro Has No Park, 2021</a></h3>
 
 Topic: Urban Environment
 
@@ -51,7 +47,18 @@ Topic: Urban Environment
 <figcaption>December 2021, Euljiro Has No Park v.1, <br /> <i>The Folding of the City</i> group exhibition, Eulji Art Center, Seoul</figcaption>
 </figure>
 
-An interactive 3D web-based artwork about the future of Euljiro district in Seoul, South Korea. 
+An interactive 3D web-based artwork about the future of Euljiro district in Seoul, South Korea.
+
+- Threejs 라이브러리를 사용해서 나무, 잔디 등 전체 환경을 구성했습니다.
+- L-system 알고리즘을 응용하여 나무를 모델링하고, 중앙의 큰 생명나무의 매터리얼은 webGL 쉐이더 코드를 사용했습니다.
+    - 참고: [보타니컬 알고리즘](http://algorithmicbotany.org/), [l-system 시뮬레이터](https://www.carl-olsson.com/project/l-system/)
+- 캐릭터는 프로크리에이트에서 직접 드로잉한 2D 스케치를 [Monstermash.zone](Monstermash.zone) 어플리케이션으로 3D화 하고 짧은 애니메이션을 생성했습니다.
+    - 캐릭터별 애니메이션은 최적화를 위해 몇몇 모델에만 적용했습니다.
+- 유저의 에너지가 떨어지면 조명이 점점 어두워지고, 필터가 블러화되면서 픽셀이 깨지는 것 같은 효과를 보입니다.
+- 유저는 화살표 키로 이동이 가능하며, raycast로 유저와 각 캐릭터 거리를 인지하고, 충분히 가까워지면 일종의 메시지 창을 띄웁니다.
+- 현장 전시 기간 동안, [Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)를 이용해 게임패드 콘솔로 조작이 가능하게 구현했습니다. 
+- webpack, vite 번들링 프레임워크로 구축했습니다. 
+
 
 <h3 id="web-2"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/dwc-v2/">garden.local, distributed web of care, 2021 - 2022</a></h3>
 
@@ -59,12 +66,14 @@ Topic: Nature and tech
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="slide-2-1.jpeg">
-<figcaption> <i>garden.local</i> 2021, LED monitor, paintings, Raspberry Pi, <br />  Installation view, Art Center White Block, Paju</figcaption>
+<figcaption> <i>가든.로컬 garden.local</i> 2021, LED monitor, paintings, Raspberry Pi, <br />  Installation view, Art Center White Block, Paju</figcaption>
 </figure>
 
 A multimedia exhibition that poses a question ‘What if the Internet is like a garden?’. Logging into the mobile website via local wifi network, the audience can experience their own virtual gardens and creatures. Made with pixi js (web 2D rendering engine), WebGL, socket, node js, Raspberry PI, etc.
 
-<h3 id="web-3">Digital Trypanosomiasis, 2022</h3>
+- 
+
+<h3 id="web-3"><a target="_blank" rel="noreferrer"  href="https://digital-trypanosomiasis-2022.netlify.app/">디지털 수면병 Digital Trypanosomiasis, 2022</a></h3>
 
 Topic: Healing of Trauma
 
@@ -74,6 +83,11 @@ Topic: Healing of Trauma
 </figure>
 
 Developed an interactive scroll-based website about trypanosomiasis, sleeping sickness parasite.
+- 300+ 장의 사진들을 연속적으로 플레이하여 마치 GIF 애니메이션 재생 같은 작품을 보여주는 웹사이트입니다. 
+- 유저가 마우스 휠을 위아래로 움직일 때만 사진들이 연속으로 재생됩니다. 
+- 구간별로 사운드 효과 재생도 구현하였으나, 최종 결과물에서는 사운드를 제외했습니다. 
+- 구간마다 한글 및 영어 자막을 코드로 설정했습니다.
+- Netlify로 배포하였으며, 대용량 이미지 로드는 Cloudinary 서비스를 사용했습니다.
 
 <h3 id="web-4">Tripbtoz, 2020 - 2021</h3>
 
