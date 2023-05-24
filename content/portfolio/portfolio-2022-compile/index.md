@@ -15,20 +15,19 @@ A developer and storyteller who uses interactive digital mediums. Passionate abo
 - [Tripbtoz, 2020 - 2021](#web-4)
 - [Saving Okja, Global Jeju Hackathon, 2017](#web-5)
 
+## 3. XR (AR, VR, MR) 증강현실, 가상현실
+- [POSCO DX R&D Center: AR.VR 가상현실 글래스 앱 연구](#xr-1)
+- [2021 Frankenstein, 2021](#xr-2)
+- [Reviving 5 Pointz, 2017](#xr-3)
+
 ## 2. GENERATIVE ARTS 알고리즘 생성 아트
 - [Audiovisual live-coding performance, 2022](#ga-1)
 - [Creative coding classes and performances, 2022](#ga-2)
-- [Dreaming in Starry Night, 2021](#ga-3)
 - [Creative coding works on social media](#ga-4)
-
-## 3. XR (AR, VR, MR) 증강현실, 가상현실
-- [2021 Frankenstein, 2021](#xr-1)
-- [Reviving 5 Pointz, 2017](#xr-2)
 
 ## 4. INTERACTIVE INSTALLATION 인터렉티브 설치물
 - [Dance x Tech Lab,  2021](#ii-1)
 - [Subconscious,  2021](#ii-2)
-- [Here, Now,  2020](#ii-3)
 - [Bloom Together,  2019](#ii-4)
 - [Stars in Your Hands,  2017](#ii-5)
 - [Interplaying, 2016](#ii-6)
@@ -43,9 +42,20 @@ A developer and storyteller who uses interactive digital mediums. Passionate abo
 Topic: Urban Environment
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-1.png">
+<img src="../euljiro-xyz/eulji1.png">
 <figcaption>December 2021, Euljiro Has No Park v.1, <br /> <i>The Folding of the City</i> group exhibition, Eulji Art Center, Seoul</figcaption>
 </figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="../euljiro-xyz/zone1-2.png">
+<figcaption>low energy view</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="../euljiro-xyz/slide-1-3-1.png">
+<figcaption>Development Process</figcaption>
+</figure>
+
 
 An interactive 3D web-based artwork about the future of Euljiro district in Seoul, South Korea.
 
@@ -59,7 +69,6 @@ An interactive 3D web-based artwork about the future of Euljiro district in Seou
 - 현장 전시 기간 동안, [Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)를 이용해 게임패드 콘솔로 조작이 가능하게 구현했습니다. 
 - webpack, vite 번들링 프레임워크로 구축했습니다. 
 
-
 <h3 id="web-2"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/dwc-v2/">garden.local, distributed web of care, 2021 - 2022</a></h3>
 
 Topic: Nature and tech
@@ -69,7 +78,22 @@ Topic: Nature and tech
 <figcaption> <i>가든.로컬 garden.local</i> 2021, LED monitor, paintings, Raspberry Pi, <br />  Installation view, Art Center White Block, Paju</figcaption>
 </figure>
 
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="../dwc-v2/dwcgrid.jpg">
+<figcaption></figcaption>
+</figure>
+
 A multimedia exhibition that poses a question ‘What if the Internet is like a garden?’. Logging into the mobile website via local wifi network, the audience can experience their own virtual gardens and creatures. Made with pixi js (web 2D rendering engine), WebGL, socket, node js, Raspberry PI, etc.
+
+- 인터렉티브 멀티미디어 전시로써, 사용자가 로컬 IP 주소를 통해 현장 네트워크로만 접속가능한 모바일 웹사이트에 접속합니다. 
+- 해당 웹사이트에서 닉네임을 설정하고 입장합니다. 
+- 본인만의 가든과 크리쳐가 생성됩니다. 가든은 삼각형과 아크 모양으로 이루어져있으며 애니메이션이 계속 재생됩니다. 
+    - 가든이 움직이는 애니메이션의 속도와 그라데이션 색깔은 현장 라즈베리 파이에서 받아오는 온도, 습도 데이터르 반영해서 변화합니다.
+- nodejs, nginx, socket, PIXI js 등을 사용해 개발했습니다. 
+- 저는 주로 PIXIjs를 이용한 2D 그래픽 변화, 사운드 인터렉션, 랜딩페이지 화면, 유저 경험 디자인 등을 담당했습니다. 추가적으로 server코드와 socket의 서버-클라이언트 연동 구현도 함께했습니다.
+- 2022년에는 프로덕트 매니저 역할을 병행하면서 21년 프로젝트를 업데이트했습니다. 
+    - 크리쳐의 SVG 코드 제너레이션 알고리즘과 코드 리팩토링을 담당했습니다.
+    - 서버 개발자의 클라우드 데이터베이스 마이그레이션 프로그래밍을 보조했습니다. 
 
 <h3 id="web-3"><a target="_blank" rel="noreferrer"  href="https://digital-trypanosomiasis-2022.netlify.app/">디지털 수면병 Digital Trypanosomiasis, 2022</a></h3>
 
@@ -110,8 +134,43 @@ Topic: Environment
 
 iOS mobile application that instantly checks the environment-friendly scores of the products with image-detection or OCR
 
+## 2. XR (AR, VR, MR)
 
-## 2. GENERATIVE ARTS
+<h3 id="xr-1">POSCO DX (POSCO ICT) R&D Center: AR.VR Research Team</h3>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="ar-glass-sample.jpg">
+<figcaption>대외비 프로젝트임에 따라 유사이미지를 첨부합니다.</figcaption>
+</figure>
+
+<h3 id="xr-2"><a target="_blank" rel="noreferrer"  href="https://2021frankenstein.bubbleapps.io/version-test/">2021 Frankenstein, 2021</a></h3>
+
+Topic: Duality of technology
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="slide-13-1.jpg">
+<figcaption>2021 Frankenstein, Hololens 2.0 & AR mobile app (Android & iOS), on-site exhibition, <br /> <i>XR-SAPY</i>, Seoul Artists Platform New & Young and SFAC sponsored.
+</figcaption>
+</figure>
+
+A site-specific XR artwork about reinterpreting the meanings of ‘monster’ in a techno-advanced 21st century.
+
+We were inspired by Mary Shelley and her classic SF novel, Frankenstein. Questioning why she created a monster, we connected the imaginary creatures with the real-world exhibition space. We also designed a new ‘monster’ reflecting the modern society and technologies. 
+
+<h3 id="xr-3"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/5-pointz-vr/">Reviving 5 Pointz, 2017</a></h3>
+
+Topic: Urban Environment
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="slide-14.png">
+<figcaption>January 2017, Reviving 5 Pointz, <i>TimeWave VR Festial</i> supported by Oculus and Time Inc.
+</figcaption>
+</figure>
+
+A short interactive VR documentary about gentrified and now-disappeared historic American mural space 5 Pointz in New York. Made with Unity.
+
+
+## 3. GENERATIVE ARTS
 
 <h3 id="ga-1"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/jsconf-korea-2022">Audiovisual live-coding performance, 2022 </a></h3>
 
@@ -134,18 +193,6 @@ Topic: Audiovisual
 
 Teach creative coding at Seoul Music High School and produce audiovisual videos for music showcase. 
 
-<h3 id="ga-3"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/continuous-flow-kote-gallery-seoul-insadong/">Dreaming in Starry Night, 2021</a></h3>
-
-Topic: Creative coding
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-10.jpg">
-<figcaption>May 2021, Dreaming in Starry Night, <i>Continuous Flow</i>, KOTE gallery, Seoul.
-</figcaption>
-</figure>
-
-A video installation of generative kinetic typography works made with Javascript (p5js, matterjs) and WebGL, inspired by typography designs and #36DaysOfType.
-
 <h3 id="ga-4"><a target="_blank" rel="noreferrer"  href="http://instagram.com/sosunnyproject">Creative coding works on social media</a></h3>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
@@ -155,65 +202,6 @@ A video installation of generative kinetic typography works made with Javascript
 </figure>
 
 Upload daily coding sketches, experiment with creative codes, make series of sketches with themes, and actively communicate with followers through Q&A and events like p5js Instagram Takeover.
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-12.png">
-<figcaption>Youtube channel @sosunnyproject, Creative technologist, Educator.
-</figcaption>
-</figure>
-
-Make basic p5js tutorials in both Korean and English. Produce time-lapse videos of creative coding works.
-
-## 3. XR (AR, VR, MR)
-
-<h3 id="xr-1"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/xrea2021/">2021 Frankenstein, 2021</a></h3>
-
-Topic: Duality of technology
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-13-1.jpg">
-<figcaption>2021 Frankenstein, Hololens 2.0 & AR mobile app (Android & iOS), on-site exhibition, <br /> <i>XR-SAPY</i>, Seoul Artists Platform New & Young and SFAC sponsored.
-</figcaption>
-</figure>
-
-A site-specific XR artwork about reinterpreting the meanings of ‘monster’ in a techno-advanced 21st century.
-
-We were inspired by Mary Shelley and her classic SF novel, Frankenstein. Questioning why she created a monster, we connected the imaginary creatures with the real-world exhibition space. We also designed a new ‘monster’ reflecting the modern society and technologies. 
-
-<h3 id="xr-2"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/5-pointz-vr/">Reviving 5 Pointz, 2017</a></h3>
-
-Topic: Urban Environment
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-14.png">
-<figcaption>January 2017, Reviving 5 Pointz, <i>TimeWave VR Festial</i> supported by Oculus and Time Inc.
-</figcaption>
-</figure>
-
-A short interactive VR documentary about gentrified and now-disappeared historic American mural space 5 Pointz in New York. Made with Unity.
-
-<h3 id="xr-3"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/not-you-vr/">Not You, 2016</a></h3>
-
-Topic: Gender discrimination
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-15.jpg">
-<figcaption>May 2016, Not You, <i>TimeWave VR/AR Festival</i> in Hearst Tower, New York.</figcaption>
-</figure>
-
-A short interactive VR film about gender discrimination that females go through in professional workplaces. Made with Unity, GoPro 360, Gear VR.
-
-<h3 id="xr-4"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/hololens-hackathon/">Augmented Beatz, VR/AR Hackathon, MIT Media Lab, 2016</a></h3>
-
-Topic: Playful technology
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-16-2.png">
-<figcaption>October 2016, Augmented Beatz, 3-days MIT Media Lab VR/AR Reality Virtually Hackathon, Boston.</figcaption>
-</figure>
-
-Hololens App demo of XR DJ-ing application that imagines a AR/MR DJ equipment one can bring anywhere. 
-Made with Unity and Hololens.
 
 ## 4. INTERACTIVE INSTALLATION
 
@@ -249,18 +237,6 @@ Topic: Trauma recovery
 
 An interactive media installation that allows the audience to meditate on their inner thoughts. Made with p5js and Leap motion hand detector. An extension of work below, Here, Now.
 
-<h3 id="ii-3"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/2020-ial-show/">Here, Now, 2020</a></h3>
-
-Topic: Healing of trauma
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="../2020-ial-show/edit-herenow2.png">
-<figcaption>July 2020, Here, Now,  <br />  Interactive Arts Lab group exhibition <i>Frames</i>, Punto Blu gallery, Seoul. </figcaption>
-</figure>
-
-A interactive installation that imitates the process of mindfulness and body scanning for meditative purpose. 
-Made with p5js and Leap motion.
-
 <h3 id="ii-4"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/2019-ial-show/">Bloom Together,  2019</a></h3>
 
 Topic: Social power dynamic
@@ -271,17 +247,6 @@ Topic: Social power dynamic
 </figure>
 
 An interactive media installation about encouraging two different people to come close and bloom the flowers together. Used p5js and poseNet deep learning.
-
-<h3 id="ii-5"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/nyu-itp-camp/">Stars in Your Hands,  2017</a></h3>
-
-Topic: Social power dynamic
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="../nyu-itp-camp/nyu10.jpg">
-<figcaption> June 2017, NYU ITP Summer Camp Final Showcase. </figcaption>
-</figure>
-
-An interactive installation about reversing the power dynamic between celebrities on stage vs. audience. It allows people to directly control the lighting and projection design of the space. Made with p5js, processing, Arduino, DMX lighting.
 
 <h3 id="ii-6"><a target="_blank" rel="noreferrer"  href="https://sosunnyproject.github.io/portfolio/media-thesis-vassar">Interplaying, 2016</a></h3>
 
@@ -308,7 +273,7 @@ Participated in various Vassar College Drama Department shows and student theate
 
 ## 5. PRESENTATION
 
-<h3 id="pp-1">Talks</h3>
+<details markdown='1' style="inline-block"><summary style="inline-block"><h3 id="pp-1" style="inline-block">Talks</h3></summary>
 
 2022.11   		Artist Talk, IML300: Reading and Writing the Web course by Qianqian Ye, 		USC Media Arts and Practice Division
 
@@ -337,9 +302,9 @@ Participated in various Vassar College Drama Department shows and student theate
 2018.10 		Poster presentation, <i>Transforming Hand-Sketched Objects into Photographic Qualities</i>,		Artificial Intelligence Symposium Conference by IEIE, Seoul National University
 
 2018.06 		<i>Introduction to Blockchain</i>, Modulabs
+</details>
 
-<h3 id="pp-2">Workshops</h3>
-
+<details markdown='1' style="inline-block"><summary><h3 id="pp-2">Workshops</h3></summary>
 
 2022.09-11  	<i>Interactive Visual Coding</i>, 5-weeks curriculum, Notefolio Design Academy, Seoul 
 
@@ -360,3 +325,5 @@ Participated in various Vassar College Drama Department shows and student theate
 2016.10 		Participant and team lead, <i>Augmented Beatz</i>, Reality Virtually Hackathon, 		MIT Media Lab, Boston
 
 2016.07 		Participant, Hack Cooper 2016, Cooper Union, NY
+
+</details>
