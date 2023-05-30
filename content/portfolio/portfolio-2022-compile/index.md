@@ -15,12 +15,11 @@ A developer and storyteller who uses interactive digital mediums. Passionate abo
 - [Tripbtoz, 2020 - 2021](#web-4)
 - [Saving Okja, Global Jeju Hackathon, 2017](#web-5)
 
-## 3. XR (AR, VR, MR) 증강현실, 가상현실
-- [POSCO DX R&D Center: AR.VR 가상현실 글래스 앱 연구](#xr-1)
+## 2. XR (AR, VR, MR) 증강현실, 가상현실
 - [2021 Frankenstein, 2021](#xr-2)
 - [Reviving 5 Pointz, 2017](#xr-3)
 
-## 2. GENERATIVE ARTS 알고리즘 생성 아트
+## 3. GENERATIVE ARTS 알고리즘 생성 아트
 - [Audiovisual live-coding performance, 2022](#ga-1)
 - [Creative coding classes and performances, 2022](#ga-2)
 - [Creative coding works on social media](#ga-4)
@@ -135,15 +134,6 @@ Topic: Environment
 iOS mobile application that instantly checks the environment-friendly scores of the products with image-detection or OCR
 
 ## 2. XR (AR, VR, MR)
-
-<h3 id="xr-1">POSCO DX (POSCO ICT) R&D Center: AR.VR Research Team</h3>
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="ar-glass-sample.jpg">
-<figcaption>대외비 프로젝트임에 따라 유사이미지를 첨부합니다.</figcaption>
-</figure>
-
-<h3 id="xr-2"><a target="_blank" rel="noreferrer"  href="https://2021frankenstein.bubbleapps.io/version-test/">2021 Frankenstein, 2021</a></h3>
 
 Topic: Duality of technology
 
