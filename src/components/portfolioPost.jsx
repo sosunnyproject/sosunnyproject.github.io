@@ -19,7 +19,7 @@ export default function PortfolioPost({ node }) {
                 {node?.frontmatter?.title}
             </h3>
             </Link>
-            <h4>{node?.frontmatter?.date}</h4>
+            {/* <h4>{node?.frontmatter?.date}</h4> */}
         </div>
     )
 }

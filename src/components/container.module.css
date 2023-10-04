@@ -191,6 +191,9 @@ a:hover{
   cursor: pointer;
   font-family: 'Montserrat';
 }
+.pf_header {
+  text-align: center;
+}
 .pf_subheader_btn:hover {
   box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset; 
 }
