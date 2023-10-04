@@ -178,6 +178,32 @@ a:hover{
   padding-bottom: 100%;
   position: unset;
 }
+.pf_subheader_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+.pf_subheader_btn {
+  padding: 0.8em;
+  font-size: 1.0em;
+  border: none;
+  background-color: transparent;
+  color: #8c8c8c;
+  cursor: pointer;
+  font-family: 'Montserrat';
+}
+.pf_subheader_btn:hover {
+  box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset; 
+}
+.pf_subheader_selected {
+  padding: 0.8em;
+  font-size: 1.0em;
+  border: none;
+  color: #3e3e3e;
+  font-family: 'Montserrat';
+  background-color: transparent;
+  color: black;
+  box-shadow: 0 -0.5em rgba(125,255,123, 0.5) inset; 
+}
 /* pre {
   width: auto;
   margin: 0 !important;

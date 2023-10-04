@@ -15,8 +15,8 @@ export default function Vitae() {
     <Header />
     
     <div>
-    <button class={vitaeStyles.vitaeButton} onClick={() => setLang('ko')} name="change to korean">한글</button>
-    <button class={vitaeStyles.vitaeButton} onClick={() => setLang('en')} name="change to english">EN</button>
+    <button className={vitaeStyles.vitaeButton} onClick={() => setLang('ko')} name="change to korean">한글</button>
+    <button className={vitaeStyles.vitaeButton} onClick={() => setLang('en')} name="change to english">EN</button>
     </div>
 
     <h1>Creative Technologist | Front End Web Developer | Artist </h1>

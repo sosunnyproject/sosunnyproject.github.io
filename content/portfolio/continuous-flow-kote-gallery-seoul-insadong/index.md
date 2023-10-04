@@ -2,6 +2,7 @@
 title: "[Exhibition] 《 별헤는 깊은밤 꾸는꿈 》, Continuous Flow, 인사동 KOTE, Seoul"
 date: "2021-04-16"
 category: "portfolio"
+subcategory: "graphics"
 featuredImage: "kote-IMG_1783.png"
 ---
 

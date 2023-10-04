@@ -2,6 +2,7 @@
 title: '[Exhibition] Stars in Your Hands'
 date: '2017-06-01'
 category: 'portfolio'
+subcategory: "graphics"
 featuredImage: 'nyu6.jpg'
 ---
 <div class="intro">

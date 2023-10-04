@@ -1,6 +1,7 @@
 ---
 title: "[VR] 5 Pointz Graffiti Mecca (360 VR Interactive Film)"
 category: 'portfolio'
+subcategory: 'XR'
 date: '2017-02-10'
 featuredImage: 'timewave2017.jpg'
 ---

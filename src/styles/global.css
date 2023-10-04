@@ -19,7 +19,6 @@ blockquote p {
 blockquote blockquote p {
   font-family: 'raleway', 'gmarketMedium';
 }
-
 figcaption {
   font-family: 'pretendard';
   font-size: calc(12px + 0.3vw);

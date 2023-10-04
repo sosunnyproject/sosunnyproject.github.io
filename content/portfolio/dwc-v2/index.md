@@ -2,6 +2,7 @@
 title: "[Exhibition] 《 Garden.Local : Distributed Web of Care 》"
 date: "2021-11-20"
 category: "portfolio"
+subcategory: "graphics"
 featuredImage: "dwc16.jpg"
 ---
 

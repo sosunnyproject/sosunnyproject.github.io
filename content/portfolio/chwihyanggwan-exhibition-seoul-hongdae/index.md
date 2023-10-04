@@ -2,6 +2,7 @@
 title: "[Exhibition] 취향관 월간일락 + 인터렉티브 미디어 전시, 《 Subconscious 》, Seoul"
 date: "2021-05-21"
 category: "portfolio"
+subcategory: "graphics"
 featuredImage: "edit-GX2A4095.png"
 ---
 

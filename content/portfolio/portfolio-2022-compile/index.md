@@ -2,6 +2,7 @@
 title: '[Portfolio] Summary & Index'
 date: '2022-12-31'
 category: 'portfolio'
+subcategory: "web"
 featuredImage: 'thumbnail.png'
 ---
 

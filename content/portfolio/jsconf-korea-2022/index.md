@@ -2,6 +2,7 @@
 title: "[Community] 2022 JSCONF KOREA"
 date: "2022-09-16"
 category: "portfolio"
+subcategory: "edu"
 featuredImage: "IMG_5116-min.jpg"
 ---
 

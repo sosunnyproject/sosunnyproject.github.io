@@ -2,6 +2,7 @@
 title: "[Exhibition] 《 2021 FRANKENSTEIN 》, Seoul"
 date: "2021-07-27"
 category: "portfolio"
+subcategory: "XR"
 featuredImage: "xrea.jpg"
 ---
 

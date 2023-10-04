@@ -2,6 +2,7 @@
 title: "[AR] MIT media lab: VR/AR Hackathon with Hololens"
 date: "2016-11-01"
 category: "portfolio"
+subcategory: "XR"
 featuredImage: "mit6.png"
 ---
 <div class="intro">
