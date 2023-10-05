@@ -4,6 +4,7 @@ date: '2022-12-31'
 category: 'portfolio'
 subcategory: "web"
 featuredImage: 'thumbnail.png'
+featured: true
 ---
 
 ## INTRODUCTION

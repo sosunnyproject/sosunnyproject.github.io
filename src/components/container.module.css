@@ -88,9 +88,10 @@ a:hover{
 .portfolioList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 2em;
 }
+
 @media (max-width: 480px) {
   .portfolioList {
     display: block;
@@ -99,8 +100,11 @@ a:hover{
     margin-top: 1em;
   }
 }
+.portfolioCard {
+  text-align: center;
+}
 .portfolioList .portfolioCard {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   margin-bottom: 4em;
@@ -182,8 +186,17 @@ a:hover{
   display: flex;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 720px) {
+  .pf_subheader_wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
 .pf_subheader_btn {
   padding: 0.8em;
+  width: fit-content;
   font-size: 1.0em;
   border: none;
   background-color: transparent;
@@ -191,6 +204,7 @@ a:hover{
   cursor: pointer;
   font-family: 'Montserrat';
 }
+
 .pf_header {
   text-align: center;
 }
@@ -198,6 +212,7 @@ a:hover{
   box-shadow: 0 -0.5em rgba(25,255,123, 0.2) inset; 
 }
 .pf_subheader_selected {
+  width: fit-content;
   padding: 0.8em;
   font-size: 1.0em;
   border: none;
@@ -206,6 +221,18 @@ a:hover{
   background-color: transparent;
   color: black;
   box-shadow: 0 -0.5em rgba(125,255,123, 0.5) inset; 
+}
+@media screen and (max-width: 720px) {
+  .pf_subheader_btn {
+    padding: 0.5em;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 720px) {
+  .pf_subheader_selected {
+    padding: 0.5em;
+    font-size: 0.8em;
+  }
 }
 /* pre {
   width: auto;

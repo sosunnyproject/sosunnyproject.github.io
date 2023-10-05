@@ -7,6 +7,9 @@ html {
 pre {
   width: auto;
 }
+body {
+  margin: 0 auto;
+}
 pre code {
   white-space: break-spaces !important;
 }
@@ -40,6 +43,10 @@ hr {
 
 .verticalImg{
   height: 100% !important;
+  width: auto !important;
+}
+.smallVertical {
+  height: 50% !important;
   width: auto !important;
 }
 /* .gatsby-resp-image-image {

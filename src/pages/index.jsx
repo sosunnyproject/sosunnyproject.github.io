@@ -15,11 +15,10 @@ export default function Home({ data }) {
 
       <p>
       a sassy girl loved musical theaters so much she <span role="img" aria-label="airplane">✈️</span> to New York Broadway & Vassar <span role="img" aria-label="the statue of liberty">🗽</span>
-      When life was giving her <span role="img" aria-label="lemon">🍋🍋🍋</span>, she found some 💎 
-      in the land of <Link to="/blog">software engineering </Link> 💻 
-      Yet, as she still loves <span role="img" aria-label="arts">🎨</span> <span role="img" aria-label="theater">🎭</span> she has started <Link to="/portfolio"> combining media and technology </Link> 
-      through VR, AR, mixed media, and <a target="_blank" rel="noreferrer" href="https://www.instagram.com/sosunnyproject">creative coding. </a>
-      Currently in Seoul, she's a freelance front-end web developer, creative coder, and artist. Mostly having fun with p5 js, three js, matter js, Unity, Blender, shader.
+      When life was giving her <span role="img" aria-label="lemon">🍋</span>, she found some 💎 
+      in the land of <a target="_blank" href="https://www.linkedin.com/in/sosunpark">software engineering </a> 💻 
+      She's been fascinated by how math, engineering and arts can be <Link to="/portfolio/games">intertwined through games and graphics. </Link> 
+       Currently in LA, she's studying M.S. Game Design and Development (USC) and passionate about graphics, web, games, and XR. Mostly having fun with three js, shader, Unity, Unreal, and p5js.
       </p>
 
       <p className={containerStyles.indexBottom}>

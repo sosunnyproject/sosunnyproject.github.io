@@ -5,9 +5,10 @@
   border-bottom: 1px solid #eee;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 720px) {
   .headerContainer {
     display: block;
+    text-align: center;
   }
   .logoText{
     padding-bottom: calc(10px + 0.5vw);

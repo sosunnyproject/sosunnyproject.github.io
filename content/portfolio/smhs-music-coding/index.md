@@ -4,6 +4,7 @@ date: "2022-02-01"
 category: "portfolio"
 subcategory: "graphics"
 featuredImage: "jiwoo1.jpeg"
+featured: true
 ---
 
 <figure style="display: block; margin: 0 auto; text-align: center">

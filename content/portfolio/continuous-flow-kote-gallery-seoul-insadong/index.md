@@ -4,6 +4,7 @@ date: "2021-04-16"
 category: "portfolio"
 subcategory: "graphics"
 featuredImage: "kote-IMG_1783.png"
+featured: true
 ---
 
 <div class="intro">

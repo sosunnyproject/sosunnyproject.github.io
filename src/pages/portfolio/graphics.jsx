@@ -4,7 +4,7 @@ import Container from "../../components/container"
 import { Link, graphql } from "gatsby"
 import * as containerStyles from "../../components/container.module.css"
 import PortfolioPost from "../../components/portfolioPost"
-import Portfolio from "../portfolio"
+import PortfolioHeader from "../portfolioHeader"
 
 export default function Graphics({ data }) {
 
@@ -13,7 +13,7 @@ export default function Graphics({ data }) {
   return (
   <Container>
     <Header />
-    <Portfolio />
+    <PortfolioHeader />
 
     <div className={containerStyles.portfolioList}>
       {data.allMarkdownRemark.edges.map(({ node }) => (

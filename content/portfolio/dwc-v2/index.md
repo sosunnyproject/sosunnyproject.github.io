@@ -4,6 +4,7 @@ date: "2021-11-20"
 category: "portfolio"
 subcategory: "graphics"
 featuredImage: "dwc16.jpg"
+featured: true
 ---
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/4rHwXSdUtBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

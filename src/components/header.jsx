@@ -22,8 +22,8 @@ export default function Header({location}) {
       <Link to="/">have so sunny day</Link>
     </div>
     <div className={headerStyles.navContainer}>
-      <Link to="/portfolio/games" getProps={({location}) => isActive({location},'portfolio')} className={headerStyles.navText}>portfolio</Link>
-      <Link to="/vitae/" getProps={({location}) => isActive({location},'vitae')} className={headerStyles.navText}>vitae</Link>
+      <Link to="/portfolio" getProps={({location}) => isActive({location},'portfolio')} className={headerStyles.navText}>portfolio</Link>
+      <Link to="/vitae" getProps={({location}) => isActive({location},'vitae')} className={headerStyles.navText}>vitae</Link>
       <div className={headerStyles.socialContainer}>
           <a target="_blank" rel="noreferrer" href={"https://www.instagram.com/sosunnyproject"}  ><img src={instagramSVG} alt="instagram" width="20px" height="auto"/></a>
           <a target="_blank" rel="noreferrer" href={"https://www.youtube.com/channel/UCKNXAqIvqc25JJ1CWdayqBA"}  ><img src={youtubeSVG} alt="youtube" width="20px" height="auto"/></a>
