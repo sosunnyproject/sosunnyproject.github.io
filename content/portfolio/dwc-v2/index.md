@@ -24,30 +24,30 @@ featured: true
   <li>The concept was a thought experiment: "What if the Internet was a garden full of moss, lichens, and mushrooms? A place where humans could visit this lush, natural environment, listen to tales of software-plants, rest against the hardware-earth, and interact with data-creatures?"</li>
 </ul>
 
-<h2>Implementation</h2>
+<h2>Key Accomplishments</h2>
 <ul>
-  <li>Created a mobile website accessible only through the local network via a user's local IP address. Each user was presented with their own virtual garden and creatures.</li>
-  <li>The animation speed and gradient color of the garden were influenced by temperature and humidity data from a local Raspberry Pi.</li>
-  <li>In 2022, I managed updated development requirements, adjusted the SVG generation algorithm for the creatures, and oversaw general graphic code refactoring. Additionally, I assisted with server code based on nodejs, socket integration, and the cloud database migration process.</li>
+  <li>Designed and developed a localized mobile website where users could interact with their own virtual garden and creatures, enhancing user engagement.</li>
+  <li>Incorporated real-time environmental data, utilizing temperature and humidity readings from Raspberry Pi to dynamically alter animation speeds and garden gradient colors.</li>
+  <li>Successfully managed the 2022 development phase, ensuring timely updates to requirements, optimizing the SVG generation algorithm, and spearheading graphic code refactoring.</li>
+  <li>Collaborated in server-side development, focusing on nodejs, socket integration, and transitioning to a cloud-based database system.</li>
 </ul>
 
-<h2>Technical Features</h2>
+<h2>Technical Highlights</h2>
 <ul>
-  <li>The website made use of pixi js (a web 2D rendering engine), WebGL, socket, nodejs, and Raspberry PI.</li>
-  <li>The experience was meant to be immersive, tying the mobile website to drawing installations, mesh wifi networks, and interactive features.</li>
-  <li>The site was kept local, being accessible only when connected to a specific wifi network from a distributed mesh network. This network was set up with wifi names such as "lichen", "moss", and "mushroom".</li>
+  <li>Enhanced interactive visual experience using pixi js, WebGL, socket, nodejs, and Raspberry Pi.</li>
+  <li>Engineered an immersive mobile website experience linked to physical drawing installations, innovative mesh wifi networks, and user-interactive features.</li>
+  <li>Pioneered a local access approach, ensuring website accessibility exclusively through unique mesh wifi networks, named to augment the exhibition theme.</li>
 </ul>
 
 <h2>Technical Diagrams</h2>
 <ul>
-<li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=0%3A1">Structure</a></li>
-<li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=9%3A4">Flow</a></li>
+<li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=0%3A1">System Architecture</a></li>
+<li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=9%3A4">User Flow & Interaction</a></li>
 </ul>
 
-
-<h2>Personal Note</h2>
+<h2>Personal Reflection</h2>
 <ul>
-  <li>Having admired Taeyoon Choi since my introduction to SFPC in 2016 in NYC, collaborating on this project was a rewarding experience. Alongside Cezar Mocan from NYU ITP, I primarily contributed to WebGL generative design using pixi.js, developed accessibility features, integrated audio, and designed touch interactions. The website was made LIVE only in a local environment, intricately tied to the unique wifi setup of the exhibition.</li>
+  <li>Collaborating with revered artist Taeyoon Choi, a personal inspiration since my exposure to SFPC in 2016, was an honor and a pivotal moment in my career. Working closely with Cezar Mocan from NYU ITP, I took the lead in WebGL generative design via pixi.js, enhanced website accessibility, integrated immersive audio, and crafted intuitive touch interactions. This project uniquely fused the digital and physical realms, with website access restricted to the exhibition's bespoke wifi setup.</li>
 </ul>
 
 

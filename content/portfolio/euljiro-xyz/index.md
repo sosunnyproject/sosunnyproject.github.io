@@ -1,5 +1,5 @@
 ---
-title: "[Interactive 3D Web] 《 euljiro.xyz 》, Seoul"
+title: "[3D Web] 《 euljiro.xyz 》, Seoul"
 date: "2021-11-27"
 category: "portfolio"
 subcategory: "games"
