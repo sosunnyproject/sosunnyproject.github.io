@@ -10,11 +10,13 @@ export default function Header({location}) {
 
   function isActive( {location}, str ) {
     let isCurrent = false;
-    if(location.pathname.includes(str)){
-      console.log(str);
-      isCurrent = true;
+    if (typeof window !== 'undefined') {
+      // Client-side-only code
+      if(location?.pathname?.includes(str)){
+        isCurrent = true;
+      }
+        return isCurrent ? {className: headerStyles.active} : null  
     }
-      return isCurrent ? {className: headerStyles.active} : null
   }
 
   return <div className={headerStyles.headerContainer}>
@@ -23,7 +25,10 @@ export default function Header({location}) {
     </div>
     <div className={headerStyles.navContainer}>
       <Link to="/portfolio" getProps={({location}) => isActive({location},'portfolio')} className={headerStyles.navText}>portfolio</Link>
-      <Link to="/vitae" getProps={({location}) => isActive({location},'vitae')} className={headerStyles.navText}>vitae</Link>
+      <Link to="/archive" getProps={({location}) => isActive({location},'archive')} className={headerStyles.navText}>
+        <span role="img" aria-label="heart-hands">🫶🫶🫶</span>
+      </Link>
+      {/* <Link to="/vitae" getProps={({location}) => isActive({location},'vitae')} className={headerStyles.navText}>vitae</Link> */}
       <div className={headerStyles.socialContainer}>
           <a target="_blank" rel="noreferrer" href={"https://www.instagram.com/sosunnyproject"}  ><img src={instagramSVG} alt="instagram" width="20px" height="auto"/></a>
           <a target="_blank" rel="noreferrer" href={"https://www.youtube.com/channel/UCKNXAqIvqc25JJ1CWdayqBA"}  ><img src={youtubeSVG} alt="youtube" width="20px" height="auto"/></a>

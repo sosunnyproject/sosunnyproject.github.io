@@ -96,21 +96,21 @@ The team won the 1st place winner in Global Jeju Hackathon, South Korea.
 - [아크로판](http://kr.acrofan.com/detail.php?number=71346&type=&lang=&UA=)
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="mediajeju1.PNG" >
+<img src="mediajeju1.png" >
 <figcaption>미디어 제주 기사</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="mediajeju2.PNG" >
+<img src="mediajeju2.png" >
 <figcaption>미디어 제주 기사</figcaption>
 </figure>
 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="ventureNews.PNG" >
+<img src="ventureNews.png" >
 <figcaption>벤쳐 스퀘어 기사</figcaption>
 </figure>
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="ventureNews2.PNG" >
+<img src="ventureNews2.png" >
 <figcaption>벤쳐 스퀘어 기사</figcaption>
 </figure>

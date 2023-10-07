@@ -80,6 +80,10 @@ p {
  /* line-height: calc(20px + 0.1vw); */
  /* letter-spacing: calc(0.005px + 0.05vw); */
 }
+
+.vitaeContainer a{
+    color: #636363;
+}
 .subHeader {
  font-family: 'Montserrat', 'pretendard';
  font-weight: 500;
@@ -104,7 +108,8 @@ p {
 }
 li {
  font-family: 'pretendard', 'ridiBatang';
- line-height: calc(18px + 0.1vw);
- font-size: calc(12px + 0.1vw);
+ line-height: calc(18px + 0.5vw);
+ font-size: calc(12px + 0.5vw);
  font-weight: 400;
+ padding: 0.4rem;
 }
