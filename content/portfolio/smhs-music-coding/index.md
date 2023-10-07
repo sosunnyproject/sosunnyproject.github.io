@@ -14,7 +14,7 @@ featured: true
 
 <hr />
 
-<h2>Teaching & Audiovisual Production at Seoul Music High School (2022)</h2>
+<h2>Teaching & Audiovisual Production at Seoul Music High School</h2>
 <ul>
     <li><b>Role</b>: Creative Coding Instructor & Audiovisual Producer</li>
     <li><b>Duration</b>: 2022.02 ~ 2022.12</li>

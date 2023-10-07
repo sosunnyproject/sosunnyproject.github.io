@@ -5,8 +5,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function PortfolioPost({ node }) {
     const image = getImage(node.frontmatter?.featuredImage)
+    const loc = "general";
+
     return (
-        <div key={node.id} className={containerStyles.portfolioCard}>
+        <div key={node.id} className={containerStyles.smallerCard && containerStyles.portfolioCard}>
             <Link to={node.fields.slug} >
             <GatsbyImage 
                 image={image}

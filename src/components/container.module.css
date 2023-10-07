@@ -126,6 +126,11 @@ a:hover{
     margin-bottom: 2em;
   }
 }
+
+.portfolioList .smallerCard {
+  width: 25%;
+  padding: 1em;
+}
 .portfolioList a {
   box-shadow: none;
   text-decoration: none;

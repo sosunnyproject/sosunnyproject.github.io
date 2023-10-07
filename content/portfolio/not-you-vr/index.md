@@ -1,7 +1,7 @@
 ---
 title: "[VR] Not You (360 VR Interactive Film)"
 date: "2016-05-13"
-category: "portfolio"
+category: ""
 subcategory: "XR"
 featuredImage: "NotYou_Screenshot.jpg"
 ---

@@ -1,7 +1,7 @@
 ---
 title: '[Exhibition] 2019 Interactive Art Lab Annual Show 인터렉티브 아트랩 전시'
 date: '2019-03-21'
-category: "portfolio"
+category: ""
 subcategory: "graphics"
 featuredImage: 'bloom4.jpg'
 ---
