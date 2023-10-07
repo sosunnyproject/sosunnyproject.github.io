@@ -13,8 +13,13 @@ export default function CV() {
     
     <div className={vitaeStyles.vitaeContainer}>
       <p>
-        <a href="https://www.linkedin.com/in/sosunpark/">
+        <a target="_blank" href="https://www.linkedin.com/in/sosunpark/">
           linkedin
+        </a>
+      </p>
+      <p>
+        <a target="_blank" href="https://drive.google.com/file/d/1eG5f-KtB9SjBxywNHLDTThVwdMczwjvG/view">
+          Resume (1 page)
         </a>
       </p>
       <p>
