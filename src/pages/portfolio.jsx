@@ -14,15 +14,14 @@ export default function Portfolio({ data }) {
   <Container>
     <Header />
     <PortfolioHeader />
-
-    <div className={containerStyles.portfolioList}>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        ((node.frontmatter.category === 'portfolio') &&
-        node.frontmatter.featured === true) &&
-            <PortfolioPost node={node} key={node.id} />
-        )
-      )}
-    </div>
+      <div className={containerStyles.portfolioList}>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          ((node.frontmatter.category === 'portfolio') &&
+          node.frontmatter.featured === true) &&
+              <PortfolioPost node={node} key={node.id} />
+          )
+        )}
+      </div>
   </Container>
   )
 }

@@ -8,7 +8,7 @@ export default function PortfolioPost({ node }) {
     const loc = "general";
 
     return (
-        <div key={node.id} className={containerStyles.smallerCard && containerStyles.portfolioCard}>
+        <div key={node.id} className={containerStyles.portfolioCard}>
             <Link to={node.fields.slug} >
             <GatsbyImage 
                 image={image}

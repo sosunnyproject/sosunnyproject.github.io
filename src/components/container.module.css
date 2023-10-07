@@ -86,9 +86,10 @@ a:hover{
 
 /* portfolio list */
 .portfolioList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30vw);
+  gap: 20px; /* Adjust this if you need spacing between cards */
   margin-top: 2em;
 }
 
@@ -108,29 +109,23 @@ a:hover{
   color:#19FF7B;
 }
 .portfolioList .portfolioCard {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
 }
 @media screen and (max-width: 1024px) {
   .portfolioList .portfolioCard {
-    width: 45%;
+    width: 100%;
     margin-right: 1em;
-    margin-bottom: 2em;
   }
 }
 @media screen and (max-width: 480px) {
   .portfolioList .portfolioCard {
     width: 100%;
-    margin-bottom: 2em;
   }
 }
 
-.portfolioList .smallerCard {
-  width: 25%;
-  padding: 1em;
-}
 .portfolioList a {
   box-shadow: none;
   text-decoration: none;
