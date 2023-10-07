@@ -10,13 +10,10 @@ export default function Header({location}) {
 
   function isActive( {location}, str ) {
     let isCurrent = false;
-    if (typeof window !== 'undefined') {
-      // Client-side-only code
-      if(location?.pathname?.includes(str)){
-        isCurrent = true;
-      }
-        return isCurrent ? {className: headerStyles.active} : null  
+    if(location?.pathname?.includes(str)){
+      isCurrent = true;
     }
+      return isCurrent ? {className: headerStyles.active} : null  
   }
 
   return <div className={headerStyles.headerContainer}>
@@ -25,8 +22,11 @@ export default function Header({location}) {
     </div>
     <div className={headerStyles.navContainer}>
       <Link to="/portfolio" getProps={({location}) => isActive({location},'portfolio')} className={headerStyles.navText}>portfolio</Link>
+      <Link to="/cv" getProps={({location}) => isActive({location},'cv')} className={headerStyles.navText}>
+        cv
+      </Link>
       <Link to="/archive" getProps={({location}) => isActive({location},'archive')} className={headerStyles.navText}>
-        <span role="img" aria-label="heart-hands">🫶🫶🫶</span>
+        <span role="img" aria-label="nerd-face  ">🤓🤓🤓</span>
       </Link>
       {/* <Link to="/vitae" getProps={({location}) => isActive({location},'vitae')} className={headerStyles.navText}>vitae</Link> */}
       <div className={headerStyles.socialContainer}>
