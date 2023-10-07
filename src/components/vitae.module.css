@@ -56,8 +56,8 @@ li a {
 h2 {
  font-family: 'pretendard black';
  color: #c130ff; /*rgba(52, 123, 0, 1); */
- font-size: 1.4em;
- padding-top: 1.2em;
+ font-size: 1.2em;
+ padding-top: 0.8rem;
  margin: 0;
 }
 h2 a {
@@ -117,5 +117,5 @@ li {
  line-height: calc(18px + 0.5vw);
  font-size: calc(12px + 0.5vw);
  font-weight: 400;
- padding: 0.4rem;
+ padding: 0.1rem;
 }

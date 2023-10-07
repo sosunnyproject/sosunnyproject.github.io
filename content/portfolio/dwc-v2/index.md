@@ -1,5 +1,5 @@
 ---
-title: "《 Garden.Local : Distributed Web of Care 》"
+title: "[Web] 《Garden.Local : Distributed Web of Care》"
 date: "2021-11-20"
 category: "portfolio"
 subcategory: "graphics"
@@ -9,8 +9,7 @@ featured: true
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/4rHwXSdUtBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<hr />
-<b>Web Development Project: "Nature and Tech"</b>
+<h2>Project Overview</h2>
 <ul>
   <li><b>Position</b>: Frontend Web Developer (2021) | Web Developer & Product Manager (2022)</li>
   <li><b>Team</b>: Taeyoon Choi and Collaborators</li>
@@ -20,33 +19,33 @@ featured: true
   <li><b>Date</b>: November 20, 2021 - November 28, 2021</li>
 </ul>
 
-<b>Project Concept</b>
+<h2>Project Concept</h2>
 <ul>
   <li>The concept was a thought experiment: "What if the Internet was a garden full of moss, lichens, and mushrooms? A place where humans could visit this lush, natural environment, listen to tales of software-plants, rest against the hardware-earth, and interact with data-creatures?"</li>
 </ul>
 
-<b>Implementation</b>
+<h2>Implementation</h2>
 <ul>
   <li>Created a mobile website accessible only through the local network via a user's local IP address. Each user was presented with their own virtual garden and creatures.</li>
   <li>The animation speed and gradient color of the garden were influenced by temperature and humidity data from a local Raspberry Pi.</li>
   <li>In 2022, I managed updated development requirements, adjusted the SVG generation algorithm for the creatures, and oversaw general graphic code refactoring. Additionally, I assisted with server code based on nodejs, socket integration, and the cloud database migration process.</li>
 </ul>
 
-<b>Technical Features</b>
+<h2>Technical Features</h2>
 <ul>
   <li>The website made use of pixi js (a web 2D rendering engine), WebGL, socket, nodejs, and Raspberry PI.</li>
   <li>The experience was meant to be immersive, tying the mobile website to drawing installations, mesh wifi networks, and interactive features.</li>
   <li>The site was kept local, being accessible only when connected to a specific wifi network from a distributed mesh network. This network was set up with wifi names such as "lichen", "moss", and "mushroom".</li>
 </ul>
 
-<b>Technical Diagrams</b>
+<h2>Technical Diagrams</h2>
 <ul>
 <li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=0%3A1">Structure</a></li>
 <li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=9%3A4">Flow</a></li>
 </ul>
 
 
-<b>Personal Note</b>
+<h2>Personal Note</h2>
 <ul>
   <li>Having admired Taeyoon Choi since my introduction to SFPC in 2016 in NYC, collaborating on this project was a rewarding experience. Alongside Cezar Mocan from NYU ITP, I primarily contributed to WebGL generative design using pixi.js, developed accessibility features, integrated audio, and designed touch interactions. The website was made LIVE only in a local environment, intricately tied to the unique wifi setup of the exhibition.</li>
 </ul>

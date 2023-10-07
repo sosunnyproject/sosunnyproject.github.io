@@ -1,5 +1,5 @@
 ---
-title: "[Exhibition] 《 2021 FRANKENSTEIN 》, Seoul"
+title: "[AR.MR] 《 2021 FRANKENSTEIN 》, Seoul"
 date: "2021-07-27"
 category: "portfolio"
 subcategory: "XR"
@@ -7,31 +7,114 @@ featuredImage: "xrea.jpg"
 featured: true
 ---
 
-<div class="intro">
-Position: [Collaborator] Team lead, Producer, Developer <br />
-Topic: AR / VR / XR, Duality of Technology <br />
-Team: X-REA (Hanna Ok, Sun Ho Lee, Joo Yeon Lee, So Sun Park) <br />
-Venue: <a target="_blank" rel="noreferrer" href="http://www.sapy.kr/XR-SAPY">Seoul Artists' Platform New&Young (SAPY) 청년예술청</a><br />
-Type: XR (AR, MR) on Android Samsung Tablets, iPads, Hololens 2.0<br />
-Tools: Unity, Unity AR foundation packages, Unity MR Toolkit <br />
-Date: 2021.06 ~ 2021.08 <br />
-Sponsored by: Seoul Foundation of Arts and Culture
-</div>
-<hr />
-
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/EAKpIvpl6zU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h3>
-A site-specific XR artwork about reinterpreting the meanings of ‘monster’ in a techno-advanced 21st century.
-</h3>
+<div>
+  <h2>Project Overview</h2>
+  <div className="intro">
+    <p><b>Position:</b> Team lead, Producer, Developer</p>
+    <p><b>Topic:</b> AR / VR / XR, Duality of Technology</p>
+    <p><b>Team:</b> X-REA (Hanna Ok, Sun Ho Lee, Joo Yeon Lee, So Sun Park)</p>
+    <p><b>Venue:</b> <a target="_blank" rel="noreferrer" href="http://www.sapy.kr/XR-SAPY">Seoul Artists' Platform New&Young (SAPY) 청년예술청</a></p>
+    <p><b>Type:</b> XR (AR, MR) on Android Samsung Tablets, iPads, Hololens 2.0</p>
+    <p><b>Tools:</b> Unity, Unity AR foundation packages, Unity MR Toolkit</p>
+    <p><b>Date:</b> 2021.06 ~ 2021.08</p>
+    <p><b>Sponsored by:</b> Seoul Foundation of Arts and Culture</p>
+  </div>
 
-<br />
+  <h2>Environment & Goal</h2>
+  <ul>
+    <li>Developed in a 3D URP environment in Unity</li>
+    <li>Deployed as iOS and Android apps as well as Hololens 2.0</li>
+    <li>Showcased on-site AR exhibition with docent</li>
+  </ul>
 
-The team name, X-REA means 'let's create x-dimensional experience in the area'.
+  <h2>AR/MR Tools & Plugins</h2>
+  <ul>
+    <li>Utilized AR Foundation, ARCore XR Plugin, ARKit, and MRTK</li>
+  </ul>
 
-In 1818, Mary Shelley wrote the original SF classic, Frankenstein. X-REA started this project by following her life stories. Questioning 'Why did she create a monster?' we connected the imaginary creatures with the real-world exhibition space. We also designed a new ‘monster’ reflecting the modern society and technologies. 
+  <h2>Functionality</h2>
+  <ul>
+    <li>Based on QR code recognition</li>
+    <li>Each QR triggers a distinct AR scene, sound narration, and sound effects</li>
+  </ul>
 
-We shared each other’s analysis and point of view of the symbolism of a ‘monster’ in our modern society, took apart our individual rules, and reconstructed them into a XR-formatted content. The 4 X-REA artists behind the one who created the year 2021 modern-day ‘monster’ is the Mary Shelley of this day. 
+  <h2>Role & Collaboration</h2>
+  <ul>
+    <li>Lead developer and project lead</li>
+    <li>Led a cross-functional team comprising of 2 designers and 1 producer</li>
+  </ul>
+
+  <h2>Coding & Mechanics</h2>
+  <ul>
+    <li>Scripted repetitive and procedural movements of static models, like laser rotations and spinning beverage cans, using trigonometry and C#</li>
+    <li>Programmed and validated AR positioning within Unity to ensure accurate and stable placement of AR models relative to QR code scan locations during on-site tests. </li>
+    <li>Customized materials, texture, and animation controller system of design assets to align with overarching visual aesthetic.</li>
+  </ul>
+
+  <h2>Project Structure</h2>
+  <ul>
+    <li>Differentiated between 5 unique scenes within Unity</li>
+    <li>Managed AR models using Unity prefabs for each scene</li>
+  </ul>
+
+  <h2>Interactions</h2>
+  <ul>
+    <li>Implemented touch interaction triggering particle creation and sound effects</li>
+    <li>Integrated canvas UI and Timeline Manager for intro scene, map menu, QR scan and reset button, and help menu to enhance user experience </li>
+  </ul>
+
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="unity_can_textures.png">
+  <figcaption>Customized materials, animations, procedural movement of 3D models</figcaption>
+  </figure>
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="unity_script_params.png">
+  <figcaption></figcaption>
+  </figure>
+
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="unity_rotateCan_script.png">
+  <figcaption>CAN movement and Neon lines animation are programmed in C# with trigonometry functions and parameter inputs</figcaption>
+  </figure>
+
+  <h2>3D Design & Integration</h2>
+  <ul>
+    <li>Partnered with 3D designers to adapt models for the Unity environment and rendering</li>
+    <li>Purchased certain assets and then customized their materials and animations</li>
+  </ul>
+
+  <h2>Project Context & Training</h2>
+  <ul>
+    <li>The project was conducted as part of an educational/business initiative supported by the Seoul Cultural Foundation</li>
+    <li>Participated in a 2-3 month program, which included short-term training in Unity, Maya, 3ds Max</li>
+  </ul>
+
+
+  <h3>Repository</h3>
+  <p><a target="_blank" rel="noreferrer" href="https://github.com/sosunnyproject/XreaUnityArUrp">Github Repository</a></p>
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="unity_anim.png">
+  <figcaption>Unity Timeline Manager for introduction scenes</figcaption>
+  </figure>
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="unity_particle_lighting.png">
+  <figcaption>Particle system</figcaption>
+  </figure>
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="xrea_media_flower2.jpg">
+  <figcaption></figcaption>
+  </figure>
+</div>
+
+<hr >
 
 <h3>Details about Storytelling</h3>
 
@@ -63,32 +146,32 @@ X-REA: 공간(area)을 XR, X차원의 경험이 있는 공간을 만들자
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="101-1.jpg">
-<figcaption></figcaption>
+<figcaption>scene 2</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="101-3.jpg">
-<figcaption></figcaption>
+<figcaption>scene 2</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="103.jpg">
-<figcaption></figcaption>
+<figcaption>scene 3</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="P3.jpg">
-<figcaption></figcaption>
+<figcaption>scene 3</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="P4.jpg">
-<figcaption></figcaption>
+<figcaption>scene 4</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="P8.png">
-<figcaption></figcaption>
+<img src="P8 copy.png">
+<figcaption>scene 5</figcaption>
 </figure>
 
 <h1>TEAM XREA</h1>

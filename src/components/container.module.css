@@ -103,6 +103,10 @@ a:hover{
 .portfolioCard {
   text-align: center;
 }
+
+.portfolioCard:hover {
+  color:#19FF7B;
+}
 .portfolioList .portfolioCard {
   width: 50%;
   display: flex;
@@ -136,7 +140,7 @@ a:hover{
   margin-bottom: 0.5em;
   font-weight: 500;
   font-size: calc(16px + 0.15vw);
-  color: #F79D84;
+  color: #2d2d2d;
   font-family: 'Montserrat', 'pretendard', 'sans serif';
   line-height: 1.3;
 }
