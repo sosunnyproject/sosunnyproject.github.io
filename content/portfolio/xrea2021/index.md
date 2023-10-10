@@ -110,9 +110,31 @@ featured: true
 
   <figure style="display: block; margin: 0 auto; text-align: center">
   <img src="xrea_media_flower2.jpg">
-  <figcaption></figcaption>
+  <figcaption>Made in 3ds Max, Cinema 4D</figcaption>
   </figure>
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="IMG_9359.png">
+  <figcaption>UI: AR Camera</figcaption>
+  </figure>
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="IMG_9349.png">
+  <figcaption>UI: Help Menu</figcaption>
+  </figure>
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="IMG_9352.png">
+  <figcaption>UI: Intro</figcaption>
+  </figure>
+
+  <figure style="display: block; margin: 0 auto; text-align: center">
+  <img src="IMG_9359.png">
+  <figcaption>UI: Image Marker Scan</figcaption>
+  </figure>
+
 </div>
+
 
 <hr >
 
