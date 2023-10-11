@@ -75,41 +75,59 @@ featured: true
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="ch15.png">
-<figcaption></figcaption>
+<figcaption>Testing AR VPS mesh, 3D models, and occlusion effects on desktop debugging</figcaption>
 </figure>
 <br />
 
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="IMG_9907.png">
-<figcaption></figcaption>
+<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
+<img style="display:inline-block" src="IMG_9379.png">
+<figcaption>Mockup of intro scene (debug mode)</figcaption>
 </figure>
 <br />
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
+<img style="display:inline-block" src="IMG_9380.png">
+<figcaption>Inventory UI menu for Chinatown storytelling</figcaption>
+</figure>
+<br />
+
+<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
+<img style="display:inline-block" src="IMG_9382.png">
+<figcaption>8th wall map for GPS world map and cute doty </figcaption>
+</figure>
+<br />
+
+<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
+<img style="display:inline-block" src="IMG_9907.png">
+<figcaption>8th wall map for VPS registered public wayspot</figcaption>
+</figure>
+<br />
+
+<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
 <img src="IMG_8695.png">
-<figcaption></figcaption>
-</figure>
-<br />
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="IMG_8685.png">
-<figcaption></figcaption>
+<figcaption>8th wall VPS coaching overlay UI for GPS object detection</figcaption>
 </figure>
 <br />
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="ch5.png">
-<figcaption></figcaption>
+<figcaption>screenshot of desktop debugging of VPS and 3D AR objects</figcaption>
 </figure>
 <br />
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="ch1.png">
-<figcaption></figcaption>
+<figcaption>screeshot of code base</figcaption>
 </figure>
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
+<img src="IMG_8685.png">
+<figcaption>In view component testing with camera raycast function</figcaption>
+</figure>
+<br />
+
+<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
 <img src="IMG_9908.png" >
-<figcaption></figcaption>
+<figcaption>On-site testing at Union Station, Los Angeles</figcaption>
 </figure>
 <br/>

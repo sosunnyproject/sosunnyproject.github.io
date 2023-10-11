@@ -1,9 +1,10 @@
 ---
-title: '[Portfolio] Summary & Index'
-date: '2022-12-31'
+title: '[Portfolio EN & KR] Summary'
+date: '2020-12-31'
 category: 'portfolio'
 subcategory: "web"
 featuredImage: 'thumbnail.png'
+featured: true
 ---
 
 ## INTRODUCTION
