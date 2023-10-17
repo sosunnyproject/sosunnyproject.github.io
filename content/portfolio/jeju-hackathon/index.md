@@ -2,7 +2,7 @@
 title: "[App Hackathon] 2017 Global Jeju Hackathon Winner 글로벌 제주 해커톤 우승작 앱"
 date: "2017-10-29"
 category: "portfolio"
-subcategory: "web"
+subcategory: "games"
 featuredImage: "app1.png"
 ---
 

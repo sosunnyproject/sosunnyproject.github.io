@@ -2,7 +2,7 @@
 title: "[Web] 《Garden.Local : Distributed Web of Care》"
 date: "2021-11-20"
 category: "portfolio"
-subcategory: "graphics"
+subcategory: "games"
 featuredImage: "dwc16.jpg"
 featured: true
 ---
@@ -44,6 +44,11 @@ featured: true
 <li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=0%3A1">System Architecture</a></li>
 <li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=9%3A4">User Flow & Interaction</a></li>
 </ul>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="slide-2-2-copy.png">
+<figcaption><garden.local> Geometric gardens and creatures in master view</figcaption>
+</figure>
 
 <h2>Personal Reflection</h2>
 <ul>

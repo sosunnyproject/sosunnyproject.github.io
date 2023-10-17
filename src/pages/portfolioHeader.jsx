@@ -16,7 +16,7 @@ export default function PortfolioHeader({ data }) {
 
   return (
     <div className={containerStyles.pf_subheader_wrapper}>
-      <Link to="/portfolio/games" getProps={isActive} className={containerStyles.pf_subheader_btn}>GAMES</Link>
+      <Link to="/portfolio/games" getProps={isActive} className={containerStyles.pf_subheader_btn}>GAMES / APPS</Link>
       <Link to="/portfolio/graphics" getProps={isActive} className={containerStyles.pf_subheader_btn}>GRAPHICS</Link>
       {/* <Link to="/portfolio/web" getProps={isActive} className={containerStyles.pf_subheader_btn}>WEB / APP</Link> */}
       <Link to="/portfolio/xr" getProps={isActive} className={containerStyles.pf_subheader_btn}>XR</Link>

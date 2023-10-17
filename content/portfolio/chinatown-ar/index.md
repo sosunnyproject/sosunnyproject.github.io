@@ -119,6 +119,7 @@ featured: true
 <img src="ch1.png">
 <figcaption>screeshot of code base</figcaption>
 </figure>
+<br />
 
 <figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
 <img src="IMG_8685.png">
