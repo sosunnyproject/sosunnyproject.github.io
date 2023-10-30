@@ -1,5 +1,5 @@
 ---
-title: "Threejs programming"
+title: "Threejs Animation Research"
 date: "2022-01-01"
 category: "portfolio"
 subcategory: "graphics"

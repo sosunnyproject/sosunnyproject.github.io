@@ -3,7 +3,7 @@ title: '[3D] Maya, Houdini, Blender'
 date: '2023-09-01'
 category: 'portfolio'
 subcategory: "graphics"
-featuredImage: 'froggy_tutorial_render.png'
+featuredImage: 'froggythumbnail.png'
 featured: true
 ---
 
@@ -19,7 +19,7 @@ featured: true
 <figcaption>Maya</figcaption>
 </figure>
 
-<iframe width="100%" height="400" src="https://youtu.be/Cx2OjNhi1ys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/Cx2OjNhi1ys?si=kFlT1zW25E0rXQ2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="beginner.mantra1.0030.jpeg">

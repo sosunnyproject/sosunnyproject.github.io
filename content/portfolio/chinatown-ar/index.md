@@ -3,7 +3,7 @@ title: 'WEB AR for Chinatown History in LA'
 date: '2023-09-01'
 category: 'portfolio'
 subcategory: "XR"
-featuredImage: '3dmodels-map.png'
+featuredImage: 'appView.png'
 featured: true
 ---
 
@@ -14,8 +14,12 @@ featured: true
 </figure>
 
 ---
-<iframe width="100%" height="400" src="https://www.youtube.com/watch?v=1yNCYzpc9Mg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="100%" height="640" src="https://www.youtube.com/embed/1yNCYzpc9Mg?si=QAMN62-GgQh94J9C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Please watch the video for the full on-site AR experience
+
+<br />
 
 <b>Position:</b> Lead Developer (Web, AR)
 <ul>
@@ -42,12 +46,6 @@ featured: true
     <li>Vanilla Javascript</li>
     <li>Blender</li>
 </ul>
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="ch14.png" >
-<figcaption></figcaption>
-</figure>
-<br/>
 
 <b>Environment Construction:</b>
 <ul>
@@ -76,28 +74,28 @@ featured: true
 </ul>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
+<img src="appView.png">
+<figcaption>Final App Design</figcaption>
+</figure>
+<br />
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="ch1.png">
+<figcaption>screeshot of code base</figcaption>
+</figure>
+<br />
+
+<figure style="display: block; margin: 0 auto; text-align: center">
 <img src="ch15.png">
 <figcaption>Testing AR VPS mesh, 3D models, and occlusion effects on desktop debugging</figcaption>
 </figure>
 <br />
 
-<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
-<img style="display:inline-block" src="IMG_9379.png">
-<figcaption>Mockup of intro scene (debug mode)</figcaption>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="ch14.png" >
+<figcaption></figcaption>
 </figure>
-<br />
-
-<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
-<img style="display:inline-block" src="IMG_9380.png">
-<figcaption>Inventory UI menu for Chinatown storytelling</figcaption>
-</figure>
-<br />
-
-<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
-<img style="display:inline-block" src="IMG_9382.png">
-<figcaption>8th wall map for GPS world map and cute doty </figcaption>
-</figure>
-<br />
+<br/>
 
 <figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
 <img style="display:inline-block" src="IMG_9907.png">
@@ -116,21 +114,3 @@ featured: true
 <figcaption>screenshot of desktop debugging of VPS and 3D AR objects</figcaption>
 </figure>
 <br />
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="ch1.png">
-<figcaption>screeshot of code base</figcaption>
-</figure>
-<br />
-
-<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
-<img src="IMG_8685.png">
-<figcaption>In view component testing with camera raycast function</figcaption>
-</figure>
-<br />
-
-<figure style="display: block;width: 300px;height: auto; margin: 0 auto; text-align: center">
-<img src="IMG_9908.png" >
-<figcaption>On-site testing at Union Station, Los Angeles</figcaption>
-</figure>
-<br/>

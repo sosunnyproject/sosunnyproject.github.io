@@ -1,5 +1,5 @@
 ---
-title: "Creative Coding"
+title: "Creative Coding / Procedural Arts (p5js)"
 date: "2021-12-31"
 category: "portfolio"
 subcategory: "graphics"
