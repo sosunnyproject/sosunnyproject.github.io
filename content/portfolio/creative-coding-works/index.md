@@ -24,10 +24,21 @@ featured: true
 </figure>
 
 <br />
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="IMG_5253.jpeg">
+<figcaption>AudioVisual with P5js, P5LIVE, WEBGL, MIDI controller performance at Seoul Artists' Platform New & Young</figcaption>
+</figure>
+<br />
+
+<figure style="display: block; margin: 0 auto; text-align: center;">
+<img src="IMG_5282.jpg">
+<figcaption>AudioVisual with P5js, P5LIVE, WEBGL, MIDI controller performance at Seoul Artists' Platform New & Young</figcaption>
+</figure>
+<br />
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="slide-7.jpg">
-<figcaption>AudioVisual with P5js, P5LIVE, WEBGL, MIDI controller performance at JSCONF KOREA</figcaption>
+<figcaption>AudioVisual with P5js, P5LIVE, WEBGL, MIDI controller performance at JSCONF Korea</figcaption>
 </figure>
 <br />
 
