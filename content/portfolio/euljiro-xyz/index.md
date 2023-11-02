@@ -1,10 +1,11 @@
 ---
-title: "[3D Web] 《 euljiro.xyz 》, Seoul"
+title: "[3D Web] 《 euljiro.xyz 》"
 date: "2021-11-27"
 category: "portfolio"
 subcategory: "games"
 featuredImage: "euljiro-park.jpg"
 featured: true
+order: 2
 ---
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/HJYgOmYNM3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

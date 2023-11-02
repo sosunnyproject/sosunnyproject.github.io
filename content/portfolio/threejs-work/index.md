@@ -5,6 +5,7 @@ category: "portfolio"
 subcategory: "graphics"
 featuredImage: "threejsanim2.png"
 featured: true
+order: 5
 ---
 
 <figure style="display: block; margin: 0 auto; text-align: center">

@@ -5,6 +5,7 @@ category: 'portfolio'
 subcategory: "games"
 featuredImage: 'slide-5-1min.png'
 featured: true
+order: 8
 ---
 
 

@@ -5,6 +5,7 @@ category: "portfolio"
 subcategory: "graphics"
 featuredImage: "jiwoo1.jpeg"
 featured: true
+order: 6
 ---
 
 <figure style="display: block; margin: 0 auto; text-align: center">

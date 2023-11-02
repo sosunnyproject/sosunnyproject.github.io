@@ -5,6 +5,7 @@ category: 'portfolio'
 subcategory: "graphics"
 featuredImage: 'froggythumbnail.png'
 featured: true
+order: 1
 ---
 
 ## Renders
@@ -19,7 +20,7 @@ featured: true
 <figcaption>Maya</figcaption>
 </figure>
 
-<iframe width="100%" height="auto" src="https://www.youtube.com/embed/Cx2OjNhi1ys?si=kFlT1zW25E0rXQ2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/Cx2OjNhi1ys?si=kFlT1zW25E0rXQ2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="beginner.mantra1.0030.jpeg">

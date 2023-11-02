@@ -1,10 +1,11 @@
 ---
-title: "[AR.MR] 《 2021 FRANKENSTEIN 》, Seoul"
+title: "[AR.MR] 《 2021 FRANKENSTEIN 》"
 date: "2021-07-27"
 category: "portfolio"
 subcategory: "XR"
 featuredImage: "xrea.jpg"
 featured: true
+order: 4
 ---
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/EAKpIvpl6zU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

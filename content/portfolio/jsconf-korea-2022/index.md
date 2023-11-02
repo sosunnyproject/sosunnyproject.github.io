@@ -5,6 +5,7 @@ category: "portfolio"
 subcategory: "edu"
 featuredImage: "IMG_5116-min.jpg"
 featured: true
+order: 12
 ---
 
 <div class="intro">

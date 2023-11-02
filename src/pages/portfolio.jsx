@@ -35,7 +35,7 @@ query {
     }
   }
   allMarkdownRemark(
-    sort: [{frontmatter: {date: DESC}}, {frontmatter: {title: ASC}}]
+    sort: [{frontmatter: {order: ASC}}, {frontmatter: {title: ASC}}]
   ){
     totalCount
       edges {
@@ -45,6 +45,7 @@ query {
           timeToRead
           frontmatter {
             title
+            order
             date(formatString: "MMMM DD, YYYY")
             category
             subcategory

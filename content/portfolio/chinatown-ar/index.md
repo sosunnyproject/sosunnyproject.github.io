@@ -1,10 +1,11 @@
 ---
-title: 'WEB AR for Chinatown History in LA'
+title: '[WEB AR] Chinatown History in LA'
 date: '2023-09-01'
 category: 'portfolio'
 subcategory: "XR"
 featuredImage: 'appView.png'
 featured: true
+order: 3
 ---
 
 

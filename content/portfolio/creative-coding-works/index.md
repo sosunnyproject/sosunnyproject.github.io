@@ -5,6 +5,7 @@ category: "portfolio"
 subcategory: "graphics"
 featuredImage: "slide-7.jpg"
 featured: true
+order: 8
 ---
 
 <figure style="display: block; margin: 0 auto; text-align: center">
