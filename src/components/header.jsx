@@ -26,7 +26,7 @@ export default function Header({location}) {
         cv
       </Link>
       <Link to="/archive" getProps={({location}) => isActive({location},'archive')} className={headerStyles.navText}>
-        <span role="img" aria-label="nerd-face  ">🤓🤓🤓</span>
+        <span role="img" aria-label="nerd-face  ">🤓TIL🤓</span>
       </Link>
       {/* <Link to="/vitae" getProps={({location}) => isActive({location},'vitae')} className={headerStyles.navText}>vitae</Link> */}
       <div className={headerStyles.socialContainer}>

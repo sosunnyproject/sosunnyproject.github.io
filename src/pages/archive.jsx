@@ -10,7 +10,19 @@ export default function Archive() {
     <Container>
       <Header />
       <div className={vitaeStyles.vitaeContainer}>
-
+      
+      <h3>TIL</h3>
+      <p><a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API#examples">Web GPU API</a></p>
+      <p><a target="_blank" rel="noreferrer" href="https://webgpu.github.io/webgpu-samples/">Web GPU Samples</a></p>
+      <p><a target="_blank" rel="noreferrer" href="https://developer.chrome.com/articles/gpu-compute/">WEB GPU Compute on the web</a></p>
+      <p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=lKdi5ZG4NbU">WebGPU Intro (Korean)한글</a></p>      
+      <p><a target="_blank" rel="noreferrer" href="https://learnopengl.com/Getting-started/Textures">Create Rendering Engine From the Ground Zero</a></p>
+      <p><a target="_blank" rel="noreferrer" href="https://developer.chrome.com/blog/webgpu-io2023/">WebGPU: Unlocking modern GPU access in the browser</a></p>
+      <p><a target="_blank" rel="noreferrer" href="https://codelabs.developers.google.com/your-first-webgpu-app?hl=ko#0">Build WEB GPU APP with Colab</a></p>
+      <p><a target="_blank" rel="noreferrer" href="https://www.w3.org/TR/WGSL/">WebGPU Shading Language, W3C Working Draft, 20 November 2023</a></p>
+      <p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=FkowOdMjvYo&pp=ygUfamF2YXNjcmlwdCBtYXN0ZXJ5IDNkIHBvcnRmb2xpbw%3D%3D">Build and Deploy an Amazing 3D Developer Portfolio in React with Three.js</a></p>
+      <p><a target="_blank" rel="noreferrer" href="http://www.directxtutorial.com/Lesson.aspx?lessonid=9-1-3">DirectX 11</a></p>
+      
       <h3>learn</h3>
 
         <p><a target="_blank" rel="noreferrer" href="https://threejs.org/">https://threejs.org/</a></p>
