@@ -11,7 +11,10 @@ export default function Archive() {
       <Header />
       <div className={vitaeStyles.vitaeContainer}>
       
-      <h3>TIL</h3>
+      <h2>TIL</h2>
+      <h4>2023~</h4>
+      <p><a target="_blank" rel="noreferrer" href="https://github.com/bgstaal/multipleWindow3dScene">Nonfigurative 3d scene across windows threejs, localStorage, window.getScreenDetails() API, getScreenDetails(), window.screenX/Y</a></p>
+      <p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=b9QbRuvkvsI">Unite Seoul 2020 VFX by Keijiro Takhashi: Particle Strip, VFX Shader Graph...</a></p>
       <p><a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API#examples">Web GPU API</a></p>
       <p><a target="_blank" rel="noreferrer" href="https://webgpu.github.io/webgpu-samples/">Web GPU Samples</a></p>
       <p><a target="_blank" rel="noreferrer" href="https://developer.chrome.com/articles/gpu-compute/">WEB GPU Compute on the web</a></p>
@@ -22,8 +25,8 @@ export default function Archive() {
       <p><a target="_blank" rel="noreferrer" href="https://www.w3.org/TR/WGSL/">WebGPU Shading Language, W3C Working Draft, 20 November 2023</a></p>
       <p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=FkowOdMjvYo&pp=ygUfamF2YXNjcmlwdCBtYXN0ZXJ5IDNkIHBvcnRmb2xpbw%3D%3D">Build and Deploy an Amazing 3D Developer Portfolio in React with Three.js</a></p>
       <p><a target="_blank" rel="noreferrer" href="http://www.directxtutorial.com/Lesson.aspx?lessonid=9-1-3">DirectX 11</a></p>
-      
-      <h3>learn</h3>
+
+      <h2>learn</h2>
 
         <p><a target="_blank" rel="noreferrer" href="https://threejs.org/">https://threejs.org/</a></p>
         <p><a target="_blank" rel="noreferrer" href="https://p5js.org">https://p5js.org</a></p>
@@ -41,7 +44,7 @@ export default function Archive() {
         <p><a target="_blank" rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection/">https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection</a></p>
 
                 
-        <h3>coolsss</h3>
+        <h2>coolsss</h2>
 
         <p><a target="_blank" rel="noreferrer" href="https://twitter.com/mrdoob">https://twitter.com/mrdoob</a></p>
         <p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=O4T7pIs--LA">DemoScene</a></p>
@@ -51,7 +54,8 @@ export default function Archive() {
         <p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=r-H5U6dV0VM">Wolves in the Walls | Oculus Quest + Rift Platforms</a></p>
         <p><a target="_blank" rel="noreferrer" href="http://taotajima.jp/">http://taotajima.jp/</a></p>
 
-        <h3>my stuff</h3>
+        <h2>my stuff</h2>
+        <p><a target="_blank" rel="noreferrer" href="https://3d-math.gitbook.io/p5jscodeanddesign/">P5JS Guide Book for Classes (Made by Me)</a></p>
         <p><a target="_blank" href="https://maily.so/sosunnyproject/">뉴스레터 (Korean Newsletter)</a></p>
         <p><a target="_blank" href="https://instagram.com/sosunnyproject/">Instagram</a></p>
         <p><a target="_blank" href="https://www.youtube.com/sosunnyproject">Youtube</a> </p>
