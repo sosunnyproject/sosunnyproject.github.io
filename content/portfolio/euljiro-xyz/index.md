@@ -8,7 +8,7 @@ featured: true
 order: 2
 ---
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/HJYgOmYNM3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="540" src="https://www.youtube.com/embed/HJYgOmYNM3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <i>As of Januray 2022, I recommend you to enjoy this artwork online, <a target="_blank" rel="noreferrer" href="https://www.euljiro.xyz">euljiro.xyz</a>. (It would work better if your graphic card is Nvidia GTX 1060 or higher.) </i>
 
 <hr />
