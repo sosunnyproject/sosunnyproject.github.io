@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function PortfolioPost({ node }) {
     const image = getImage(node.frontmatter?.featuredImage)
-    const loc = "general";
 
     return (
         <div key={node.id} className={containerStyles.portfolioCard}>
@@ -15,7 +14,7 @@ export default function PortfolioPost({ node }) {
                 alt=""
                 layout="fullWidth"
                 width={480}
-                aspectRatio={16/9}
+                aspectratio={16/9}
             />
             <h3>
                 {node?.frontmatter?.title}
