@@ -21,7 +21,7 @@ export default function Header({location}) {
       <Link to="/">have so sunny day</Link>
     </div>
     <div className={headerStyles.navContainer}>
-      <Link to="/portfolio" getProps={({location}) => isActive({location},'portfolio')} className={headerStyles.navText}>portfolio</Link>
+      <Link to="/portfolio/main" getProps={({location}) => isActive({location},'portfolio')} className={headerStyles.navText}>portfolio</Link>
       <Link to="/cv" getProps={({location}) => isActive({location},'cv')} className={headerStyles.navText}>
         cv
       </Link>

@@ -8,7 +8,7 @@ import PortfolioHeader from "../portfolioHeader"
 
 export default function Graphics({ data }) {
 
-  const [currentSub, setCurrentSub] = useState('games');
+  const [currentSub, setCurrentSub] = useState('graphics');
 
   return (
   <Container>

@@ -2,9 +2,9 @@
 title: "Creative coding x Music Classes and Showcase"
 date: "2022-02-01"
 category: "portfolio"
-subcategory: "graphics"
+subcategory: "edu"
 featuredImage: "jiwoo1.jpeg"
-featured: true
+featured: false
 order: 6
 ---
 

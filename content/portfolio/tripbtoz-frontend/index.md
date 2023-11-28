@@ -4,7 +4,7 @@ date: '2021-05-01'
 category: 'portfolio'
 subcategory: "games"
 featuredImage: 'slide-5-1min.png'
-featured: true
+featured: false
 order: 8
 ---
 

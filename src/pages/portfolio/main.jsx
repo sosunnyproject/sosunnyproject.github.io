@@ -1,12 +1,12 @@
 import React, { useState } from "react"
-import Header from "../components/header"
-import Container from "../components/container"
+import Header from "../../components/header"
+import Container from "../../components/container"
 import { Link, graphql } from "gatsby"
-import * as containerStyles from "../components/container.module.css"
-import PortfolioPost from "../components/portfolioPost"
-import PortfolioHeader from "./portfolioHeader.jsx"
+import * as containerStyles from "../../components/container.module.css"
+import PortfolioPost from "../../components/portfolioPost"
+import PortfolioHeader from "../portfolioHeader"
 
-export default function Portfolio({ data }) {
+export default function FeaturedPortfolio({ data }) {
 
   const [currentSub, setCurrentSub] = useState('main');
 
@@ -14,14 +14,15 @@ export default function Portfolio({ data }) {
   <Container>
     <Header />
     <PortfolioHeader />
-      <div className={containerStyles.portfolioList}>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          ((node.frontmatter.category === 'portfolio') &&
-          node.frontmatter.featured === true) &&
-              <PortfolioPost node={node} key={node.id} />
-          )
-        )}
-      </div>
+
+    <div className={containerStyles.portfolioList}>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        ((node.frontmatter.category === 'portfolio') &&
+        node.frontmatter.featured === true) &&
+            <PortfolioPost node={node} key={node.id} />
+        )
+      )}
+    </div>
   </Container>
   )
 }
@@ -45,11 +46,11 @@ query {
           timeToRead
           frontmatter {
             title
-            order
             date(formatString: "MMMM DD, YYYY")
             category
             subcategory
             featured
+            order
             featuredImage {
               childImageSharp {
                 gatsbyImageData(

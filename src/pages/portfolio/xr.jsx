@@ -8,6 +8,8 @@ import PortfolioHeader from "../portfolioHeader"
 
 export default function XR({ data }) {
 
+  const [currentSub, setCurrentSub] = useState('xr');
+
   return (
   <Container>
     <Header />

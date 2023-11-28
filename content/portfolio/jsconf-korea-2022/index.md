@@ -4,7 +4,7 @@ date: "2022-09-16"
 category: "portfolio"
 subcategory: "edu"
 featuredImage: "IMG_5116-min.jpg"
-featured: true
+featured: false
 order: 12
 ---
 

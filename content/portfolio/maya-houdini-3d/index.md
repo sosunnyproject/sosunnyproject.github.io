@@ -4,7 +4,7 @@ date: '2023-09-01'
 category: 'portfolio'
 subcategory: "graphics"
 featuredImage: 'froggythumbnail.png'
-featured: true
+featured: false
 order: 1
 ---
 

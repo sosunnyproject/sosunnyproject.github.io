@@ -4,7 +4,7 @@ date: "2022-01-01"
 category: "portfolio"
 subcategory: "graphics"
 featuredImage: "threejsanim2.png"
-featured: true
+featured: false
 order: 5
 ---
 

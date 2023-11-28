@@ -4,7 +4,7 @@ date: "2021-07-27"
 category: "portfolio"
 subcategory: "XR"
 featuredImage: "xrea.jpg"
-featured: true
+featured: false
 order: 4
 ---
 

@@ -18,7 +18,7 @@ export default function Games({ data }) {
     <div className={containerStyles.portfolioList}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         ((node.frontmatter.category === 'portfolio') &&
-        node.frontmatter.subcategory === currentSub) &&
+        node.frontmatter.subcategory === 'games') &&
             <PortfolioPost node={node} key={node.id} />
         )
       )}
