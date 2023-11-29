@@ -12,13 +12,21 @@ export default function Home({ data }) {
 
     <div className={containerStyles.index}>
       <h1>Write Code, Make Art</h1>
+{/* 
+      <div className={containerStyles.indexVideoWrapper}>
+        <iframe className={containerStyles.indexVideo} width="90%" height="auto" src="https://www.youtube.com/embed/HJYgOmYNM3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div> */}
 
       <p>
       a sassy girl loved musical theaters so much she <span role="img" aria-label="airplane">✈️</span> to New York & Vassar <span role="img" aria-label="the statue of liberty">🗽</span>
-      When life was giving her <span role="img" aria-label="lemon">🍋</span>, she found some 💎 
+       When life was giving her <span role="img" aria-label="lemon">🍋</span>, she found some 💎 
       in the land of <a target="_blank" href="https://www.linkedin.com/in/sosunpark">software engineering </a> 💻 
-      She's been fascinated by how math, engineering and arts can be <Link to="/portfolio/games">intertwined through graphics and games. </Link> 
-       Currently in LA, she's studying M.S. Game Design and Development (USC) and passionate about graphics, web, games, and XR. Mostly having fun with three js, shader, Unity, Unreal, and p5js.
+      She's been fascinated by how math, technology and arts can be <Link to="/portfolio/games">intertwined through graphics and games. </Link> 
+      </p>
+      <p>
+       Currently in LA, she's studying M.S. Game Design and Development (USC) and passionate about graphics, web, games, and XR. 
+       Mostly having fun with three js, Shader, Unity, Unreal, p5js.
+       Studying C++, OpenGL, Computer Graphics, WebGPU, and so on.
       </p>
 
       <p className={containerStyles.indexBottom}>

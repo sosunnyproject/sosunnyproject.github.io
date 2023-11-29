@@ -1,12 +1,14 @@
-## Procedural / Generative alogirhtm for Garden rendering
-Server / Config
-https://github.com/gardenlocal/dwc-v3-socket-server/blob/main/server/controllers/garden.controller.js
+## Procedural / Generative Alogirhtm for Garden Animation
+
+#### [Server / Config](https://github.com/gardenlocal/dwc-v3-socket-server/blob/main/server/controllers/garden.controller.js)
 - Shape: Enums - DWC_META.tileShapes.TRIANGLE / CIRCLE
 - Duration: Growing from one corner to the diagonal corner
 - Anchor: [ 0, 1, 2, 3 ]
-- Shader properties: time seed, speed
+- Shader parameters: time seed, speed
 
-Client / Rendering
+#### Client / Rendering
+- Troubleshooting process
+
 - Color / Gradient: fragment shader tests: https://github.com/gardenlocal/dwc-v2/tree/main/canvas/src/render/shaders, https://www.shadertoy.com/user/sosunnyproject
 - Shapes: Use Tessellation library to customize Triangulate function: https://www.glprogramming.com/red/chapter11.html, https://github.com/memononen/tess2.js
 - Send Uniform data to shader
@@ -41,7 +43,40 @@ Add more variety to Creature SVG logics
 - https://github.com/gardenlocal/dwc-v3-socket-server/blob/main/shared-constants.js
 - https://github.com/gardenlocal/dwc-v2-2022/blob/main/canvas/src/render/Creatures/MushroomCluster.js 
 
-## User Login, Accessibility features (web service)
+## Technical Documentation
+
+### Client Side: Pixi JS, Garden and Creature Rendering
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="dwc-appStructure.png">
+<figcaption><garden.local>App Structure Diagram</figcaption>
+</figure>
+
+### User Login, Accessibility, Web Service
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="dwc-flowchart.png">
+<figcaption><garden.local> User Flowchart of Web Application </figcaption>
+</figure>
 
 
+## Key Accomplishments
+- Frontend & Graphics Engineer
+  - Designed UI UX and developed a mobile website where users could interact with their own virtual garden and creatures
+  - Incorporated real-time environmental data, utilizing temperature and humidity readings from Raspberry Pi to 
+  dynamically alter animation speeds and garden gradient colors.
+  - Collaborated with server-side development utilizing nodejs, socket communication. 
+  - Supported transitioning API and database from a local nedb to Supabase, a cloud-based database system.
+- Project Manager
+  - Successfully managed the 2022 development phase, ensuring timely updates to requirements
+  - Revised the SVG generation algorithm, and spearheading graphic code refactoring.
+
+
+## Technical Highlights
+- Enhanced interactive visual experience using pixi js, WebGL, socket, nodejs, and Raspberry Pi.
+- Engineered an immersive mobile website experience linked to physical drawing installations, innovative mesh wifi networks, and user-interactive features.
+- Ensured website accessibility exclusively through unique mesh wifi networks, named to augment the exhibition theme.
+
+
+Debrief from Taeyoon
 - https://taeyoonchoi.com/garden-local-2022/
