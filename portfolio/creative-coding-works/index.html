@@ -46,6 +46,7 @@
 </ul>
 </li>
 <li>Reference: <a href="http://www.songho.ca/opengl/gl_sphere.html">OpenGL Sphere algorithm</a></li>
+<li><a href="https://openprocessing.org/sketch/1627906">Basic Version Code Live Preview 1</a></li>
 </ul>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> stAngle <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> stAngle <span class="token operator">&lt;</span> <span class="token number">360</span><span class="token punctuation">;</span> stAngle <span class="token operator">+=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> xy <span class="token operator">=</span> radius<span class="token operator">*</span><span class="token function">cos</span><span class="token punctuation">(</span>stAngle<span class="token punctuation">)</span><span class="token punctuation">;</span>  
@@ -132,18 +133,93 @@
 <br>
 <h2>Progress &#x26; Development</h2>
 <ol>
-<li>Divide each row, columns. Divide a row into several vertex points. <a href="https://openprocessing.org/sketch/1646304">https://openprocessing.org/sketch/1646304</a></li>
-<li>Bezier Dynamics <a href="https://openprocessing.org/sketch/1615640">https://openprocessing.org/sketch/1615640</a></li>
-<li>Fill / Stroke <a href="https://openprocessing.org/sketch/1615639">https://openprocessing.org/sketch/1615639</a></li>
-<li>Rotate <a href="https://openprocessing.org/sketch/1615637">https://openprocessing.org/sketch/1615637</a></li>
+<li>Divide each row, columns. Divide a row into several vertex points</li>
+<li>Conditionally fill the space inide vertex or stroke only</li>
 </ol>
+<ul>
+<li><a href="https://openprocessing.org/sketch/1615639">code live preview</a></li>
+<li><a href="https://openprocessing.org/sketch/1637853">code live preview 2</a></li>
+</ul>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
+      <a class="gatsby-resp-image-link" href="/static/a2de8646fb685a75ecbc583428fb0c6f/d3d45/cc-b1.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 58.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADb0lEQVR42hXR2U/TBwDA8d+iI2wSkKMSLoFxxANYGTelUNQGRKRUnUA523K35b4ph2W0pdiCnEMREJ1Ew5w024KyjYQMHkjGNmY0I0v2sDPLEh/2sGwx+S77/AsfITBNgt+FTLySxGR4iCiJOE5RkIi0+ADeOJlEoETC0fhUDqVm45IQi68uHw/DZUJVKYRLj6Mt8aSj+HUqr7oRHOSKYF8txvxjLXVLauYUMoyOdqYHYvnkg3SUjglG7SqyTE14LTwg0mahamucnnkN/aZkqlf07OxI+O2pD4tLMpKl4QgPnXKqV4oIs2hRKpW0S1IwThfw7ZNTtE11kjI0R4XFgHh7Be/JRUIrdGgcNdw0Z9I5e5nzm53M2GXsmhOJjQ5HUDRrObUxQdqLMYruDzM62c2mKY3dLxKpvKEiprkbfaUGc48eybCNw4+WKN8Zwrkg45vbMTgHxBx0RvD7aAhZce4I16xi9nZP8MuOiClHPEEVeiK/niZ+rZ0zH3XxbvY5qnSXSNGU4NY7hKDrYajkDOspoYycFlPVnINmPI29972JijyC8PnGWZIXjGTuO/DeXkDdIsOpT+BZnx8/3T2GSpdFV4eS8uFmFIu3yLiqos6uQuts4PFKFPaxWBaywniuOUFciA9CSMM1PPedFB4MMdiv5knNJQ5sMdzbz6V8tpbcVgO5dX2Utwyj768jZ3cG7fdGvttI4KvxOP58JOLvx578teXLRen/yy3J5J+PwjoiJb1ATVzZIManRmrv1zBQVkZHQg7yAT3H+q0E59bj39bL0dV55LdmSVxb5J29Ea4vZ/OHKYD02DcR2BHx5U1vbLOZRBZrcLN2E7Ncxe1iP1Zlkcx1J3LHEoDcXIh7Uxfu6kHkJZVcyc3AdcKIeL0T0/VoZhRhhHn5IPywGsJy3Un0nzUSvj3B2Y+NZH54jxvzFSxbpJRa84lWa1H01bNWn029PI808xBXevU8NMmZqkzC3laBrUVPSqQ/wuB6EaUvzSS8WuH0r05mP63hwXMVdzZVWMeUyMwmGlq7WOwo50WplLvVeTwzRvGvxZ9/ekS87Arh58loXm0Fk5fuiiAoShEcbbxmqUX99lt0B3owrD6ErfEwcQWpuEkv4F+gxrvQwJGqSgSbjosdMbzX6kJjrS9dBg/6m1wZNLgREerCf6RrFD0E5kn1AAAAAElFTkSuQmCC'); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="cc b1" title="cc b1" src="/static/a2de8646fb685a75ecbc583428fb0c6f/e5715/cc-b1.png" srcset="/static/a2de8646fb685a75ecbc583428fb0c6f/8514f/cc-b1.png 192w,
+/static/a2de8646fb685a75ecbc583428fb0c6f/804b2/cc-b1.png 384w,
+/static/a2de8646fb685a75ecbc583428fb0c6f/e5715/cc-b1.png 768w,
+/static/a2de8646fb685a75ecbc583428fb0c6f/4ad3a/cc-b1.png 1152w,
+/static/a2de8646fb685a75ecbc583428fb0c6f/71c1d/cc-b1.png 1536w,
+/static/a2de8646fb685a75ecbc583428fb0c6f/d3d45/cc-b1.png 1614w" sizes="(max-width: 768px) 100vw, 768px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
+  </a>
+    </span>
+<figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
+</figure>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
+      <a class="gatsby-resp-image-link" href="/static/aaf1b7f7ef788310257b58f1a4c05b0a/8adb9/cc-b2.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 58.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACbklEQVR42jWT22tVRxTG12VmX05yTHI0OzGpWkU9SdpaKpjSp1KKxebNC0SqRl/iJUYtqbalpKURQZRSasHXQl+Fvvrv/cqanTwsZs+w55vvspZMrV1nam2d4XCIiyCqpVQFk7704FyipF/jHzfEndXRiHtdx2zOyM7lb/jx8kV+OTfHylSDqFPnRK4yqakxT1jKqDtaVUiV0bZCq4wkI4+OcGn9Pj/c2GY8/wEi3THk6Elk4SRiiuWMx8XkaJ1xS5h5zzClAihNVZiVf0zoRFidnePs0ePI9svXfP/mLY+37nJn3NGm/nJOTpWcnA8ADfVUqnwHsAuLH33G242HvL/5gJX5RWR5/Q4rNzcZz484M6wYVJmsSp0cT47lYJuRsiZ00PRgTY2aIpPTfP3haV59tcZ48UR4LL3RnkghN2VcjRRgdY3vMyoSB01fVUJyQizOrdz3doLJUYcsff4Fy5WQ94HNjOyOl7QNMccDLGQfPB5p5tSnHPvpEQ8+Oc/Ho1nk919/4tXuUy5s3KX7dJXcTu4zUmaqilMhLcxPhjYtNt0hltB4sK05fH7M3tUbvNv+jZVI+dHuLk/29vj5r7/ZevqMwfBQ6TtTZb6tWYhECztFB0Ns+kjZW0ieyHx77QrvNnf497v7fShbz1/w7I8/2bm9zsyZ5ZJwBNLmRAqvItlgFKFYKq0l0YeTbfFyrhnw5vo9/rv1kKVuAdnZ3KD78lIxPSalzpkqO25aZJWmDs+Kj4ZMNKWxY2/aT87S1Az/3H7CuUh5VHsZrxKIO5UrZiE5AlI0pLn2zCKEYoHtj6H24Ylw4fAsJ+qa/wF4UCyWdC9c1wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="cc b2" title="cc b2" src="/static/aaf1b7f7ef788310257b58f1a4c05b0a/e5715/cc-b2.png" srcset="/static/aaf1b7f7ef788310257b58f1a4c05b0a/8514f/cc-b2.png 192w,
+/static/aaf1b7f7ef788310257b58f1a4c05b0a/804b2/cc-b2.png 384w,
+/static/aaf1b7f7ef788310257b58f1a4c05b0a/e5715/cc-b2.png 768w,
+/static/aaf1b7f7ef788310257b58f1a4c05b0a/4ad3a/cc-b2.png 1152w,
+/static/aaf1b7f7ef788310257b58f1a4c05b0a/71c1d/cc-b2.png 1536w,
+/static/aaf1b7f7ef788310257b58f1a4c05b0a/8adb9/cc-b2.png 1638w" sizes="(max-width: 768px) 100vw, 768px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
+  </a>
+    </span>
+<figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
+</figure>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
+      <a class="gatsby-resp-image-link" href="/static/0ba539e3a5f718b6333a516a46c86f81/5d72a/cc-b5.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 127.60416666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAABYlAAAWJQFJUiTwAAAD/0lEQVR42n1VO49VVRj9nnufM4974c4wPEYBkRDUBKJBgZAZjYVSGkYRo1BoIWhsNBGixMJnNFgbW4MUxtLf4A8gsbDQytoYY2VMlvm+fe6duYlSnJzH3nvt9a219neIiEBlCW4dxkToRUH9BFqWkWN5cd4LEVaFwbPv/3HF4MkXv8W593/HV49v4addjPfO38QjH/6NYxdvg2ODYfJ+MbwwGoGZwSwQIlQSuCqEZ6CEvc+9g1O3/sEznwA/nLmIPyaCjy/fxqHXf0StNReKCtQFRAJWA6mA1FClYEEqWGQb0C5cw/KVj3Dy7Z+x+Tnw/RNb+PPAGK+OxzlJleGdoisMi3diCDG4VpAbmAS96jZgue8oePcK6mgPHrv+Kza+AO4cP4u/1ldwbTQKXdDXxsCKQ8WgbMkwvnGWvINhshjuC2vHcGDzXbgX3Nk/wZerkwSMMWHOKwBNArhCuea4FdsGVBOwEHTYRXJXRjVBqQoSBjHPNuacw3BSiBS4+bwpAaClaaBMEAsQAbGiE0Zn0t6LJxsfqol1qak0HRNQrMPo8NnGwiwzZ1qgVoZctYlltsk8U53JNdVQHDJ5AOIBqDCtKLGjL+B41+O1cY/D7oh5PoBFREyapqQK43C/jVFQPjTVJfQygWgMKjYWlvDbwXXcXd+HowEaurHAtEWJWeFaE9jqYEolwge7xxhHaaGPNgM89CLC6a7Hd3v34EgsMIEHu6nr0lh1tYJ9yGHUvyw8F50oR4vAI7gzHRnFCGbt2bgxinJFLF2fucxRSrfU9JmKzQQOx9PZVl4AuxJ6jwz26NTaPJprGC0GdbQKe/g07NGnIA+e3A5yOD9jqnmm3aY6KtxKi9pcDpWzXFtchoxXIEdPgJZ3Zc666smUhq4TJVfj/KaD0yaGqjR/9EJU3hFairKsZaszg4hAI+hUMCoV1QUcchRHF310z9q0bxLcov0wtJTUSqPUWcOMZ0VRz+MpERNiLC4sob/wJurLN2Ar+3aGPqgreiswU7DJrBnEjlxKmhEg5rWB5lEj+PoRLL5xC+X85Sx/25QU2VHMoSp5arJhWgGrDD3RodkMNDX3Ici2tg7dPYHsBIwXd8rU93Wxdehk4yl6ieaZxgysvaSrOrQsGaK2wxSBajQAgbCiWNMpGidbxZJ0eLLvcWrJcW44QWKe+atFc+0cYArNJZm2KChcDMUFpSu54Ym+xwZ1uLprH86M2h+xeJn9EWknYDsZBcaeuzVQyR9Uip+tvuD5TcLm159i9c5d3P/s0/jlm4LPro6axouL2y5P6Tq1MnhwOZ5laFkLneL6luDSKw+Btt7C/kuXcPNKxY2XKiYjB60dbNGhe/20/+eSe4z/CxYJTnYL72i7AAAAAElFTkSuQmCC'); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="cc b5" title="cc b5" src="/static/0ba539e3a5f718b6333a516a46c86f81/e5715/cc-b5.png" srcset="/static/0ba539e3a5f718b6333a516a46c86f81/8514f/cc-b5.png 192w,
+/static/0ba539e3a5f718b6333a516a46c86f81/804b2/cc-b5.png 384w,
+/static/0ba539e3a5f718b6333a516a46c86f81/e5715/cc-b5.png 768w,
+/static/0ba539e3a5f718b6333a516a46c86f81/5d72a/cc-b5.png 834w" sizes="(max-width: 768px) 100vw, 768px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
+  </a>
+    </span>
+<figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
+</figure>
+<ol start="5">
+<li>Change vertex to <strong>Curve Vertex or Bezier Vertex</strong> makes the <strong>wavy, dynamic visuals</strong></li>
+</ol>
+<ul>
+<li><a href="https://openprocessing.org/sketch/1615640">code live preview: version2.js</a></li>
+</ul>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
+      <a class="gatsby-resp-image-link" href="/static/b7557c5915cae3443d41489f2a88c70b/9e9da/cc-beziervertex.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 41.14583333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7ElEQVR42j2SS08TYRSG54/4a/wBunCpLnXjwo0xbnTlzpgYJcELKFGIMQiEFKmtXLTUAIUqbYhA2+ncL+3cZ74RNz5mRsLiSc63eb73zTmS4zhomo5pmti2TfEejUbnuK5b4nlj3PGY6v4xvWOVvC9z0lNpDSyUmTp/Lt9HXqsjZSLHC0LCICCKItI0JY5jgiAo54IkjsmFQOSCh5U2a9sKHG1j/Wqx0dzl5O5L+hdv8HX5LVKSJiiujayqGIaBZVllWtf9n9B2HExvxMj3SZKY23NNnq2qjNpLnPY/0p54jnzrEdPtZd58nyuEKerYRTEMbMtC0zQURSmlxQeariHbJobrIpKE61NVLtyZYm/nB38NFU0/ZL8+x9HkBDvqOlKaZQRRVNZN4oQwDEuiKCyrCyHIirpC8DsX3JxZ59LTGs7BOr3uPIvLU2w0NlnYWGS29R4pjGNM28YyrXIp0Zm8kBYSkWVkZ5zmgmuvPvOk0iEZdBl0a8w3Vvg5XaHa+MLSwQLSOAo5sQz6snxedzAYoOt6yVBR6Js6uuOQpylXJld4MLuJNzQI+j2a6pDe43fsVes0hjWkKImxvTFOeRpeSbGMwA/wfb+cHd/DKxJnKVdfVLg33+bwSMPvrFLrdPjW7NL4tMXr3Q/8AxfdNNq3cmlyAAAAAElFTkSuQmCC'); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="cc beziervertex" title="cc beziervertex" src="/static/b7557c5915cae3443d41489f2a88c70b/e5715/cc-beziervertex.png" srcset="/static/b7557c5915cae3443d41489f2a88c70b/8514f/cc-beziervertex.png 192w,
+/static/b7557c5915cae3443d41489f2a88c70b/804b2/cc-beziervertex.png 384w,
+/static/b7557c5915cae3443d41489f2a88c70b/e5715/cc-beziervertex.png 768w,
+/static/b7557c5915cae3443d41489f2a88c70b/4ad3a/cc-beziervertex.png 1152w,
+/static/b7557c5915cae3443d41489f2a88c70b/71c1d/cc-beziervertex.png 1536w,
+/static/b7557c5915cae3443d41489f2a88c70b/9e9da/cc-beziervertex.png 2482w" sizes="(max-width: 768px) 100vw, 768px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
+  </a>
+    </span>
+<figcaption>Bezier, Curve Vertex Update</figcaption>
+</figure>
 <hr >
 <h1>2D Circular Vertex Animation (Trignometry)</h1>
 <ul>
 <li>Trigonometry</li>
 <li>Animation of size: tangent function, audio volume input</li>
 <li><a href="https://openprocessing.org/sketch/1637856">Code &#x26; Live Preview</a></li>
+<li><a href="https://openprocessing.org/sketch/1615636">Code version 2</a></li>
 </ul>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
+      <a class="gatsby-resp-image-link" href="/static/c908de5431a6093baa60bee9e1e28e95/eba85/cc-circle0.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADLElEQVR42lWT609cVRTFz73n3Dv3MU+Y96MwFJgaJpa0FFJboEB5zQy01AdIYm2a1BqxEhgYW2mwGGP0o9Evpp+wzrQYNfLQIIKG+KF/1s8wkzThw0pOVvZe2XutfcTOzi6FGzcp3nqL0dFRro+OMl6a4sbcPHc/+4LZDxYYHxtjslikWCpRKBQZunaNiYkJpgsFSuMTTN18k5nZeQ6PjhA/PnuG0BVCiNNQBkKXDWgaQtMbvKnQbaf+1oUgqGk4pk2qvYudvT8QP1WrGJaFlDpKGXgsG8vjwRsMEU6m8Dg2/mAIXyDAcHGG4Tv3yM/dxnIdNKW4kMmw0XeZ96fn2Dk4RGy9+BnH8aLreh1Cb0zS3j/C9ZUNutIZHJ+PcCTBzO0PSXe8htUUQkkdISWtzWHe6ciRa8/x518HiL/3/2V98TsGeifrQmeSGaKROG48SXtfP58PDtEZiSEtHyOXWrnSfQZdV1iWhWEYWK6LMBSO67K3t4f49ZffKA3Pkc/11AWX7txjtjSDoQy64wlywRCJUBOO12F6oJNsJoJh2bheb10wFA7j8/sJBoMNwefPXxALp/B4bKSSZDM5wsHmxtpeH+lIBKEaocWbbS5f7ODt+/c5192NUoqz57qIxBL4/b6GYK1WI+gP4TFPgpG4tos3FKWzf5qmyQKeoTcwTYPOs3l6X+8j25JkbmGB/KUewtE4a9/+wMWrg/UJD4/+QdSqNSyPhZIKqRRK1wimsuSn7hK7OoiVTiC8Nm0tORbee4xlua9O68S33oFh4qkMmdYs/718idja2sK2bTStkbJhmPViTZdIaWLoGoGWdkLnB1DeAFIqbMPAY5rIk8s4qRWSWCzB/v4+olqt4vf76+ueeGIoRSqbxfRY6FLWG6xwkraRecbyV+iJJ4m4bt0GKTVi0TSOHSCVzLC7u4vY3Nw89UOC0Sg9xVsEovFTvN/1sjH0LufDiVdcW/oCzYE2TOXDcRy2t7cRBwcHLC4uUi6X+eTBAyoPH/Hkq695tLZGpVKhsrrCanmZ8tIia59WWFpeZuHjj1h//CVPv/+dJ+vfUFl9yMpKmePjY/4HAKSZ6F8ugywAAAAASUVORK5CYII='); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="cc circle0" title="cc circle0" src="/static/c908de5431a6093baa60bee9e1e28e95/e5715/cc-circle0.png" srcset="/static/c908de5431a6093baa60bee9e1e28e95/8514f/cc-circle0.png 192w,
+/static/c908de5431a6093baa60bee9e1e28e95/804b2/cc-circle0.png 384w,
+/static/c908de5431a6093baa60bee9e1e28e95/e5715/cc-circle0.png 768w,
+/static/c908de5431a6093baa60bee9e1e28e95/eba85/cc-circle0.png 1054w" sizes="(max-width: 768px) 100vw, 768px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
+  </a>
+    </span>
+<figcaption>Circular Vertex Segments</figcaption>
+</figure>
 <ol>
 <li>Define each circular segment. It should start after the last inner circle.</li>
 </ol>
@@ -173,6 +249,19 @@
 <span class="token comment">// lines separating the segments at each radius</span>
 <span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> r6<span class="token operator">*</span><span class="token number">1.25</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">,</span> r6<span class="token operator">*</span><span class="token number">1.25</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">,</span> speed1 <span class="token operator">+</span> <span class="token constant">TWO_PI</span><span class="token operator">/</span><span class="token number">6</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">,</span> speed2 <span class="token operator">+</span> <span class="token constant">TWO_PI</span><span class="token operator">/</span><span class="token number">6</span><span class="token operator">*</span><span class="token number">5</span><span class="token punctuation">)</span>
 <span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> r6<span class="token operator">*</span><span class="token number">1.25</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">,</span> r6<span class="token operator">*</span><span class="token number">1.25</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">,</span> speed2 <span class="token operator">+</span> <span class="token constant">TWO_PI</span><span class="token operator">/</span><span class="token number">6</span><span class="token operator">*</span><span class="token number">1</span><span class="token punctuation">,</span> speed1 <span class="token operator">+</span> <span class="token constant">TWO_PI</span><span class="token operator">/</span><span class="token number">6</span><span class="token operator">*</span><span class="token number">5</span><span class="token punctuation">)</span></code></pre></div>
+<figure style="display: block; margin: 0 auto; text-align: center">
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
+      <a class="gatsby-resp-image-link" href="/static/37d19e88068b6ae1d3817276d55f0922/bb2fd/cc-circle1.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 68.22916666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAADqElEQVR42k2U+zOcZxTH37XeXbEvu0uXdYsg69ZWVZiEpmsFWanKTTUNiiiNS0Zdl0U02F1rh5C0jJnWZWXNMKbukSlrJTX9uz4dr860P5yZ58z3nM+Z7/M8c4SzszNWV1dZX19nY32D3a09Do4CbB8H2D0OcHz2N4eB9xycnLJ/csqe/z27Jx/YPvKzuubjz0M/B/vvWFlZ4fT0FGFpaQlBENBp9ei1kVxNzqCgqQvr0ATFNgd3hicp7ndQ1DfOLds4pfZJrM+nudbUQUbmNdpqh7mRY5EZTqfzP6AoqpBCNYRKElkNnTx1PKdzYpCbPQ5KB5yUDExQ0u/C0jtKiX2C4o5htAYj6cmfYDTEERSkxOVyIfh8PhmoUqm5FBKCQq0mr7mbO0MuHo+McLPPgcXmoNju5tb5uW+UJucilX2TKCUJlRiMJIXLjKmpKYRz7+eJRqNBUChI0EdQ1NxFbusgBZ2j/Ng9Ils1Dzgp7B2lsGeU0n4XBW02VBqJIIUCSZJkhntiAmF5+QIYHnYxpcBgoL2xgwLbS3La7dT3jFDTP47Z7qSsdwpr7yxVk/NUdr/gckwKiv8DJz0Iq943qEW9/CgKhSALEUkmykZm+HZsgXK7R743c+8YD3pc1NscPJlfo25whsbKn1AGi0jn7gQBz/Q0wh+bb7Hmd5CRe5dLiRmIqhBZTMjJ5+HQLPfdCxTZ3VgG3FhtLmpsDlLyLYQboglWKuVaraRBPAe63QhrbzYw6k2YMrIRI+NQiiqC/i2MryjH9LSFG/UtWFtbqOtqRHc1TdZCVCKqUA0RpkyS4xNIEFXMeDwIm9t7NDz4nIaKTxGUahRBQXJDnqUQS20tYlgUWakfY0rMoK2pCvPtQiSdDlVwMJIhmqzaFrrvVtGXnolvbg5h9+Ad5i9yycs0EhVlwBifSLhOjyE2hi8tjVSVj1F3f5LqMicjozu8eL1GVHTsxVcT1WjT00nK/owCrQ7f/DyCb22Nj4wx6CQ1xugomnp+5rrlNtmpX9Fes0jzo9c8uefhUe1LHj+b41ntAlZzK7FXkomIjEBrzie0qwUhLgWn24Pg9XrRR0eTnJ6GKAaTnJZGatJ1njx8xff3pqiucFP3tZtvqqewts3yXfEYg8Mb1PxgJ+bKZYRIPWGmVFTxmXh+WUCQl4PPx9beHiteL/Nzv7K1+Zb9nQC7W8fsbZ9cxJaf/Z0Tdrf8HB5+4Mj/F0tLy/y+uIjXu8pvi0v4AwH+AfLQLK+pU9SJAAAAAElFTkSuQmCC'); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="cc circle1" title="cc circle1" src="/static/37d19e88068b6ae1d3817276d55f0922/e5715/cc-circle1.png" srcset="/static/37d19e88068b6ae1d3817276d55f0922/8514f/cc-circle1.png 192w,
+/static/37d19e88068b6ae1d3817276d55f0922/804b2/cc-circle1.png 384w,
+/static/37d19e88068b6ae1d3817276d55f0922/e5715/cc-circle1.png 768w,
+/static/37d19e88068b6ae1d3817276d55f0922/bb2fd/cc-circle1.png 1058w" sizes="(max-width: 768px) 100vw, 768px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
+  </a>
+    </span>
+<figcaption>Circular Vertex Segments</figcaption>
+</figure>
+<hr >
 <h1>For More</h1>
 <h3>Tip for Cool Designer's eyes</h3>
 <ul>
@@ -232,4 +321,4 @@
           >
             window.___chunkMapping="{\"app\":[\"/app-4c852c4a82f536992220.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-09719d71f0fef75379c3.js\"],\"component---src-pages-archive-jsx\":[\"/component---src-pages-archive-jsx-3d09551a19fad194f29c.js\"],\"component---src-pages-blog-jsx\":[\"/component---src-pages-blog-jsx-4930482e476f41b4292d.js\"],\"component---src-pages-cv-jsx\":[\"/component---src-pages-cv-jsx-017fb52c472de863866d.js\"],\"component---src-pages-index-jsx\":[\"/component---src-pages-index-jsx-c0e74069b994ca10c175.js\"],\"component---src-pages-portfolio-edu-jsx\":[\"/component---src-pages-portfolio-edu-jsx-15c891a0f6dae7e6f9ce.js\"],\"component---src-pages-portfolio-games-jsx\":[\"/component---src-pages-portfolio-games-jsx-c7ff5b3920c0e252ea09.js\"],\"component---src-pages-portfolio-graphics-jsx\":[\"/component---src-pages-portfolio-graphics-jsx-63bf2e4bf08a6cbd1b69.js\"],\"component---src-pages-portfolio-header-jsx\":[\"/component---src-pages-portfolio-header-jsx-000108c9be33a6eca8cb.js\"],\"component---src-pages-portfolio-jsx\":[\"/component---src-pages-portfolio-jsx-83951a863ae4b4074973.js\"],\"component---src-pages-portfolio-main-jsx\":[\"/component---src-pages-portfolio-main-jsx-23cdf4754313958c7923.js\"],\"component---src-pages-portfolio-old-jsx\":[\"/component---src-pages-portfolio-old-jsx-adf2e206593045b402f3.js\"],\"component---src-pages-portfolio-web-jsx\":[\"/component---src-pages-portfolio-web-jsx-e5ab3e55862032ddbb73.js\"],\"component---src-pages-portfolio-xr-jsx\":[\"/component---src-pages-portfolio-xr-jsx-c2061810164d25f70bfa.js\"],\"component---src-pages-vitae-en-jsx\":[\"/component---src-pages-vitae-en-jsx-4b54cdedb0d9f64e486e.js\"],\"component---src-pages-vitae-jsx\":[\"/component---src-pages-vitae-jsx-451764d170d8d1470fee.js\"],\"component---src-pages-vitae-ko-jsx\":[],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-bbf0df96304da8ce0fbd.js\"],\"component---src-templates-portfolio-post-js\":[\"/component---src-templates-portfolio-post-js-5e73a8b3e47b165cf5c7.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="2bb5518907bfaf9dd53e";</script><script src="/webpack-runtime-931bdea6982625c15b39.js" async></script><script src="/framework-aa8b5a9d1438e1cc975c.js" async></script><script src="/app-4c852c4a82f536992220.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="e98d1cb356220fbf5b3b";</script><script src="/webpack-runtime-931bdea6982625c15b39.js" async></script><script src="/framework-aa8b5a9d1438e1cc975c.js" async></script><script src="/app-4c852c4a82f536992220.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
