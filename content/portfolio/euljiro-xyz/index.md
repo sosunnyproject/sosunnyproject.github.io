@@ -151,7 +151,7 @@ Used to decorate each ZONE's bottom circular planes and materials for Main Tree,
   - fractals
   - noise
   - turbulence
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width:70%; margin: 0 auto; text-align: center">
 <img src="zone1-3.png">
 <figcaption>Bottom Plane of Zone 1 is Metallic Fragment Shader Material</figcaption>
 </figure>
@@ -179,7 +179,7 @@ vertex position => model matrix => view matrix => projection matrix => Final pos
 <hr >
 
 # L system
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width:70%;  margin: 0 auto; text-align: center">
 <img src="euljiro-park.jpg">
 <figcaption>Low poly, L-system trees in the PARK</figcaption>
 </figure>
@@ -320,7 +320,7 @@ function tick() {
   // ...
 }
 ```
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width:70%; margin: 0 auto; text-align: center">
 <img src="eulji2.png">
 <figcaption>Bounding Volumes for entrance path</figcaption>
 </figure>
