@@ -96,16 +96,6 @@ instancedMesh.translateZ(position.z)
 
 ### Nature Objects: Flower petals
 - Rose Algorithm
-  - Used from previous practices of Rose Algorithm in creative coding. Here are some open source of my codes.
-    - version: smaller Bezier Vertex
-      - https://openprocessing.org/sketch/1409491
-      - https://openprocessing.org/sketch/1410080
-      - https://openprocessing.org/sketch/1415793
-      - https://openprocessing.org/sketch/1409489
-      - https://openprocessing.org/sketch/1414163
-    - version: longer Bezier Vertex: https://openprocessing.org/sketch/1416027
-    - version: arc: https://openprocessing.org/sketch/1416020
-    - version: bezierVertex: https://openprocessing.org/sketch/1409255
 
 - Define class and Animating flower petals
 ```js
@@ -142,6 +132,41 @@ tick(){
   this.renderPetal()
 }
 ```
+
+## Research Background
+  - Used from previous practices of Rose Algorithm in creative coding. Here are some open source of my codes.
+    - [Code: Parameter Variation Playground](https://openprocessing.org/sketch/1410080)
+    - [Code collection preview](https://openprocessing.org/sketch/1415793)
+    - version: longer Bezier Vertex: https://openprocessing.org/sketch/1416027
+    - [Code: Parameter Variation Playground3: Bezier Vertex](https://openprocessing.org/sketch/1409255)
+  
+<figure style="display: block; width:50%; margin: 0 auto; text-align: center">
+<img src="rose-collections.jpg">
+<figcaption>Rose  Algorithm: different numbers, different visuals</figcaption>
+</figure>
+
+<figure style="display: block; width:50%; margin: 0 auto; text-align: center">
+<img src="rose1.jpg">
+<figcaption><a href="https://openprocessing.org/sketch/1422109" target="_blank">Rose  Algorithm: bezier vertex and thin strokes</a></figcaption>
+</figure>
+
+<figure style="display: block; width:50%; margin: 0 auto; text-align: center">
+<img src="rose2.jpg">
+<figcaption><a href="https://openprocessing.org/sketch/1422109" target="_blank">Rose  Algorithm: bezier vertex and thin strokes</a> </figcaption>
+</figure>
+
+<figure style="display: block; width:50%; margin: 0 auto; text-align: center">
+<img src="rose3-params.png">
+<figcaption><a href="https://openprocessing.org/sketch/1409255" target="_blank">Rose  Algorithm with UI inputs</a></figcaption>
+</figure>
+
+<figure style="display: block; width:50%; margin: 0 auto; text-align: center">
+<img src="rose4-params.jpg">
+<figcaption><a href="https://openprocessing.org/sketch/1409255" target="_blank">Rose  Algorithm with UI inputs</a></figcaption>
+</figure>
+
+
+
 <hr >
 
 # Shader 
@@ -243,6 +268,10 @@ function branch(len) {
   }
 }
 ```
+<figure style="display: block; width:50%; margin: 0 auto; text-align: center">
+<img src="cc-recursiveTree.png">
+<figcaption>p5js demo preview</figcaption>
+</figure>
 
 2. Then, expand into the algorithm of L-system using axiom, rules like this book describes. 
   - http://algorithmicbotany.org/papers/abop/abop.pdf 

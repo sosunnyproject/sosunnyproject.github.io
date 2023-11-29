@@ -12,7 +12,7 @@ order: 3
 - [OpenProcessing](https://openprocessing.org/user/238026/?view=sketches&o=211): Open Source Archive for p5js / processing works
 - [Instagram](https://www.instagram.com/sosunnyproject/)
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="openprocessing.png">
 <figcaption>OpenProcessing: open source codes and resources for creative coding practices and teaching</figcaption>
 </figure>
@@ -24,7 +24,7 @@ order: 3
 # 3D Spherical Vertex
 
 <br />
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="IMG_5253.jpeg">
 <figcaption>AudioVisual with P5js, P5LIVE, WEBGL, MIDI controller performance at Seoul Artists' Platform New & Young</figcaption>
 </figure>
@@ -95,7 +95,7 @@ class Cube {
 }
 ```
 
-<figure style="display: block; margin: 0 auto; text-align: center;">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center;">
 <img src="IMG_5282.jpg">
 <figcaption>AudioVisual with P5js, P5LIVE, WEBGL, MIDI controller  LIVE CODING performance at Seoul Artists' Platform New & Young</figcaption>
 </figure>
@@ -106,7 +106,7 @@ class Cube {
 
 # 2D Vertex + Bezier Manipulation
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="slide-7.jpg">
 <figcaption>AudioVisual with P5js, P5LIVE, WEBGL, MIDI controller LIVE CODING performance at JSCONF Korea</figcaption>
 </figure>
@@ -118,17 +118,17 @@ class Cube {
 - [code live preview](https://openprocessing.org/sketch/1615639)
 - [code live preview 2](https://openprocessing.org/sketch/1637853)  
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="cc-b1.png">
 <figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
 </figure>
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="cc-b2.png">
 <figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
 </figure>
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="cc-b5.png">
 <figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
 </figure>
@@ -136,9 +136,19 @@ class Cube {
 5. Change vertex to **Curve Vertex or Bezier Vertex** makes the **wavy, dynamic visuals**
 - [code live preview: version2.js](https://openprocessing.org/sketch/1615640)
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="cc-beziervertex.png">
 <figcaption>Bezier, Curve Vertex Update</figcaption>
+</figure>
+
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
+<img src="cc-bezier2.png">
+<figcaption>Bezier, Curve Vertex</figcaption>
+</figure>
+
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
+<img src="cc-bezier3.png">
+<figcaption>Bezier, Curve Vertex</figcaption>
 </figure>
 
 
@@ -151,7 +161,7 @@ class Cube {
 - [Code & Live Preview](https://openprocessing.org/sketch/1637856)
 - [Code version 2](https://openprocessing.org/sketch/1615636)
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="cc-circle0.png">
 <figcaption>Circular Vertex Segments</figcaption>
 </figure>
@@ -187,9 +197,14 @@ arc(0, 0, r6*1.25*2, r6*1.25*2, speed1 + TWO_PI/6*2, speed2 + TWO_PI/6*5)
 arc(0, 0, r6*1.25*2, r6*1.25*2, speed2 + TWO_PI/6*1, speed1 + TWO_PI/6*5)
 ```
 
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
+<img src="cc-circular-prototype.png">
+<figcaption>First version: Circular Vertex Segments</figcaption>
+</figure>
+
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="cc-circle1.png">
-<figcaption>Circular Vertex Segments</figcaption>
+<figcaption>Second version: Circular Vertex Segments</figcaption>
 </figure>
 
 <hr >
@@ -200,13 +215,13 @@ arc(0, 0, r6*1.25*2, r6*1.25*2, speed2 + TWO_PI/6*1, speed1 + TWO_PI/6*5)
 - [coolors.co](https://coolors.co/)
 
 ### Instagram feed
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="slide-11.png">
 <figcaption>Snapshots of performances and keynotes</figcaption>
 </figure>
 
 ### Youtube for tutorials and more
-<figure style="display: block; margin: 0 auto; text-align: center">
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="slide-12.png">
 <figcaption>Snapshots of youtube tutorials</figcaption>
 </figure>
