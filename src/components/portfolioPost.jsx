@@ -13,7 +13,7 @@ export default function PortfolioPost({ node }) {
                 image={image}
                 alt=""
                 layout="fullWidth"
-                width={480}
+                width={360}
                 aspectratio={16/9}
             />
             <h3>

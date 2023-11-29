@@ -22,11 +22,15 @@ blockquote p {
 blockquote blockquote p {
   font-family: 'raleway', 'gmarketMedium';
 }
+figure {
+  margin-top: 1.0em !important;
+}
 figcaption {
   font-family: 'pretendard';
   font-size: calc(12px + 0.3vw);
   line-height: 1.5em;
   color: #A0A0A0;
+  margin: 0.5em;
   /* padding-bottom: 0.75em; */
   /* letter-spacing: calc(0.005px + 0.05vw); */
 }

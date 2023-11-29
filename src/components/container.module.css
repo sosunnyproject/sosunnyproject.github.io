@@ -200,6 +200,21 @@ a:hover{
   margin: 0 auto;
 }
 
+.portfolioWrapper h1{
+  padding: 0;
+  margin-top: 2.0em;
+  margin-bottom: 1.0em;
+}
+.portfolioWrapper h2 {
+  padding: 0;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+}
+.portfolioWrapper h3 {
+  padding: 0;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
 .portfolioWrapper p {
   font-family: 'pretendard';
   font-size: 1.0em;
@@ -212,6 +227,14 @@ a:hover{
   font-family: 'pretendard';
   font-size: 1.0em;
   line-height: 1.4em;
+  /* font-size: calc(16px + 0.1vw); */
+}
+.portfolioWrapper li p {
+  font-family: 'pretendard';
+  font-size: 1.0em;
+  line-height: 1.4em;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
   /* font-size: calc(16px + 0.1vw); */
 }
 .portfolioWrapper div {

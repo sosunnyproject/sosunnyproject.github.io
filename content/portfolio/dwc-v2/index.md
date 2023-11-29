@@ -5,7 +5,7 @@ category: "portfolio"
 subcategory: "games"
 featuredImage: "dwc16.jpg"
 featured: true
-order: 3
+order: 2
 ---
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/4rHwXSdUtBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -25,31 +25,282 @@ order: 3
   <li>The concept was a thought experiment: "What if the Internet was a garden full of moss, lichens, and mushrooms? A place where humans could visit this lush, natural environment, listen to tales of software-plants, rest against the hardware-earth, and interact with data-creatures?"</li>
 </ul>
 
-<h2>Key Accomplishments</h2>
-<ul>
-  <li>Designed and developed a localized mobile website where users could interact with their own virtual garden and creatures, enhancing user engagement.</li>
-  <li>Incorporated real-time environmental data, utilizing temperature and humidity readings from Raspberry Pi to dynamically alter animation speeds and garden gradient colors.</li>
-  <li>Successfully managed the 2022 development phase, ensuring timely updates to requirements, optimizing the SVG generation algorithm, and spearheading graphic code refactoring.</li>
-  <li>Collaborated in server-side development, focusing on nodejs, socket integration, and transitioning to a cloud-based database system.</li>
-</ul>
-
-<h2>Technical Highlights</h2>
-<ul>
-  <li>Enhanced interactive visual experience using pixi js, WebGL, socket, nodejs, and Raspberry Pi.</li>
-  <li>Engineered an immersive mobile website experience linked to physical drawing installations, innovative mesh wifi networks, and user-interactive features.</li>
-  <li>Pioneered a local access approach, ensuring website accessibility exclusively through unique mesh wifi networks, named to augment the exhibition theme.</li>
-</ul>
-
-<h2>Technical Diagrams</h2>
-<ul>
-<li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=0%3A1">System Architecture</a></li>
-<li><a target="_blank" href="https://www.figma.com/file/w2HzFecg65sds39SEc4S6Z/Software-Diagram?node-id=9%3A4">User Flow & Interaction</a></li>
-</ul>
-
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="slide-2-2-copy.png">
 <figcaption><garden.local> Geometric gardens and creatures in master view</figcaption>
 </figure>
+
+# My Contribution
+## Key Accomplishments
+- Frontend & Graphics Engineer
+  - **Constantly communicated with artist and designer about their drawings and vision to implement/realize them into procedural graphics with programming and algorithms**
+  - Designed UI UX and developed a mobile website where users could interact with their own virtual garden and creatures
+  - Incorporated real-time environmental data, utilizing temperature and humidity readings from Raspberry Pi to dynamically alter animation speeds and garden gradient colors.
+  - Collaborated with server-side development utilizing nodejs, socket communication. 
+  - Supported transitioning API and database from a local nedb to Supabase, a cloud-based database system.
+- Project Manager
+  - Successfully managed the 2022 development phase, ensuring timely updates to requirements
+  - Revised the SVG generation algorithm, and spearheading graphic code refactoring.
+
+
+## Technical Highlights
+- Enhanced interactive visual experience using pixi js, WebGL, socket, nodejs, and Raspberry Pi.
+- Engineered an immersive mobile website experience linked to physical drawing installations, mesh wifi networks, and user-interactive features.
+- Ensured website accessibility exclusively through unique mesh wifi networks, named to augment the exhibition theme.
+
+<hr >
+
+# Procedural / Generative Algorithm for Garden Animation
+- Main Goals
+  - Each garden is square and has 4 anchors (corners). Each garden is randomly asisgned to have either triangle or arc shapes appearing.
+  - It animates between 2 transition types
+    - TO_FULL: start from the anchor and grow
+    - TO_EMPTY: After finished growing, shrinks back to the anchor
+  - Triangle / Arc shapes have gradient color animation. This animation's speed, duration, and size of the growing shape would change based on connected hardware Rasberry PI's weather data.
+
+## Here are some parts of codes to explain how we achieved these ideas 
+- disclaimer: Below are cut and edited parts of the entire codebase to show the highlight of the features.
+
+## [Server / Config](https://github.com/gardenlocal/dwc-v3-socket-server/blob/main/server/controllers/garden.controller.js)
+- Enums of Shapes: DWC_META.tileShapes.TRIANGLE / CIRCLE
+- Animation: Growing from one corner to the diagonal corner
+- Anchor: [ 0, 1, 2, 3 ] corner of square garden
+- Shader 
+```js
+// createGardenSection
+const shapeTypes = getConfig().backgroundTypes;
+const shape = randomElementFromArray(shapeTypes);
+const target =
+  shape == DWC_META.tileShapes.TRIANGLE
+    ? randomElementFromArray([0.25, 0.4, 0.5, 0.6, 0.75])
+    : randomElementFromArray([0.25, 0.3, 0.4, 0.75]);
+currTile.push({
+  target: target,
+  duration: randomIntInRange(25000, 75000),
+  shape: shape,
+  anchor: randomElementFromArray([0, 1, 2, 3]),
+});
+// ... 
+newGarden.shaderProps = {
+  shaderTimeSeed: Math.random() * 10,
+  shaderSpeed: Math.random() * 10 + 1,
+};
+```
+
+## Client / Rendering
+- Shapes: Used Tessellation library to customize polygon shapes and smoothness
+  - https://www.glprogramming.com/red/chapter11.html
+  - https://github.com/memononen/tess2.js
+- Send uniform data to shader parameters
+- [Weather Data](https://github.com/gardenlocal/dwc-v2/blob/main/canvas/src/render/userGarden.js#L54)
+  - Replicate the real ecosystem and weather relationship
+    - higher temperature and higher humidity, higher entrophy and more lively
+- Define Background rendering properties
+  - Used PIXI.JS Filter and Mask features to apply shader material to the White PIXI Sprite
+
+```js
+// ResidueBackground.js
+// Shader Parameters
+this.gradientUniforms = {
+  u_time: 1.0,
+  u_point1: [0.5, 0.0], u_radius1: 0.1, u_color1: [12.0 / 256.0, 239.0 / 256.0, 66.0 / 256.0],
+  u_point2: [0.5, 1.0], u_radius2: 0.1, u_color2: [253.0 / 256.0, 136.0 / 256.0, 11.0 / 256.0],
+  u_offset: [0.0, - window.DWCApp.stage.pivot.y * this.s * 2],
+  u_resolution: [this.W * 1.0, this.H * 1.0],
+  u_scale: this.s * 1.0
+}
+// Fragment shader get masked over the WHITE SPRITE
+const gradientFilter = new PIXI.Filter(null, HorizontalGradientFrag, this.gradientUniforms);
+const gradientSprite = new PIXI.Sprite(PIXI.Texture.WHITE)
+gradientSprite.width = this.W
+gradientSprite.height = this.H
+gradientSprite.filters = [gradientFilter]  
+this.addChild(gradientSprite)
+
+// Bring the predefined properties, Render and animate
+// Use Bezier points and lerp for smooth animation of PIXI Sprite
+drawCircle() {
+  if (this.currentShape != SHAPES.CIRCLE) {
+    this.circleTransitionContainer.alpha = 0
+    return
+  }
+  this.circleTransitionContainer.alpha = 1
+  if (!this.isAnimating && this.firstRenderCount >= 2) return
+  this.firstRenderCount++
+
+  let bezierAlpha = this.transitionAlpha// + Math.cos(this.frame / 5) / 800
+  const WIDTH = this.W
+  const HEIGHT = this.H
+  this.circleTransition.clear()
+  this.circleTransition.beginFill(0xffffff)
+  this.circleTransition.moveTo(0, 0)
+  this.circleTransition.lineTo(WIDTH, 0)  
+  this.circleTransition.lineTo(WIDTH, HEIGHT)
+
+  const bezierMaxStretch = 0.35
+  const pA0 = { x: WIDTH * (1 + bezierMaxStretch), y: 0 }
+  const pB0 = { x: WIDTH, y: -HEIGHT * bezierMaxStretch }
+  const pA1 = { x: 0, y: HEIGHT * (1 + bezierMaxStretch) }    
+  const pB1 = { x: -WIDTH * bezierMaxStretch, y: HEIGHT }
+  const pA = lerpPoint(pA0, pA1, bezierAlpha)
+  const pB = lerpPoint(pB0, pB1, bezierAlpha)
+  
+  this.circleTransition.bezierCurveTo(pA.x, pA.y, pB.x, pB.y, 0, 0)
+  this.circleTransition.closePath();
+  this.mask = this.circleTransition;
+}
+```
+
+```js
+async init() {
+  this.bgContainer = new PIXI.Graphics()
+  this.bgContainer.beginFill(0xf9f9f9)
+  this.bgContainer.drawRect(0, 0, 1000, 1000)
+  this.addChild(this.bgContainer)
+  this.drawBackgrounds()    
+}
+
+async animateBackgrounds() {
+  // params based on weather data
+  const duration = map(this.temperature, -5, 20, 85000, 25000) // hotter, faster, shorter duration
+  const shaderSpeed = map(this.humidity, 40, 80, 1, 0.1)  // more humid, faster    
+  const targetSize = map(this.humidity, 40, 80, 0.25, 0.75)  // more humid, larger size
+
+  for(let i = 0; i < this.tilesContainer.children.length; i++) {
+    const currentTile = this.userGarden.tileProps[i];
+    const currentLoop = currentTile[this.bgAnimationParams.currentTile];
+    const shaderRand = shaderSpeed * map(i, 0, 4, 5, 10)
+
+    await this.tilesContainer.children[i].appear(targetSize, duration, currentLoop.shape, currentLoop.anchor, shaderRand) 
+    // appear at 0, disappear after bg2+bg3+bg4_duration
+  }
+  //...
+  tick() {
+    this.tilesContainer?.children.forEach(bg => {
+      if(bg.tick) bg.tick()
+    })
+  }
+}
+```
+
+- Color / Gradient: [fragment shader tests](https://github.com/gardenlocal/dwc-v2/tree/main/canvas/src/render/shaders)
+  - Simple horizontal gradient shader
+  - Horizontally sliding up and down, transitioning the colors orange - white - green
+  - Below is a snippet, not the entire code.
+
+```glsl
+// ...
+highp float dist(vec2 a, vec2 b) {
+  return abs(a.y - b.y);  // linear
+}
+
+void main() {
+    vec2 st = (gl_FragCoord.xy - u_offset.xy) / u_resolution / u_scale;
+    float gradientScale = 4.0;
+    st.y += u_time;
+    st.y = st.y - (gradientScale * floor(st.y / gradientScale));
+
+    vec3 color;
+    vec2 u_point1 = vec2(0.50,gradientScale * 1.0);
+    vec2 u_point2 = vec2(0.50,gradientScale * 0.75);
+    vec2 u_point3 = vec2(0.50,gradientScale * 0.50);
+    vec2 u_point4 = vec2(0.50,gradientScale * 0.25);
+    vec2 u_point5 = vec2(0.50,gradientScale * 0.0);
+
+    vec3 u_color1 = vec3(1.0, 1.0, 1.0);  // middle white
+    vec3 u_color2 = vec3(253.0 / 256.0, 136.0 / 256.0, 11.0 / 256.0); // orange
+    vec3 u_color3 = vec3(1.0, 1.0, 1.0);  // middle white
+    vec3 u_color4 = vec3(12.0 / 256.0, 239.0 / 256.0, 66.0 / 256.0); // green
+    vec3 u_color5 = vec3(1.0, 1.0, 1.0);  // middle white
+	
+    float u_radius1 = 0.001;
+    float u_radius2 = 0.05;
+    float u_radius3 = 0.001;
+    float u_radius4 = 0.05;
+    float u_radius5 = 0.001;
+
+    if (st.y < u_radius5) {
+      color = u_color5;
+    } else if (st.y < u_point4.y - u_radius4) {
+      float alpha = (st.y - u_radius5) / (u_point4.y - u_radius4 - u_radius5);
+      color = mix(u_color5, u_color4, alpha);
+    } else if (st.y < u_point4.y + u_radius4) {
+      color = u_color4;
+    } else if (st.y < u_point3.y - u_radius3) {
+      float alpha = (st.y - u_point4.y - u_radius4) / (u_point3.y - u_radius3 - u_point4.y - u_radius4);
+      color = mix(u_color4, u_color3, alpha);
+    } // ...
+    else {
+      color = u_color1;
+    }
+
+    gl_FragColor = vec4(color, 1.0);
+}
+```
+
+## Add more variety to Creature SVG logics
+- My co-worker Cezar implemented a generative SVG creature evolution code in 2021. It had a fixed amount of children particles.
+- In 2022, I had to update the features due to **artist's request to make the creatures more recursive and include more children particles** (smaller SVG shapes attached to a main bigger SVG)
+1. First, tested hard-code to attach more children SVG particles
+2. [Then, made a recursive loop to create more children nodes until the limit](https://github.com/gardenlocal/dwc-v3-socket-server/blob/main/shared-constants.js)
+```js
+// Shared-Constant.js, where we define the properties of the creatures
+// recursion
+let recursionNum = 20;    
+const recursionLimit = 1; // end threshold
+const connectorCount = 4; // num of corners where children SVG can be attached to
+//...
+const lichenConnectors = [0, 1, 2, 3];
+function recur(parent, deductBoolean) {
+  // choose the possible corner index, avoid the ones already occupied by other node
+  const parentOccupiedConnector = parent.parentConnector;
+  let avoidIndex = (parentOccupiedConnector+2)%4;
+  const possibleIndices = lichenConnectors.filter(i => i !== avoidIndex);
+  let chosenIndices = [];
+  const rand = randomIntInRange(1, possibleIndices.length);
+  for(let i = 0; i < rand; i++ ){
+    chosenIndices.push(randomElementFromArray(possibleIndices));
+  }
+  const children = chosenIndices.map(index => createLichenChildTemplate(index));
+  parent.children = children;    
+  
+  if(deductBoolean == true) {
+    recursionNum -= 1;
+  }
+  if(recursionNum > recursionLimit) {
+    for(let i = 0; i< parent.children.length; i++) {
+      let nextParent = parent.children[i];      
+      let deductRecursion = false;
+      if(i == 0) deductRecursion = true;
+      // Set this child as a new parent and recur again.
+      recur(nextParent, deductRecursion);
+    }
+  }
+}
+```
+**Other things I updated include...**
+- Adjust/randomize the position of children SVG nodes to overlap slightly
+- Adjust the transparency of overall SVG shapes
+
+<hr >
+
+# Technical Documentation
+
+## Client Side: Pixi JS, Garden and Creature Rendering
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="dwc-appStructure.png">
+<figcaption><garden.local>App Structure Diagram</figcaption>
+</figure>
+
+## User Login, Accessibility, Web Service
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="dwc-flowchart.png">
+<figcaption><garden.local> User Flowchart of Web Application </figcaption>
+</figure>
+
+<hr >
 
 <h2>Personal Reflection</h2>
 <ul>
