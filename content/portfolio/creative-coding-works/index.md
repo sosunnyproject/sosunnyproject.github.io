@@ -36,6 +36,7 @@ order: 3
 - Instead of making thousands of cubes, I make limited instanced of cubes for the performance. 
   - I let the cubes to be rendered on the canvas and leave the rendering trace. And then, covering the canvas of black plane, imitaing as if the canvas is getting erased. 
 - Reference: [OpenGL Sphere algorithm](http://www.songho.ca/opengl/gl_sphere.html)
+- [Basic Version Code Live Preview 1](https://openprocessing.org/sketch/1627906)
 
 ```js
 for(let stAngle = 0; stAngle < 360; stAngle += 10) {
@@ -112,10 +113,34 @@ class Cube {
 <br />
 
 ## Progress & Development
-1. Divide each row, columns. Divide a row into several vertex points. https://openprocessing.org/sketch/1646304
-2. Bezier Dynamics https://openprocessing.org/sketch/1615640
-3. Fill / Stroke https://openprocessing.org/sketch/1615639
-4. Rotate https://openprocessing.org/sketch/1615637
+1. Divide each row, columns. Divide a row into several vertex points
+2. Conditionally fill the space inide vertex or stroke only
+- [code live preview](https://openprocessing.org/sketch/1615639)
+- [code live preview 2](https://openprocessing.org/sketch/1637853)  
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="cc-b1.png">
+<figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="cc-b2.png">
+<figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="cc-b5.png">
+<figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
+</figure>
+
+5. Change vertex to **Curve Vertex or Bezier Vertex** makes the **wavy, dynamic visuals**
+- [code live preview: version2.js](https://openprocessing.org/sketch/1615640)
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="cc-beziervertex.png">
+<figcaption>Bezier, Curve Vertex Update</figcaption>
+</figure>
+
 
 <hr >
 
@@ -124,6 +149,12 @@ class Cube {
 - Trigonometry
 - Animation of size: tangent function, audio volume input
 - [Code & Live Preview](https://openprocessing.org/sketch/1637856)
+- [Code version 2](https://openprocessing.org/sketch/1615636)
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="cc-circle0.png">
+<figcaption>Circular Vertex Segments</figcaption>
+</figure>
 
 1. Define each circular segment. It should start after the last inner circle.
 ```js
@@ -155,6 +186,13 @@ for(let i = 0; i < 6; i++) {
 arc(0, 0, r6*1.25*2, r6*1.25*2, speed1 + TWO_PI/6*2, speed2 + TWO_PI/6*5)
 arc(0, 0, r6*1.25*2, r6*1.25*2, speed2 + TWO_PI/6*1, speed1 + TWO_PI/6*5)
 ```
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="cc-circle1.png">
+<figcaption>Circular Vertex Segments</figcaption>
+</figure>
+
+<hr >
 
 # For More
 
