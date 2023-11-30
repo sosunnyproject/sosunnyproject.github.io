@@ -118,6 +118,64 @@ class Cube {
 - [code live preview](https://openprocessing.org/sketch/1615639)
 - [code live preview 2](https://openprocessing.org/sketch/1637853)  
 
+```js
+// trying to manage as a dataset
+
+  let speedSin = sin(frameCount/slow)
+  let speedCos = cos(frameCount/slow)
+  let speedTan = tan(frameCount/slow)
+  
+  let change1 = speedCos*xSize
+  let change2 = speedSin*xSize
+  let change3 = speedTan*xSize*2
+  
+  let xOffset1 = speedCos*xSize
+  let xOffset2 = speedSin*xSize
+  let xOffset3 = speedTan*xSize
+  
+  const changes = [change1, change2, change3]
+  const xOffsets = [xOffset1, xOffset2] // make rectangle to trapezoid/triangle
+  const colorInd = [1, 2, 3, 4, 
+                    3, 2, 1, 0,
+                    // ...
+                    3, 2, 1, 0]
+```
+
+```js
+// Draw rest number of vertex-rectangles in a row
+// besides leftmost and rightmost
+for(let i = 0; i < nums-3; i++) {
+  strokeWeight(0.5)
+  stroke(colorArr[colorInd[i]])
+  
+  let index = i % changes.length // 0, 1, 2
+  let nextIndex = (i+1) % changes.length    
+  let xInc = map(speedCos, -1, 1, 1, 2)
+  let leftTopX = xSize * (i+xInc) + changes[index] + xOffsets[index]
+  let v1 = {x: leftTopX, y: topY}
+
+  beginShape()  
+  // VERTEX 1 (LEFT TOP)
+  vertex(v1.x, v1.y) 
+  push()
+  stroke(colorArr[colorInd[i]])
+  strokeWeight(3)
+  point(v1.x, v1.y)
+  pop()
+
+  // VERTEX 2 (RIGHT TOP)
+  let rightTopX = xSize * (i+2) + changes[nextIndex] + xOffsets[nextIndex]
+  let v2 = {x: rightTopX, y: topY}  
+  vertex(v2.x , v2.y)
+  push()
+  stroke(colorArr[colorInd[i]])
+  strokeWeight(3)
+  point(v2.x , v2.y)
+  pop()
+  // ...
+}
+```
+
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="cc-b1.png">
 <figcaption>2D horizontal, vertical bezier vertex segments</figcaption>
@@ -150,7 +208,6 @@ class Cube {
 <img src="cc-bezier3.png">
 <figcaption>Bezier, Curve Vertex</figcaption>
 </figure>
-
 
 <hr >
 
