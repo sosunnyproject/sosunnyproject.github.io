@@ -11,7 +11,9 @@ order: 5
 
 <hr >
 
-# Technical Artist & Tools programmer for USC Games MFA Thesis [Eight Moon To The Eternity](https://www.youtube.com/watch?v=-4KR8BfA4rk)
+# Technical Artist & Tools programmer for USC Games MFA Thesis Eight Moon To The Eternity
+
+<iframe width="100%" height="640" src="https://www.youtube.com/embed/-4KR8BfA4rk?si=WM3GSE0IkZf3HPJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### 1. Procedural Avatar Portrait System 
 #### Goal
@@ -19,7 +21,6 @@ order: 5
 - Generate a semi-controlled / semi-random avatar portrait combinations of helmet / visor / armor / etc
 - Generate at each runtime but save and load the same portrait combination data during that runtime
 - When the player comes back to the same planet, they should see a same avatar portrait. 
-
 
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="emte-collage.jpg">

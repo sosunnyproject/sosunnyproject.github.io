@@ -12,10 +12,10 @@ export default function Home({ data }) {
 
     <div className={containerStyles.index}>
       <h1>Write Code, Make Art</h1>
-{/* 
+
       <div className={containerStyles.indexVideoWrapper}>
-        <iframe className={containerStyles.indexVideo} width="90%" height="auto" src="https://www.youtube.com/embed/HJYgOmYNM3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div> */}
+        <iframe className={containerStyles.indexVideo} width="100%" height="640" src="https://www.youtube.com/embed/a_1fZZ_WZmY?si=fO7cmcOg1_H9EToO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
 
       <p>
       a sassy girl loved musical theaters so much she <span role="img" aria-label="airplane">✈️</span> to New York & Vassar <span role="img" aria-label="the statue of liberty">🗽</span>
