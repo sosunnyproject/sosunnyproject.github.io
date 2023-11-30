@@ -209,6 +209,12 @@ vertex position => model matrix => view matrix => projection matrix => Final pos
 <figcaption>Low poly, L-system trees in the PARK</figcaption>
 </figure>
 
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="lsystem-1.jpeg">
+<figcaption>L system trees</figcaption>
+</figure>
+
+
 - I used the L-system algorithm to generate geometric trees, especially the biggest tree in this virtual world. 
   - Using f, A, B, ^, +, - symbols to make generative rules of growing trees and branches
 - Used cylinder geometries and shader material for the branches
@@ -288,6 +294,12 @@ function branch(len) {
 <hr >
 
 # Physics - Collision & Raycasting
+
+<figure style="display: block; width:70%; margin: 0 auto; text-align: center">
+<img src="eulji2.png">
+<figcaption>Bounding Volumes for entrance path</figcaption>
+</figure>
+
 - Inside tick(), keep checking if the camera's position is inside or outside of bounding boxes of several paths (zone 1, 2, 3, park)
   - tick() function is as same as Unity C# script's Update() function.
   - If the camera collides with the bounding box / walls, update the camera (aka pointerLockControls) position or velocity to offset the movement.
@@ -349,19 +361,22 @@ function tick() {
   // ...
 }
 ```
-<figure style="display: block; width:70%; margin: 0 auto; text-align: center">
-<img src="eulji2.png">
-<figcaption>Bounding Volumes for entrance path</figcaption>
-</figure>
 
 <hr >
 
 # Game Mechanism & Renderer
+
 - Energy Feedback System
   - Negative Feedback: If the user uses all the given energy, give post-processing Blurred effect.
   - Used Nodepost Renderer Processing
   - Blur effect: mosaic pixelated effect on screen
 - Threejs uses WebGLRenderer.
+
+<figure style="display: block; width:70%; margin: 0 auto; text-align: center">
+<img src="zone1-2.png">
+<figcaption>low energy view (environment lighting)</figcaption>
+</figure>
+
 ```js
   // init NodePostProcessing
   blurScreen = new Nodes.BlurNode( new Nodes.ScreenNode() );
@@ -473,11 +488,6 @@ Removed animations from a number of models, considering the tech specs for more 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="zone2.png">
-<figcaption>zone 2</figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="zone2-1.png">
 <figcaption>zone 2</figcaption>
 </figure>
 

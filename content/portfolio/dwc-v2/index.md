@@ -50,6 +50,11 @@ order: 2
 
 <hr >
 
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="dwc9.jpg">
+<figcaption></figcaption>
+</figure>
+
 # Procedural / Generative Algorithm for Garden Animation
 - Main Goals
   - Each garden is square and has 4 anchors (corners). Each garden is randomly asisgned to have either triangle or arc shapes appearing.
@@ -58,8 +63,12 @@ order: 2
     - TO_EMPTY: After finished growing, shrinks back to the anchor
   - Triangle / Arc shapes have gradient color animation. This animation's speed, duration, and size of the growing shape would change based on connected hardware Rasberry PI's weather data.
 
-## Here are some parts of codes to explain how we achieved these ideas 
-- disclaimer: Below are cut and edited parts of the entire codebase to show the highlight of the features.
+#### Disclaimer: Below are the edited code snippets to show the highlight of the features.
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="dwc-bg.png">
+<figcaption></figcaption>
+</figure>
 
 ## [Server / Config](https://github.com/gardenlocal/dwc-v3-socket-server/blob/main/server/controllers/garden.controller.js)
 - Enums of Shapes: DWC_META.tileShapes.TRIANGLE / CIRCLE
@@ -97,6 +106,7 @@ newGarden.shaderProps = {
     - higher temperature and higher humidity, higher entrophy and more lively
 - Define Background rendering properties
   - Used PIXI.JS Filter and Mask features to apply shader material to the White PIXI Sprite
+
 
 ```js
 // ResidueBackground.js
@@ -183,10 +193,16 @@ async animateBackgrounds() {
 }
 ```
 
-- Color / Gradient: [fragment shader tests](https://github.com/gardenlocal/dwc-v2/tree/main/canvas/src/render/shaders)
+- **Color / Gradient: [Fragment shader tests](https://github.com/gardenlocal/dwc-v2/tree/main/canvas/src/render/shaders)**
   - Simple horizontal gradient shader
   - Horizontally sliding up and down, transitioning the colors orange - white - green
   - Below is a snippet, not the entire code.
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="dwc-bg3.png">
+<figcaption></figcaption>
+</figure>
+
 
 ```glsl
 // ...
@@ -243,6 +259,12 @@ void main() {
 - In 2022, I had to update the features due to **artist's request to make the creatures more recursive and include more children particles** (smaller SVG shapes attached to a main bigger SVG)
 1. First, tested hard-code to attach more children SVG particles
 2. [Then, made a recursive loop to create more children nodes until the limit](https://github.com/gardenlocal/dwc-v3-socket-server/blob/main/shared-constants.js)
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="dwc-recur1.png">
+<figcaption></figcaption>
+</figure>
+
 ```js
 // Shared-Constant.js, where we define the properties of the creatures
 // recursion
@@ -367,11 +389,6 @@ Photographs below are taken by Chulki Hong.
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="dwc8.jpg">
-<figcaption></figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="dwc9.jpg">
 <figcaption></figcaption>
 </figure>
 
