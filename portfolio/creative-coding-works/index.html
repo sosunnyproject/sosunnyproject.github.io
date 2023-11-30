@@ -140,6 +140,58 @@
 <li><a href="https://openprocessing.org/sketch/1615639">code live preview</a></li>
 <li><a href="https://openprocessing.org/sketch/1637853">code live preview 2</a></li>
 </ul>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// trying to manage as a dataset</span>
+
+  <span class="token keyword">let</span> speedSin <span class="token operator">=</span> <span class="token function">sin</span><span class="token punctuation">(</span>frameCount<span class="token operator">/</span>slow<span class="token punctuation">)</span>
+  <span class="token keyword">let</span> speedCos <span class="token operator">=</span> <span class="token function">cos</span><span class="token punctuation">(</span>frameCount<span class="token operator">/</span>slow<span class="token punctuation">)</span>
+  <span class="token keyword">let</span> speedTan <span class="token operator">=</span> <span class="token function">tan</span><span class="token punctuation">(</span>frameCount<span class="token operator">/</span>slow<span class="token punctuation">)</span>
+  
+  <span class="token keyword">let</span> change1 <span class="token operator">=</span> speedCos<span class="token operator">*</span>xSize
+  <span class="token keyword">let</span> change2 <span class="token operator">=</span> speedSin<span class="token operator">*</span>xSize
+  <span class="token keyword">let</span> change3 <span class="token operator">=</span> speedTan<span class="token operator">*</span>xSize<span class="token operator">*</span><span class="token number">2</span>
+  
+  <span class="token keyword">let</span> xOffset1 <span class="token operator">=</span> speedCos<span class="token operator">*</span>xSize
+  <span class="token keyword">let</span> xOffset2 <span class="token operator">=</span> speedSin<span class="token operator">*</span>xSize
+  <span class="token keyword">let</span> xOffset3 <span class="token operator">=</span> speedTan<span class="token operator">*</span>xSize
+  
+  <span class="token keyword">const</span> changes <span class="token operator">=</span> <span class="token punctuation">[</span>change1<span class="token punctuation">,</span> change2<span class="token punctuation">,</span> change3<span class="token punctuation">]</span>
+  <span class="token keyword">const</span> xOffsets <span class="token operator">=</span> <span class="token punctuation">[</span>xOffset1<span class="token punctuation">,</span> xOffset2<span class="token punctuation">]</span> <span class="token comment">// make rectangle to trapezoid/triangle</span>
+  <span class="token keyword">const</span> colorInd <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> 
+                    <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                    <span class="token comment">// ...</span>
+                    <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span></code></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// Draw rest number of vertex-rectangles in a row</span>
+<span class="token comment">// besides leftmost and rightmost</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">strokeWeight</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+  <span class="token function">stroke</span><span class="token punctuation">(</span>colorArr<span class="token punctuation">[</span>colorInd<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  
+  <span class="token keyword">let</span> index <span class="token operator">=</span> i <span class="token operator">%</span> changes<span class="token punctuation">.</span>length <span class="token comment">// 0, 1, 2</span>
+  <span class="token keyword">let</span> nextIndex <span class="token operator">=</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> changes<span class="token punctuation">.</span>length    
+  <span class="token keyword">let</span> xInc <span class="token operator">=</span> <span class="token function">map</span><span class="token punctuation">(</span>speedCos<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> leftTopX <span class="token operator">=</span> xSize <span class="token operator">*</span> <span class="token punctuation">(</span>i<span class="token operator">+</span>xInc<span class="token punctuation">)</span> <span class="token operator">+</span> changes<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">+</span> xOffsets<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+  <span class="token keyword">let</span> v1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">x</span><span class="token operator">:</span> leftTopX<span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> topY<span class="token punctuation">}</span>
+
+  <span class="token function">beginShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  
+  <span class="token comment">// VERTEX 1 (LEFT TOP)</span>
+  <span class="token function">vertex</span><span class="token punctuation">(</span>v1<span class="token punctuation">.</span>x<span class="token punctuation">,</span> v1<span class="token punctuation">.</span>y<span class="token punctuation">)</span> 
+  <span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function">stroke</span><span class="token punctuation">(</span>colorArr<span class="token punctuation">[</span>colorInd<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token function">strokeWeight</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+  <span class="token function">point</span><span class="token punctuation">(</span>v1<span class="token punctuation">.</span>x<span class="token punctuation">,</span> v1<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+  <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// VERTEX 2 (RIGHT TOP)</span>
+  <span class="token keyword">let</span> rightTopX <span class="token operator">=</span> xSize <span class="token operator">*</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> changes<span class="token punctuation">[</span>nextIndex<span class="token punctuation">]</span> <span class="token operator">+</span> xOffsets<span class="token punctuation">[</span>nextIndex<span class="token punctuation">]</span>
+  <span class="token keyword">let</span> v2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">x</span><span class="token operator">:</span> rightTopX<span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> topY<span class="token punctuation">}</span>  
+  <span class="token function">vertex</span><span class="token punctuation">(</span>v2<span class="token punctuation">.</span>x <span class="token punctuation">,</span> v2<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+  <span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function">stroke</span><span class="token punctuation">(</span>colorArr<span class="token punctuation">[</span>colorInd<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token function">strokeWeight</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+  <span class="token function">point</span><span class="token punctuation">(</span>v2<span class="token punctuation">.</span>x <span class="token punctuation">,</span> v2<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+  <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
       <a class="gatsby-resp-image-link" href="/static/a2de8646fb685a75ecbc583428fb0c6f/d3d45/cc-b1.png" style="display: block" target="_blank" rel="noopener">
