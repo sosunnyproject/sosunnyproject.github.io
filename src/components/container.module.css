@@ -204,6 +204,7 @@ a:hover{
   padding: 0;
   margin-top: 2.0em;
   margin-bottom: 1.0em;
+  line-height: 1.3em;
 }
 .portfolioWrapper h2 {
   padding: 0;
@@ -215,13 +216,23 @@ a:hover{
   margin-top: 1.0em;
   margin-bottom: 0.5em;
 }
+.portfolioWrapper h4 {
+  padding: 0;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
 .portfolioWrapper p {
   font-family: 'pretendard';
   font-size: 1.0em;
   line-height: 1.4em;
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
   /* line-height: calc(26px + 0.1vw); */
   /* font-size: calc(16px + 0.1vw); */
+}
+.portfolioWrapper ul {
+  margin-top: 0.5em;
+  margin-bottom: 1.0em;
 }
 .portfolioWrapper li {
   font-family: 'pretendard';
