@@ -58,6 +58,112 @@
 <ul>
     <li>Guided the optimization process alongside 3 designers to refine GLB/GLTF models, focusing on texture management and Draco compression.</li>
 </ul>
+<h2>3D modeling integration</h2>
+<ul>
+<li>Used the metric reflecting the real distance relative to the wayspot
+<ul>
+<li>Measured the entire LA UNION STATION sundial wayspot venue</li>
+<li>To make sure the AR 3D model to spawn at the desired location when the users scan the wayspot</li>
+</ul>
+</li>
+<li>Optimization for web, app, XR
+<ul>
+<li>
+<ol>
+<li>Initially, the model's filesize was too big to be used in web</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Troubleshooted if it were Rhino problem, or mesh or texture issues</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Rhino uses NURBS, Maya and Blender you can use Polygon instead NURBS</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>Texture file size was too big. The ideal or maximum size of texture would be 1024x1024.</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>Texture file format: png to jpg. Reduce filesize</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>Upload the entire 3D model with UV mapped to gltf.report website which allows you to optimize texture size as well as 3D modeling compression, using draco technology developed by google.</li>
+</ol>
+</li>
+<li>
+<ol start="7">
+<li>8th wall only supports glb 3D file format, which is preferred in most of web-based 3D assets even in other libraries such as threejs.</li>
+</ol>
+<ul>
+<li>You can use draco compression on glb, gltf file format.</li>
+<li>Maya doesn't support glb/gltf export, so we had to ultimately use Blender as the last part of 3D pipeline.</li>
+</ul>
+</li>
+<li>8th Wall / A-frame API: simple way to integrate 3D or webVR into the website. A-frame is an eaiser wrapper library of threejs.</li>
+<li>draco: <code class="language-text">gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/</code></li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html">// loading in the beginning of the scene. 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-scene</span>
+  <span class="token attr-name">landing-page</span>
+  <span class="token attr-name">activate-portal</span>
+  <span class="token attr-name">vps-coaching-overlay</span>
+  <span class="token attr-name">background</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>color: #303030<span class="token punctuation">"</span></span>
+  <span class="token attr-name">renderer</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>colorManagement: true<span class="token punctuation">"</span></span>
+  <span class="token attr-name">gltf-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/<span class="token punctuation">"</span></span>
+  <span class="token attr-name">xrextras-runtime-error</span>
+  <span class="token attr-name">xrextras-loading</span>
+  <span class="token attr-name">ui-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>currentScene: mobileSundial;<span class="token punctuation">"</span></span>
+  <span class="token attr-name">xrweb</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>enableVps: true; allowedDevices: any<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-assets</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-asset-item</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vps-mesh<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../assets/glb/sun-dial---i.glb<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-asset-item</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-asset-item</span>
+      <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>men-jen-low<span class="token punctuation">"</span></span>
+      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../assets/glb/2023-10-11_MenJenLowBlock_Frame_Without_extrusion-draco.glb<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-asset-item</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-asset-item</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>portal-frame<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../assets/glb/portal-frame.glb<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-asset-item</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>holo-placeholder-img<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../assets/img/DavidSilhouette.png<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span>
+      <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>portal-video<span class="token punctuation">"</span></span>
+      <span class="token attr-name">muted</span>
+      <span class="token attr-name">autoplay</span>
+      <span class="token attr-name">playsinline</span>
+      <span class="token attr-name">crossorigin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anonymous<span class="token punctuation">"</span></span>
+      <span class="token attr-name">loop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.././assets/video/manjenlow_monet_2.mp4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skybox-img<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../assets/img/skybox.jpg<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blob-shadow-img<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../assets/img/blob-shadow.png<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>men-jen-low-img<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../assets/img/manjenlowCafe.jpg<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-assets</span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html">// After you scan sun-dial, all the a-entity tags inside this will appear
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-entity</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>VPSMesh<span class="token punctuation">"</span></span> <span class="token attr-name">named-wayspot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name: sun-dial---i<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+     <span class="token comment">&lt;!-- Made MJL model transparent in the beginning. --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-entity</span>
+    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ghostBuilding<span class="token punctuation">"</span></span>
+    <span class="token attr-name">gltf-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#men-jen-low<span class="token punctuation">"</span></span>
+    <span class="token attr-name">model-transparent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>opacity: 0.3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-entity</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- all other AR objects you want to spawn --></span>
+
+    <span class="token comment">&lt;!-- Inside the portal. Same building without transparency --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-entity</span>
+        <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>men-jen-low<span class="token punctuation">"</span></span>
+        <span class="token attr-name">gltf-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#men-jen-low<span class="token punctuation">"</span></span>
+        <span class="token attr-name">reflections</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>type: realtime<span class="token punctuation">"</span></span>
+        <span class="token attr-name">shadow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>receive: false<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-entity</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-entity</span><span class="token punctuation">></span></span></code></pre></div>
 <figure style="display: block; margin: 0 auto; text-align: center">
 <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
       <a class="gatsby-resp-image-link" href="/static/09a3643a0acd17027c95ea88e5c44422/d61c2/appView.png" style="display: block" target="_blank" rel="noopener">
@@ -180,6 +286,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-4c852c4a82f536992220.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-09719d71f0fef75379c3.js\"],\"component---src-pages-archive-jsx\":[\"/component---src-pages-archive-jsx-01f2395e888d172ed627.js\"],\"component---src-pages-blog-jsx\":[\"/component---src-pages-blog-jsx-a555e9492b808c7ae353.js\"],\"component---src-pages-cv-jsx\":[\"/component---src-pages-cv-jsx-75a8c415483309eef0c7.js\"],\"component---src-pages-index-jsx\":[\"/component---src-pages-index-jsx-2adff970c829a0aaf8f6.js\"],\"component---src-pages-portfolio-edu-jsx\":[\"/component---src-pages-portfolio-edu-jsx-6c4d52fd8cbd3d79070c.js\"],\"component---src-pages-portfolio-games-jsx\":[\"/component---src-pages-portfolio-games-jsx-ee499eba566447f8e93e.js\"],\"component---src-pages-portfolio-graphics-jsx\":[\"/component---src-pages-portfolio-graphics-jsx-800dd4223bbe0d2e8d5d.js\"],\"component---src-pages-portfolio-header-jsx\":[\"/component---src-pages-portfolio-header-jsx-b4b893739619635d5c36.js\"],\"component---src-pages-portfolio-jsx\":[\"/component---src-pages-portfolio-jsx-ed39a3cbd535603e9161.js\"],\"component---src-pages-portfolio-main-jsx\":[\"/component---src-pages-portfolio-main-jsx-5d85b2795bedb3de495c.js\"],\"component---src-pages-portfolio-old-jsx\":[\"/component---src-pages-portfolio-old-jsx-adf2e206593045b402f3.js\"],\"component---src-pages-portfolio-web-jsx\":[\"/component---src-pages-portfolio-web-jsx-d1ea1dd21152d5318e13.js\"],\"component---src-pages-portfolio-xr-jsx\":[\"/component---src-pages-portfolio-xr-jsx-2348593db7161c0f55d3.js\"],\"component---src-pages-vitae-en-jsx\":[\"/component---src-pages-vitae-en-jsx-4b54cdedb0d9f64e486e.js\"],\"component---src-pages-vitae-jsx\":[\"/component---src-pages-vitae-jsx-451764d170d8d1470fee.js\"],\"component---src-pages-vitae-ko-jsx\":[],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-bbf0df96304da8ce0fbd.js\"],\"component---src-templates-portfolio-post-js\":[\"/component---src-templates-portfolio-post-js-5e73a8b3e47b165cf5c7.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-4c852c4a82f536992220.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-09719d71f0fef75379c3.js\"],\"component---src-pages-archive-jsx\":[\"/component---src-pages-archive-jsx-01f2395e888d172ed627.js\"],\"component---src-pages-blog-jsx\":[\"/component---src-pages-blog-jsx-a555e9492b808c7ae353.js\"],\"component---src-pages-cv-jsx\":[\"/component---src-pages-cv-jsx-0efdd5f4bee690d2528f.js\"],\"component---src-pages-index-jsx\":[\"/component---src-pages-index-jsx-2adff970c829a0aaf8f6.js\"],\"component---src-pages-portfolio-edu-jsx\":[\"/component---src-pages-portfolio-edu-jsx-6c4d52fd8cbd3d79070c.js\"],\"component---src-pages-portfolio-games-jsx\":[\"/component---src-pages-portfolio-games-jsx-ee499eba566447f8e93e.js\"],\"component---src-pages-portfolio-graphics-jsx\":[\"/component---src-pages-portfolio-graphics-jsx-800dd4223bbe0d2e8d5d.js\"],\"component---src-pages-portfolio-header-jsx\":[\"/component---src-pages-portfolio-header-jsx-b4b893739619635d5c36.js\"],\"component---src-pages-portfolio-jsx\":[\"/component---src-pages-portfolio-jsx-ed39a3cbd535603e9161.js\"],\"component---src-pages-portfolio-main-jsx\":[\"/component---src-pages-portfolio-main-jsx-5d85b2795bedb3de495c.js\"],\"component---src-pages-portfolio-old-jsx\":[\"/component---src-pages-portfolio-old-jsx-adf2e206593045b402f3.js\"],\"component---src-pages-portfolio-web-jsx\":[\"/component---src-pages-portfolio-web-jsx-d1ea1dd21152d5318e13.js\"],\"component---src-pages-portfolio-xr-jsx\":[\"/component---src-pages-portfolio-xr-jsx-2348593db7161c0f55d3.js\"],\"component---src-pages-vitae-en-jsx\":[\"/component---src-pages-vitae-en-jsx-4b54cdedb0d9f64e486e.js\"],\"component---src-pages-vitae-jsx\":[\"/component---src-pages-vitae-jsx-451764d170d8d1470fee.js\"],\"component---src-pages-vitae-ko-jsx\":[],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-bbf0df96304da8ce0fbd.js\"],\"component---src-templates-portfolio-post-js\":[\"/component---src-templates-portfolio-post-js-5e73a8b3e47b165cf5c7.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="33f6ec3cb2f2e24be4fe";</script><script src="/webpack-runtime-09ef7d73d34e9f93a0a0.js" async></script><script src="/framework-aa8b5a9d1438e1cc975c.js" async></script><script src="/app-4c852c4a82f536992220.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="f1fd02036d7d2bbed843";</script><script src="/webpack-runtime-46638e89f3fca93b03df.js" async></script><script src="/framework-aa8b5a9d1438e1cc975c.js" async></script><script src="/app-4c852c4a82f536992220.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
