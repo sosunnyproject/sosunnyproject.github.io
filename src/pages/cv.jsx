@@ -18,7 +18,7 @@ export default function CV() {
         </a>
       </p>
       <p>
-        <a target="_blank" href="https://drive.google.com/file/d/1eG5f-KtB9SjBxywNHLDTThVwdMczwjvG/view">
+        <a target="_blank" href="https://drive.google.com/file/d/1S6e2I_hDFYBNiFCPgKPK4A2AkhysLykJ/view?usp=sharing">
           Resume (1 page)
         </a>
       </p>
