@@ -148,6 +148,10 @@ order: 3
     </a-entity>
 </a-entity>
 ```
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="8thwall-3d.png">
+<figcaption>Niantic 8thwall Editor view. Optimized 3d model with less than 1MB</figcaption>
+</figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="appView.png">

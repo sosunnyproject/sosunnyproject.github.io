@@ -23,6 +23,12 @@ order: 5
 - When the player comes back to the same planet, they should see a same avatar portrait. 
 
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
+<img src="emte-cockpit.png">
+<figcaption>Game - Cockpit view with runtime generated avatar character </figcaption>
+</figure>
+
+
+<figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
 <img src="emte-collage.jpg">
 <figcaption> Variations made with the latest avatar portrait system </figcaption>
 </figure>
