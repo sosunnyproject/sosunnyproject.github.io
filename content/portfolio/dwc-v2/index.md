@@ -63,6 +63,21 @@ order: 2
     - TO_EMPTY: After finished growing, shrinks back to the anchor
   - Triangle / Arc shapes have gradient color animation. This animation's speed, duration, and size of the growing shape would change based on connected hardware Rasberry PI's weather data.
 
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="./procreate/main.JPG">
+<figcaption>Idea note organized.</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="./procreate/main2.JPG">
+<figcaption>Idea note organized.</figcaption>
+</figure>
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="./procreate/dwc-algo-sketches.jpeg">
+<figcaption>Troubleshooting ideas for algorithms and systems</figcaption>
+</figure>
+
 #### Disclaimer: Below are the edited code snippets to show the highlight of the features.
 
 <figure style="display: block; margin: 0 auto; text-align: center">

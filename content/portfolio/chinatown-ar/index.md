@@ -91,6 +91,12 @@ order: 3
         - Maya doesn't support glb/gltf export, so we had to ultimately use Blender as the last part of 3D pipeline.
     - 8th Wall / A-frame API: simple way to integrate 3D or webVR into the website. A-frame is an eaiser wrapper library of threejs. 
     - draco: `gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/`
+
+<figure style="display: block; margin: 0 auto; text-align: center">
+<img src="8thwall-3d.png">
+<figcaption>Niantic 8thwall Editor view. Optimized 3d model with less than 1MB</figcaption>
+</figure>
+
 ```html
 // loading in the beginning of the scene. 
 <a-scene
@@ -148,10 +154,6 @@ order: 3
     </a-entity>
 </a-entity>
 ```
-<figure style="display: block; margin: 0 auto; text-align: center">
-<img src="8thwall-3d.png">
-<figcaption>Niantic 8thwall Editor view. Optimized 3d model with less than 1MB</figcaption>
-</figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="appView.png">
