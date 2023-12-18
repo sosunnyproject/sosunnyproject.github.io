@@ -58,7 +58,7 @@ query {
           timeToRead
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date
             category
             subcategory
             featuredImage {

@@ -64,13 +64,13 @@ order: 2
   - Triangle / Arc shapes have gradient color animation. This animation's speed, duration, and size of the growing shape would change based on connected hardware Rasberry PI's weather data.
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="./procreate/main.JPG">
-<figcaption>Idea note organized.</figcaption>
+<img src="./procreate/main.jpeg">
+<figcaption>Idea note organized</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="./procreate/main2.JPG">
-<figcaption>Idea note organized.</figcaption>
+<img src="./procreate/main2.jpeg">
+<figcaption>Idea note organized</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">

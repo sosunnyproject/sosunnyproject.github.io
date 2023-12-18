@@ -45,7 +45,7 @@ query {
           timeToRead
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date
             category
           }
           fields {

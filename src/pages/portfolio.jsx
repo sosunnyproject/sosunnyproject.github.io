@@ -46,7 +46,7 @@ query {
           frontmatter {
             title
             order
-            date(formatString: "MMMM DD, YYYY")
+            date
             category
             subcategory
             featured

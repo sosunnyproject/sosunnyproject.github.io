@@ -3,7 +3,7 @@ title: "[Unity] Technical Arts, Tools Programming (W.I.P)"
 date: "2023-12-31"
 category: "portfolio"
 subcategory: "graphics"
-featuredImage: "smoke3-scene1.png"
+featuredImage: "emte-avatar-thumbnail.jpeg"
 featured: true
 order: 5
 ---
@@ -13,7 +13,8 @@ order: 5
 
 # Technical Artist & Tools programmer for USC Games MFA Thesis Eight Moon To The Eternity
 
-<iframe width="100%" height="640" src="https://www.youtube.com/embed/-4KR8BfA4rk?si=WM3GSE0IkZf3HPJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="640" src="https://www.youtube.com/embed/wX5Ow5Brzuk?si=EwYW-O98QIk0cisE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ### 1. Procedural Avatar Portrait System 
 #### Goal
