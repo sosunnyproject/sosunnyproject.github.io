@@ -7,7 +7,16 @@ featuredImage: "simulator-2.jpg"
 ---
 
 ## Build recordings
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wbmUbkq4enc?si=1ZJIUhVAieRveS4W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="640" src="https://www.youtube.com/embed/wbmUbkq4enc?si=1ZJIUhVAieRveS4W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Highlights
+- Led a 4-people team at 2-days XR Hackathon, hosted by MIT Reality Hack, sponsored by Apple, Meta, Unity, Qualcomm, Snap
+- Built AR demo with Apple Vision Pro Simulator and Unity Polyspatial beta SDK to simulate sports environment for training and/or audience tools 
+- Reported SDK bugs regarding Apple Vision Pro emulator graphics issues and discrepancy with the Unity editor preview to Unity Professional Services team
+  - The objects implemented in Unity Editor are not occluded in Apple Vision Pro Emulator. It is because the objects are virtual, not being fed by a real camera of Apple Vision device.
+  - Unity camera's setting in *screen space overlay* does not work in Apple simulator. We had to choose *screen space camera* but then it moves along the camera view and too shaky.
+  - Unity only handles the game mechanics and interaction algorithms, while Apple vision pro handles all the graphics and final renderings. That is why it is hard to control the graphics problems from Unity editor side. 
+
 
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="simulator-2.jpg">
@@ -77,7 +86,7 @@ featuredImage: "simulator-2.jpg"
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="unity-4.jpg">
+<img src="unity-4.png">
 <figcaption>URP material warning in Xcode build</figcaption>
 </figure>
 
