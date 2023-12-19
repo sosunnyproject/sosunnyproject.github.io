@@ -5,7 +5,7 @@ category: "portfolio"
 subcategory: "graphics"
 featuredImage: "slide-7.jpg"
 featured: true
-order: 3
+order: 8
 ---
 
 ## Links

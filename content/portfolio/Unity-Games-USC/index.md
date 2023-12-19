@@ -5,7 +5,7 @@ category: "portfolio"
 subcategory: "graphics"
 featuredImage: "emte-avatar-thumbnail.jpeg"
 featured: true
-order: 5
+order: 4
 ---
 #### As these game productions are still WORK IN PROGRESS, I'm presenting the parts I heavily focused on & something related to Technical Arts, Tools programming. 
 

@@ -4,6 +4,8 @@ date: "2023-09-31"
 category: "portfolio"
 subcategory: "XR"
 featuredImage: "simulator-2.jpg"
+featured: true
+order: 5
 ---
 
 ## Build recordings

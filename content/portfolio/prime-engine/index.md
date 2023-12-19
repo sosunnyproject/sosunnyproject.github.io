@@ -5,7 +5,7 @@ category: 'portfolio'
 subcategory: "games"
 featuredImage: 'pe-3.png'
 featured: true
-order: 4
+order: 7
 ---
 <figure style="display: block; margin: 0 auto; text-align: center">
 <img src="pe-2.png">

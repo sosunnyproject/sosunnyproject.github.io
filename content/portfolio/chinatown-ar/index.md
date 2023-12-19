@@ -4,8 +4,8 @@ date: '2023-09-01'
 category: 'portfolio'
 subcategory: "XR"
 featuredImage: 'appView.png'
-featured: false
-order: 3
+featured: true
+order: 6
 ---
 
 
