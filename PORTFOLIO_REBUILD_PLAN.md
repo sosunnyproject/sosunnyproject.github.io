@@ -705,10 +705,12 @@ export default function Landing() {
 
 ## 8. Phase 5 — 인터랙션 다듬기
 
-- **홀드 색 = 루트 카테고리**: frontmatter `holdColor`로 프로젝트 카테고리(게임/그래픽스/웹/XR)를 색으로 구분. 같은 색끼리 "루트"처럼 연결선(`<Line>` from drei)을 그어도 좋음.
-- **클릭 트랜지션**: 바로 navigate 대신, framer-motion으로 페이드/줌 후 라우트 전환. zustand에 `selectedProject` 두고 오버레이 모달로 먼저 보여준 뒤 "자세히" 클릭 시 페이지 이동하는 2단계도 가능.
+> ⚠️ **설계 변경 반영(§14 참조)**: 홀드는 이제 **개별 프로젝트가 아니라 포트폴리오 카테고리 페이지로 이동**한다. 아래 항목들도 그 전제로 읽을 것.
+
+- **홀드 색 = 카테고리**: 홀드 1개 = 1개 카테고리(games/graphics/xr/web/edu/main). 색은 `src/data/categories.js`의 매핑을 따른다. 같은 색끼리 "루트"처럼 연결선(`<Line>` from drei)을 그어도 좋음.
+- **클릭 트랜지션**: 바로 navigate 대신, framer-motion으로 페이드/줌 후 라우트 전환. zustand에 `hoveredCategory`/`selectedCategory` 두고 오버레이로 먼저 보여준 뒤 이동하는 2단계도 가능.
 - **모바일 스크롤 검증(중요)**: 실제 기기에서 Canvas 위 터치가 스크롤로 동작하는지 확인. `ScrollControls`가 처리하지만 iOS Safari에서 어긋나는 경우가 있어 `touch-action` CSS 점검.
-- **배경 진행감**: `scroll.offset`으로 배경 그라데이션을 새벽→낮→노을로 보간. Canvas의 clear color 또는 div 배경을 useFrame에서 갱신.
+- **배경 진행감 → 도시 랜드스케이프 페이드(§14.2)**: `scroll.offset`에 따라 배경에 도시 스카이라인 그래픽이 **fade in/out**으로 전환된다(Seoul → New York → London → Los Angeles → Austin). 단순 그라데이션 보간을 대체/보완.
 
 `src/store/useStore.js` (zustand):
 ```js
@@ -933,3 +935,31 @@ const NAV_ITEMS = [
 - **리스트는 하나로**: blog/portfolio/서브카테고리는 `ListTemplate` + `filter`/`sort` 조합으로 재사용(별도 페이지 컴포넌트 난립 방지 — 기존 portfolio/edu·games·graphics·web·xr 5개 중복 제거).
 - **Nav·CV는 config/데이터 주도**: 새 항목 추가가 코드 수정이 아니라 배열 한 줄 추가가 되도록.
 - **이번 라운드 구현 대상은 `Landing`뿐**, 나머지 템플릿은 "시그니처 확정 + 빈 스텁" 정도까지만 둬도 된다(추후 채움).
+
+---
+
+## 14. 메인 랜딩 설계 확정 (Phase 4 구현 반영)
+
+> 실제 구현하면서 확정한 사항. 이전 §7(`/work/:slug` 프로토타입)보다 **이 섹션이 우선**한다.
+
+### 14.1 홀드 = 카테고리 (개별 프로젝트 아님)
+
+- 클라이밍 홀드 1개는 **포트폴리오 카테고리**에 대응한다. 클릭 시 카테고리 페이지 route로 이동:
+  `/portfolio/main`, `/portfolio/games`, `/portfolio/graphics`, `/portfolio/xr`, `/portfolio/web`, `/portfolio/edu`.
+- 데이터 소스: `src/data/categories.js` (`{ slug, label, color, to }`). 홀드 수가 6개로 고정·적어서 배치가 단순하고, ~30개 프로젝트를 벽에 흩뿌리는 것보다 직관적.
+- 이전 §7.5의 `navigate('/work/${p.slug}')`, §12.4의 `projects`/`holdColor` 기반 배치는 **폐기**. 대신 `CATEGORIES`를 순회하며 `navigate(cat.to)`.
+- ⚠️ **라우팅은 추후 연결**(사용자 결정): 이번 라운드는 랜딩만 완성한다. `/portfolio/*` 페이지는 아직 Vite로 포팅되지 않았으므로(기존 `src/pages/portfolio/*.jsx`는 Gatsby 전용 — `graphql`/`gatsby` import로 동작 불가), 클릭 시 **임시 placeholder 라우트**("준비 중")로 받는다. Phase 7에서 §13 `ListTemplate`로 실제 페이지 구현.
+
+### 14.2 스크롤 연동 도시 랜드스케이프 배경 (신규 요구)
+
+스크롤 업/다운에 따라 배경에 **도시 스카이라인 그래픽이 fade in/out**으로 순차 전환된다. 벽을 오를수록 도시가 바뀌는 연출.
+
+- **도시 순서**: Seoul → New York → London → Los Angeles → Austin (Texas). (작가의 이동 경로 서사와 연결)
+- **구현 방식 후보**:
+  - (A) **DOM 레이어**: 각 도시 PNG/SVG를 절대배치 레이어로 깔고, `scroll.offset` 구간별 `opacity`를 framer-motion 또는 `useFrame`으로 보간. Canvas 뒤(z-index 아래)에 둠. 가장 단순·가벼움. **권장**.
+  - (B) **R3F 평면 텍스처**: 벽 뒤쪽에 도시 텍스처를 입힌 billboard plane들을 배치하고 카메라 거리/스크롤로 머티리얼 `opacity` 보간. 씬에 통합되지만 텍스처 로딩·메모리 관리 필요.
+- **fade 로직**: 도시 N개를 스크롤 `0..1` 구간을 N등분해 각 구간 중심에서 최대 opacity, 인접 구간과 cross-fade. 한 번에 1~2개 도시만 보이게.
+- **에셋**: 도시별 stylized skyline 그래픽 1장씩(통일된 아트 스타일, 가로로 긴 비율). `src/assets/cities/` 또는 `static/cities/`에 둔다. 아직 없음 → 제작/수급 필요(플레이스홀더로 단색+도시명 텍스트부터 시작 가능).
+- **배경 그라데이션**(새벽→낮→노을)은 도시 페이드와 **공존** 가능: 하늘 그라데이션 위에 도시 실루엣이 겹치는 구성.
+
+**구현 순서 제안**: ① 플레이스홀더(도시명 텍스트 레이어)로 fade 로직 먼저 검증 → ② 실제 스카이라인 그래픽 교체.

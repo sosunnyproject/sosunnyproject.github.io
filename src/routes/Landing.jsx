@@ -1,9 +1,23 @@
-// Phase 4에서 클라이밍 벽 3D 씬으로 교체
+import { Canvas } from '@react-three/fiber'
+import { Suspense } from 'react'
+import { ClimbingWall } from '../three/ClimbingWall.jsx'
+
 export default function Landing() {
   return (
-    <main style={{ padding: '2rem', maxWidth: 720, margin: '0 auto', fontFamily: 'sans-serif' }}>
-      <h1>Write Code, Make Art</h1>
-      <p>Graphics · Web · Games · XR. Currently studying M.S. Game Design at USC.</p>
-    </main>
+    <div style={{
+      width: '100vw',
+      height: '100vh',
+      background: 'linear-gradient(180deg, #bfe3ff 0%, #ffe9c7 100%)',
+    }}>
+      <Canvas
+        shadows
+        camera={{ position: [0, 2, 7], fov: 50 }}
+        dpr={[1, 2]}
+      >
+        <Suspense fallback={null}>
+          <ClimbingWall />
+        </Suspense>
+      </Canvas>
+    </div>
   )
 }
