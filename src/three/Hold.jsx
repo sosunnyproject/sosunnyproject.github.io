@@ -4,19 +4,19 @@ import { Html } from '@react-three/drei'
 import * as THREE from 'three'
 
 // 클릭 가능한 카테고리 홀드 — low-poly Dodecahedron + flatShading
-export function Hold({ position, color, scale = 1, label, onClick }) {
+export function Hold({ position, color, scale = 1, rotation = [0, 0, 0], label, onClick }) {
   const ref = useRef()
   const [hovered, setHovered] = useState(false)
   const target = useRef(new THREE.Vector3(scale, scale, scale))
 
   useFrame(() => {
     if (!ref.current) return
-    target.current.setScalar(hovered ? scale * 1.3 : scale)
+    target.current.setScalar(hovered ? scale * 20 : scale)
     ref.current.scale.lerp(target.current, 0.15)
   })
 
   return (
-    <group position={position}>
+    <group position={position} rotation={rotation}>
       <mesh
         ref={ref}
         castShadow

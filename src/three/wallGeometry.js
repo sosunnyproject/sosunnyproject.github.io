@@ -1,5 +1,18 @@
 import * as THREE from 'three'
 
+// 결정론적 PRNG (mulberry32). 같은 seed → 항상 같은 난수열 →
+// 새로고침해도 벽 굴곡·홀드 z가 고정된다.
+export function makeRng(seed) {
+  let a = seed >>> 0
+  return function () {
+    a |= 0
+    a = (a + 0x6d2b79f5) | 0
+    let t = Math.imul(a ^ (a >>> 15), 1 | a)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
 // BoxGeometry의 "앞면"만 변위시켜 두께가 있는 faceted 암벽 슬래브를 만든다.
 // 뒷면·옆면은 평평하게 남아 실제 두께(thickness)가 보이고,
 // 앞면 내부 정점만 흔들어 low-poly 굴곡을 준다.
@@ -14,7 +27,9 @@ export function createWall({
   irregularity = 0.55, // <1 일수록 값이 양 극단으로 몰려 면 간 깊이 차가 커짐
   detail = 0.25,       // 작은 고주파 디테일 변위 비율
   yOffset = 0,         // 월드 좌표 보정 (mesh position.y와 동일하게)
+  seed = 1337,         // 고정 시드 → 새로고침해도 동일한 벽 굴곡
 } = {}) {
+  const rng = makeRng(seed)
   const geometry = new THREE.BoxGeometry(width, height, thickness, segX, segY, 1)
   const pos = geometry.attributes.position
   const frontZ = thickness / 2
@@ -34,9 +49,9 @@ export function createWall({
 
     let z = frontZ
     if (!onBorder) {
-      const r = Math.random() * 2 - 1 // -1..1
+      const r = rng() * 2 - 1 // -1..1
       const base = Math.sign(r) * Math.pow(Math.abs(r), irregularity) * depth
-      const fine = (Math.random() * 2 - 1) * depth * detail
+      const fine = (rng() * 2 - 1) * depth * detail
       z = frontZ + base + fine
       pos.setZ(i, z)
       // 홀드는 변위된 내부 정점 위에만 올림

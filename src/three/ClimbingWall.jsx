@@ -5,23 +5,17 @@ import { ScrollControls, Scroll, useScroll } from '@react-three/drei'
 import { useNavigate } from 'react-router-dom'
 import { Wall } from './Wall.jsx'
 import { Hold, DecoHold } from './Hold.jsx'
+import { ModelHold } from './ModelHold.jsx'
 import { Lighting } from './Lighting.jsx'
-import { createWall, surfaceZAt } from './wallGeometry.js'
+import { createWall, surfaceZAt, makeRng } from './wallGeometry.js'
 import { CATEGORIES } from '../data/categories.js'
 
-const WALL_WIDTH = 6
+const WALL_WIDTH = 5 // 화면을 꽉 채우지 않도록 — 양옆에 배경 여백 확보
 const WALL_HEIGHT = 24
 const WALL_Y = WALL_HEIGHT / 2 - 2 // mesh position.y == 정점 yOffset
 
-// 카테고리 홀드의 (x, y) 루트 — z는 벽 표면에 스냅
-const HOLD_XY = [
-  [-1.8,  3.5],
-  [ 1.6,  6.0],
-  [-1.2,  8.8],
-  [ 1.9, 11.5],
-  [-1.5, 14.2],
-  [ 1.3, 17.0],
-]
+// 카테고리 홀드의 (x, y) 루트 — 장식 홀드가 이 근처를 피하도록 사용
+const HOLD_XY = CATEGORIES.map((c) => [c.position[0], c.position[1]])
 
 // 장식용 홀드 색 팔레트 (bright, distinct)
 const DECO_COLORS = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#e84393', '#e67e22']
@@ -85,7 +79,7 @@ export function ClimbingWall() {
     () => createWall({
       width: WALL_WIDTH,
       height: WALL_HEIGHT,
-      segX: 6,
+      segX: 5,
       segY: 24,
       thickness: 0.7,
       depth: 0.32,
@@ -102,19 +96,20 @@ export function ClimbingWall() {
   const tiltRef = useRef()
   useDragTilt(tiltRef, { maxAngle: Math.PI / 4})
 
-  // 카테고리 홀드: (x,y) 루트 + 표면 z 스냅
+  // 카테고리 홀드: 데이터의 position 사용. z 생략 시 벽 표면에 스냅.
   const categoryHolds = useMemo(
     () =>
-      CATEGORIES.map((cat, i) => {
-        const [x, y] = HOLD_XY[i] ?? [0, 4 + i * 3]
-        const z = surfaceZAt(vertices, x, y) + 0.16 // 표면에 딱 붙도록
-        return { ...cat, position: [x, y, z] }
+      CATEGORIES.map((cat) => {
+        const [x, y, customZ] = cat.position
+        const z = customZ ?? surfaceZAt(vertices, x, y) + 0.16 // z 없으면 표면에 붙임
+        return { ...cat, worldPosition: [x, y, z] }
       }),
     [vertices]
   )
 
   // 장식용 홀드: 벽 정점 일부를 샘플링해 표면에 흩뿌림 (카테고리 위치는 피함)
   const decoHolds = useMemo(() => {
+    const rng = makeRng(4242) // 고정 시드 → 회전·크기도 새로고침해도 동일
     const out = []
     const step = 7 // 정점 샘플링 간격
     for (let i = 0; i < vertices.length; i += step) {
@@ -127,14 +122,14 @@ export function ClimbingWall() {
 
       const variant = out.length % 2 === 0 ? 'dodeca' : 'ellipsoid'
       const rotation = [
-        Math.random() * Math.PI,
-        Math.random() * Math.PI,
-        Math.random() * Math.PI,
+        rng() * Math.PI,
+        rng() * Math.PI,
+        rng() * Math.PI,
       ]
       // 타원형은 살짝 길쭉하게(찌그러진 구) — z는 너무 납작하지 않게 해 도드라지도록
       const scale =
         variant === 'ellipsoid'
-          ? [1.15 + Math.random() * 0.25, 0.7 + Math.random() * 0.25, 0.95 + Math.random() * 0.15]
+          ? [1.15 + rng() * 0.25, 0.7 + rng() * 0.25, 0.95 + rng() * 0.15]
           : [1, 1, 1]
       // 표면에 붙되 확실히 솟아 보이도록
       const zOffset = variant === 'ellipsoid' ? 0.13 : 0.1
@@ -169,16 +164,31 @@ export function ClimbingWall() {
           />
         ))}
 
-        {categoryHolds.map((cat) => (
-          <Hold
-            key={cat.slug}
-            position={cat.position}
-            color={cat.color}
-            scale={1.0}
-            label={cat.label}
-            onClick={() => navigate(cat.to)}
-          />
-        ))}
+        {categoryHolds.map((cat) =>
+          cat.model ? (
+            <ModelHold
+              key={cat.slug}
+              url={cat.model.url}
+              position={cat.worldPosition}
+              rotation={cat.rotation}
+              spin={cat.model.spin}
+              spinAxis={cat.model.spinAxis}
+              targetSize={cat.model.targetSize}
+              label={cat.label}
+              onClick={() => navigate(cat.to)}
+            />
+          ) : (
+            <Hold
+              key={cat.slug}
+              position={cat.worldPosition}
+              rotation={cat.rotation}
+              color={cat.color}
+              scale={1.0}
+              label={cat.label}
+              onClick={() => navigate(cat.to)}
+            />
+          )
+        )}
       </group>
 
       <ScrollCamera />
