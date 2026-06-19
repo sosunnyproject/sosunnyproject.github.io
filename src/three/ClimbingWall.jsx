@@ -4,11 +4,12 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { ScrollControls, Scroll, useScroll } from '@react-three/drei'
 import { useNavigate } from 'react-router-dom'
 import { Wall } from './Wall.jsx'
-import { Hold, DecoHold } from './Hold.jsx'
-import { ModelHold } from './ModelHold.jsx'
+import { Hold } from './Hold.jsx'
+import { ModelHold, ModelDecoHold } from './ModelHold.jsx'
 import { Lighting } from './Lighting.jsx'
 import { createWall, surfaceZAt, makeRng } from './wallGeometry.js'
 import { CATEGORIES } from '../data/categories.js'
+import { DECO_HOLDS, HOLD_MODEL_POOL } from '../data/decoHolds.js'
 
 const WALL_WIDTH = 5 // 화면을 꽉 채우지 않도록 — 양옆에 배경 여백 확보
 const WALL_HEIGHT = 24
@@ -16,9 +17,6 @@ const WALL_Y = WALL_HEIGHT / 2 - 2 // mesh position.y == 정점 yOffset
 
 // 카테고리 홀드의 (x, y) 루트 — 장식 홀드가 이 근처를 피하도록 사용
 const HOLD_XY = CATEGORIES.map((c) => [c.position[0], c.position[1]])
-
-// 장식용 홀드 색 팔레트 (bright, distinct)
-const DECO_COLORS = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#e84393', '#e67e22']
 
 function ScrollCamera() {
   const scroll = useScroll()
@@ -107,9 +105,21 @@ export function ClimbingWall() {
     [vertices]
   )
 
-  // 장식용 홀드: 벽 정점 일부를 샘플링해 표면에 흩뿌림 (카테고리 위치는 피함)
-  const decoHolds = useMemo(() => {
-    const rng = makeRng(4242) // 고정 시드 → 회전·크기도 새로고침해도 동일
+  // 장식용 모델 홀드: 데이터의 position 사용. z 생략 시 벽 표면에 스냅.
+  const decoModelHolds = useMemo(
+    () =>
+      DECO_HOLDS.map((h) => {
+        const [x, y, customZ] = h.position
+        const z = customZ ?? surfaceZAt(vertices, x, y) + 0.12
+        return { ...h, worldPosition: [x, y, z] }
+      }),
+    [vertices]
+  )
+
+  // 장식용 모델 홀드(스캐터): 벽 정점 일부를 샘플링해 표면에 흩뿌림 (카테고리 위치는 피함).
+  // 각 위치에 홀드 모델 풀에서 시드 랜덤으로 모델/회전/크기 배정 → 새로고침해도 동일.
+  const scatterHolds = useMemo(() => {
+    const rng = makeRng(4242) // 고정 시드
     const out = []
     const step = 7 // 정점 샘플링 간격
     for (let i = 0; i < vertices.length; i += step) {
@@ -120,26 +130,11 @@ export function ClimbingWall() {
       const tooClose = HOLD_XY.some(([hx, hy]) => (hx - v.x) ** 2 + (hy - v.y) ** 2 < 1.2)
       if (tooClose) continue
 
-      const variant = out.length % 2 === 0 ? 'dodeca' : 'ellipsoid'
-      const rotation = [
-        rng() * Math.PI,
-        rng() * Math.PI,
-        rng() * Math.PI,
-      ]
-      // 타원형은 살짝 길쭉하게(찌그러진 구) — z는 너무 납작하지 않게 해 도드라지도록
-      const scale =
-        variant === 'ellipsoid'
-          ? [1.15 + rng() * 0.25, 0.7 + rng() * 0.25, 0.95 + rng() * 0.15]
-          : [1, 1, 1]
-      // 표면에 붙되 확실히 솟아 보이도록
-      const zOffset = variant === 'ellipsoid' ? 0.13 : 0.1
-
       out.push({
-        position: [v.x, v.y, v.z + zOffset],
-        color: DECO_COLORS[out.length % DECO_COLORS.length],
-        variant,
-        rotation,
-        scale,
+        url: HOLD_MODEL_POOL[Math.floor(rng() * HOLD_MODEL_POOL.length)],
+        position: [v.x, v.y, v.z + 0.1],
+        rotation: [rng() * Math.PI * 2, rng() * Math.PI * 2, rng() * Math.PI * 2],
+        targetSize: 0.45 + rng() * 0.25,
       })
     }
     return out
@@ -153,14 +148,23 @@ export function ClimbingWall() {
       <group ref={tiltRef}>
         <Wall geometry={geometry} position={[0, WALL_Y, 0]} />
 
-        {decoHolds.map((h, i) => (
-          <DecoHold
-            key={`deco-${i}`}
+        {scatterHolds.map((h, i) => (
+          <ModelDecoHold
+            key={`scatter-${i}`}
+            url={h.url}
             position={h.position}
-            color={h.color}
-            variant={h.variant}
             rotation={h.rotation}
-            scale={h.scale}
+            targetSize={h.targetSize}
+          />
+        ))}
+
+        {decoModelHolds.map((h, i) => (
+          <ModelDecoHold
+            key={`deco-model-${i}`}
+            url={h.url}
+            position={h.worldPosition}
+            rotation={h.rotation}
+            targetSize={h.targetSize}
           />
         ))}
 

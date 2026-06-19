@@ -11,7 +11,7 @@ export function Hold({ position, color, scale = 1, rotation = [0, 0, 0], label, 
 
   useFrame(() => {
     if (!ref.current) return
-    target.current.setScalar(hovered ? scale * 20 : scale)
+    target.current.setScalar(hovered ? scale * 2 : scale)
     ref.current.scale.lerp(target.current, 0.15)
   })
 

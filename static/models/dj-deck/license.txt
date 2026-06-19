@@ -1,0 +1,11 @@
+Model Information:
+* title:	DJ Set
+* source:	https://sketchfab.com/3d-models/dj-set-dacd1e338270478485e35f8a79d6dc64
+* author:	Milan (https://sketchfab.com/milanfonken)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "DJ Set" (https://sketchfab.com/3d-models/dj-set-dacd1e338270478485e35f8a79d6dc64) by Milan (https://sketchfab.com/milanfonken) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
