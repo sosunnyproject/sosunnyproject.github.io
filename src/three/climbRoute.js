@@ -1,7 +1,7 @@
 // 스크롤 진행도(0..1) ↔ 캐릭터 위치/스토리 비트 매핑. React 무관 순수 함수.
 // 3D(캐릭터·카메라·안개)와 DOM(텍스트)이 같은 함수를 쓰므로 서로 어긋나지 않는다.
 import { CATEGORIES } from '../data/categories.js'
-import { STORY } from '../data/story.js'
+import { STORY, OUTRO } from '../data/story.js'
 import { CLIMBER } from '../data/climber.js'
 
 export const WALL_WIDTH = 5 // 화면을 꽉 채우지 않도록 — 양옆에 배경 여백 확보
@@ -31,6 +31,19 @@ const SEGMENTS = KEYS.length - 1
 
 // 스크롤 길이 (뷰포트 배수) — 구간당 약 1화면
 export const SCROLL_PAGES = SEGMENTS + 1
+
+// 배경 도시 구간: 비트 i = 구간 i (그 홀드로 오르는 구간), OUTRO = 마지막 구간.
+// 같은 도시가 연속되면 한 구간으로 합친다 → [{ city, range: [start, end] }]
+export const CITY_RANGES = [...STORY_STOPS.map((s) => s.city), OUTRO.city].reduce((out, city, i) => {
+  const prev = out[out.length - 1]
+  if (prev?.city === city) prev.range[1] = (i + 1) / SEGMENTS
+  else out.push({ city, range: [i / SEGMENTS, (i + 1) / SEGMENTS] })
+  return out
+}, [])
+
+// 캐릭터가 좌우로 움직이는 x 범위 (발 기준) — 일반 홀드를 이 근처에만 배치
+const ROUTE_XS = KEYS.map((k) => k.x)
+export const ROUTE_X = [Math.min(...ROUTE_XS), Math.max(...ROUTE_XS)]
 
 const clamp01 = (v) => Math.min(1, Math.max(0, v))
 const easeInOut = (t) => t * t * (3 - 2 * t)

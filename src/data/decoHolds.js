@@ -17,14 +17,15 @@ export const HOLD_MODEL_POOL = [
 //             [x, y, z] → z까지 직접 지정
 // rotation:   [x, y, z] 라디안. 위치를 잡은 뒤 여기서 각도 조정.
 // targetSize: 정규화 크기 (장식은 작게 ~0.5–0.7 권장)
+// ⚠️ x는 캐릭터 이동 범위 근처(대략 |x| ≤ 1.3)에 둘 것 — 벽 가장자리 쪽은 비워 둔다.
 export const DECO_HOLDS = [
-  { url: '/models/holds/hold_conver_no5.glb',   position: [-2.0,  2.2], rotation: [0, 0, 0], targetSize: 0.6 },
-  { url: '/models/holds/hold_convex_no6.glb',   position: [ 2.0,  4.3], rotation: [0, 0, 0], targetSize: 0.6 },
-  { url: '/models/holds/hold_convex_no8.glb',   position: [-2.1,  6.5], rotation: [0, 0, 0], targetSize: 0.6 },
+  { url: '/models/holds/hold_conver_no5.glb',   position: [-1.0,  2.2], rotation: [0, 0, 0], targetSize: 0.6 },
+  { url: '/models/holds/hold_convex_no6.glb',   position: [ 1.0,  4.3], rotation: [0, 0, 0], targetSize: 0.6 },
+  { url: '/models/holds/hold_convex_no8.glb',   position: [-1.1,  6.5], rotation: [0, 0, 0], targetSize: 0.6 },
   { url: '/models/holds/hold_e_m_4v2.glb',      position: [ 0.2,  7.6], rotation: [0, 0, 0], targetSize: 0.6 },
-  { url: '/models/holds/hold_e_m_5.glb',        position: [ 2.0,  9.5], rotation: [0, 0, 0], targetSize: 0.6 },
-  { url: '/models/holds/hold_mint_big_hold.glb', position: [-2.0, 11.0], rotation: [0, 0, 0], targetSize: 0.6 },
-  { url: '/models/holds/hold_phone_fat.glb',    position: [ 2.0, 14.6], rotation: [0, 0, 0], targetSize: 0.6 },
-  { url: '/models/holds/hold_phone_small.glb',  position: [-2.0, 15.8], rotation: [0, 0, 0], targetSize: 0.6 },
+  { url: '/models/holds/hold_e_m_5.glb',        position: [ 1.0,  9.5], rotation: [0, 0, 0], targetSize: 0.6 },
+  { url: '/models/holds/hold_mint_big_hold.glb', position: [-1.0, 11.0], rotation: [0, 0, 0], targetSize: 0.6 },
+  { url: '/models/holds/hold_phone_fat.glb',    position: [ 1.0, 14.6], rotation: [0, 0, 0], targetSize: 0.6 },
+  { url: '/models/holds/hold_phone_small.glb',  position: [-1.0, 15.8], rotation: [0, 0, 0], targetSize: 0.6 },
   { url: '/models/holds/hold_thb_01_v2.glb',    position: [ 0.0, 18.5], rotation: [0, 0, 0], targetSize: 0.6 },
 ]

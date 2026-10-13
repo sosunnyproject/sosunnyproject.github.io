@@ -8,40 +8,19 @@
 //   - targetSize 정규화 크기
 //   - spin       매 프레임 Y축 자동 회전 속도 (라디안/초). 0이면 회전 안 함.
 export const CATEGORIES = [
+  // 순서 = 아래에서 위 (= story.js의 등반 순서). y가 스토리 순서를 결정한다.
   {
     slug: 'main', label: 'All Work', color: '#e67e22', to: '/portfolio/main',
-    position: [-1.4, 3.5, 0.9],
-    rotation: [Math.PI/2, 0, 0],
-    model: {  
-      url: '/models/holds/hold_conver_no5.glb',
-      targetSize: 0.8,
-    },
-  },
-  {
-    slug: 'games', label: 'Games', color: '#e74c3c', to: '/portfolio/games',
-    position: [1.6, 6.0],
+    position: [-1.4, 3.5],
     rotation: [0, 0, 0],
     model: {
-      url: '/models/cyberfunk-sony-controller.glb',
-      targetSize: 1.2,
-      spin: 0.4,
-      spinAxis: 'z',
-    },
-  },
-  {
-    slug: 'graphics', label: 'Creative Technology', color: '#9b59b6', to: '/portfolio/graphics',
-    position: [-1.2, 8.8, 0.8],
-    rotation: [Math.PI/2, 0, 0],
-    model: {
-      url: '/models/dj-deck/scene.gltf',
-      targetSize: 1.6,
-      spin: 0.4,
-      spinAxis: 'y',
+      url: '/models/theater_masks/theater_masks.glb', // 원본 scene.gltf(14.5MB) → simplify + Draco (151KB)
+      targetSize: 1.4,
     },
   },
   {
     slug: 'xr', label: 'XR', color: '#1abc9c', to: '/portfolio/xr',
-    position: [1.5, 11.5, 0.6],
+    position: [1.6, 6.0, 0.6],
     rotation: [Math.PI/10, -Math.PI/2, 0],
     model: {
       url: '/models/apple-vision-pro/scene.gltf',
@@ -52,7 +31,7 @@ export const CATEGORIES = [
   },
   {
     slug: 'web', label: 'Web', color: '#3498db', to: '/portfolio/web',
-    position: [-1.5, 13.2],
+    position: [-1.2, 8.8],
     rotation: [0, 0, 0],
     model: {
       url: '/models/react-logo/scene.gltf',
@@ -62,14 +41,36 @@ export const CATEGORIES = [
     },
   },
   {
+    slug: 'graphics', label: 'Creative Technology', color: '#9b59b6', to: '/portfolio/graphics',
+    position: [1.5, 11.5, 0.8],
+    rotation: [Math.PI/2, 0, 0],
+    model: {
+      url: '/models/dj-deck/scene.gltf',
+      targetSize: 1.6,
+      spin: 0.4,
+      spinAxis: 'y',
+    },
+  },
+  {
     slug: 'edu', label: 'Education', color: '#f1c40f', to: '/portfolio/edu',
-    position: [1.3, 17.0],
+    position: [-1.5, 13.2],
     rotation: [Math.PI/2, 0, 0],
     model: {
       url: '/models/apple_keyboard.glb',
       targetSize: 1.2,
       spin: 1.0,
       spinAxis: 'y',
+    },
+  },
+  {
+    slug: 'games', label: 'Games', color: '#e74c3c', to: '/portfolio/games',
+    position: [1.3, 17.0],
+    rotation: [0, 0, 0],
+    model: {
+      url: '/models/cyberfunk-sony-controller.glb',
+      targetSize: 1.2,
+      spin: 0.4,
+      spinAxis: 'z',
     },
   },
 ]

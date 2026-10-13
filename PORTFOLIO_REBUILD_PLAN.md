@@ -954,7 +954,7 @@ const NAV_ITEMS = [
 
 스크롤 업/다운에 따라 배경에 **도시 스카이라인 그래픽이 fade in/out**으로 순차 전환된다. 벽을 오를수록 도시가 바뀌는 연출.
 
-- **도시 순서**: Seoul → New York → London → Los Angeles → Austin (Texas). (작가의 이동 경로 서사와 연결)
+- **도시 순서**: ~~Seoul → New York → London → Los Angeles → Austin~~ → **§15.10에서 변경**: New York → Seoul → Los Angeles → Austin. 각 스토리 비트의 `city`가 결정.
 - **구현 방식 후보**:
   - (A) **DOM 레이어**: 각 도시 PNG/SVG를 절대배치 레이어로 깔고, `scroll.offset` 구간별 `opacity`를 framer-motion 또는 `useFrame`으로 보간. Canvas 뒤(z-index 아래)에 둠. 가장 단순·가벼움. **권장**.
   - (B) **R3F 평면 텍스처**: 벽 뒤쪽에 도시 텍스처를 입힌 billboard plane들을 배치하고 카메라 거리/스크롤로 머티리얼 `opacity` 보간. 씬에 통합되지만 텍스처 로딩·메모리 관리 필요.
@@ -1002,7 +1002,8 @@ const NAV_ITEMS = [
 
 ### 15.4 주인공 캐릭터 — `src/three/Climber.jsx`
 
-- ⚠️ **실측**: `static/models/journey-character.glb`는 **스켈레톤·애니메이션이 없는 정적 메시**(skins 0, animations 0, Sketchfab cloth 그룹). 이 파일로는 "팔다리가 움직이는 클라이밍 모션"을 재생할 수 없다.
+- ✅ **교체 완료 (§15.10)**: `static/models/dora-climbing-down.glb` (리깅 + 클립). 아래는 이전 상태 기록.
+- ⚠️ **실측(이전)**: `static/models/journey-character.glb`는 **스켈레톤·애니메이션이 없는 정적 메시**(skins 0, animations 0, Sketchfab cloth 그룹). 이 파일로는 "팔다리가 움직이는 클라이밍 모션"을 재생할 수 없다.
 - 그래서 `Climber`는 두 모드를 지원:
   1. **리깅 모델 + 클립이 있으면**: `useAnimations`로 클립(이름에 `climb` 포함 우선)을 재생하되, 시간 흐름이 아니라 **스크롤로 scrub**한다 — `action.time = (오른 거리 / stride) mod duration`. 스크롤을 멈추면 동작도 멈추고, 위로 스크롤하면 역재생.
   2. **클립이 없으면(현재)**: 절차적 모션 — 오른 거리에 비례한 좌우 체중 이동, 상하 bob, 몸 기울기. 실제 에셋이 오기 전 레이아웃/타이밍 검증용.
@@ -1030,7 +1031,7 @@ const NAV_ITEMS = [
 
 - 구조: `src/data/backgrounds.js`(레이어 설정) → `ScrollBackground`(스택, `progress` 구독) → `BackgroundLayer`(한 장, 자기 구간에서만 보임).
 - 각 레이어는 `progress` 구간 `[start, end]`을 가지며, 경계에서 `fade` 폭만큼 겹쳐 **한 번에 최대 2장**만 보인다. 레이어 내부 이미지는 뷰포트보다 높게(예: 130vh) 두고 구간 진행에 따라 **아래로 이동**(캐릭터가 오르니 세상은 내려감).
-- 이미지가 아직 없으면 그라데이션 + 큰 라벨(도시명)로 플레이스홀더 렌더 → 에셋 없이도 타이밍 검증 가능. 도시 순서는 §14.2(Seoul → New York → London → Los Angeles → Austin) 유지.
+- 이미지가 아직 없으면 그라데이션 + 큰 라벨(도시명)로 플레이스홀더 렌더 → 에셋 없이도 타이밍 검증 가능. 도시 순서·구간은 `story.js` 비트의 `city`에서 파생(§15.10).
 - 에셋 가이드: 가로 2400px 내외 WebP/AVIF, 세로 길이 ≥ 1.3×(가로/16×9), 각 300KB 이하 목표. 경로 `static/backgrounds/<id>.webp`.
 - (B)로 갈 경우: `progress`를 uniform으로 받는 `BackgroundShader` 컴포넌트로 교체만 하면 됨 — 인터페이스(`progress` MotionValue + `backgrounds.js`)는 동일하게 유지.
 
@@ -1070,8 +1071,46 @@ src/
 
 ### 15.9 남은 일 (에셋/튜닝)
 
-- [ ] 리깅 + 클라이밍 클립이 있는 캐릭터 glb 제작 → `src/data/climber.js`의 `url` 교체 (§15.4)
-- [ ] 도시 배경 이미지 5장 제작 → `src/data/backgrounds.js`의 `src` 채우기 (§15.6)
+- [x] 리깅 + 클라이밍 클립이 있는 캐릭터 glb 제작 → `src/data/climber.js`의 `url` 교체 (§15.4, §15.10)
+- [ ] 도시 배경 이미지 4장(New York, Seoul, Los Angeles, Austin) 제작 → `src/data/backgrounds.js`의 `src` 채우기 (§15.6)
 - [ ] `src/data/story.js` 문구 다듬기 (현재 초안)
 - [ ] 모델 하나라도 로드 실패 시 씬 전체가 사라짐 → `<ErrorBoundary>`로 홀드/캐릭터 개별 격리 + Draco 디코더 self-host(`useGLTF(url, '/draco/')`) 검토
 - [ ] 홀드 glb 용량(장식 홀드 합계 ~16MB) 압축 — gltf-transform으로 Draco/Meshopt + 텍스처 리사이즈
+- [ ] CC-BY-4.0 크레딧 표기 — Dora(littlebillfishing), Theater Masks(WilDuo). 원문은 각 모델 폴더의 `license.txt`. 사이트 footer/about에 노출 필요
+- [ ] 캐릭터 포즈 튜닝 — Dora는 2등신 비율이라 Mixamo 리타깃 시 다리가 몸 쪽으로 많이 접힘. 필요하면 다른 클라이밍 클립(`Climbing Up Wall`) 시도
+
+### 15.10 업데이트 (2026-10-13)
+
+**캐릭터 교체** — `dora-climbing-down.glb`
+- 실측: skins 1 (Mixamo `mixamorig:*` 33 joints), 클립 1개 `Armature|mixamo.com|Layer0` 4.05초 = 내려가기 2 사이클, Hips 이동 트랙에 **root motion**(아래로 이동) 포함. 텍스처 내장, 355KB.
+- `dora-gltf/`(리깅 없는 원본 Sketchfab 메시)와 `.fbx`(Mixamo 원본)는 런타임에 쓰지 않음 → 커밋하지 않음.
+- `Climber.jsx` 변경:
+  - `reverse: true` — 내려가는 클립을 역재생해서 오르는 동작으로 사용.
+  - `rootMotion: 'detrend'` — Hips 이동 트랙에서 **누적 이동만 선형으로 빼서** 제자리 루프로 만든다(흔들림 유지, 루프 이음매 없음). 루트 이동은 `climbRoute`가 담당.
+  - `stride: null` → 빼낸 누적 이동량(월드 단위로 변환)을 그대로 stride로 사용 → 손발이 미끄러지지 않음 (현재 ≈1.04 / 클립 1회).
+  - 버그 수정: drei `useAnimations`의 `actions`는 마운트 후에야 생성되는데 렌더 중에 꺼내고 있었음 → 첫 비트 변경으로 리렌더되기 전까지 T-포즈. effect에서 꺼내 ref로 보관.
+
+**첫 홀드 = Theater Masks** — `static/models/theater_masks/theater_masks.glb`
+- 원본 `scene.gltf` 14.5MB(~30만 정점) → `gltf-transform optimize --compress draco --simplify-ratio 0.12` → **151KB** (정점 색 유지). 원본은 커밋하지 않음.
+- 슬러그는 `main`(All Work 링크) 그대로, 모델만 교체.
+
+**스토리 순서 / 배경 도시**
+
+| # | 홀드 | 도시 |
+|---|---|---|
+| 1 | main (Theater → Media Studies) | New York |
+| 2 | xr | New York |
+| 3 | web | Seoul |
+| 4 | graphics | Seoul |
+| 5 | edu | Seoul |
+| 6 | games | Los Angeles |
+| OUTRO | — | Austin |
+
+- 등반 순서는 **홀드 y**가 결정(`STORY_STOPS`는 y 정렬) → `categories.js` 위치를 위 순서대로 재배치(모델별 rotation/z/spin은 모델과 함께 이동).
+- 각 비트에 `city` 필드 추가. `climbRoute.CITY_RANGES`가 비트 i = 구간 i, OUTRO = 마지막 구간으로 보고 같은 도시가 이어지면 합쳐 배경 구간을 만든다. `backgrounds.js`는 이제 도시별 스타일만 가진다(London은 미사용).
+- 구간 길이가 달라져서 cross-fade 폭은 가장 짧은 구간 기준으로 통일.
+
+**일반 홀드 배치 범위 축소**
+- `climbRoute.ROUTE_X` = 캐릭터 발 x 범위(현재 약 −0.83..0.88). 스캐터 홀드는 `ROUTE_X ± 0.5` 안에만, 행(0.6) 단위 지그재그로 배치 → 벽 가장자리는 비워 둔다.
+- 스캐터 z는 최근접 정점 대신 **레이캐스트로 정확한 면 높이**(`createSurfaceSampler`) 사용.
+- `decoHolds.js` 수동 배치 x도 ±2.0 → ±1.0으로 이동.

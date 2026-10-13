@@ -76,3 +76,19 @@ export function surfaceZAt(vertices, x, y) {
   }
   return best
 }
+
+// 벽 앞면의 정확한 표면 z를 구하는 샘플러 (레이캐스트). 정점 사이 기울어진 면 위에도 홀드가 정확히 앉는다.
+// geometry는 createWall 결과, yOffset은 mesh position.y와 동일하게.
+export function createSurfaceSampler(geometry, yOffset = 0) {
+  const mesh = new THREE.Mesh(geometry)
+  mesh.position.y = yOffset
+  mesh.updateMatrixWorld(true)
+  const ray = new THREE.Raycaster()
+  const origin = new THREE.Vector3()
+  const dir = new THREE.Vector3(0, 0, -1)
+  return (x, y) => {
+    ray.set(origin.set(x, y, 10), dir)
+    const hit = ray.intersectObject(mesh, false)[0]
+    return hit ? hit.point.z : 0
+  }
+}

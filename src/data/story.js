@@ -5,10 +5,13 @@
 // position: [x, y] 직접 지정 (장식 홀드 등 카테고리가 아닌 곳에 의미를 붙일 때). hold보다 우선.
 // kicker:   작은 머리글 (선택)
 // lines:    2–3줄
+// city:     이 비트 구간의 배경 도시 (backgrounds.js의 id). 같은 도시가 이어지면 한 장으로 합쳐진다.
+//
+// ⚠️ 등반 순서는 배열 순서가 아니라 홀드 y 순서(categories.js)로 정해진다 — 둘을 같은 순서로 유지할 것.
 export const INTRO = {
   title: 'Write Code, Make Art',
   lines: [
-    "Hi, I'm Sunny — I build things where code meets art.",
+    "Welcome to my adventure.",
     'Scroll to climb. Every hold carries a story.',
   ],
 }
@@ -16,30 +19,16 @@ export const INTRO = {
 export const STORY = [
   {
     hold: 'main',
+    city: 'new-york',
     kicker: 'Where it started',
     lines: [
-      'Media Studies at Vassar, a first job in New York,',
-      'then home to Seoul to write code for a living.',
-    ],
-  },
-  {
-    hold: 'games',
-    kicker: 'Games',
-    lines: [
-      'Now an M.S. Game Design student at USC,',
-      'building Unity games and a C++ engine from scratch.',
-    ],
-  },
-  {
-    hold: 'graphics',
-    kicker: 'Creative Technology',
-    lines: [
-      'Exhibitions in Seoul taught me to make code you can feel —',
-      'p5.js, shaders, Arduino lights, and a 3D Euljiro on the web.',
+      'I started out as a Theater major at Vassar, in New York —',
+      'then turned to Media Studies, where storytelling met technology.',
     ],
   },
   {
     hold: 'xr',
+    city: 'new-york',
     kicker: 'XR',
     lines: [
       'From a HoloLens hackathon at MIT to Frankenstein in mixed reality,',
@@ -48,23 +37,44 @@ export const STORY = [
   },
   {
     hold: 'web',
+    city: 'seoul',
     kicker: 'Web',
     lines: [
-      'Years of frontend at POSCO ICT and Tripbtoz —',
+      'Back home in Seoul: years of frontend at POSCO ICT and Tripbtoz —',
       'React, design systems, and the craft of shipping.',
     ],
   },
   {
+    hold: 'graphics',
+    city: 'seoul',
+    kicker: 'Creative Technology',
+    lines: [
+      'Exhibitions in Seoul taught me to make code you can feel —',
+      'p5.js, shaders, Arduino lights, and a 3D Euljiro on the web.',
+    ],
+  },
+  {
     hold: 'edu',
+    city: 'seoul',
     kicker: 'Sharing',
     lines: [
       'I love passing on what I learn:',
       'talks at JSConf Korea and SOSCON, and creative-coding classes.',
     ],
   },
+  {
+    hold: 'games',
+    city: 'los-angeles',
+    kicker: 'Games',
+    lines: [
+      'Now an M.S. Game Design student at USC,',
+      'building Unity games and a C++ engine from scratch.',
+    ],
+  },
 ]
 
 export const OUTRO = {
+  city: 'austin',
   title: 'Top out.',
   lines: ['Thanks for climbing with me. Click any hold, or —'],
   cta: { to: '/portfolio/main', label: 'See all work →' },
