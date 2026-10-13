@@ -1,35 +1,25 @@
-import { useMemo, useRef, useEffect } from 'react'
+import { Suspense, useMemo, useRef, useEffect } from 'react'
 import * as THREE from 'three'
-import { useFrame, useThree } from '@react-three/fiber'
-import { ScrollControls, Scroll, useScroll } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 import { useNavigate } from 'react-router-dom'
 import { Wall } from './Wall.jsx'
 import { Hold } from './Hold.jsx'
 import { ModelHold, ModelDecoHold } from './ModelHold.jsx'
 import { Lighting } from './Lighting.jsx'
+import { Climber } from './Climber.jsx'
+import { CameraRig } from './CameraRig.jsx'
+import { FogBand } from './FogBand.jsx'
 import { createWall, surfaceZAt, makeRng } from './wallGeometry.js'
+import { WALL_WIDTH, WALL_HEIGHT, WALL_Y, STORY_STOPS } from './climbRoute.js'
 import { CATEGORIES } from '../data/categories.js'
 import { DECO_HOLDS, HOLD_MODEL_POOL } from '../data/decoHolds.js'
-
-const WALL_WIDTH = 5 // 화면을 꽉 채우지 않도록 — 양옆에 배경 여백 확보
-const WALL_HEIGHT = 24
-const WALL_Y = WALL_HEIGHT / 2 - 2 // mesh position.y == 정점 yOffset
+import { useStore } from '../store/useStore.js'
 
 // 카테고리 홀드의 (x, y) 루트 — 장식 홀드가 이 근처를 피하도록 사용
 const HOLD_XY = CATEGORIES.map((c) => [c.position[0], c.position[1]])
 
-function ScrollCamera() {
-  const scroll = useScroll()
-  const { camera } = useThree()
-  useFrame(() => {
-    camera.position.y = THREE.MathUtils.lerp(2, WALL_HEIGHT - 4, scroll.offset)
-    camera.lookAt(0, camera.position.y, 0)
-  })
-  return null
-}
-
 // 클릭&드래그로 벽 그룹을 Y축 회전 (±maxAngle 로 clamp).
-// ScrollControls와 충돌하는 OrbitControls 대신, 이벤트를 window에서 받아
+// 스크롤과 충돌하는 OrbitControls 대신, 이벤트를 window에서 받아
 // 그룹 rotation만 흔든다 → 벽 뒤쪽을 살짝 들여다볼 수 있음.
 function useDragTilt(ref, { maxAngle = Math.PI / 4, speed = 0.005 } = {}) {
   const drag = useRef({ active: false, lastX: 0, target: 0 })
@@ -55,10 +45,12 @@ function useDragTilt(ref, { maxAngle = Math.PI / 4, speed = 0.005 } = {}) {
     window.addEventListener('pointerdown', onDown)
     window.addEventListener('pointermove', onMove)
     window.addEventListener('pointerup', onUp)
+    window.addEventListener('pointercancel', onUp) // 터치 스크롤이 포인터를 가져갈 때
     return () => {
       window.removeEventListener('pointerdown', onDown)
       window.removeEventListener('pointermove', onMove)
       window.removeEventListener('pointerup', onUp)
+      window.removeEventListener('pointercancel', onUp)
     }
   }, [maxAngle, speed])
 
@@ -72,7 +64,8 @@ function useDragTilt(ref, { maxAngle = Math.PI / 4, speed = 0.005 } = {}) {
   })
 }
 
-export function ClimbingWall() {
+// progress: 스프링 감쇠된 스크롤 진행도 MotionValue (0..1). Landing에서 DOM 레이어와 공유.
+export function ClimbingWall({ progress }) {
   const { geometry, vertices } = useMemo(
     () => createWall({
       width: WALL_WIDTH,
@@ -89,8 +82,10 @@ export function ClimbingWall() {
   )
 
   const navigate = useNavigate()
+  // 캐릭터가 도달한 스토리 홀드 → 강조
+  const activeHold = useStore((s) => (typeof s.beat === 'number' ? STORY_STOPS[s.beat]?.hold : null))
 
-  // 드래그 회전 (±22.5°)
+  // 드래그 회전 (±45°)
   const tiltRef = useRef()
   useDragTilt(tiltRef, { maxAngle: Math.PI / 4})
 
@@ -141,10 +136,10 @@ export function ClimbingWall() {
   }, [vertices])
 
   return (
-    <ScrollControls pages={4} damping={0.3}>
+    <>
       <Lighting />
 
-      {/* 드래그로 ±22.5° 만 회전하는 그룹 (벽 + 홀드 한 덩어리) */}
+      {/* 드래그로 ±45° 만 회전하는 그룹 (벽 + 홀드 + 캐릭터 한 덩어리) */}
       <group ref={tiltRef}>
         <Wall geometry={geometry} position={[0, WALL_Y, 0]} />
 
@@ -179,6 +174,7 @@ export function ClimbingWall() {
               spinAxis={cat.model.spinAxis}
               targetSize={cat.model.targetSize}
               label={cat.label}
+              active={cat.slug === activeHold}
               onClick={() => navigate(cat.to)}
             />
           ) : (
@@ -189,30 +185,20 @@ export function ClimbingWall() {
               color={cat.color}
               scale={1.0}
               label={cat.label}
+              active={cat.slug === activeHold}
               onClick={() => navigate(cat.to)}
             />
           )
         )}
+
+        {/* 주인공은 tilt 그룹 안 (벽과 함께 회전). 무거우니 별도 Suspense — 벽이 먼저 보인다 */}
+        <Suspense fallback={null}>
+          <Climber progress={progress} />
+        </Suspense>
       </group>
 
-      <ScrollCamera />
-      <Scroll html>
-        <div style={{
-          position: 'absolute',
-          top: '10vh',
-          width: '100%',
-          textAlign: 'center',
-          color: '#1e2327',
-          pointerEvents: 'none',
-        }}>
-          <h1 style={{ fontSize: '2.2rem', margin: '0 0 0.4rem', fontFamily: 'sans-serif' }}>
-            Write Code, Make Art
-          </h1>
-          <p style={{ opacity: 0.65, fontFamily: 'sans-serif', margin: 0, fontSize: '1rem' }}>
-            스크롤해서 벽을 오르세요 — 홀드를 클릭하면 포트폴리오로 이동합니다.
-          </p>
-        </div>
-      </Scroll>
-    </ScrollControls>
+      <FogBand />
+      <CameraRig progress={progress} />
+    </>
   )
 }

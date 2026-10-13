@@ -50,6 +50,7 @@ export function ModelHold({
   targetSize = 0.9,
   baseScale = 1,
   label,
+  active = false,       // 캐릭터가 이 홀드에 도달 → 살짝 커지고 라벨 표시
   onClick,
 }) {
   const model = useNormalizedModel(url, targetSize)
@@ -59,7 +60,7 @@ export function ModelHold({
 
   useFrame((_, delta) => {
     if (!ref.current) return
-    target.current.setScalar(hovered ? baseScale * 1.25 : baseScale)
+    target.current.setScalar(baseScale * (hovered ? 1.25 : active ? 1.12 : 1))
     ref.current.scale.lerp(target.current, 0.15)
     if (spin) ref.current.rotation[spinAxis] += spin * delta // 연속 tick 회전
   })
@@ -87,7 +88,7 @@ export function ModelHold({
           <primitive object={model} />
         </group>
       </group>
-      {hovered && label && (
+      {(hovered || active) && label && (
         <Html distanceFactor={8} position={[0.6, 0.4, 0]}>
           <div style={{
             background: 'rgba(15,15,20,0.88)',

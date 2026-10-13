@@ -1048,7 +1048,7 @@ src/
 │  ├─ CameraRig.jsx              # 캐릭터 추종 카메라 + 화면비 대응 거리
 │  ├─ Climber.jsx                # 주인공 (클립 scrub / 절차적 fallback)
 │  ├─ FogBand.jsx                # 상단 1/3 안개 셰이더 plane
-│  └─ climbRoute.js              # progress ↔ 위치/비트 순수 함수
+│  └─ climbRoute.js              # progress ↔ 위치/비트 순수 함수 + 벽 치수 상수(WALL_*)
 └─ data/
    ├─ story.js                   # 홀드별 2–3줄 문구
    ├─ backgrounds.js             # 배경 레이어 설정
@@ -1057,11 +1057,21 @@ src/
 
 ### 15.8 완료 기준
 
-- [ ] 랜딩 진입 시 인트로 문구가 상단 1/3에 보이고, 캐릭터는 벽 하단에 있다.
-- [ ] 스크롤 다운 → 캐릭터가 위로 이동(모션 포함), 카메라가 따라감, 위로 스크롤하면 역방향.
-- [ ] 상단 1/3 벽은 안개로 흐리고, 하단 2/3는 선명.
-- [ ] 스토리 홀드에 손이 닿으면 해당 2–3줄 문구가 fade/slide-in, 이전 문구는 fade-out.
-- [ ] 배경이 아래로 흐르며 구간별 cross-fade, 동시에 최대 2장.
-- [ ] 홀드 클릭 → 카테고리 placeholder 라우트 이동 유지, 드래그 tilt 유지.
-- [ ] `prefers-reduced-motion`이면 parallax/scale 없이 opacity 전환만.
-- [ ] 모바일 세로 화면에서 벽 전체 폭이 보이도록 카메라 거리 자동 조정.
+> 1차 구현 완료 (headless Chromium 1280×800 / 390×844 스크린샷 + 홀드 클릭 이동으로 확인). 남은 일은 §15.9.
+
+- [x] 랜딩 진입 시 인트로 문구가 상단 1/3에 보이고, 캐릭터는 벽 하단에 있다.
+- [x] 스크롤 다운 → 캐릭터가 위로 이동(모션 포함), 카메라가 따라감, 위로 스크롤하면 역방향.
+- [x] 상단 1/3 벽은 안개로 흐리고, 하단 2/3는 선명.
+- [x] 스토리 홀드에 손이 닿으면 해당 2–3줄 문구가 fade/slide-in, 이전 문구는 fade-out.
+- [x] 배경이 아래로 흐르며 구간별 cross-fade, 동시에 최대 2장.
+- [x] 홀드 클릭 → 카테고리 placeholder 라우트 이동 유지, 드래그 tilt 유지.
+- [x] `prefers-reduced-motion`이면 parallax/scale 없이 opacity 전환만.
+- [x] 모바일 세로 화면에서 벽 전체 폭이 보이도록 카메라 거리 자동 조정.
+
+### 15.9 남은 일 (에셋/튜닝)
+
+- [ ] 리깅 + 클라이밍 클립이 있는 캐릭터 glb 제작 → `src/data/climber.js`의 `url` 교체 (§15.4)
+- [ ] 도시 배경 이미지 5장 제작 → `src/data/backgrounds.js`의 `src` 채우기 (§15.6)
+- [ ] `src/data/story.js` 문구 다듬기 (현재 초안)
+- [ ] 모델 하나라도 로드 실패 시 씬 전체가 사라짐 → `<ErrorBoundary>`로 홀드/캐릭터 개별 격리 + Draco 디코더 self-host(`useGLTF(url, '/draco/')`) 검토
+- [ ] 홀드 glb 용량(장식 홀드 합계 ~16MB) 압축 — gltf-transform으로 Draco/Meshopt + 텍스처 리사이즈
