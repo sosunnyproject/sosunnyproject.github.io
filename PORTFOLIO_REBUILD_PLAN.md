@@ -710,7 +710,7 @@ export default function Landing() {
 - **홀드 색 = 카테고리**: 홀드 1개 = 1개 카테고리(games/graphics/xr/web/edu/main). 색은 `src/data/categories.js`의 매핑을 따른다. 같은 색끼리 "루트"처럼 연결선(`<Line>` from drei)을 그어도 좋음.
 - **클릭 트랜지션**: 바로 navigate 대신, framer-motion으로 페이드/줌 후 라우트 전환. zustand에 `hoveredCategory`/`selectedCategory` 두고 오버레이로 먼저 보여준 뒤 이동하는 2단계도 가능.
 - **모바일 스크롤 검증(중요)**: 실제 기기에서 Canvas 위 터치가 스크롤로 동작하는지 확인. `ScrollControls`가 처리하지만 iOS Safari에서 어긋나는 경우가 있어 `touch-action` CSS 점검.
-- **배경 진행감 → 도시 랜드스케이프 페이드(§14.2)**: `scroll.offset`에 따라 배경에 도시 스카이라인 그래픽이 **fade in/out**으로 전환된다(Seoul → New York → London → Los Angeles → Austin). 단순 그라데이션 보간을 대체/보완.
+- **배경 진행감 → 도시 랜드스케이프 페이드(§14.2, 구현 설계는 §15.6)**: `scroll.offset`에 따라 배경에 도시 스카이라인 그래픽이 **fade in/out**으로 전환된다(Seoul → New York → London → Los Angeles → Austin). 단순 그라데이션 보간을 대체/보완.
 
 `src/store/useStore.js` (zustand):
 ```js
@@ -940,7 +940,7 @@ const NAV_ITEMS = [
 
 ## 14. 메인 랜딩 설계 확정 (Phase 4 구현 반영)
 
-> 실제 구현하면서 확정한 사항. 이전 §7(`/work/:slug` 프로토타입)보다 **이 섹션이 우선**한다.
+> 실제 구현하면서 확정한 사항. 이전 §7(`/work/:slug` 프로토타입)보다 **이 섹션이 우선**한다. 스크롤 구동·캐릭터·스토리 텍스트·배경은 **§15가 최신**.
 
 ### 14.1 홀드 = 카테고리 (개별 프로젝트 아님)
 
@@ -950,7 +950,7 @@ const NAV_ITEMS = [
 - 이전 §7.5의 `navigate('/work/${p.slug}')`, §12.4의 `projects`/`holdColor` 기반 배치는 **폐기**. 대신 `CATEGORIES`를 순회하며 `navigate(cat.to)`.
 - ⚠️ **라우팅은 추후 연결**(사용자 결정): 이번 라운드는 랜딩만 완성한다. `/portfolio/*` 페이지는 아직 Vite로 포팅되지 않았으므로(기존 `src/pages/portfolio/*.jsx`는 Gatsby 전용 — `graphql`/`gatsby` import로 동작 불가), 클릭 시 **임시 placeholder 라우트**("준비 중")로 받는다. Phase 7에서 §13 `ListTemplate`로 실제 페이지 구현.
 
-### 14.2 스크롤 연동 도시 랜드스케이프 배경 (신규 요구)
+### 14.2 스크롤 연동 도시 랜드스케이프 배경 (신규 요구 — 구현 설계는 §15.6이 우선)
 
 스크롤 업/다운에 따라 배경에 **도시 스카이라인 그래픽이 fade in/out**으로 순차 전환된다. 벽을 오를수록 도시가 바뀌는 연출.
 
@@ -963,3 +963,105 @@ const NAV_ITEMS = [
 - **배경 그라데이션**(새벽→낮→노을)은 도시 페이드와 **공존** 가능: 하늘 그라데이션 위에 도시 실루엣이 겹치는 구성.
 
 **구현 순서 제안**: ① 플레이스홀더(도시명 텍스트 레이어)로 fade 로직 먼저 검증 → ② 실제 스카이라인 그래픽 교체.
+
+---
+
+## 15. 스크롤 클라이밍 스토리 랜딩 (최신 — §7.5·§8·§14.2보다 우선)
+
+> 목표: 첫 화면 = 스크롤 연동 인터랙티브 three.js 경험. 사용자가 아래로 스크롤하면 주인공 캐릭터가 **벽을 오르는 모션**을 하고, 의미 있는 홀드(`ModelHold`)에 닿을 때마다 화면 상단 1/3에 **2–3줄짜리 자기소개 문장**이 나타난다. 동시에 벽 바깥(화면 전체 폭)의 **배경 이미지가 아래로 흐르며 cross-fade**된다.
+
+### 15.1 화면 구성 (뷰포트 기준 레이어, 뒤 → 앞)
+
+| z | 레이어 | 구현 | 비고 |
+|---|---|---|---|
+| 0 | 배경 이미지 스택 | `src/background/ScrollBackground.jsx` (DOM) | 전체 폭. 스크롤에 따라 아래로 parallax + cross-fade |
+| 1 | 3D Canvas (투명) | `src/three/ClimbingWall.jsx` | 벽·홀드·캐릭터·안개 밴드 |
+| 2 | 스토리 텍스트 | `src/story/StoryOverlay.jsx` (DOM) | 상단 1/3, `pointer-events: none` |
+| — | 스크롤 스페이서 | `Landing.jsx`의 `height: N×100vh` 빈 div | 문서 스크롤 길이만 제공 |
+
+- 화면 **하단 2/3 = 선명한 벽 + 캐릭터**, **상단 1/3 = 안개/구름으로 흐려진 벽 + 텍스트**.
+- 안개는 벽 바로 앞에 놓인 **카메라 추종 셰이더 plane**(`FogBand.jsx`)으로 처리 → 벽 폭만 흐리게 하고 양옆 배경 이미지는 그대로 보이게 한다. 수직 그라데이션 알파 + 흐르는 노이즈(fbm)로 구름 느낌.
+- 다음 홀드는 안개 속에 있다가 캐릭터가 다가가면 안개 밖으로 드러난다 → "도달" 순간 텍스트 등장.
+
+### 15.2 스크롤 구동 방식 변경: `ScrollControls` → 네이티브 스크롤 + 단일 progress
+
+- 기존 drei `ScrollControls`는 Canvas 내부 전용 스크롤 div를 만든다 → **Canvas 바깥 DOM(배경·텍스트)이 같은 진행도를 읽기 어렵고**, §8에서 우려한 iOS 터치 스크롤 이슈도 있다.
+- 변경: 문서(window) 스크롤 + `position: fixed` 레이어. framer-motion `useScroll()` → `useSpring()`으로 감쇠한 **MotionValue 하나(`progress`, 0..1)** 를 모든 레이어가 공유한다.
+  - DOM 레이어: `useTransform(progress, …)`으로 opacity/transform 바인딩 (리렌더 없음, GPU 합성).
+  - R3F: `useFrame`에서 `progress.get()`을 읽어 캐릭터/카메라/안개 갱신.
+  - 같은 스프링 값을 쓰므로 3D와 DOM이 프레임 단위로 동기화.
+- GSAP ScrollTrigger는 **도입하지 않음**(framer-motion이 이미 의존성에 있고 기능이 겹침). 추후 타임라인 연출이 필요하면 `progress` MotionValue만 GSAP 값으로 교체하면 되도록 인터페이스를 단일화해 둔다.
+
+### 15.3 클라이밍 루트 (순수 함수 모듈) — `src/three/climbRoute.js`
+
+진행도 → 캐릭터 위치/활성 비트의 매핑을 **React와 무관한 순수 함수**로 둔다. 3D(캐릭터·카메라)와 DOM(텍스트)이 같은 함수를 호출하므로 어긋날 수 없다.
+
+- `climberYAt(p)` : 0..1 → 캐릭터 y (벽 하단 → 마지막 홀드 위)
+- `climberXAt(y)` : 스토리 홀드들의 x를 smoothstep으로 이어 지그재그 루트 생성 (홀드 옆으로 붙어서 오름)
+- `beatIndexAt(p)` : 손 높이(`y + REACH`)가 지난 스토리 홀드 수 → 현재 텍스트 비트 (-1 = 인트로)
+
+### 15.4 주인공 캐릭터 — `src/three/Climber.jsx`
+
+- ⚠️ **실측**: `static/models/journey-character.glb`는 **스켈레톤·애니메이션이 없는 정적 메시**(skins 0, animations 0, Sketchfab cloth 그룹). 이 파일로는 "팔다리가 움직이는 클라이밍 모션"을 재생할 수 없다.
+- 그래서 `Climber`는 두 모드를 지원:
+  1. **리깅 모델 + 클립이 있으면**: `useAnimations`로 클립(이름에 `climb` 포함 우선)을 재생하되, 시간 흐름이 아니라 **스크롤로 scrub**한다 — `action.time = (오른 거리 / stride) mod duration`. 스크롤을 멈추면 동작도 멈추고, 위로 스크롤하면 역재생.
+  2. **클립이 없으면(현재)**: 절차적 모션 — 오른 거리에 비례한 좌우 체중 이동, 상하 bob, 몸 기울기. 실제 에셋이 오기 전 레이아웃/타이밍 검증용.
+- **에셋 파이프라인(해야 할 일)**: Mixamo에서 캐릭터 리깅(또는 Mixamo 기본 캐릭터) + `Climbing` / `Climbing Up Wall` 애니메이션 → FBX 다운로드 → Blender에서 glTF(.glb)로 export(가능하면 Draco/Meshopt 압축) → `static/models/climber.glb`. `src/data/climber.js`의 `url`만 바꾸면 자동으로 모드 1로 전환.
+  - Journey 모델은 망토(cloth) 위주라 Mixamo 자동 리깅이 잘 안 될 수 있음 → 리깅된 바디 + 망토는 별도 메시로 붙이거나, 클라이밍 포즈에 맞는 다른 캐릭터를 쓰는 방안 검토.
+- 캐릭터는 벽을 바라보도록(등이 카메라 쪽) 배치. 크기는 바운딩박스 높이로 정규화.
+
+### 15.5 스토리 비트 데이터 — `src/data/story.js`
+
+- 텍스트는 배치 데이터(`categories.js`)와 분리. 각 비트는 홀드 slug를 참조(`hold: 'games'`)하거나 직접 `y`를 지정 → 카테고리 홀드뿐 아니라 장식 홀드에도 의미를 붙일 수 있음.
+- 형식: `{ hold, kicker, lines: [2–3줄] }` + `INTRO`, `OUTRO`(포트폴리오 CTA).
+- 현재 문구는 vitae/포트폴리오에서 뽑은 **초안**. 작가가 직접 다듬을 것.
+- 활성 홀드는 zustand `activeHold`로 공유 → 해당 `ModelHold`가 살짝 커지며 강조.
+
+### 15.6 배경 이미지 컴포넌트 검토 — 왜 별도 컴포넌트인가
+
+배경은 벽/홀드와 **수명주기·성능 특성·편집 주기가 전혀 다르므로** three 씬에서 분리한다.
+
+| 관점 | (A) DOM 레이어 — **채택** | (B) WebGL 배경 quad |
+|---|---|---|
+| 렌더 비용 | opacity/transform만 변경 → 브라우저 compositor(GPU)가 처리, 3D 프레임과 독립 | 3D 렌더 패스에 full-screen 텍스처 샘플링 추가 |
+| 전환 연출 | cross-fade + parallax + 미세 scale(Ken Burns) | 노이즈 dissolve, displacement, 블러 등 셰이더 전환 가능 |
+| 이미지 교체 | `src`만 바꾸면 됨, `object-fit: cover` 반응형, `loading`/`decoding` 브라우저 최적화 | 텍스처 로딩/해제/메모리 관리 직접 |
+| 실패 시 | 3D가 실패해도 배경·텍스트는 남음 (fallback에 유리) | Canvas와 운명을 같이함 |
+
+- 구조: `src/data/backgrounds.js`(레이어 설정) → `ScrollBackground`(스택, `progress` 구독) → `BackgroundLayer`(한 장, 자기 구간에서만 보임).
+- 각 레이어는 `progress` 구간 `[start, end]`을 가지며, 경계에서 `fade` 폭만큼 겹쳐 **한 번에 최대 2장**만 보인다. 레이어 내부 이미지는 뷰포트보다 높게(예: 130vh) 두고 구간 진행에 따라 **아래로 이동**(캐릭터가 오르니 세상은 내려감).
+- 이미지가 아직 없으면 그라데이션 + 큰 라벨(도시명)로 플레이스홀더 렌더 → 에셋 없이도 타이밍 검증 가능. 도시 순서는 §14.2(Seoul → New York → London → Los Angeles → Austin) 유지.
+- 에셋 가이드: 가로 2400px 내외 WebP/AVIF, 세로 길이 ≥ 1.3×(가로/16×9), 각 300KB 이하 목표. 경로 `static/backgrounds/<id>.webp`.
+- (B)로 갈 경우: `progress`를 uniform으로 받는 `BackgroundShader` 컴포넌트로 교체만 하면 됨 — 인터페이스(`progress` MotionValue + `backgrounds.js`)는 동일하게 유지.
+
+### 15.7 파일 구조 (이번 라운드)
+
+```
+src/
+├─ routes/Landing.jsx            # 레이어 조립 + 스크롤 스페이서 + progress 생성
+├─ background/
+│  ├─ ScrollBackground.jsx       # 배경 스택
+│  └─ BackgroundLayer.jsx        # 배경 1장 (cross-fade + parallax)
+├─ story/StoryOverlay.jsx        # 상단 1/3 텍스트 (framer-motion AnimatePresence)
+├─ three/
+│  ├─ ClimbingWall.jsx           # 씬 루트 (ScrollControls 제거, progress prop)
+│  ├─ CameraRig.jsx              # 캐릭터 추종 카메라 + 화면비 대응 거리
+│  ├─ Climber.jsx                # 주인공 (클립 scrub / 절차적 fallback)
+│  ├─ FogBand.jsx                # 상단 1/3 안개 셰이더 plane
+│  └─ climbRoute.js              # progress ↔ 위치/비트 순수 함수
+└─ data/
+   ├─ story.js                   # 홀드별 2–3줄 문구
+   ├─ backgrounds.js             # 배경 레이어 설정
+   └─ climber.js                 # 캐릭터 모델 설정
+```
+
+### 15.8 완료 기준
+
+- [ ] 랜딩 진입 시 인트로 문구가 상단 1/3에 보이고, 캐릭터는 벽 하단에 있다.
+- [ ] 스크롤 다운 → 캐릭터가 위로 이동(모션 포함), 카메라가 따라감, 위로 스크롤하면 역방향.
+- [ ] 상단 1/3 벽은 안개로 흐리고, 하단 2/3는 선명.
+- [ ] 스토리 홀드에 손이 닿으면 해당 2–3줄 문구가 fade/slide-in, 이전 문구는 fade-out.
+- [ ] 배경이 아래로 흐르며 구간별 cross-fade, 동시에 최대 2장.
+- [ ] 홀드 클릭 → 카테고리 placeholder 라우트 이동 유지, 드래그 tilt 유지.
+- [ ] `prefers-reduced-motion`이면 parallax/scale 없이 opacity 전환만.
+- [ ] 모바일 세로 화면에서 벽 전체 폭이 보이도록 카메라 거리 자동 조정.
