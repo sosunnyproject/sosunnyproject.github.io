@@ -3,6 +3,7 @@
 // position: [x, y]      → z는 벽 표면에 자동 스냅 (벽이 시드 고정이라 매번 동일)
 //           [x, y, z]   → z까지 직접 지정 (표면 스냅 무시, 커스텀 깊이)
 // rotation: [x, y, z]   라디안. 홀드의 기본 기울기.
+// to:       클릭 시 이동할 route. null이면 클릭/호버 반응 없음
 // model:    있으면 glTF 모델 홀드로 렌더 (없으면 기본 dodecahedron 홀드)
 //   - url        모델 경로
 //   - targetSize 정규화 크기
@@ -10,7 +11,7 @@
 export const CATEGORIES = [
   // 순서 = 아래에서 위 (= story.js의 등반 순서). y가 스토리 순서를 결정한다.
   {
-    slug: 'main', label: 'All Work', color: '#e67e22', to: '/portfolio/main',
+    slug: 'main', label: 'Theater', color: '#e67e22', to: null, // 링크 없음 — 스토리 전용 홀드
     position: [-1.4, 3.5],
     rotation: [0, 0, 0],
     model: {

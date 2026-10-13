@@ -187,7 +187,7 @@ export function ClimbingWall({ progress }) {
               targetSize={cat.model.targetSize}
               label={cat.label}
               active={cat.slug === activeHold}
-              onClick={() => navigate(cat.to)}
+              onClick={cat.to ? () => navigate(cat.to) : undefined}
             />
           ) : (
             <Hold
@@ -198,7 +198,7 @@ export function ClimbingWall({ progress }) {
               scale={1.0}
               label={cat.label}
               active={cat.slug === activeHold}
-              onClick={() => navigate(cat.to)}
+              onClick={cat.to ? () => navigate(cat.to) : undefined}
             />
           )
         )}

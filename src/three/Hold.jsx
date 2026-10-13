@@ -21,6 +21,7 @@ export function Hold({ position, color, scale = 1, rotation = [0, 0, 0], label, 
         ref={ref}
         castShadow
         onPointerOver={(e) => {
+          if (!onClick) return // 링크 없는 홀드는 호버/커서 반응 없음
           e.stopPropagation()
           setHovered(true)
           document.body.style.cursor = 'pointer'
@@ -30,8 +31,9 @@ export function Hold({ position, color, scale = 1, rotation = [0, 0, 0], label, 
           document.body.style.cursor = 'auto'
         }}
         onClick={(e) => {
+          if (!onClick) return
           e.stopPropagation()
-          onClick?.()
+          onClick()
         }}
       >
         <dodecahedronGeometry args={[0.32, 0]} />

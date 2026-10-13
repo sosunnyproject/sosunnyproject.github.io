@@ -72,6 +72,7 @@ export function ModelHold({
         <group
           ref={ref}
           onPointerOver={(e) => {
+            if (!onClick) return // 링크 없는 홀드는 호버/커서 반응 없음
             e.stopPropagation()
             setHovered(true)
             document.body.style.cursor = 'pointer'
@@ -81,8 +82,9 @@ export function ModelHold({
             document.body.style.cursor = 'auto'
           }}
           onClick={(e) => {
+            if (!onClick) return
             e.stopPropagation()
-            onClick?.()
+            onClick()
           }}
         >
           <primitive object={model} />

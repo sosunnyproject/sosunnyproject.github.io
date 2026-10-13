@@ -27,12 +27,27 @@ function detrendTrack(track) {
   return drift
 }
 
+// 익스포트 결함 보정용 머티리얼 사본 (원본은 useGLTF 캐시라 건드리지 않음)
+function fixMaterial(src, { opaque, metalness, roughness }) {
+  const m = src.clone()
+  if (opaque) {
+    m.transparent = false
+    m.opacity = 1
+    m.depthWrite = true
+    m.alphaTest = 0
+  }
+  if (metalness !== undefined && 'metalness' in m) m.metalness = metalness
+  if (roughness !== undefined && 'roughness' in m) m.roughness = roughness
+  return m
+}
+
 // 주인공 — progress에 따라 루트를 따라 오른다.
 // 클립이 있으면 오른 높이로 scrub (스크롤 멈춤 = 동작 멈춤, 위로 스크롤 = 역재생),
 // 없으면 절차적 체중 이동/흔들림.
 export function Climber({ progress, config = CLIMBER }) {
-  const { url, height, rotation, z, clip, reverse, stride, rootMotion } = config
-  const { scene, animations } = useGLTF(url, true)
+  const { url, animUrl, height, rotation, z, clip, reverse, stride, rootMotion, material } = config
+  const { scene } = useGLTF(url, true)
+  const { animations } = useGLTF(animUrl ?? url, true) // 같은 url이면 캐시 공유
   const root = useRef()
   const body = useRef()
 
@@ -40,7 +55,10 @@ export function Climber({ progress, config = CLIMBER }) {
   const { model, clips, rises } = useMemo(() => {
     const obj = cloneSkinned(scene)
     obj.traverse((o) => {
-      if (o.isMesh) o.castShadow = true
+      if (o.isMesh) {
+        o.castShadow = true
+        if (material) o.material = Array.isArray(o.material) ? o.material.map((m) => fixMaterial(m, material)) : fixMaterial(o.material, material)
+      }
       if (o.isSkinnedMesh) o.frustumCulled = false // 포즈가 바인드 박스를 벗어나도 잘리지 않게
     })
     obj.updateMatrixWorld(true)
@@ -73,7 +91,7 @@ export function Climber({ progress, config = CLIMBER }) {
       return copy
     })
     return { model: wrapper, clips: out, rises }
-  }, [scene, animations, height, rootMotion])
+  }, [scene, animations, height, rootMotion, material])
 
   const { actions, names } = useAnimations(clips, root)
   const clipName = names.find((n) => clip.test(n)) ?? names[0]

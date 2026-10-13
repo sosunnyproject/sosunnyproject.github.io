@@ -1077,7 +1077,7 @@ src/
 - [ ] 모델 하나라도 로드 실패 시 씬 전체가 사라짐 → `<ErrorBoundary>`로 홀드/캐릭터 개별 격리 + Draco 디코더 self-host(`useGLTF(url, '/draco/')`) 검토
 - [ ] 홀드 glb 용량(장식 홀드 합계 ~16MB) 압축 — gltf-transform으로 Draco/Meshopt + 텍스처 리사이즈
 - [ ] CC-BY-4.0 크레딧 표기 — Dora(littlebillfishing), Theater Masks(WilDuo). 원문은 각 모델 폴더의 `license.txt`. 사이트 footer/about에 노출 필요
-- [ ] 캐릭터 포즈 튜닝 — Dora는 2등신 비율이라 Mixamo 리타깃 시 다리가 몸 쪽으로 많이 접힘. 필요하면 다른 클라이밍 클립(`Climbing Up Wall`) 시도
+- [ ] 캐릭터 포즈 튜닝 — Dora는 2등신 비율이라 Mixamo 리타깃 시 다리가 몸 쪽으로 많이 접힘 → `Climbing Up Wall` 클립으로 교체 (§15.10 절차)
 
 ### 15.10 업데이트 (2026-10-13)
 
@@ -1092,7 +1092,7 @@ src/
 
 **첫 홀드 = Theater Masks** — `static/models/theater_masks/theater_masks.glb`
 - 원본 `scene.gltf` 14.5MB(~30만 정점) → `gltf-transform optimize --compress draco --simplify-ratio 0.12` → **151KB** (정점 색 유지). 원본은 커밋하지 않음.
-- 슬러그는 `main`(All Work 링크) 그대로, 모델만 교체.
+- 슬러그는 `main` 유지, **링크 없음**(`to: null` → 클릭/호버 커서 반응 없음), 라벨 `Theater`. OUTRO의 'See all work' CTA는 그대로 `/portfolio/main`.
 
 **스토리 순서 / 배경 도시**
 
@@ -1114,3 +1114,16 @@ src/
 - `climbRoute.ROUTE_X` = 캐릭터 발 x 범위(현재 약 −0.83..0.88). 스캐터 홀드는 `ROUTE_X ± 0.5` 안에만, 행(0.6) 단위 지그재그로 배치 → 벽 가장자리는 비워 둔다.
 - 스캐터 z는 최근접 정점 대신 **레이캐스트로 정확한 면 높이**(`createSurfaceSampler`) 사용.
 - `decoHolds.js` 수동 배치 x도 ±2.0 → ±1.0으로 이동.
+
+**캐릭터 머티리얼 보정** (2차)
+- 실측: Blender export가 두 머티리얼 모두 `alphaMode: BLEND`(텍스처는 RGB, 알파 없음) + `metallicFactor` 누락(glTF 기본값 1.0) → 투명 정렬로 머리카락/손/몸 깊이 순서가 뒤바뀌고, 환경맵 없는 금속이라 어둡고 번들거림. 원본 Sketchfab gltf는 metallic 0.
+- `climber.js`의 `material: { opaque, metalness, roughness }`로 런타임 보정(머티리얼 사본에 적용). 다음 export도 같은 결함이 나올 수 있어 데이터로 둠.
+- Blender에서 고치려면: Material → Settings → Blend Mode `Opaque`, Principled BSDF Metallic 0.
+
+**Mixamo 'Climbing Up Wall' 적용 절차**
+1. Mixamo에 Dora 업로드(이전과 같은 캐릭터 FBX) → `Climbing Up Wall` 검색 → (있으면) In Place 체크는 상관없음 — root motion은 `detrend`가 처리.
+2. Download: FBX, **With Skin**, 30fps.
+3. Blender: File → Import → FBX → (위 머티리얼 설정 수정 선택) → File → Export → glTF Binary, Animation 포함 → `static/models/dora-climbing-up.glb`.
+4. `climber.js`: `url: '/models/dora-climbing-up.glb'`, `reverse: false`. stride는 자동 계산.
+- 클립을 여러 개 쓸 때: 'Without Skin'으로 받아 같은 방식으로 glb 변환 → `animUrl`에 지정하면 `url` 모델에 본 이름(`mixamorig*`)으로 바인딩. ⚠️ 모델과 같은 파이프라인(Blender)으로 변환해야 함 — FBXLoader로 바로 읽은 클립은 Blender export 리그와 본 축/스케일이 달라 깨진다.
+- 대안 클립: `Climbing`(벽 타기 루프). `Climbing To Top`은 탑아웃(턱 넘기) 동작이라 OUTRO용으로 고려 가능.
