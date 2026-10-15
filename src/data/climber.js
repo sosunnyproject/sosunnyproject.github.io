@@ -11,6 +11,7 @@ export const CLIMBER = {
   clip: /climb|mixamo/i,      // 사용할 클립 이름 패턴 (없으면 첫 클립)
   reverse: true,              // 클립을 거꾸로 재생 (climbing down → up)
   stride: null,               // 클립 한 번 재생 동안 오르는 높이. null = 클립의 root motion에서 자동 계산
+  strideScale: 2.2,           // stride 배율. 1 = 손발이 벽에 딱 붙음(동작이 빠름), 클수록 같은 높이에 동작이 느긋해짐(약간 미끄러짐)
   rootMotion: 'detrend',      // Hips 이동 트랙 처리: 'detrend' = 누적 이동만 제거(흔들림 유지) | 'strip' = 트랙 제거 | 'keep'
   // 머티리얼 보정. Blender glTF export가 alphaMode BLEND(→ 깊이 정렬 깨짐)와 metallic 누락(→ 기본값 1, 어둡고 번들거림)을 남김.
   // opaque: 불투명 + depthWrite 강제 / metalness·roughness: 덮어쓸 값 (undefined면 유지)

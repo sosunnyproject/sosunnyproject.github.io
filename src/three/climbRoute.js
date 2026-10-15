@@ -29,8 +29,10 @@ const KEYS = [
 ]
 const SEGMENTS = KEYS.length - 1
 
-// 스크롤 길이 (뷰포트 배수) — 구간당 약 1화면
-export const SCROLL_PAGES = SEGMENTS + 1
+// 스크롤 길이 (뷰포트 배수). 구간(홀드 → 홀드)당 PAGES_PER_SEGMENT 화면 + 마지막 화면.
+// 키우면 같은 휠 양에 캐릭터가 덜 움직인다 (이동·팔다리 동작 모두 느려짐).
+const PAGES_PER_SEGMENT = 1.6
+export const SCROLL_PAGES = SEGMENTS * PAGES_PER_SEGMENT + 1
 
 // 배경 도시 구간: 비트 i = 구간 i (그 홀드로 오르는 구간), OUTRO = 마지막 구간.
 // 같은 도시가 연속되면 한 구간으로 합친다 → [{ city, range: [start, end] }]

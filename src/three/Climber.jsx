@@ -45,7 +45,7 @@ function fixMaterial(src, { opaque, metalness, roughness }) {
 // 클립이 있으면 오른 높이로 scrub (스크롤 멈춤 = 동작 멈춤, 위로 스크롤 = 역재생),
 // 없으면 절차적 체중 이동/흔들림.
 export function Climber({ progress, config = CLIMBER }) {
-  const { url, animUrl, height, rotation, z, clip, reverse, stride, rootMotion, material } = config
+  const { url, animUrl, height, rotation, z, clip, reverse, stride, strideScale = 1, rootMotion, material } = config
   const { scene } = useGLTF(url, true)
   const { animations } = useGLTF(animUrl ?? url, true) // 같은 url이면 캐시 공유
   const root = useRef()
@@ -116,7 +116,7 @@ export function Climber({ progress, config = CLIMBER }) {
     const { x, y } = climbPose(progress.get())
     root.current.position.set(x, y, z)
 
-    const cycle = y / (stride || autoStride || FALLBACK_STRIDE)
+    const cycle = y / ((stride || autoStride || FALLBACK_STRIDE) * strideScale)
     const a = action.current
     if (a) {
       const frac = ((cycle % 1) + 1) % 1
