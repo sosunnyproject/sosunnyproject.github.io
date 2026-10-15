@@ -71,3 +71,11 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 dist/
+
+# 3D source assets — kept locally, not served. Only optimized .glb + license.txt are committed.
+# (paths are explicit: other models like apple-vision-pro/scene.gltf ARE served and tracked)
+static/models/**/*.fbx
+static/models/dora-gltf/*
+!static/models/dora-gltf/license.txt
+static/models/theater_masks/scene.gltf
+static/models/theater_masks/scene.bin
