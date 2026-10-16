@@ -1149,7 +1149,7 @@ src/
 - HoldLab: color = palette 순환 / original / 팔레트 칸 클릭으로 전체 미리보기. 10개 전부 pool.
 
 **스토리 홀드 접근 성장**
-- `climbRoute.approachAt(p, holdY)`: 손 높이가 홀드 y − 1.8에서 0 → 도달 순간 1 (smoothstep). 스크롤 구동이라 역스크롤 시 다시 작아짐.
+- `climbRoute.approachAt(p, holdY)`: 손 높이가 홀드 y − `GROW_FROM`(1.8)에서 0 → 도달 순간 1 → 지나쳐 + `SHRINK_AFTER`(1.8)에서 다시 0 (양쪽 smoothstep). 스크롤 구동이라 역스크롤도 대칭. 문구가 남아 있는 동안(LINGER)은 active 1.12가 우선이라 문구가 사라진 뒤 줄어듦.
 - `ModelHold`의 `approach` + `dormantScale`(0.5): 도달 전 절반 크기에서 시작. hover 1.25 / active 1.12는 그대로 우선.
 - 스케일이 중심 기준이라 `seat` 오프셋 × 현재 스케일로 z를 매 프레임 갱신 → 어떤 크기에서도 뒷면이 벽에 닿음.
 - 팔레트: 사용자 확정 파스텔 `HOLD_PALETTE`.
