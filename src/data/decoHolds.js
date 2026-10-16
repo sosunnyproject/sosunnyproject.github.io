@@ -29,7 +29,8 @@ export const HOLD_MODELS = [
 export const HOLD_MODEL_POOL = HOLD_MODELS.filter((m) => m.pool)
 
 // 루트 홀드 색 팔레트 — 홀드마다 시드 랜덤 (바로 앞 홀드와 같은 색은 피함). 베이지 벽 위에서 잘 보이는 색 위주.
-export const HOLD_PALETTE = ['#e4572e', '#f3a712', '#29a36a', '#2e86de', '#8e44ad', '#ff7eb6', '#17bebb', '#2d3142']
+export const HOLD_PALETTE = ['#849F7F', '#A78B8E', '#CC7F73', '#ED7B84', '#FFA69E', '#FFE2FE']
+// ['#e4572e', '#f3a712', '#29a36a', '#2e86de', '#8e44ad', '#ff7eb6', '#17bebb', '#2d3142']
 
 // 수동 배치 홀드 (선택). 루트 홀드 외에 특정 위치에 직접 놓고 싶을 때만 추가.
 // position:   [x, y]    → z는 벽 표면에 자동 스냅

@@ -10,7 +10,7 @@ import { Climber } from './Climber.jsx'
 import { CameraRig } from './CameraRig.jsx'
 import { FogBand } from './FogBand.jsx'
 import { createWall, createSurfaceSampler, surfaceZAt, makeRng } from './wallGeometry.js'
-import { WALL_HEIGHT, WALL_WIDTH, WALL_Y, STORY_STOPS, ROUTE_HOLDS } from './climbRoute.js'
+import { WALL_HEIGHT, WALL_WIDTH, WALL_Y, STORY_STOPS, ROUTE_HOLDS, approachAt } from './climbRoute.js'
 import { CATEGORIES } from '../data/categories.js'
 import { DECO_HOLDS, HOLD_MODEL_POOL, HOLD_PALETTE } from '../data/decoHolds.js'
 import { useStore } from '../store/useStore.js'
@@ -181,6 +181,7 @@ export function ClimbingWall({ progress }) {
               seat={cat.seat}
               label={cat.label}
               active={cat.slug === activeHold}
+              approach={() => approachAt(progress.get(), cat.worldPosition[1])}
               onClick={cat.to ? () => navigate(cat.to) : undefined}
             />
           ) : (

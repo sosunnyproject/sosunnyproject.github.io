@@ -107,6 +107,14 @@ export function climbPose(p) {
   return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k }
 }
 
+// progress → 스토리 홀드 성장도 0..1. 손이 홀드 GROW_FROM 아래에 오면 커지기 시작해 도달 순간 1.
+// 스크롤로 구동되므로 위로 스크롤하면 다시 작아진다.
+const GROW_FROM = 1.8
+export function approachAt(p, holdY) {
+  const hand = climbPose(p).y + CLIMBER.reach
+  return easeInOut(clamp01((hand - (holdY - GROW_FROM)) / GROW_FROM))
+}
+
 // progress → 지금 보여줄 텍스트: 'intro' | STORY_STOPS 인덱스 | 'outro' | null(이동 중)
 export function beatAt(p) {
   const { i, t } = segmentAt(p)

@@ -134,23 +134,30 @@ export function ModelHold({
   seat = false,         // true: position.z = 벽 표면으로 보고, 뒷면이 표면에 닿게 앞으로 뺌
   label,
   active = false,       // 캐릭터가 이 홀드에 도달 → 살짝 커지고 라벨 표시
+  approach,             // () => 0..1 캐릭터 접근도. 주면 dormantScale에서 시작해 1까지 커짐
+  dormantScale = 0.5,   // 캐릭터가 오기 전 크기 배율
   onClick,
 }) {
   const model = useNormalizedModel(url, targetSize)
   const seatOffset = useSeatOffset(model, rotation, spin, spinAxis, seat)
   const ref = useRef()
+  const holder = useRef()
   const [hovered, setHovered] = useState(false)
-  const target = useRef(new THREE.Vector3(baseScale, baseScale, baseScale))
+  const start = baseScale * (approach ? dormantScale : 1)
+  const target = useRef(new THREE.Vector3(start, start, start))
 
   useFrame((_, delta) => {
     if (!ref.current) return
-    target.current.setScalar(baseScale * (hovered ? 1.25 : active ? 1.12 : 1))
+    const grown = approach ? dormantScale + (1 - dormantScale) * approach() : 1
+    target.current.setScalar(baseScale * (hovered ? 1.25 : active ? 1.12 : grown))
     ref.current.scale.lerp(target.current, 0.15)
     if (spin) ref.current.rotation[spinAxis] += spin * delta // 연속 tick 회전
+    // 중심 기준 확대/축소라 뒷면 깊이도 같은 비율 → 오프셋도 스케일에 맞춰 뒷면이 계속 벽에 닿게
+    holder.current.position.z = position[2] + seatOffset * ref.current.scale.x
   })
 
   return (
-    <group position={[position[0], position[1], position[2] + seatOffset]}>
+    <group ref={holder} position={[position[0], position[1], position[2] + seatOffset * start]}>
       {/* 바깥: 데이터의 기본 기울기(고정) / 안쪽 ref: hover 스케일 + 자동 회전 */}
       <group rotation={rotation}>
         <group

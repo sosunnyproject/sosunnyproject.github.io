@@ -1139,7 +1139,7 @@ src/
 - `createSurfaceSampler(...).max(x, y, r)`: 발자국 반경(크기의 40%) 안 17점 레이캐스트 중 가장 튀어나온 표면 z.
 - 카테고리 홀드(z 생략 시): `seat` — 기본 회전 + spin 한 바퀴(16등분) 동안 가장 깊은 정점 z를 precise Box3로 구해, 뒷면이 그 표면에 닿게 앞으로 뺌. 커스텀 z(xr, graphics)는 그대로 존중.
 - 루트 홀드(`WallHold`): precise Box3 + 발자국 최고 표면, inset 0.005.
-- 남는 한계: hover(1.25×)/active(1.12×) 확대는 중심 기준이라 확대 중엔 살짝 파고들 수 있음.
+- ~~남는 한계: hover/active 확대 시 파고듦~~ → 해결: seat 오프셋을 현재 스케일에 비례시켜 매 프레임 갱신.
 
 **홀드 중복 제거 + 압축 + 팔레트 색칠**
 - 실측: 17개 중 7쌍이 **바이트 단위로 동일**(지오메트리·텍스처 같음, 이름만 다름) → `yellow_big/small/curved`, `under_gray/red/mint`, `side_green` 삭제. 남은 10개 모양.
@@ -1147,3 +1147,9 @@ src/
 - 색은 코드에서: `HOLD_MODELS[].paint` = { 머티리얼 이름 | '*': 밝기 배율 }. 칠한 머티리얼은 텍스처 제거 + 무광(metalness 0). 볼륨 홀드는 몸체 1.0 + 받침/볼트 0.55(어두운 같은 색).
 - 루트 홀드는 `HOLD_PALETTE`에서 시드 랜덤 색(앞 홀드와 같은 색 피함). 같은 (원본 머티리얼, 색, 배율) 조합은 머티리얼 공유(캐시).
 - HoldLab: color = palette 순환 / original / 팔레트 칸 클릭으로 전체 미리보기. 10개 전부 pool.
+
+**스토리 홀드 접근 성장**
+- `climbRoute.approachAt(p, holdY)`: 손 높이가 홀드 y − 1.8에서 0 → 도달 순간 1 (smoothstep). 스크롤 구동이라 역스크롤 시 다시 작아짐.
+- `ModelHold`의 `approach` + `dormantScale`(0.5): 도달 전 절반 크기에서 시작. hover 1.25 / active 1.12는 그대로 우선.
+- 스케일이 중심 기준이라 `seat` 오프셋 × 현재 스케일로 z를 매 프레임 갱신 → 어떤 크기에서도 뒷면이 벽에 닿음.
+- 팔레트: 사용자 확정 파스텔 `HOLD_PALETTE`.
