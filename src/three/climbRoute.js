@@ -3,6 +3,7 @@
 import { CATEGORIES } from '../data/categories.js'
 import { STORY, OUTRO } from '../data/story.js'
 import { CLIMBER } from '../data/climber.js'
+import { makeRng } from './wallGeometry.js'
 
 export const WALL_WIDTH = 5 // 화면을 꽉 채우지 않도록 — 양옆에 배경 여백 확보
 export const WALL_HEIGHT = 24
@@ -43,9 +44,50 @@ export const CITY_RANGES = [...STORY_STOPS.map((s) => s.city), OUTRO.city].reduc
   return out
 }, [])
 
-// 캐릭터가 좌우로 움직이는 x 범위 (발 기준) — 일반 홀드를 이 근처에만 배치
-const ROUTE_XS = KEYS.map((k) => k.x)
-export const ROUTE_X = [Math.min(...ROUTE_XS), Math.max(...ROUTE_XS)]
+// ── 루트 홀드 ──────────────────────────────────────────────────────────────
+// 일반 홀드를 캐릭터 경로를 따라 지그재그(좌·우 교대)로 배치한 (x, y) 목록. 모델/회전/z는 ClimbingWall에서.
+// 경로 = 몸 중심이 지나는 선 (KEYS를 reach/2 만큼 올림) + 시작 발 높이 ~ 탑아웃 손 높이까지 연장.
+// 경로 길이 기준 등간격이라 비스듬한 구간에서도 간격이 일정하다.
+const HOLD_STEP = 0.55   // 경로를 따라 홀드 간 거리
+const HOLD_SPREAD = 0.4  // 경로 중심에서 좌우로 벌어지는 거리 (몸 폭 ≈ 손발 위치)
+const HOLD_CLEAR = 0.8   // 스토리(심볼) 홀드 주변 비우는 반경
+const HOLD_JITTER = 0.06 // 자연스럽게 살짝 흐트러뜨림
+
+const LAST = KEYS[KEYS.length - 1]
+const PATH = [
+  { x: 0, y: START_Y + 0.05 },
+  ...KEYS.map((k) => ({ x: k.x, y: k.y + CLIMBER.reach / 2 })),
+  { x: LAST.x, y: LAST.y + CLIMBER.reach + 0.3 },
+]
+
+export const ROUTE_HOLDS = (() => {
+  const rng = makeRng(2024)
+  const halfW = WALL_WIDTH / 2 - 0.3
+  const out = []
+  let side = 1
+  let carry = HOLD_STEP / 2 // 구간 경계를 넘어 간격 유지
+  for (let i = 0; i < PATH.length - 1; i++) {
+    const a = PATH[i]
+    const b = PATH[i + 1]
+    const dx = b.x - a.x
+    const dy = b.y - a.y
+    const len = Math.hypot(dx, dy)
+    const nx = -dy / len // 진행 방향의 왼쪽 법선
+    const ny = dx / len
+    let s = carry
+    for (; s < len; s += HOLD_STEP) {
+      const t = s / len
+      const off = HOLD_SPREAD * (0.85 + rng() * 0.3) * side
+      const x = Math.max(-halfW, Math.min(halfW, a.x + dx * t + nx * off + (rng() - 0.5) * HOLD_JITTER))
+      const y = a.y + dy * t + ny * off + (rng() - 0.5) * HOLD_JITTER
+      side = -side // 건너뛰어도 좌우 리듬은 유지
+      if (CATEGORIES.some((c) => (c.position[0] - x) ** 2 + (c.position[1] - y) ** 2 < HOLD_CLEAR ** 2)) continue
+      out.push({ x, y })
+    }
+    carry = s - len
+  }
+  return out
+})()
 
 const clamp01 = (v) => Math.min(1, Math.max(0, v))
 const easeInOut = (t) => t * t * (3 - 2 * t)

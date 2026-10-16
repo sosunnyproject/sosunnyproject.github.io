@@ -3,6 +3,8 @@ import { Suspense, lazy } from 'react'
 
 // 3D 랜딩은 별도 청크로 lazy load
 const Landing = lazy(() => import('./routes/Landing.jsx'))
+// 개발 전용: 홀드 모델 카탈로그 확인 (npm run dev → /dev/holds). 프로덕션 빌드에는 포함되지 않음
+const HoldLab = import.meta.env.DEV ? lazy(() => import('./routes/HoldLab.jsx')) : null
 
 export default function App() {
   return (
@@ -11,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         {/* 라우팅은 Phase 7에서 실제 페이지로 연결. 지금은 임시 placeholder */}
         <Route path="/portfolio/:category" element={<CategoryPlaceholder />} />
+        {HoldLab && <Route path="/dev/holds" element={<HoldLab />} />}
       </Routes>
     </Suspense>
   )

@@ -4,26 +4,16 @@ import { useFrame } from '@react-three/fiber'
 import { useNavigate } from 'react-router-dom'
 import { Wall } from './Wall.jsx'
 import { Hold } from './Hold.jsx'
-import { ModelHold, ModelDecoHold } from './ModelHold.jsx'
+import { ModelHold, ModelDecoHold, WallHold } from './ModelHold.jsx'
 import { Lighting } from './Lighting.jsx'
 import { Climber } from './Climber.jsx'
 import { CameraRig } from './CameraRig.jsx'
 import { FogBand } from './FogBand.jsx'
 import { createWall, createSurfaceSampler, surfaceZAt, makeRng } from './wallGeometry.js'
-import { WALL_HEIGHT, WALL_WIDTH, WALL_Y, STORY_STOPS, ROUTE_X } from './climbRoute.js'
+import { WALL_HEIGHT, WALL_WIDTH, WALL_Y, STORY_STOPS, ROUTE_HOLDS } from './climbRoute.js'
 import { CATEGORIES } from '../data/categories.js'
 import { DECO_HOLDS, HOLD_MODEL_POOL } from '../data/decoHolds.js'
 import { useStore } from '../store/useStore.js'
-
-// 카테고리 홀드의 (x, y) 루트 — 장식 홀드가 이 근처를 피하도록 사용
-const HOLD_XY = CATEGORIES.map((c) => [c.position[0], c.position[1]])
-const DECO_XY = DECO_HOLDS.map((h) => [h.position[0], h.position[1]])
-
-// 스캐터 홀드 배치 범위: 캐릭터 발이 움직이는 x 범위 ± 손/발이 닿는 폭. 벽 가장자리는 비운다.
-const SCATTER_BAND = 0.5
-const SCATTER_X = [ROUTE_X[0] - SCATTER_BAND, ROUTE_X[1] + SCATTER_BAND]
-const SCATTER_Y = [0.6, WALL_HEIGHT - 4.5] // 시작 발 높이 ~ 탑아웃 손 높이 위
-const SCATTER_ROW = 0.6 // 행 간격 (행마다 최대 2개)
 
 // 클릭&드래그로 벽 그룹을 Y축 회전 (±maxAngle 로 clamp).
 // 스크롤과 충돌하는 OrbitControls 대신, 이벤트를 window에서 받아
@@ -118,33 +108,23 @@ export function ClimbingWall({ progress }) {
     [vertices]
   )
 
-  // 장식용 모델 홀드(스캐터): 캐릭터 이동 범위(SCATTER_X) 안에 행 단위로 흩뿌림 (카테고리·장식 홀드 근처는 피함).
-  // 각 위치에 홀드 모델 풀에서 시드 랜덤으로 모델/회전/크기 배정 → 새로고침해도 동일.
-  const scatterHolds = useMemo(() => {
-    const rng = makeRng(4242) // 고정 시드
+  // 루트 홀드: 캐릭터 경로를 따라 지그재그로 놓인 일반 홀드 (위치는 climbRoute.ROUTE_HOLDS).
+  // 모델은 풀에서 시드 랜덤(바로 앞과 같은 모델은 피함), 벽 법선 기준 회전·크기도 시드 고정 → 새로고침해도 동일.
+  const routeHolds = useMemo(() => {
+    const rng = makeRng(4242)
     const surfaceZ = createSurfaceSampler(geometry, WALL_Y)
-    const [x0, x1] = SCATTER_X
-    const mid = (x0 + x1) / 2
-    const out = []
-    const near = (list, x, y, r2) => list.some(([hx, hy]) => (hx - x) ** 2 + (hy - y) ** 2 < r2)
-    for (let y = SCATTER_Y[0], row = 0; y <= SCATTER_Y[1]; y += SCATTER_ROW, row++) {
-      // 행마다 왼쪽/오른쪽 반을 번갈아 시작 → 지그재그 루트처럼 보이게
-      const halves = row % 2 ? [[mid, x1], [x0, mid]] : [[x0, mid], [mid, x1]]
-      for (const [a, b] of halves) {
-        if (rng() < 0.35) continue // 성기게
-        const x = a + rng() * (b - a)
-        const hy = y + (rng() - 0.5) * SCATTER_ROW * 0.6
-        if (near(HOLD_XY, x, hy, 1.0) || near(DECO_XY, x, hy, 0.35)) continue
-        if (near(out.map((h) => h.position), x, hy, 0.3)) continue
-        out.push({
-          url: HOLD_MODEL_POOL[Math.floor(rng() * HOLD_MODEL_POOL.length)],
-          position: [x, hy, surfaceZ(x, hy) + 0.08],
-          rotation: [rng() * Math.PI * 2, rng() * Math.PI * 2, rng() * Math.PI * 2],
-          targetSize: 0.4 + rng() * 0.2,
-        })
+    let prev = -1
+    return ROUTE_HOLDS.map(({ x, y }) => {
+      let m = Math.floor(rng() * HOLD_MODEL_POOL.length)
+      if (m === prev) m = (m + 1) % HOLD_MODEL_POOL.length
+      prev = m
+      return {
+        ...HOLD_MODEL_POOL[m],
+        position: [x, y, surfaceZ(x, y)],
+        spin: rng() * Math.PI * 2,
+        targetSize: 0.38 + rng() * 0.12,
       }
-    }
-    return out
+    })
   }, [geometry])
 
   return (
@@ -155,12 +135,13 @@ export function ClimbingWall({ progress }) {
       <group ref={tiltRef}>
         <Wall geometry={geometry} position={[0, WALL_Y, 0]} />
 
-        {scatterHolds.map((h, i) => (
-          <ModelDecoHold
-            key={`scatter-${i}`}
+        {routeHolds.map((h, i) => (
+          <WallHold
+            key={`route-${i}`}
             url={h.url}
+            mount={h.mount}
             position={h.position}
-            rotation={h.rotation}
+            spin={h.spin}
             targetSize={h.targetSize}
           />
         ))}

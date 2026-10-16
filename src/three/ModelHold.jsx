@@ -24,6 +24,30 @@ function useNormalizedModel(url, targetSize) {
   }, [scene, targetSize])
 }
 
+const MOUNTS = { floor: [Math.PI / 2, 0, 0], wall: [0, 0, 0] }
+
+// 벽 표면에 앉히는 일반 홀드. position = 벽 표면 점.
+// mount로 바닥면을 벽(-Z)으로 향하게 세우고 → 벽 법선(Z) 기준 spin 회전 → 뒷면이 표면에 닿도록 z 자동 보정.
+export function WallHold({ url, position, mount = 'floor', spin = 0, targetSize = 0.45, inset = 0.03 }) {
+  const model = useNormalizedModel(url, targetSize)
+  const object = useMemo(() => {
+    const mounted = new THREE.Group()
+    mounted.rotation.set(...MOUNTS[mount])
+    mounted.add(model)
+    const spun = new THREE.Group()
+    spun.rotation.z = spin
+    spun.add(mounted)
+    spun.updateMatrixWorld(true)
+    spun.position.z = -new THREE.Box3().setFromObject(spun).min.z - inset
+    return spun
+  }, [model, mount, spin, inset])
+  return (
+    <group position={position}>
+      <primitive object={object} />
+    </group>
+  )
+}
+
 // 장식용(클릭/호버 없는) 모델 홀드 — 벽에 흩뿌리는 정적 클라이밍 홀드.
 // 위치 잡은 뒤 rotation으로 각도만 조정하면 됨.
 export function ModelDecoHold({

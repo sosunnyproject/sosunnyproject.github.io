@@ -1127,3 +1127,9 @@ src/
 4. `climber.js`: `url: '/models/dora-climbing-up.glb'`, `reverse: false`. stride는 자동 계산.
 - 클립을 여러 개 쓸 때: 'Without Skin'으로 받아 같은 방식으로 glb 변환 → `animUrl`에 지정하면 `url` 모델에 본 이름(`mixamorig*`)으로 바인딩. ⚠️ 모델과 같은 파이프라인(Blender)으로 변환해야 함 — FBXLoader로 바로 읽은 클립은 Blender export 리그와 본 축/스케일이 달라 깨진다.
 - 대안 클립: `Climbing`(벽 타기 루프). `Climbing To Top`은 탑아웃(턱 넘기) 동작이라 OUTRO용으로 고려 가능.
+
+**루트 홀드 (스캐터 대체)**
+- 일반 홀드는 랜덤 스캐터 대신 `climbRoute.ROUTE_HOLDS`가 **캐릭터 경로를 따라** 계산: 몸 중심선(KEYS + reach/2, 시작 발 높이 ~ 탑아웃 손 높이) 위를 경로 길이 기준 `HOLD_STEP`(0.55) 등간격으로 걸으며 진행 방향 법선으로 좌·우 교대 `HOLD_SPREAD`(0.4) 오프셋 + 작은 jitter. 심볼 홀드 반경 `HOLD_CLEAR`(0.8) 안은 비움 → 현재 35개. 심볼 홀드 위치를 옮기면 자동으로 따라감.
+- `WallHold`: 모델별 `mount`('floor' = X +90°로 세움 / 'wall' = 그대로)로 바닥면을 벽에 붙이고, 벽 법선 기준 spin, 바운딩박스 뒷면이 표면에 닿게 z 자동 보정. 이전 스캐터는 3축 랜덤 회전이라 홀드가 벽에 박히거나 떠 보였음.
+- `decoHolds.js`: `HOLD_MODELS`(17개 전체 카탈로그, mount·pool 플래그) → `HOLD_MODEL_POOL = pool만`. 수동 `DECO_HOLDS`는 비움(경로 밖 ±1.0 배치였음, 필요하면 추가).
+- **개발 전용 `/dev/holds` (HoldLab)**: `npm run dev` 후 접속. 카탈로그 전 모델을 같은 `WallHold`로 벽에 붙여 표시, 궤도 회전, spin 슬라이더, 라벨 클릭 시 반대 mount 미리보기 + 반영할 값 표시. `import.meta.env.DEV`에서만 라우트 등록 → 프로덕션 번들 제외.
