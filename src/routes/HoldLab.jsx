@@ -2,10 +2,11 @@ import { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Html } from '@react-three/drei'
 import { WallHold } from '../three/ModelHold.jsx'
-import { HOLD_MODELS } from '../data/decoHolds.js'
+import { HOLD_MODELS, HOLD_PALETTE } from '../data/decoHolds.js'
 
 // 개발 전용 홀드 카탈로그 (/dev/holds). decoHolds.js의 HOLD_MODELS를 전부 평평한 벽(z=0)에
 // 랜딩과 같은 WallHold(mount + 자동 z 보정)로 붙여서 보여준다.
+// 색: 'palette' = 모델마다 팔레트 색 순환, 'original' = 파일 원래 색, 팔레트 칸 클릭 = 전부 그 색.
 // mount가 틀린 모델은 바닥면이 벽에서 떨어져 보이거나 옆으로 누워 보임 → 'flip'으로 반대 mount를 미리 보고 데이터 수정.
 const COLS = 6
 const GAP = 1.1
@@ -15,6 +16,9 @@ const other = { floor: 'wall', wall: 'floor' }
 export default function HoldLab() {
   const [flipped, setFlipped] = useState({}) // url → true면 반대 mount로 미리보기
   const [spin, setSpin] = useState(0)
+  const [paintMode, setPaintMode] = useState('palette') // 'palette' | 'original' | '#hex'
+  const colorFor = (i) =>
+    paintMode === 'original' ? undefined : paintMode === 'palette' ? HOLD_PALETTE[i % HOLD_PALETTE.length] : paintMode
   const rows = Math.ceil(HOLD_MODELS.length / COLS)
   const changed = HOLD_MODELS.filter((m) => flipped[m.url])
 
@@ -35,7 +39,7 @@ export default function HoldLab() {
           return (
             <group key={m.url}>
               <Suspense fallback={null}>
-                <WallHold url={m.url} mount={mount} spin={spin} targetSize={0.7} position={[x, y, 0]} />
+                <WallHold url={m.url} mount={mount} spin={spin} targetSize={0.7} position={[x, y, 0]} color={colorFor(i)} paint={m.paint} />
               </Suspense>
               <Html position={[x, y - 0.5, 0.05]} center>
                 <button
@@ -65,6 +69,16 @@ export default function HoldLab() {
           spin {Math.round((spin * 180) / Math.PI)}°{' '}
           <input type="range" min={0} max={Math.PI * 2} step={0.01} value={spin} onChange={(e) => setSpin(+e.target.value)} />
         </label>
+        <div style={{ marginTop: 6, display: 'flex', flexWrap: 'wrap', gap: 4, alignItems: 'center' }}>
+          color
+          {['palette', 'original'].map((mode) => (
+            <button key={mode} onClick={() => setPaintMode(mode)} style={chip(paintMode === mode)}>{mode}</button>
+          ))}
+          {HOLD_PALETTE.map((c) => (
+            <button key={c} onClick={() => setPaintMode(c)} title={c}
+              style={{ ...chip(paintMode === c), width: 20, height: 20, padding: 0, background: c }} />
+          ))}
+        </div>
         {changed.length > 0 && (
           <pre style={{ marginTop: 8, fontSize: 11, background: '#f4f1ec', padding: 6, whiteSpace: 'pre-wrap' }}>
             {'// 데이터에 반영할 mount 변경\n' + changed.map((m) => `${name(m.url)}: mount: '${other[m.mount]}'`).join('\n')}
@@ -74,3 +88,8 @@ export default function HoldLab() {
     </div>
   )
 }
+
+const chip = (active) => ({
+  font: '11px sans-serif', border: active ? '2px solid #111' : '1px solid #bbb', borderRadius: 4,
+  padding: '2px 6px', background: '#fff', cursor: 'pointer',
+})

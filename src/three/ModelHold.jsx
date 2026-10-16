@@ -48,12 +48,44 @@ function useSeatOffset(model, rotation, spin, spinAxis, enabled) {
   }, [model, rx, ry, rz, spin, spinAxis, enabled])
 }
 
+// 칠한 머티리얼 캐시 — 같은 (원본 머티리얼, 색, 배율)이면 홀드끼리 공유 → 머티리얼/셰이더 수 최소화
+const painted = new Map()
+function paintMaterial(src, color, k) {
+  const key = `${src.uuid}|${color}|${k}`
+  let m = painted.get(key)
+  if (!m) {
+    // unlit(MeshBasic) 원본은 조명을 받도록 Standard로 교체
+    m = src.isMeshBasicMaterial
+      ? new THREE.MeshStandardMaterial({ name: src.name, side: src.side })
+      : src.clone()
+    m.map = null // 텍스처 × 색 곱셈 방지 → 팔레트 색 그대로
+    m.color.set(color).multiplyScalar(k)
+    m.metalness = 0
+    m.roughness = Math.max(m.roughness ?? 0.6, 0.55)
+    painted.set(key, m)
+  }
+  return m
+}
+
+// paint: { 머티리얼 이름 | '*': 밝기 배율 } — 목록에 있는 머티리얼만 color로 칠함. color 없으면 원래 색.
+function applyPaint(root, color, paint) {
+  root.traverse((o) => {
+    if (!o.isMesh) return
+    o.userData.baseMaterial ??= o.material
+    const base = o.userData.baseMaterial
+    const k = color && paint ? paint[base.name] ?? paint['*'] : undefined
+    o.material = k == null ? base : paintMaterial(base, color, k)
+  })
+}
+
 const MOUNTS = { floor: [Math.PI / 2, 0, 0], wall: [0, 0, 0] }
 
 // 벽 표면에 앉히는 일반 홀드. position = 벽 표면 점.
 // mount로 바닥면을 벽(-Z)으로 향하게 세우고 → 벽 법선(Z) 기준 spin 회전 → 뒷면이 표면에 닿도록 z 자동 보정.
-export function WallHold({ url, position, mount = 'floor', spin = 0, targetSize = 0.45, inset = 0.005 }) {
+// color + paint를 주면 팔레트 색으로 칠한다 (applyPaint).
+export function WallHold({ url, position, mount = 'floor', spin = 0, targetSize = 0.45, inset = 0.005, color, paint }) {
   const model = useNormalizedModel(url, targetSize)
+  useMemo(() => applyPaint(model, color, paint), [model, color, paint])
   const object = useMemo(() => {
     const mounted = new THREE.Group()
     mounted.rotation.set(...MOUNTS[mount])

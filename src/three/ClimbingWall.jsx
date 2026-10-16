@@ -12,7 +12,7 @@ import { FogBand } from './FogBand.jsx'
 import { createWall, createSurfaceSampler, surfaceZAt, makeRng } from './wallGeometry.js'
 import { WALL_HEIGHT, WALL_WIDTH, WALL_Y, STORY_STOPS, ROUTE_HOLDS } from './climbRoute.js'
 import { CATEGORIES } from '../data/categories.js'
-import { DECO_HOLDS, HOLD_MODEL_POOL } from '../data/decoHolds.js'
+import { DECO_HOLDS, HOLD_MODEL_POOL, HOLD_PALETTE } from '../data/decoHolds.js'
 import { useStore } from '../store/useStore.js'
 
 // 클릭&드래그로 벽 그룹을 Y축 회전 (±maxAngle 로 clamp).
@@ -114,20 +114,25 @@ export function ClimbingWall({ progress }) {
   )
 
   // 루트 홀드: 캐릭터 경로를 따라 지그재그로 놓인 일반 홀드 (위치는 climbRoute.ROUTE_HOLDS).
-  // 모델은 풀에서 시드 랜덤(바로 앞과 같은 모델은 피함), 벽 법선 기준 회전·크기도 시드 고정 → 새로고침해도 동일.
+  // 모델·색은 시드 랜덤(바로 앞 홀드와 같은 모델/색은 피함), 벽 법선 기준 회전·크기도 시드 고정 → 새로고침해도 동일.
   const routeHolds = useMemo(() => {
     const rng = makeRng(4242)
-    let prev = -1
+    const pick = (n, prev) => {
+      const i = Math.floor(rng() * n)
+      return i === prev ? (i + 1) % n : i
+    }
+    let prevModel = -1
+    let prevColor = -1
     return ROUTE_HOLDS.map(({ x, y }) => {
-      let m = Math.floor(rng() * HOLD_MODEL_POOL.length)
-      if (m === prev) m = (m + 1) % HOLD_MODEL_POOL.length
-      prev = m
+      const m = (prevModel = pick(HOLD_MODEL_POOL.length, prevModel))
+      const c = (prevColor = pick(HOLD_PALETTE.length, prevColor))
       const targetSize = 0.38 + rng() * 0.12
       return {
         ...HOLD_MODEL_POOL[m],
         position: [x, y, surfaceZ.max(x, y, targetSize * 0.4)], // 발자국 안 최고 표면에 뒷면을 맞춤
         spin: rng() * Math.PI * 2,
         targetSize,
+        color: HOLD_PALETTE[c],
       }
     })
   }, [surfaceZ])
@@ -148,6 +153,8 @@ export function ClimbingWall({ progress }) {
             position={h.position}
             spin={h.spin}
             targetSize={h.targetSize}
+            color={h.color}
+            paint={h.paint}
           />
         ))}
 

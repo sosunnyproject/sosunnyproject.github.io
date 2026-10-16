@@ -1075,7 +1075,7 @@ src/
 - [ ] 도시 배경 이미지 4장(New York, Seoul, Los Angeles, Austin) 제작 → `src/data/backgrounds.js`의 `src` 채우기 (§15.6)
 - [ ] `src/data/story.js` 문구 다듬기 (현재 초안)
 - [ ] 모델 하나라도 로드 실패 시 씬 전체가 사라짐 → `<ErrorBoundary>`로 홀드/캐릭터 개별 격리 + Draco 디코더 self-host(`useGLTF(url, '/draco/')`) 검토
-- [ ] 홀드 glb 용량(장식 홀드 합계 ~16MB) 압축 — gltf-transform으로 Draco/Meshopt + 텍스처 리사이즈
+- [x] 홀드 glb 용량 압축 — 중복 7개 삭제 + gltf-transform Draco/WebP 512/simplify 0.5 → 28MB(17개) → 0.8MB(10개) (§15.10)
 - [ ] CC-BY-4.0 크레딧 표기 — Dora(littlebillfishing), Theater Masks(WilDuo). 원문은 각 모델 폴더의 `license.txt`. 사이트 footer/about에 노출 필요
 - [ ] 캐릭터 포즈 튜닝 — Dora는 2등신 비율이라 Mixamo 리타깃 시 다리가 몸 쪽으로 많이 접힘 → `Climbing Up Wall` 클립으로 교체 (§15.10 절차)
 
@@ -1140,3 +1140,10 @@ src/
 - 카테고리 홀드(z 생략 시): `seat` — 기본 회전 + spin 한 바퀴(16등분) 동안 가장 깊은 정점 z를 precise Box3로 구해, 뒷면이 그 표면에 닿게 앞으로 뺌. 커스텀 z(xr, graphics)는 그대로 존중.
 - 루트 홀드(`WallHold`): precise Box3 + 발자국 최고 표면, inset 0.005.
 - 남는 한계: hover(1.25×)/active(1.12×) 확대는 중심 기준이라 확대 중엔 살짝 파고들 수 있음.
+
+**홀드 중복 제거 + 압축 + 팔레트 색칠**
+- 실측: 17개 중 7쌍이 **바이트 단위로 동일**(지오메트리·텍스처 같음, 이름만 다름) → `yellow_big/small/curved`, `under_gray/red/mint`, `side_green` 삭제. 남은 10개 모양.
+- `gltf-transform optimize --compress draco --texture-compress webp --texture-size 512 --simplify-ratio 0.5 --simplify-error 0.001 --palette false` → 10개 합계 **≈0.8MB** (이전 17개 28MB). `--palette false`: 기본 palette 단계가 단색 머티리얼을 하나로 합쳐 이름 기반 칠하기가 깨지므로 끔.
+- 색은 코드에서: `HOLD_MODELS[].paint` = { 머티리얼 이름 | '*': 밝기 배율 }. 칠한 머티리얼은 텍스처 제거 + 무광(metalness 0). 볼륨 홀드는 몸체 1.0 + 받침/볼트 0.55(어두운 같은 색).
+- 루트 홀드는 `HOLD_PALETTE`에서 시드 랜덤 색(앞 홀드와 같은 색 피함). 같은 (원본 머티리얼, 색, 배율) 조합은 머티리얼 공유(캐시).
+- HoldLab: color = palette 순환 / original / 팔레트 칸 클릭으로 전체 미리보기. 10개 전부 pool.
