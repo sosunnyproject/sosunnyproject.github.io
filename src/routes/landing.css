@@ -60,7 +60,7 @@
 .bg-label {
   position: absolute;
   left: 4vw;
-  top: 30vh;
+  bottom: 15vh; /* .bg-pointer 기준(뷰포트보다 ~8vh 아래로 확장) → 화면 하단에서 ~7vh 위. 스크롤 이동(±5.6vh)에도 안 잘림 */
   font-size: clamp(2.5rem, 9vw, 8rem);
   font-weight: 800;
   letter-spacing: -0.03em;
