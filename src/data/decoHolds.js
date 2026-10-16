@@ -20,7 +20,7 @@ export const HOLD_MODELS = [
   { url: '/models/holds/hold_e_m_4v2.glb',       mount: 'wall',  pool: true, paint: SOLID },
   { url: '/models/holds/hold_e_m_5.glb',         mount: 'wall',  pool: true, paint: SOLID },
   { url: '/models/holds/hold_mint_big_hold.glb', mount: 'floor', pool: true, paint: SOLID },
-  { url: '/models/holds/hold_phone_big.glb',     mount: 'wall',  pool: true, paint: SOLID },
+  { url: '/models/holds/hold_phone_big.glb',     mount: 'floor', pool: true, paint: SOLID },
   { url: '/models/holds/hold_phone_fat.glb',     mount: 'floor', pool: true, paint: SOLID },
   { url: '/models/holds/hold_phone_small.glb',   mount: 'floor', pool: true, paint: SOLID },
   { url: '/models/holds/hold_thb_01_v2.glb',     mount: 'wall',  pool: true, paint: SOLID },
