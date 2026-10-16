@@ -1072,7 +1072,7 @@ src/
 ### 15.9 남은 일 (에셋/튜닝)
 
 - [x] 리깅 + 클라이밍 클립이 있는 캐릭터 glb 제작 → `src/data/climber.js`의 `url` 교체 (§15.4, §15.10)
-- [ ] 도시 배경 이미지 4장(New York, Seoul, Los Angeles, Austin) 제작 → `src/data/backgrounds.js`의 `src` 채우기 (§15.6)
+- [x] 도시 배경 이미지 — Midjourney 도시별 8장 (§15.10 배경 이미지) → `src/data/backgrounds.js`의 `src` 채우기 (§15.6)
 - [ ] `src/data/story.js` 문구 다듬기 (현재 초안)
 - [ ] 모델 하나라도 로드 실패 시 씬 전체가 사라짐 → `<ErrorBoundary>`로 홀드/캐릭터 개별 격리 + Draco 디코더 self-host(`useGLTF(url, '/draco/')`) 검토
 - [x] 홀드 glb 용량 압축 — 중복 7개 삭제 + gltf-transform Draco/WebP 512/simplify 0.5 → 28MB(17개) → 0.8MB(10개) (§15.10)
@@ -1153,3 +1153,8 @@ src/
 - `ModelHold`의 `approach` + `dormantScale`(0.5): 도달 전 절반 크기에서 시작. hover 1.25 / active 1.12는 그대로 우선.
 - 스케일이 중심 기준이라 `seat` 오프셋 × 현재 스케일로 z를 매 프레임 갱신 → 어떤 크기에서도 뒷면이 벽에 닿음.
 - 팔레트: 사용자 확정 파스텔 `HOLD_PALETTE`.
+
+**배경 이미지 + 마우스 패럴랙스**
+- Midjourney flat vector 도시별 8장(1232×928 PNG, 총 64MB) → WebP q80 (32장 4.6MB, 장당 33–214KB) → `src/background/images/<id>/NN.webp` (`new-york`, `seoul`, `los-angeles`, `austin`). 원본은 `art-src/backgrounds/`(gitignore) — `static/`에 두면 publicDir라 빌드에 통째로 복사되므로 옮김. `src/assets/`는 3D 원본용으로 gitignore라 사용 안 함.
+- `backgrounds.js`: `import.meta.glob`으로 폴더 이미지를 자동 수집 → 모듈 로드 시 도시마다 1장 랜덤(새로고침마다 바뀜). 파일만 추가/삭제하면 반영. 방문당 다운로드는 4장(≈0.5MB).
+- 마우스 패럴랙스(단일 레이어): `ScrollBackground`가 커서 위치(-1..1)를 스프링으로 공유 → `BackgroundLayer`의 `.bg-pointer`가 커서 반대로 최대 1.5% 이동(가장자리 여백 2%). 마우스만 반응(터치 제외), 창 밖으로 나가면 중앙 복귀, reduced-motion이면 정지. 스크롤 패럴랙스(y·scale)와 별도 래퍼라 합성됨.

@@ -79,3 +79,6 @@ static/models/dora-gltf/*
 !static/models/dora-gltf/license.txt
 static/models/theater_masks/scene.gltf
 static/models/theater_masks/scene.bin
+
+# 배경 원본(Midjourney PNG) — 로컬 보관. 웹용 WebP는 src/assets/backgrounds/에 커밋
+art-src/

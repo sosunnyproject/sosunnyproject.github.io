@@ -24,6 +24,11 @@
   inset: -15vh 0; /* 뷰포트보다 높게 → 아래로 흘러도 빈틈 없음 */
   will-change: transform;
 }
+.bg-pointer {
+  position: absolute;
+  inset: -2%; /* 마우스 패럴랙스로 움직여도 가장자리가 비지 않게 */
+  will-change: transform;
+}
 .bg-media img {
   width: 100%;
   height: 100%;
