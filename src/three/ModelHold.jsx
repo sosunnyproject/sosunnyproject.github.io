@@ -74,6 +74,7 @@ function applyPaint(root, color, paint) {
     o.userData.baseMaterial ??= o.material
     const base = o.userData.baseMaterial
     const k = color && paint ? paint[base.name] ?? paint['*'] : undefined
+    if (k != null && !o.geometry.attributes.normal) o.geometry.computeVertexNormals() // unlit 원본은 압축 시 normal이 빠짐 → 조명용으로 생성 (지오메트리 공유라 1회)
     o.material = k == null ? base : paintMaterial(base, color, k)
   })
 }
