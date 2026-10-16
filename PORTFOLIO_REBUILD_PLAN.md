@@ -1133,3 +1133,10 @@ src/
 - `WallHold`: 모델별 `mount`('floor' = X +90°로 세움 / 'wall' = 그대로)로 바닥면을 벽에 붙이고, 벽 법선 기준 spin, 바운딩박스 뒷면이 표면에 닿게 z 자동 보정. 이전 스캐터는 3축 랜덤 회전이라 홀드가 벽에 박히거나 떠 보였음.
 - `decoHolds.js`: `HOLD_MODELS`(17개 전체 카탈로그, mount·pool 플래그) → `HOLD_MODEL_POOL = pool만`. 수동 `DECO_HOLDS`는 비움(경로 밖 ±1.0 배치였음, 필요하면 추가).
 - **개발 전용 `/dev/holds` (HoldLab)**: `npm run dev` 후 접속. 카탈로그 전 모델을 같은 `WallHold`로 벽에 붙여 표시, 궤도 회전, spin 슬라이더, 라벨 클릭 시 반대 mount 미리보기 + 반영할 값 표시. `import.meta.env.DEV`에서만 라우트 등록 → 프로덕션 번들 제외.
+
+**홀드 깊이(벽 밀착)**
+- 원인: 벽 앞면이 ±0.3 굴곡진 faceted 면인데, 카테고리 홀드는 중심의 *최근접 정점* z + 0.16에 놓여 넓은 모델(React 로고 1.2)이 높은 면을 파고들었음. 루트 홀드는 회전된 geometry 박스(부풀려짐)로 z를 계산해 뜨거나 묻혔음.
+- `createSurfaceSampler(...).max(x, y, r)`: 발자국 반경(크기의 40%) 안 17점 레이캐스트 중 가장 튀어나온 표면 z.
+- 카테고리 홀드(z 생략 시): `seat` — 기본 회전 + spin 한 바퀴(16등분) 동안 가장 깊은 정점 z를 precise Box3로 구해, 뒷면이 그 표면에 닿게 앞으로 뺌. 커스텀 z(xr, graphics)는 그대로 존중.
+- 루트 홀드(`WallHold`): precise Box3 + 발자국 최고 표면, inset 0.005.
+- 남는 한계: hover(1.25×)/active(1.12×) 확대는 중심 기준이라 확대 중엔 살짝 파고들 수 있음.

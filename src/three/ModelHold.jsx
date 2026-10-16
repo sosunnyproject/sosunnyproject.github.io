@@ -24,11 +24,35 @@ function useNormalizedModel(url, targetSize) {
   }, [scene, targetSize])
 }
 
+// 모델이 (자동 회전 포함) 가장 깊이 들어가는 z를 구해, 그만큼 앞으로 뺄 거리를 반환.
+// → position.z를 벽 표면에 두면 뒷면이 표면에 닿는다. spin이 있으면 한 바퀴를 16등분해 최악값 사용.
+function useSeatOffset(model, rotation, spin, spinAxis, enabled) {
+  const [rx, ry, rz] = rotation
+  return useMemo(() => {
+    if (!enabled) return 0
+    const outer = new THREE.Group()
+    outer.rotation.set(rx, ry, rz)
+    const inner = new THREE.Group()
+    outer.add(inner)
+    inner.add(model)
+    const steps = spin ? 16 : 1
+    let minZ = Infinity
+    for (let i = 0; i < steps; i++) {
+      inner.rotation.set(0, 0, 0)
+      inner.rotation[spinAxis] = (i / steps) * Math.PI * 2
+      outer.updateMatrixWorld(true)
+      minZ = Math.min(minZ, new THREE.Box3().setFromObject(outer, true).min.z)
+    }
+    inner.remove(model) // 실제 씬 그룹에 다시 붙도록 임시 부모에서 분리
+    return -minZ
+  }, [model, rx, ry, rz, spin, spinAxis, enabled])
+}
+
 const MOUNTS = { floor: [Math.PI / 2, 0, 0], wall: [0, 0, 0] }
 
 // 벽 표면에 앉히는 일반 홀드. position = 벽 표면 점.
 // mount로 바닥면을 벽(-Z)으로 향하게 세우고 → 벽 법선(Z) 기준 spin 회전 → 뒷면이 표면에 닿도록 z 자동 보정.
-export function WallHold({ url, position, mount = 'floor', spin = 0, targetSize = 0.45, inset = 0.03 }) {
+export function WallHold({ url, position, mount = 'floor', spin = 0, targetSize = 0.45, inset = 0.005 }) {
   const model = useNormalizedModel(url, targetSize)
   const object = useMemo(() => {
     const mounted = new THREE.Group()
@@ -38,7 +62,8 @@ export function WallHold({ url, position, mount = 'floor', spin = 0, targetSize 
     spun.rotation.z = spin
     spun.add(mounted)
     spun.updateMatrixWorld(true)
-    spun.position.z = -new THREE.Box3().setFromObject(spun).min.z - inset
+    // precise: 회전된 정점 기준 (geometry 박스를 회전하면 부풀어서 떠 보임)
+    spun.position.z = -new THREE.Box3().setFromObject(spun, true).min.z - inset
     return spun
   }, [model, mount, spin, inset])
   return (
@@ -73,11 +98,13 @@ export function ModelHold({
   spinAxis = 'y',       // 회전축 'x' | 'y' | 'z'
   targetSize = 0.9,
   baseScale = 1,
+  seat = false,         // true: position.z = 벽 표면으로 보고, 뒷면이 표면에 닿게 앞으로 뺌
   label,
   active = false,       // 캐릭터가 이 홀드에 도달 → 살짝 커지고 라벨 표시
   onClick,
 }) {
   const model = useNormalizedModel(url, targetSize)
+  const seatOffset = useSeatOffset(model, rotation, spin, spinAxis, seat)
   const ref = useRef()
   const [hovered, setHovered] = useState(false)
   const target = useRef(new THREE.Vector3(baseScale, baseScale, baseScale))
@@ -90,7 +117,7 @@ export function ModelHold({
   })
 
   return (
-    <group position={position}>
+    <group position={[position[0], position[1], position[2] + seatOffset]}>
       {/* 바깥: 데이터의 기본 기울기(고정) / 안쪽 ref: hover 스케일 + 자동 회전 */}
       <group rotation={rotation}>
         <group

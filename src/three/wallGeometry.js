@@ -86,9 +86,20 @@ export function createSurfaceSampler(geometry, yOffset = 0) {
   const ray = new THREE.Raycaster()
   const origin = new THREE.Vector3()
   const dir = new THREE.Vector3(0, 0, -1)
-  return (x, y) => {
+  const at = (x, y) => {
     ray.set(origin.set(x, y, 10), dir)
     const hit = ray.intersectObject(mesh, false)[0]
     return hit ? hit.point.z : 0
   }
+  // 반경 r 원 안(중심 + 둘레 8점 + 중간 8점)에서 가장 튀어나온 표면 z.
+  // 홀드 뒷면을 여기에 맞추면 굴곡진 면 위에서도 벽을 파고들지 않는다.
+  at.max = (x, y, r) => {
+    let z = at(x, y)
+    for (let i = 0; i < 8; i++) {
+      const a = (i / 8) * Math.PI * 2
+      for (const k of [0.5, 1]) z = Math.max(z, at(x + Math.cos(a) * r * k, y + Math.sin(a) * r * k))
+    }
+    return z
+  }
+  return at
 }

@@ -86,15 +86,20 @@ export function ClimbingWall({ progress }) {
   const tiltRef = useRef()
   useDragTilt(tiltRef, { maxAngle: Math.PI / 4})
 
-  // 카테고리 홀드: 데이터의 position 사용. z 생략 시 벽 표면에 스냅.
+  // 벽 표면 높이 샘플러 (레이캐스트). 홀드 발자국 안에서 가장 튀어나온 점에 뒷면을 맞춘다.
+  const surfaceZ = useMemo(() => createSurfaceSampler(geometry, WALL_Y), [geometry])
+
+  // 카테고리 홀드: 데이터의 position 사용. z 생략 시 → 발자국(크기의 40% 반경) 안 최고 표면 + 뒷면 자동 맞춤(seat).
   const categoryHolds = useMemo(
     () =>
       CATEGORIES.map((cat) => {
         const [x, y, customZ] = cat.position
-        const z = customZ ?? surfaceZAt(vertices, x, y) + 0.16 // z 없으면 표면에 붙임
-        return { ...cat, worldPosition: [x, y, z] }
+        const size = cat.model?.targetSize ?? 0.6
+        const seat = customZ == null
+        const z = seat ? surfaceZ.max(x, y, size * 0.4) : customZ
+        return { ...cat, worldPosition: [x, y, z], seat }
       }),
-    [vertices]
+    [surfaceZ]
   )
 
   // 장식용 모델 홀드: 데이터의 position 사용. z 생략 시 벽 표면에 스냅.
@@ -112,20 +117,20 @@ export function ClimbingWall({ progress }) {
   // 모델은 풀에서 시드 랜덤(바로 앞과 같은 모델은 피함), 벽 법선 기준 회전·크기도 시드 고정 → 새로고침해도 동일.
   const routeHolds = useMemo(() => {
     const rng = makeRng(4242)
-    const surfaceZ = createSurfaceSampler(geometry, WALL_Y)
     let prev = -1
     return ROUTE_HOLDS.map(({ x, y }) => {
       let m = Math.floor(rng() * HOLD_MODEL_POOL.length)
       if (m === prev) m = (m + 1) % HOLD_MODEL_POOL.length
       prev = m
+      const targetSize = 0.38 + rng() * 0.12
       return {
         ...HOLD_MODEL_POOL[m],
-        position: [x, y, surfaceZ(x, y)],
+        position: [x, y, surfaceZ.max(x, y, targetSize * 0.4)], // 발자국 안 최고 표면에 뒷면을 맞춤
         spin: rng() * Math.PI * 2,
-        targetSize: 0.38 + rng() * 0.12,
+        targetSize,
       }
     })
-  }, [geometry])
+  }, [surfaceZ])
 
   return (
     <>
@@ -166,6 +171,7 @@ export function ClimbingWall({ progress }) {
               spin={cat.model.spin}
               spinAxis={cat.model.spinAxis}
               targetSize={cat.model.targetSize}
+              seat={cat.seat}
               label={cat.label}
               active={cat.slug === activeHold}
               onClick={cat.to ? () => navigate(cat.to) : undefined}
