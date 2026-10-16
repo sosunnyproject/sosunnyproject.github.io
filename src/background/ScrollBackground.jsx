@@ -6,7 +6,7 @@ import { CITY_RANGES } from '../three/climbRoute.js'
 
 // 스토리 비트의 city 구간 → 배경 레이어 (스타일은 backgrounds.js)
 const STORY_LAYERS = CITY_RANGES.map(({ city, range }, i) => ({
-  ...(BACKGROUNDS.find((b) => b.id === city) ?? { id: city, label: city, src: null, sky: ['#ddd', '#eee'], city: '#999' }),
+  ...(BACKGROUNDS.find((b) => b.id === city) ?? { id: city, label: city, image: null, sky: ['#ddd', '#eee'], city: '#999' }),
   key: `${city}-${i}`,
   range,
 }))

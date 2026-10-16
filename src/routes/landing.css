@@ -21,19 +21,30 @@
 }
 .bg-media {
   position: absolute;
-  inset: -15vh 0; /* 뷰포트보다 높게 → 아래로 흘러도 빈틈 없음 */
+  inset: -6vh 0; /* 뷰포트보다 살짝 높게 → 아래로 흘러도 빈틈 없음 (BackgroundLayer TRAVEL과 짝) */
   will-change: transform;
 }
 .bg-pointer {
   position: absolute;
-  inset: -2%; /* 마우스 패럴랙스로 움직여도 가장자리가 비지 않게 */
+  inset: -1.5%; /* 마우스 패럴랙스로 움직여도 가장자리가 비지 않게 (POINTER와 짝) */
   will-change: transform;
+}
+/* 이미지는 창 너비에 맞춤(비율 유지) → 좌우가 잘리지 않음. 아래 정렬(스카이라인·물이 아래쪽).
+   세로로 긴 화면에선 최소 높이 55vh를 보장 (그만큼만 좌우가 잘림). 남는 위쪽은 레이어 바탕(이미지 윗색)과 페이드로 이어짐. */
+.bg-media picture {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: max(100%, calc(55vh * 4 / 3));
+  transform: translateX(-50%);
+  display: block;
 }
 .bg-media img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 12%);
 }
 .bg-placeholder {
   position: absolute;
@@ -49,11 +60,12 @@
 .bg-label {
   position: absolute;
   left: 4vw;
-  bottom: calc(15vh + 40vh);
+  top: 30vh;
   font-size: clamp(2.5rem, 9vw, 8rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 2px 30px rgba(30, 35, 39, 0.12);
   white-space: nowrap;
 }
 

@@ -1158,3 +1158,12 @@ src/
 - Midjourney flat vector 도시별 8장(1232×928 PNG, 총 64MB) → WebP q80 (32장 4.6MB, 장당 33–214KB) → `src/background/images/<id>/NN.webp` (`new-york`, `seoul`, `los-angeles`, `austin`). 원본은 `art-src/backgrounds/`(gitignore) — `static/`에 두면 publicDir라 빌드에 통째로 복사되므로 옮김. `src/assets/`는 3D 원본용으로 gitignore라 사용 안 함.
 - `backgrounds.js`: `import.meta.glob`으로 폴더 이미지를 자동 수집 → 모듈 로드 시 도시마다 1장 랜덤(새로고침마다 바뀜). 파일만 추가/삭제하면 반영. 방문당 다운로드는 4장(≈0.5MB).
 - 마우스 패럴랙스(단일 레이어): `ScrollBackground`가 커서 위치(-1..1)를 스프링으로 공유 → `BackgroundLayer`의 `.bg-pointer`가 커서 반대로 최대 1.5% 이동(가장자리 여백 2%). 마우스만 반응(터치 제외), 창 밖으로 나가면 중앙 복귀, reduced-motion이면 정지. 스크롤 패럴랙스(y·scale)와 별도 래퍼라 합성됨.
+
+**배경 이미지 v2 — 업스케일 + AVIF + 너비 맞춤**
+- 1232px 원본은 화면에서 최대 ~3.4× 늘어나 흐릿 → Midjourney Upscale(2464–2544px) 17장으로 교체 (도시당 4–5장). 원본 PNG 117MB는 `art-src/backgrounds/upscaled/`(gitignore).
+- 손실 WebP는 항상 4:2:0(색 절반 해상도)이라 빨간 굴뚝·창틀 같은 얇은 색 선이 번짐. 비교(NYC, 2464px): WebP q80 271KB/PSNR 37.9 vs **AVIF q65 4:4:4 266KB/42.1** vs WebP q90 sharp 492KB/41.5.
+- 채택: **AVIF 4:4:4, 원본 해상도, q65에서 시작해 ≤450KB까지 5씩 낮춤(최소 q50)** — 평면 NYC는 q65(190–320KB), 질감 많은 Austin/Seoul/LA는 q50–60(330–460KB). 질감 이미지는 PSNR이 낮게 나오지만(노이즈 성격) 1:1에서 건물·창 엣지는 유지, 그레인만 살짝 부드러워짐.
+- 폴백: WebP 1600px q80 sharp-yuv — `<picture>`로 AVIF 미지원 브라우저만 다운로드. 저장소 합계 10MB, 방문당 ≈1.5MB(4장).
+- 줌 축소: 레이어 높이 130vh→112vh, TRAVEL 12%→5%, Ken Burns 1.08→1.03, 패럴랙스 여백 2%→1.5%(POINTER 1.2).
+- **너비 맞춤**: `object-fit: cover` 대신 이미지 너비 = 창 너비(비율 유지, 아래 정렬) → 좌우가 잘리지 않음. 세로 화면은 최소 높이 55vh(그만큼만 좌우 잘림). 이미지 위가 비면 레이어 바탕 = 이미지 맨 위 4% 평균색(canvas 샘플링) + 이미지 위쪽 12% 마스크 페이드로 이음새 없음.
+- 도시명 라벨(`.bg-label`) 복원 — 이미지/플레이스홀더 공통으로 레이어에서 렌더.
