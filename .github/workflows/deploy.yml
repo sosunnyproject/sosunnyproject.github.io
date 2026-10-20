@@ -26,7 +26,7 @@ jobs:
           cache: 'npm'
       - uses: actions/configure-pages@v5
       - run: npm ci --legacy-peer-deps --ignore-scripts
-      - run: npm run build:vite
+      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist

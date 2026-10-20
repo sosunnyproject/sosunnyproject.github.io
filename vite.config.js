@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import content from './vite-plugin-content.js'
 
 export default defineConfig({
   base: '/',
-  plugins: [react()],
+  // content(): content/**/*.md → ?meta / ?post 모듈 (src/site/content.js)
+  plugins: [content(), react()],
   // 기존 static/ 폴더를 그대로 활용 (gatsby public/ 충돌 방지)
   publicDir: 'static',
   build: {

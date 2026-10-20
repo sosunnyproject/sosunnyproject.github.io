@@ -1,0 +1,27 @@
+name: Build check
+
+# threejs 브랜치에 push할 때마다 빌드만 확인 (배포 X). 빌드 결과(dist)는 아티팩트로 7일 보관 → 다운로드해서 미리보기 가능.
+on:
+  push:
+    branches: [threejs]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci --legacy-peer-deps --ignore-scripts
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 7
