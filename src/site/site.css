@@ -143,7 +143,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--canvas) 86%, transparent);
+  background: color-mix(in srgb, var(--canvas) 95%, transparent);
   backdrop-filter: saturate(1.4) blur(12px);
   -webkit-backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid transparent;
@@ -398,7 +398,7 @@
   position: sticky;
   top: var(--header-h);
   z-index: 40;
-  background: color-mix(in srgb, var(--canvas) 86%, transparent);
+  background: color-mix(in srgb, var(--canvas) 95%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -642,6 +642,12 @@
   font-family: var(--font-serif);
   font-size: 18px;
   line-height: 1.85;
+}
+.site .prose > :first-child {
+  margin-top: 0;
+}
+.site .blog-end {
+  height: var(--space-12);
 }
 .site .prose > * + * {
   margin-top: 1.1em;
@@ -923,7 +929,7 @@
 .site .post-list {
   list-style: none;
   margin: 0;
-  padding: var(--space-4) 0 var(--space-20);
+  padding: 0 0 var(--space-4);
   max-width: 860px;
 }
 .site .post-list li + li {
@@ -965,7 +971,7 @@
   color: var(--ink-soft);
 }
 .site .year-head {
-  margin: var(--space-8) 0 0;
+  margin: var(--space-8) 0 var(--space-2);
   font-size: 13px;
   font-weight: 650;
   letter-spacing: 0.16em;

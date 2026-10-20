@@ -195,6 +195,7 @@ export function BlogIndex() {
             </ul>
           </section>
         ))}
+        <div className="blog-end" />
       </div>
     </>
   )

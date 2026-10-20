@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { SECTIONS, sectionOf, yearOf } from './content.js'
@@ -43,10 +43,19 @@ export function Loading() {
 
 // 카테고리 칩 — 활성 배경이 layoutId로 미끄러지듯 이동
 export function CategoryChips({ active }) {
+  const row = useRef(null)
+  // 모바일: 활성 칩이 화면 밖이면 가로 스크롤로 보이게
+  useEffect(() => {
+    const el = row.current?.querySelector('[aria-current="page"]')
+    if (!el || !row.current) return
+    const r = row.current
+    const left = el.offsetLeft - (r.clientWidth - el.offsetWidth) / 2
+    r.scrollTo({ left: Math.max(0, left), behavior: 'smooth' })
+  }, [active])
   return (
     <div className="chips">
       <div className="wrap">
-        <nav className="chips-row" aria-label="Portfolio categories">
+        <nav className="chips-row" aria-label="Portfolio categories" ref={row}>
           {SECTIONS.map((s) => {
             const isActive = s.slug === active
             return (
