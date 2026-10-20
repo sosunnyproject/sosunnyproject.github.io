@@ -25,3 +25,23 @@ jobs:
           name: dist
           path: dist
           retention-days: 7
+
+  # 커밋 메시지에 [preview]가 있을 때만: 빌드 결과를 ci-preview 브랜치로 push (아티팩트 다운로드가 안 되는 환경에서 미리보기용, 확인 후 삭제)
+  preview:
+    if: contains(github.event.head_commit.message, '[preview]')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - run: |
+          cd dist
+          git init -q -b ci-preview
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "preview of ${GITHUB_SHA}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-preview
