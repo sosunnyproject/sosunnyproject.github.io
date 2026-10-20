@@ -35,7 +35,7 @@ const CREDITS = [
 function Logo() {
   return (
     <motion.div initial="rest" whileHover="hover" animate="rest">
-      <Link to="/" className="logo" aria-label="sosunny portfolio — back to the climbing wall">
+      <Link to="/" className="logo" aria-label="sosunny portfolio, back to the climbing wall">
         <motion.span
           className="logo-hold"
           initial={{ y: -14, opacity: 0 }}

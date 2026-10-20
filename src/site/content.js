@@ -22,17 +22,17 @@ export const posts = Object.values(blogMeta)
 const WALL = Object.fromEntries(CATEGORIES.map((c) => [c.slug, c]))
 export const SECTIONS = [
   { slug: 'main', label: 'Featured', color: WALL.main?.color ?? '#e67e22', text: 'var(--accent-text)', on: 'var(--ink)',
-    blurb: 'A few climbs I keep coming back to — games, XR, graphics and teaching.' },
+    blurb: 'A few climbs I keep coming back to, across games, XR, graphics and teaching.' },
   { slug: 'games', label: 'Games', color: WALL.games?.color, text: 'var(--cat-games-text)', on: 'var(--ink)',
-    blurb: 'Engines, web 3D worlds and apps — things you play or poke at.' },
+    blurb: 'Game engines, technical art and 3D worlds you can play with.' },
   { slug: 'graphics', label: WALL.graphics?.label ?? 'Creative Technology', color: WALL.graphics?.color, text: 'var(--cat-graphics-text)', on: '#fff',
-    blurb: 'Exhibitions, creative coding and 3D — shaders, light and form.' },
+    blurb: 'Exhibitions, installations and creative coding with shaders, light and sound.' },
   { slug: 'xr', label: 'XR', color: WALL.xr?.color, text: 'var(--cat-xr-text)', on: 'var(--ink)',
     blurb: 'VR, AR and spatial computing, from hackathons to Vision Pro.' },
   { slug: 'web', label: 'Web', color: WALL.web?.color, text: 'var(--cat-web-text)', on: 'var(--ink)',
-    blurb: 'Front-end work and the sites behind the art.' },
+    blurb: 'Front-end products, hackathon apps and the sites behind the art.' },
   { slug: 'edu', label: 'Education', color: WALL.edu?.color, text: 'var(--cat-edu-text)', on: 'var(--ink)',
-    blurb: 'Talks, workshops and classes — teaching code as a creative tool.' },
+    blurb: 'Talks, workshops and classes on code as a creative tool.' },
 ]
 export const sectionBySlug = Object.fromEntries(SECTIONS.map((s) => [s.slug, s]))
 

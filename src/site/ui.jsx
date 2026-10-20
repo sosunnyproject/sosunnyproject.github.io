@@ -5,7 +5,7 @@ import { SECTIONS, sectionOf, yearOf } from './content.js'
 
 export function useTitle(title) {
   useEffect(() => {
-    document.title = title ? `${title} — sosunny portfolio` : 'sosunny portfolio'
+    document.title = title ? `${title} · sosunny portfolio` : 'sosunny portfolio'
   }, [title])
 }
 

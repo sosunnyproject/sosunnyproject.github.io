@@ -34,13 +34,12 @@ function CategoryPage({ slug }) {
   const list = projectsIn(slug)
   const next = nextSection(slug)
   useTitle(s.label)
-  const hold = String(WALL_ORDER.indexOf(slug) + 1).padStart(2, '0')
 
   return (
     <>
       <CategoryChips active={slug} />
       <motion.div key={slug} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25 }}>
-        <PageHead color={s.color} kicker={`Hold ${hold} · ${list.length} project${list.length === 1 ? '' : 's'}`} kickerColor={s.text} title={s.label} lead={s.blurb} />
+        <PageHead color={s.color} kicker={`${list.length} project${list.length === 1 ? '' : 's'}`} kickerColor={s.text} title={s.label} lead={s.blurb} />
         <div className="wrap">
           {list.length ? (
             <ul className="grid">
@@ -49,7 +48,7 @@ function CategoryPage({ slug }) {
               ))}
             </ul>
           ) : (
-            <p className="empty">Nothing on this hold yet — check back soon.</p>
+            <p className="empty">Nothing on this hold yet. Check back soon.</p>
           )}
         </div>
         <section className="next" aria-label="Keep climbing">
@@ -173,7 +172,7 @@ export function BlogIndex() {
   let i = 0
   return (
     <>
-      <PageHead color="var(--scene-wall)" kicker={`Writing · ${posts.length} posts`} title="Blog" lead="Notes on creative coding, front-end, exhibitions and the occasional retrospective — mostly in Korean." />
+      <PageHead color="var(--scene-wall)" kicker={`Writing · ${posts.length} posts`} title="Blog" lead="Notes on creative coding, front-end, exhibitions and the occasional retrospective, mostly in Korean." />
       <div className="wrap">
         {byYear.map(([year, list]) => (
           <section key={year} aria-labelledby={`y-${year}`}>
@@ -306,7 +305,7 @@ export function Archive() {
   useTitle('TIL')
   return (
     <>
-      <PageHead color="var(--cat-xr)" kicker="Today I learned" kickerColor="var(--cat-xr-text)" title="til" lead="Links I keep going back to — graphics, WebGPU, shaders and people who inspire me." />
+      <PageHead color="var(--cat-xr)" kicker="Today I learned" kickerColor="var(--cat-xr-text)" title="til" lead="Links I keep going back to: graphics, WebGPU, shaders and people who inspire me." />
       <div className="wrap link-groups">
         {TIL.map((g, gi) => (
           <motion.section key={g.title} className="link-group" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>

@@ -2,8 +2,10 @@
 title: '[Portfolio EN & KR] Summary'
 date: '2020-12-31'
 category: 'portfolio'
-subcategory: "web"
+subcategory: ""
 featuredImage: 'thumbnail.png'
+featured: true
+order: 9
 ---
 
 ## INTRODUCTION

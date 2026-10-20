@@ -22,7 +22,7 @@ export const STORY = [
     city: 'new-york',
     kicker: 'Where it started',
     lines: [
-      'I started out as a Theater major at Vassar, in New York —',
+      'I started out as a Theater major at Vassar in New York,',
       'then turned to Media Studies, where storytelling met technology.',
     ],
   },
@@ -40,8 +40,8 @@ export const STORY = [
     city: 'seoul',
     kicker: 'Web',
     lines: [
-      'Back home in Seoul: years of frontend at POSCO ICT and Tripbtoz —',
-      'React, design systems, and the craft of shipping.',
+      'Back home in Seoul, I built frontends at POSCO ICT and Tripbtoz,',
+      'learning React, design systems, and the craft of shipping.',
     ],
   },
   {
@@ -49,8 +49,8 @@ export const STORY = [
     city: 'seoul',
     kicker: 'Creative Technology',
     lines: [
-      'Exhibitions in Seoul taught me to make code you can feel —',
-      'p5.js, shaders, Arduino lights, and a 3D Euljiro on the web.',
+      'Exhibitions in Seoul taught me to make code you can feel',
+      'with p5.js, shaders, Arduino lights, and a 3D Euljiro on the web.',
     ],
   },
   {
@@ -76,6 +76,6 @@ export const STORY = [
 export const OUTRO = {
   city: 'austin',
   title: 'Top out.',
-  lines: ['Thanks for climbing with me. Click any hold, or —'],
+  lines: ['Thanks for climbing with me!', 'Tap any hold to revisit a chapter, or see everything at once.'],
   cta: { to: '/portfolio/main', label: 'See all work →' },
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useStore } from '../store/useStore.js'
 import { STORY_STOPS } from '../three/climbRoute.js'
 import { INTRO, OUTRO } from '../data/story.js'
+import { Confetti } from './Confetti.jsx'
 
 const card = {
   hidden: {},
@@ -29,6 +30,8 @@ export function StoryOverlay() {
 
   return (
     <div className="story">
+      {/* Top out 도달 시 축하 컨페티 (떠났다가 다시 오면 다시 재생) */}
+      {beat === 'outro' && <Confetti />}
       <AnimatePresence mode="wait">
         {content && (
           <motion.div key={content.key} className="story-card" variants={card} initial="hidden" animate="show" exit="exit">

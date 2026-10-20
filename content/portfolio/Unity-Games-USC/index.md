@@ -2,7 +2,7 @@
 title: "[Unity] Technical Arts, Tools Programming (W.I.P)"
 date: "2023-12-31"
 category: "portfolio"
-subcategory: "graphics"
+subcategory: "games"
 featuredImage: "emte-avatar-thumbnail.jpeg"
 featured: true
 order: 4

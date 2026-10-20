@@ -2,7 +2,7 @@
 title: '[3D] Maya, Houdini, Blender'
 date: '2023-09-01'
 category: 'portfolio'
-subcategory: "graphics"
+subcategory: "games"
 featuredImage: 'froggythumbnail.png'
 featured: false
 order: 1
