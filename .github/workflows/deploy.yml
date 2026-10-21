@@ -1,9 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  # 이주 완료 후 source-update 머지 시점에 push 트리거 추가
-  # push:
-  #   branches: [source-update]
+  # source-update에 push하면 자동 배포 (Settings → Pages → Source가 "GitHub Actions"여야 함)
+  push:
+    branches: [source-update]
   workflow_dispatch:
 
 permissions:
