@@ -100,6 +100,16 @@ function excerptOf(html, n = 140) {
   return text.length > n ? text.slice(0, n).replace(/\s\S*$/, '') + '…' : text
 }
 
+// 대소문자만 다른 파일도 찾는다 (예: md엔 x.png, 실제 파일은 x.PNG — macOS에선 되지만 Linux 빌드에선 깨짐)
+function resolveFile(abs) {
+  if (fs.existsSync(abs)) return abs
+  const dir = path.dirname(abs)
+  if (!fs.existsSync(dir)) return null
+  const want = path.basename(abs).toLowerCase()
+  const hit = fs.readdirSync(dir).find((f) => f.toLowerCase() === want)
+  return hit ? path.join(dir, hit) : null
+}
+
 const isRelative = (src) => src && !/^(https?:|data:|\/\/|\/|#|mailto:)/i.test(src)
 
 function build(file, withHtml) {
@@ -113,8 +123,8 @@ function build(file, withHtml) {
 
   const imports = []
   const assetVar = (p) => {
-    const abs = path.resolve(dir, decodeURI(p.split(/[?#]/)[0]))
-    if (!fs.existsSync(abs)) return null
+    const abs = resolveFile(path.resolve(dir, decodeURI(p.split(/[?#]/)[0])))
+    if (!abs) return null
     const name = `__img${imports.length}`
     imports.push(`import ${name} from ${JSON.stringify(abs.split(path.sep).join('/') + '?url')}`)
     return name

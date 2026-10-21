@@ -3,14 +3,14 @@ title: '[Frontend, UI UX] Tripbtoz Hotel Commerce'
 date: '2021-05-01'
 category: 'portfolio'
 subcategory: "web"
-featuredImage: 'slide-5-1min.png'
+featuredImage: 'slide-5-1min.jpg'
 featured: false
 order: 8
 ---
 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-5-1min.png">
+<img src="slide-5-1min.jpg">
 <figcaption></figcaption>
 </figure>
 

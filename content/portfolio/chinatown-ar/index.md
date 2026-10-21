@@ -10,7 +10,7 @@ order: 6
 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="ch8.png">
+<img src="ch8.jpg">
 <figcaption></figcaption>
 </figure>
 
@@ -174,7 +174,7 @@ order: 6
 <br />
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="ch14.png" >
+<img src="ch14.jpg" >
 <figcaption></figcaption>
 </figure>
 <br/>

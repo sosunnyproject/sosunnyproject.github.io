@@ -62,7 +62,7 @@ order: 7
 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="pe-1.png">
+<img src="pe-1.jpg">
 <figcaption></figcaption>
 </figure>
 <br />

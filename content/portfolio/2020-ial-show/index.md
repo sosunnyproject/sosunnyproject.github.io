@@ -57,7 +57,7 @@ The audience can change simple shapes on the screen with her hand movement. It a
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="edit-herenow-flower.png" >
+<img src="edit-herenow-flower.jpg" >
 <figcaption></figcaption>
 </figure>
 
