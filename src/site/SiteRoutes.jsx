@@ -9,8 +9,8 @@ export default function SiteRoutes() {
       <Route element={<SiteLayout />}>
         <Route path="portfolio" element={<PortfolioHome />} />
         <Route path="portfolio/:slug" element={<PortfolioRoute />} />
-        <Route path="blog" element={<BlogIndex />} />
-        <Route path="blog/:slug" element={<BlogPost />} />
+        {/* <Route path="blog" element={<BlogIndex />} /> */}
+        {/* <Route path="blog/:slug" element={<BlogPost />} /> */}
         <Route path="cv" element={<CV />} />
         <Route path="archive" element={<Archive />} />
         <Route path="*" element={<NotFound />} />

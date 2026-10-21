@@ -11,7 +11,7 @@ import './site.css'
 
 const NAV = [
   { to: '/portfolio/main', match: '/portfolio', label: 'portfolio' },
-  { to: '/blog', match: '/blog', label: 'blog' },
+  // { to: '/blog', match: '/blog', label: 'blog' },
   { to: '/cv', match: '/cv', label: 'cv' },
   { to: '/archive', match: '/archive', label: 'til' },
 ]
