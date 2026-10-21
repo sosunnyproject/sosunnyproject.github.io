@@ -40,8 +40,8 @@ export const STORY = [
     city: 'seoul',
     kicker: 'Web',
     lines: [
-      'Back home in Seoul, I built frontends at POSCO ICT and Tripbtoz,',
-      'learning React, design systems, and the craft of shipping.',
+      'Back home in Seoul, I worked for B2B and B2C services,',
+      'using React, design systems, Java, blockchain, and AR.',
     ],
   },
   {
@@ -50,7 +50,7 @@ export const STORY = [
     kicker: 'Creative Technology',
     lines: [
       'Exhibitions in Seoul taught me to make code you can feel',
-      'with p5.js, shaders, Arduino lights, and a 3D Euljiro on the web.',
+      'with p5.js, shaders, Arduino lights, and a interactive 3D on the web.',
     ],
   },
   {

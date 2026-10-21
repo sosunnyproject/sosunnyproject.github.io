@@ -181,22 +181,6 @@ export function ModelHold({
           <primitive object={model} />
         </group>
       </group>
-      {(hovered || active) && label && (
-        <Html distanceFactor={8} position={[0.6, 0.4, 0]}>
-          <div style={{
-            background: 'rgba(15,15,20,0.88)',
-            color: '#fff',
-            padding: '5px 10px',
-            borderRadius: 6,
-            fontSize: 13,
-            fontFamily: 'sans-serif',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-          }}>
-            {label}
-          </div>
-        </Html>
-      )}
     </group>
   )
 }

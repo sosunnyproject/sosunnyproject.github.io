@@ -2,7 +2,7 @@ import { useThree } from '@react-three/fiber'
 
 // 화면 폭에 따른 벽 불투명도 — 좁은 화면일수록 더 투명하게(뒤 도시 배경이 더 비침).
 // 폰(≤ MOBILE_W) = MOBILE, 데스크톱(≥ DESKTOP_W) = DESKTOP, 그 사이는 선형 보간.
-export const WALL_OPACITY = { MOBILE: 0.42, DESKTOP: 0.6, MOBILE_W: 420, DESKTOP_W: 1024 }
+export const WALL_OPACITY = { MOBILE: 0.28, DESKTOP: 0.6, MOBILE_W: 420, DESKTOP_W: 1024 }
 
 export function wallOpacityFor(width) {
   const { MOBILE, DESKTOP, MOBILE_W, DESKTOP_W } = WALL_OPACITY
