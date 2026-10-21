@@ -1,0 +1,222 @@
+.landing {
+  --ink: #1e2327;
+  --ink-soft: rgba(30, 35, 39, 0.72);
+  --accent: #e67e22;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
+  color: var(--ink);
+  background: #f3ece2;
+}
+
+/* 0: 배경 스택 */
+.landing-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.bg-layer {
+  position: absolute;
+  inset: 0;
+  will-change: opacity;
+}
+.bg-media {
+  position: absolute;
+  inset: -6vh 0; /* 뷰포트보다 살짝 높게 → 아래로 흘러도 빈틈 없음 (BackgroundLayer TRAVEL과 짝) */
+  will-change: transform;
+}
+.bg-pointer {
+  position: absolute;
+  inset: -1.5%; /* 마우스 패럴랙스로 움직여도 가장자리가 비지 않게 (POINTER와 짝) */
+  will-change: transform;
+}
+/* 이미지는 창 너비에 맞춤(비율 유지) → 좌우가 잘리지 않음. 아래 정렬(스카이라인·물이 아래쪽).
+   세로로 긴 화면에선 최소 높이 55vh를 보장 (그만큼만 좌우가 잘림). 남는 위쪽은 레이어 바탕(이미지 윗색)과 페이드로 이어짐. */
+.bg-media picture {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: max(100%, calc(55vh * 4 / 3));
+  transform: translateX(-50%);
+  display: block;
+}
+.bg-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 12%);
+}
+.bg-placeholder {
+  position: absolute;
+  inset: 0;
+}
+.bg-placeholder svg {
+  position: absolute;
+  left: 0;
+  bottom: 15vh;
+  width: 100%;
+  height: 38vh;
+}
+.bg-label {
+  position: absolute;
+  left: 4vw;
+  bottom: 20vh; /* .bg-pointer 기준(뷰포트보다 ~8vh 아래로 확장) → 화면 하단에서 ~7vh 위. 스크롤 이동(±5.6vh)에도 안 잘림 */
+  font-size: clamp(2.75rem, 10vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 2px 30px rgba(30, 35, 39, 0.12);
+  white-space: nowrap;
+}
+
+/* 1: 3D */
+.landing-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+/* 2: 상단 1/3 스토리 텍스트 (안개 위) */
+.story {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 33.4vh;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  pointer-events: none;
+  text-align: center;
+}
+.story-card {
+  max-width: min(36rem, 100%);
+}
+.story-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.story-title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.8rem, 4.4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.story-line {
+  margin: 0.15rem 0;
+  font-size: clamp(0.98rem, 1.9vw, 1.18rem);
+  font-weight: 450;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  text-wrap: balance;
+}
+.story-cta {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  pointer-events: auto;
+}
+.story-cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.landing-spacer {
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* "Top out." 컨페티 — StoryOverlay > Confetti. 타이틀 뒤에서 터져서 아래로 떨어진다 */
+.confetti {
+  position: fixed;
+  inset: 0;
+  z-index: 3; /* 스토리 텍스트(2) 위, 클릭은 통과 */
+  pointer-events: none;
+  overflow: hidden;
+}
+.confetti-piece {
+  position: absolute;
+  left: 50%;
+  top: 17vh; /* 상단 1/3 스토리 영역의 타이틀 높이 */
+  opacity: 0;
+  animation: confetti-pop var(--dur) var(--delay) both;
+  will-change: transform, opacity;
+}
+.confetti-piece i {
+  display: block;
+  background: var(--c);
+  animation: confetti-flip var(--flip) linear infinite;
+}
+.confetti-chip {
+  width: 11px;
+  height: 7px;
+  border-radius: 1.5px;
+}
+.confetti-strip {
+  width: 5px;
+  height: 15px;
+  border-radius: 2px;
+}
+.confetti-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+@keyframes confetti-pop {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.3);
+    animation-timing-function: cubic-bezier(0.12, 0.8, 0.32, 1); /* 펑! 빠르게 퍼짐 */
+  }
+  20% {
+    opacity: 1;
+    transform: translate3d(var(--bx), var(--by), 0) rotate(calc(var(--rot) * 0.25)) scale(1);
+    animation-timing-function: cubic-bezier(0.45, 0, 0.85, 0.55); /* 중력처럼 가속하며 낙하 */
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(calc(var(--bx) + var(--dx)), var(--fall), 0) rotate(var(--rot)) scale(1);
+  }
+}
+@keyframes confetti-flip {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(60deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(0deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti {
+    display: none;
+  }
+}

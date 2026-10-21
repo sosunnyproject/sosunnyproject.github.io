@@ -87,8 +87,8 @@ It found a lesson from organic and physical human-to-human interaction in cultur
 <img src="thesis12.png" /><br />
 <img src="thesis13.png" /><br />
 <img src="thesis14.png" /><br />
-<img src="thesis15.png" /><br />
-<img src="thesis16.png" /><br />
+<img src="thesis15.jpg" /><br />
+<img src="thesis16.jpg" /><br />
 <img src="thesis17.png" /><br />
 <img src="thesis18.png" /><br />
 <img src="thesis19.png" /><br />

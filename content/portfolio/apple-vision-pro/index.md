@@ -43,19 +43,19 @@ order: 5
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="unity-7.png">
+<img src="unity-7.jpg">
 <figcaption>Customizing Character Walker scene for VisionOS</figcaption>
 </figure>
 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="unity-6.png">
+<img src="unity-6.jpg">
 <figcaption>Waypoint algorithm for charact walking</figcaption>
 </figure>
 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="unity-7.png">
+<img src="unity-7.jpg">
 <figcaption>Customizing Character Walker scene for VisionOS</figcaption>
 </figure>
 

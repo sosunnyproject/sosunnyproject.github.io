@@ -64,7 +64,7 @@ Made with P5 JS, Matter JS, P5 Live.
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="kote-IMG_4044.png">
+<img src="kote-IMG_4044.jpg">
 <figcaption>Deep in Korean. WebGL x p5js</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Made with P5 JS, Matter JS, P5 Live.
 <figcaption>Butterfly shapes with p5js</figcaption>
 </figure>
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="kote-IMG_1058.png">
+<img src="kote-IMG_1058.jpg">
 <figcaption>Exhibition site</figcaption>
 </figure>
 <figure style="display: block; margin: 0 auto; text-align: center">

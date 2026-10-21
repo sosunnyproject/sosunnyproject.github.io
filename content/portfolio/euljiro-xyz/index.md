@@ -23,7 +23,7 @@ order: 1
 <br />
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="eulji1.png">
+<img src="eulji1.jpg">
 <figcaption>park</figcaption>
 </figure>
 
@@ -81,7 +81,7 @@ instancedMesh.translateZ(position.z)
 </figure>
 
 <figure style="display: block; width:50%; margin: 0 auto; text-align: center">
-<img src="UnityShaderStartup_Book2.png">
+<img src="UnityShaderStartup_Book2.jpg">
 <figcaption>From the book: Unity Shader Startup</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ instancedMesh.translateZ(position.z)
 # Rose Algorithm to Make Spiral Flower Petals
 
 <figure style="display: block; width:70%; margin: 0 auto; text-align: center">
-<img src="zone1-2.png">
+<img src="zone1-2.jpg">
 <figcaption>low energy view (environment lighting)</figcaption>
 </figure>
 
@@ -181,12 +181,12 @@ Used to decorate each ZONE's bottom circular planes and materials for Main Tree,
 <figcaption>Bottom Plane of Zone 1 is Metallic Fragment Shader Material</figcaption>
 </figure>
 <figure style="display: block; width:70%; margin: 0 auto; text-align: center">
-<img src="shadertoy-1.png">
+<img src="shadertoy-1.jpg">
 <figcaption>Testing Variation of cellular noise algorithm</figcaption>
 </figure>
 
 <figure style="display: block; width:70%; margin: 0 auto; text-align: center">
-<img src="shadertoy-2.png">
+<img src="shadertoy-2.jpg">
 <figcaption>Testing Variation for liquid material</figcaption>
 </figure>
 
@@ -373,7 +373,7 @@ function tick() {
 - Threejs uses WebGLRenderer.
 
 <figure style="display: block; width:70%; margin: 0 auto; text-align: center">
-<img src="zone1-2.png">
+<img src="zone1-2.jpg">
 <figcaption>low energy view (environment lighting)</figcaption>
 </figure>
 

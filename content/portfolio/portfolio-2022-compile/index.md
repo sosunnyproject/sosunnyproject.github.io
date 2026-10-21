@@ -2,8 +2,10 @@
 title: '[Portfolio EN & KR] Summary'
 date: '2020-12-31'
 category: 'portfolio'
-subcategory: "web"
-featuredImage: 'thumbnail.png'
+subcategory: ""
+featuredImage: 'thumbnail.jpg'
+featured: true
+order: 9
 ---
 
 ## INTRODUCTION
@@ -42,12 +44,12 @@ A developer and storyteller who uses interactive digital mediums. Passionate abo
 Topic: Urban Environment
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="../euljiro-xyz/eulji1.png">
+<img src="../euljiro-xyz/eulji1.jpg">
 <figcaption>December 2021, Euljiro Has No Park v.1, <br /> <i>The Folding of the City</i> group exhibition, Eulji Art Center, Seoul</figcaption>
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="../euljiro-xyz/zone1-2.png">
+<img src="../euljiro-xyz/zone1-2.jpg">
 <figcaption>low energy view</figcaption>
 </figure>
 
@@ -100,7 +102,7 @@ A multimedia exhibition that poses a question ‘What if the Internet is like a 
 Topic: Healing of Trauma
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-4-1.png">
+<img src="slide-4-1.jpg">
 <figcaption> Digital Trypanosomiasis by Hayne Park, featured on Ars Electronica and K’ARTS Festival. </figcaption>
 </figure>
 
@@ -117,7 +119,7 @@ Topic: Travel Tech, B2C Service <br />
 Position: Full-time Front-end Web Developer
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-5-1min.png">
+<img src="slide-5-1min.jpg">
 <figcaption> Tripbotz, travel tech startup, Pre-Series B as of Summer 2022, Seoul, South Korea.
  </figcaption>
 </figure>
@@ -153,7 +155,7 @@ We were inspired by Mary Shelley and her classic SF novel, Frankenstein. Questio
 Topic: Urban Environment
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-14.png">
+<img src="slide-14.jpg">
 <figcaption>January 2017, Reviving 5 Pointz, <i>TimeWave VR Festial</i> supported by Oculus and Time Inc.
 </figcaption>
 </figure>
@@ -255,7 +257,7 @@ An interactive media installation demo for live music events. It experiments mul
 Position: [Collaborator] Lighting designer, Sound designer, Lighting crew.
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="slide-22.png">
+<img src="slide-22.jpg">
 <figcaption>Vassar College Theater Production for plays and musicals. 
 </figcaption>
 </figure>

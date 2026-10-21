@@ -279,7 +279,7 @@ arc(0, 0, r6*1.25*2, r6*1.25*2, speed2 + TWO_PI/6*1, speed1 + TWO_PI/6*5)
 
 ### Youtube for tutorials and more
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
-<img src="slide-12.png">
+<img src="slide-12.jpg">
 <figcaption>Snapshots of youtube tutorials</figcaption>
 </figure>
 <br />

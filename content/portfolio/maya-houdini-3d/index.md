@@ -2,8 +2,8 @@
 title: '[3D] Maya, Houdini, Blender'
 date: '2023-09-01'
 category: 'portfolio'
-subcategory: "graphics"
-featuredImage: 'froggythumbnail.png'
+subcategory: "games"
+featuredImage: 'froggythumbnail.jpg'
 featured: false
 order: 1
 ---
@@ -43,7 +43,7 @@ order: 1
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="froggy_tutorial_render.png">
+<img src="froggy_tutorial_render.jpg">
 <figcaption>Blender, modeling, texture painting, lighting, rendering</figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ order: 1
 </figure>
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="maya-old.png">
+<img src="maya-old.jpg">
 <figcaption>Maya, modeling, animation, rigging, texturing (2015)</figcaption>
 </figure>
 

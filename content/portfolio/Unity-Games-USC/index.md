@@ -2,7 +2,7 @@
 title: "[Unity] Technical Arts, Tools Programming (W.I.P)"
 date: "2023-12-31"
 category: "portfolio"
-subcategory: "graphics"
+subcategory: "games"
 featuredImage: "emte-avatar-thumbnail.jpeg"
 featured: true
 order: 4
@@ -92,7 +92,7 @@ order: 4
 </figure>
 
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
-<img src="smoke2-position4.png">
+<img src="smoke2-position4.jpg">
 <figcaption>Inside the VFX graph, you can choose either Sample Bezier node or Sample Multiple Position Map node. Connect it with 'Set Position' node of particles </figcaption>
 </figure>
 
@@ -110,7 +110,7 @@ order: 4
 </figure>
 
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
-<img src="smoke2-positions2.png">
+<img src="smoke2-positions2.jpg">
 <figcaption> You can adjust the POS objects in the scene </figcaption>
 </figure>
 
@@ -127,12 +127,12 @@ order: 4
 - I knew about SDF through shadertoy and Inigo Quilez, but did not know Unity VFX graph had such features. So I gave it a try and it worked like a charm!
 
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
-<img src="smoke3-scene1.png">
+<img src="smoke3-scene1.jpg">
 <figcaption>Kitchen with nightsky window view</figcaption>
 </figure>
 
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
-<img src="smoke3-scene2.png">
+<img src="smoke3-scene2.jpg">
 <figcaption>Transition to Dream Scene</figcaption>
 </figure>
 

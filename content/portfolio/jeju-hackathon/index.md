@@ -2,8 +2,8 @@
 title: "[App Hackathon] 2017 Global Jeju Hackathon Winner 글로벌 제주 해커톤 우승작 앱"
 date: "2017-10-29"
 category: "portfolio"
-subcategory: "games"
-featuredImage: "app1.png"
+subcategory: "web"
+featuredImage: "app1.jpg"
 ---
 
 <div class="intro">
@@ -25,11 +25,11 @@ Date: 2017.10-27 ~ 2017.10.29
 The team won the 1st place winner in Global Jeju Hackathon, South Korea.
 
 <figure class="verticalImg" style="display: block; margin: 0 auto; text-align: center">
-<img src="app1.png" >
+<img src="app1.jpg" >
 <figcaption></figcaption>
 </figure>
 <figure class="verticalImg" style="display: block; margin: 0 auto; text-align: center">
-<img src="app3.png" >
+<img src="app3.jpg" >
 <figcaption></figcaption>
 </figure>
 <figure class="verticalImg" style="display: block; margin: 0 auto; text-align: center">

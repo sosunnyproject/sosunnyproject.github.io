@@ -39,7 +39,7 @@ At each scene, it throws a question like a game, and creates special interaction
 관객은 화면 속의 글을 읽고 손을 어떻게 활용할지 예상하고 실험한다. 어두운 방의 희미한 불빛 속에서 명상 음악을 듣고, 손의 움직임에 따라 변하는 거대한 장면을 관찰하며 손의 감각에 더욱 집중한다. 
 
 <figure style="display: block; margin: 0 auto; text-align: center">
-<img src="edit-GX2A4010.png">
+<img src="edit-GX2A4010.jpg">
 <figcaption></figcaption>
 </figure>
 

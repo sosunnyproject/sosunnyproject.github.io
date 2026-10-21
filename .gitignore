@@ -61,9 +61,24 @@ public
 # Mac files
 .DS_Store
 
+# 3D 모델 원본 보관용 (코드는 static/models/ 의 서빙본을 사용) — 로컬 백업으로만 유지
+src/assets/
+
 # Yarn
 yarn-error.log
 .pnp/
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+dist/
+
+# 3D source assets — kept locally, not served. Only optimized .glb + license.txt are committed.
+# (paths are explicit: other models like apple-vision-pro/scene.gltf ARE served and tracked)
+static/models/**/*.fbx
+static/models/dora-gltf/*
+!static/models/dora-gltf/license.txt
+static/models/theater_masks/scene.gltf
+static/models/theater_masks/scene.bin
+
+# 배경 원본(Midjourney PNG) — 로컬 보관. 웹용 WebP는 src/assets/backgrounds/에 커밋
+art-src/

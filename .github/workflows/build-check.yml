@@ -1,0 +1,47 @@
+name: Build check
+
+# threejs 브랜치에 push할 때마다 빌드만 확인 (배포 X). 빌드 결과(dist)는 아티팩트로 7일 보관 → 다운로드해서 미리보기 가능.
+on:
+  push:
+    branches: [threejs]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci --legacy-peer-deps --ignore-scripts
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 7
+
+  # 커밋 메시지에 [preview]가 있을 때만: 빌드 결과를 ci-preview 브랜치로 push (아티팩트 다운로드가 안 되는 환경에서 미리보기용, 확인 후 삭제)
+  preview:
+    if: contains(github.event.head_commit.message, '[preview]')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - run: |
+          cd dist
+          git init -q -b ci-preview
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "preview of ${GITHUB_SHA}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-preview

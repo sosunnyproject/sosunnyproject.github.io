@@ -3,7 +3,7 @@ title: "[Talk] 2019 JSCONF (Javascript Conference, Seoul)"
 date: "2019-09-03"
 category: "portfolio"
 subcategory: "edu"
-featuredImage: "talk1.png"
+featuredImage: "talk1.jpg"
 ---
 
 <div class="intro">
@@ -16,9 +16,9 @@ Date: 2019-09-03
 <hr />
 
 #### 스피커로 참여해서 라이트닝 토크에서 기술과 예술을 융합하는 랩 활동에 대해 소개하고 커뮤니티 활동을 통해 느낀 시사점을 공유했습니다.
-![talk1](talk1.png)
+![talk1](talk1.jpg)
 
-![talk3](talk3.png)
+![talk3](talk3.jpg)
 
 ### jsconf 참여 후기 영상
 
@@ -29,7 +29,7 @@ Date: 2019-09-03
 ## 인터렉티브 아트랩 부스
 
 ![부스사진3](IMG_2657.JPG)
-![부스사진4](booth1.png)
+![부스사진4](booth1.jpg)
 ![부스사진1](IMG_2660.JPG)
 ![부스사진2](IMG_2649.JPG)
 

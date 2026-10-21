@@ -4,7 +4,7 @@
 ### First method: Using same VFX Particle + Bezier Points
 
 <figure style="display: block; width: 70%; margin: 0 auto; text-align: center">
-<img src="aroma1.png">
+<img src="aroma1.jpg">
 <figcaption> </figcaption>
 </figure>
 

@@ -2,7 +2,7 @@
 title: "Threejs Animation Research"
 date: "2022-01-01"
 category: "portfolio"
-subcategory: "graphics"
+subcategory: "games"
 featuredImage: "threejsanim2.png"
 featured: false
 order: 5
